@@ -99,11 +99,11 @@
     } else if ([segue.identifier isEqualToString:@"merch"]) {
         [self configureColorTransition:[UIColor pinkLipstickColor] transitionType:FMColorTransitionTypeDown];
     } else if ([segue.identifier isEqualToString:@"social"]) {
-        [self configureColorTransition:[UIColor lavenderColor] transitionType:FMColorTransitionTypeLeft];
+        [self configureColorTransition:[UIColor lavenderColor] transitionType:FMColorTransitionTypeRight];
     } else if ([segue.identifier isEqualToString:@"help"]) {
         
     } else if ([segue.identifier isEqualToString:@"map"]) {
-        [self configureColorTransition:[UIColor grassColor] transitionType:FMColorTransitionTypeRight];
+        [self configureColorTransition:[UIColor grassColor] transitionType:FMColorTransitionTypeLeft];
     }
 }
 
