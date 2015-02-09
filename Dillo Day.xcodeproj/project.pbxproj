@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		217946B21A87C96100224737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B11A87C96100224737 /* main.m */; };
+		217946B51A87C96100224737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B41A87C96100224737 /* AppDelegate.m */; };
+		217946B81A87C96100224737 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B71A87C96100224737 /* ViewController.m */; };
+		217946BB1A87C96100224737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217946B91A87C96100224737 /* Main.storyboard */; };
+		217946BD1A87C96100224737 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217946BC1A87C96100224737 /* Images.xcassets */; };
+		217946C01A87C96100224737 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217946BE1A87C96100224737 /* LaunchScreen.xib */; };
+		217946CC1A87C96100224737 /* Dillo_DayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946CB1A87C96100224737 /* Dillo_DayTests.m */; };
+		217946D81A87FAB900224737 /* DDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946D71A87FAB900224737 /* DDViewController.m */; };
+		217946DB1A87FCAD00224737 /* FMColorTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946DA1A87FCAD00224737 /* FMColorTransition.m */; };
+		217946DF1A87FE9A00224737 /* ColorSegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946DE1A87FE9A00224737 /* ColorSegueViewController.m */; };
+		217946E21A87FFCE00224737 /* MainCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946E11A87FFCE00224737 /* MainCSViewController.m */; };
+		217946E51A88004800224737 /* DirectionLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946E41A88004800224737 /* DirectionLabelView.m */; };
+		217947871A881FF000224737 /* LineupCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217947861A881FF000224737 /* LineupCSViewController.m */; };
+		2179478A1A881FF800224737 /* MerchCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217947891A881FF800224737 /* MerchCSViewController.m */; };
+		2179478D1A88200200224737 /* MapCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2179478C1A88200200224737 /* MapCSViewController.m */; };
+		217947901A88200F00224737 /* SocialCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2179478F1A88200F00224737 /* SocialCSViewController.m */; };
+		217947931A88201E00224737 /* HelpCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217947921A88201E00224737 /* HelpCSViewController.m */; };
+		9E0BDF8DD8C012C4C3F4ED85 /* libPods-Dillo Day.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		217946C61A87C96100224737 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 217946A41A87C96100224737 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 217946AB1A87C96100224737;
+			remoteInfo = "Dillo Day";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		217946AC1A87C96100224737 /* Dillo Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dillo Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		217946B01A87C96100224737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		217946B11A87C96100224737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		217946B31A87C96100224737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		217946B41A87C96100224737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		217946B61A87C96100224737 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		217946B71A87C96100224737 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		217946BA1A87C96100224737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		217946BC1A87C96100224737 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		217946BF1A87C96100224737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		217946C51A87C96100224737 /* Dillo DayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dillo DayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		217946CA1A87C96100224737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		217946CB1A87C96100224737 /* Dillo_DayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dillo_DayTests.m; sourceTree = "<group>"; };
+		217946D61A87FAB900224737 /* DDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDViewController.h; sourceTree = "<group>"; };
+		217946D71A87FAB900224737 /* DDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDViewController.m; sourceTree = "<group>"; };
+		217946D91A87FCAD00224737 /* FMColorTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMColorTransition.h; sourceTree = "<group>"; };
+		217946DA1A87FCAD00224737 /* FMColorTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMColorTransition.m; sourceTree = "<group>"; };
+		217946DD1A87FE9A00224737 /* ColorSegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSegueViewController.h; sourceTree = "<group>"; };
+		217946DE1A87FE9A00224737 /* ColorSegueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSegueViewController.m; sourceTree = "<group>"; };
+		217946E01A87FFCE00224737 /* MainCSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCSViewController.h; sourceTree = "<group>"; };
+		217946E11A87FFCE00224737 /* MainCSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCSViewController.m; sourceTree = "<group>"; };
+		217946E31A88004800224737 /* DirectionLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionLabelView.h; sourceTree = "<group>"; };
+		217946E41A88004800224737 /* DirectionLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionLabelView.m; sourceTree = "<group>"; };
+		217947851A881FF000224737 /* LineupCSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineupCSViewController.h; sourceTree = "<group>"; };
+		217947861A881FF000224737 /* LineupCSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineupCSViewController.m; sourceTree = "<group>"; };
+		217947881A881FF800224737 /* MerchCSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MerchCSViewController.h; sourceTree = "<group>"; };
+		217947891A881FF800224737 /* MerchCSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MerchCSViewController.m; sourceTree = "<group>"; };
+		2179478B1A88200200224737 /* MapCSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCSViewController.h; sourceTree = "<group>"; };
+		2179478C1A88200200224737 /* MapCSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCSViewController.m; sourceTree = "<group>"; };
+		2179478E1A88200F00224737 /* SocialCSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialCSViewController.h; sourceTree = "<group>"; };
+		2179478F1A88200F00224737 /* SocialCSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialCSViewController.m; sourceTree = "<group>"; };
+		217947911A88201E00224737 /* HelpCSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCSViewController.h; sourceTree = "<group>"; };
+		217947921A88201E00224737 /* HelpCSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCSViewController.m; sourceTree = "<group>"; };
+		6D331DFBD86CF821E61B852F /* Pods-Dillo Day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dillo Day.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.debug.xcconfig"; sourceTree = "<group>"; };
+		6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dillo Day.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB9D6A9B72E6CB8B1378584F /* Pods-Dillo Day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dillo Day.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		217946A91A87C96100224737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0BDF8DD8C012C4C3F4ED85 /* libPods-Dillo Day.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		217946C21A87C96100224737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		129CA9EBF89302FBF1C892F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		217946A31A87C96100224737 = {
+			isa = PBXGroup;
+			children = (
+				217946E61A88004B00224737 /* Views */,
+				217946D51A87FAAC00224737 /* Controllers */,
+				217946E71A88005200224737 /* Controls */,
+				217946AE1A87C96100224737 /* Dillo Day */,
+				217946C81A87C96100224737 /* Dillo DayTests */,
+				217946AD1A87C96100224737 /* Products */,
+				FC22692339283960782E818F /* Pods */,
+				129CA9EBF89302FBF1C892F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		217946AD1A87C96100224737 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				217946AC1A87C96100224737 /* Dillo Day.app */,
+				217946C51A87C96100224737 /* Dillo DayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		217946AE1A87C96100224737 /* Dillo Day */ = {
+			isa = PBXGroup;
+			children = (
+				217946B31A87C96100224737 /* AppDelegate.h */,
+				217946B41A87C96100224737 /* AppDelegate.m */,
+				217946B61A87C96100224737 /* ViewController.h */,
+				217946B71A87C96100224737 /* ViewController.m */,
+				217946B91A87C96100224737 /* Main.storyboard */,
+				217946BC1A87C96100224737 /* Images.xcassets */,
+				217946BE1A87C96100224737 /* LaunchScreen.xib */,
+				217946AF1A87C96100224737 /* Supporting Files */,
+			);
+			path = "Dillo Day";
+			sourceTree = "<group>";
+		};
+		217946AF1A87C96100224737 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				217946B01A87C96100224737 /* Info.plist */,
+				217946B11A87C96100224737 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		217946C81A87C96100224737 /* Dillo DayTests */ = {
+			isa = PBXGroup;
+			children = (
+				217946CB1A87C96100224737 /* Dillo_DayTests.m */,
+				217946C91A87C96100224737 /* Supporting Files */,
+			);
+			path = "Dillo DayTests";
+			sourceTree = "<group>";
+		};
+		217946C91A87C96100224737 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				217946CA1A87C96100224737 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		217946D51A87FAAC00224737 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				217946DD1A87FE9A00224737 /* ColorSegueViewController.h */,
+				217946DE1A87FE9A00224737 /* ColorSegueViewController.m */,
+				217946D61A87FAB900224737 /* DDViewController.h */,
+				217946D71A87FAB900224737 /* DDViewController.m */,
+				217946E01A87FFCE00224737 /* MainCSViewController.h */,
+				217946E11A87FFCE00224737 /* MainCSViewController.m */,
+				217947851A881FF000224737 /* LineupCSViewController.h */,
+				217947861A881FF000224737 /* LineupCSViewController.m */,
+				217947881A881FF800224737 /* MerchCSViewController.h */,
+				217947891A881FF800224737 /* MerchCSViewController.m */,
+				2179478B1A88200200224737 /* MapCSViewController.h */,
+				2179478C1A88200200224737 /* MapCSViewController.m */,
+				2179478E1A88200F00224737 /* SocialCSViewController.h */,
+				2179478F1A88200F00224737 /* SocialCSViewController.m */,
+				217947911A88201E00224737 /* HelpCSViewController.h */,
+				217947921A88201E00224737 /* HelpCSViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		217946DC1A87FCB300224737 /* FMColorTransition */ = {
+			isa = PBXGroup;
+			children = (
+				217946D91A87FCAD00224737 /* FMColorTransition.h */,
+				217946DA1A87FCAD00224737 /* FMColorTransition.m */,
+			);
+			name = FMColorTransition;
+			sourceTree = "<group>";
+		};
+		217946E61A88004B00224737 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				217946E31A88004800224737 /* DirectionLabelView.h */,
+				217946E41A88004800224737 /* DirectionLabelView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		217946E71A88005200224737 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				217946DC1A87FCB300224737 /* FMColorTransition */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		FC22692339283960782E818F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D331DFBD86CF821E61B852F /* Pods-Dillo Day.debug.xcconfig */,
+				BB9D6A9B72E6CB8B1378584F /* Pods-Dillo Day.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		217946AB1A87C96100224737 /* Dillo Day */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 217946CF1A87C96100224737 /* Build configuration list for PBXNativeTarget "Dillo Day" */;
+			buildPhases = (
+				85DC4AEDE67785418F4975AF /* Check Pods Manifest.lock */,
+				217946A81A87C96100224737 /* Sources */,
+				217946A91A87C96100224737 /* Frameworks */,
+				217946AA1A87C96100224737 /* Resources */,
+				379508CFEAC23FBD7898D96A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dillo Day";
+			productName = "Dillo Day";
+			productReference = 217946AC1A87C96100224737 /* Dillo Day.app */;
+			productType = "com.apple.product-type.application";
+		};
+		217946C41A87C96100224737 /* Dillo DayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 217946D21A87C96100224737 /* Build configuration list for PBXNativeTarget "Dillo DayTests" */;
+			buildPhases = (
+				217946C11A87C96100224737 /* Sources */,
+				217946C21A87C96100224737 /* Frameworks */,
+				217946C31A87C96100224737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				217946C71A87C96100224737 /* PBXTargetDependency */,
+			);
+			name = "Dillo DayTests";
+			productName = "Dillo DayTests";
+			productReference = 217946C51A87C96100224737 /* Dillo DayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		217946A41A87C96100224737 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Mayfest;
+				TargetAttributes = {
+					217946AB1A87C96100224737 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					217946C41A87C96100224737 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 217946AB1A87C96100224737;
+					};
+				};
+			};
+			buildConfigurationList = 217946A71A87C96100224737 /* Build configuration list for PBXProject "Dillo Day" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 217946A31A87C96100224737;
+			productRefGroup = 217946AD1A87C96100224737 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				217946AB1A87C96100224737 /* Dillo Day */,
+				217946C41A87C96100224737 /* Dillo DayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		217946AA1A87C96100224737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				217946BB1A87C96100224737 /* Main.storyboard in Resources */,
+				217946C01A87C96100224737 /* LaunchScreen.xib in Resources */,
+				217946BD1A87C96100224737 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		217946C31A87C96100224737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		379508CFEAC23FBD7898D96A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85DC4AEDE67785418F4975AF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		217946A81A87C96100224737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				217946D81A87FAB900224737 /* DDViewController.m in Sources */,
+				217946B81A87C96100224737 /* ViewController.m in Sources */,
+				217946B51A87C96100224737 /* AppDelegate.m in Sources */,
+				217947901A88200F00224737 /* SocialCSViewController.m in Sources */,
+				217946E51A88004800224737 /* DirectionLabelView.m in Sources */,
+				2179478D1A88200200224737 /* MapCSViewController.m in Sources */,
+				217946B21A87C96100224737 /* main.m in Sources */,
+				217946E21A87FFCE00224737 /* MainCSViewController.m in Sources */,
+				217947931A88201E00224737 /* HelpCSViewController.m in Sources */,
+				2179478A1A881FF800224737 /* MerchCSViewController.m in Sources */,
+				217947871A881FF000224737 /* LineupCSViewController.m in Sources */,
+				217946DF1A87FE9A00224737 /* ColorSegueViewController.m in Sources */,
+				217946DB1A87FCAD00224737 /* FMColorTransition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		217946C11A87C96100224737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				217946CC1A87C96100224737 /* Dillo_DayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		217946C71A87C96100224737 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 217946AB1A87C96100224737 /* Dillo Day */;
+			targetProxy = 217946C61A87C96100224737 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		217946B91A87C96100224737 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				217946BA1A87C96100224737 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		217946BE1A87C96100224737 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				217946BF1A87C96100224737 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		217946CD1A87C96100224737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		217946CE1A87C96100224737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		217946D01A87C96100224737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D331DFBD86CF821E61B852F /* Pods-Dillo Day.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Dillo Day/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		217946D11A87C96100224737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB9D6A9B72E6CB8B1378584F /* Pods-Dillo Day.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Dillo Day/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		217946D31A87C96100224737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Dillo DayTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dillo Day.app/Dillo Day";
+			};
+			name = Debug;
+		};
+		217946D41A87C96100224737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Dillo DayTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dillo Day.app/Dillo Day";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		217946A71A87C96100224737 /* Build configuration list for PBXProject "Dillo Day" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				217946CD1A87C96100224737 /* Debug */,
+				217946CE1A87C96100224737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		217946CF1A87C96100224737 /* Build configuration list for PBXNativeTarget "Dillo Day" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				217946D01A87C96100224737 /* Debug */,
+				217946D11A87C96100224737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		217946D21A87C96100224737 /* Build configuration list for PBXNativeTarget "Dillo DayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				217946D31A87C96100224737 /* Debug */,
+				217946D41A87C96100224737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 217946A41A87C96100224737 /* Project object */;
+}
