@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "FMColorTransition.h"
+#import "FMDirectionTransition.h"
 
 @interface ColorSegueViewController : UIViewController
 @property (strong, nonatomic) FMColorTransition *previousColorTransition;
 - (void)configureColorTransition:(UIColor *)color transitionType:(FMColorTransitionType)type;
-
+- (void)configureDirectionTransition:(FMDirectionTransitionType)direction;
 
 - (void)configureDilloButtonToUnwindOnTap:(BOOL)unwindsOnTap;
 @end

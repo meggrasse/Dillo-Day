@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>325CA368-8313-49F2-841E-848A7162753C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Dillo Day</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9D335C052952F6C3070861D9F32363AE641AED27</key>
+		<string>https://github.com/feelmyears/Dillo-Day.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Dillo Day.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9D335C052952F6C3070861D9F32363AE641AED27</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/feelmyears/Dillo-Day.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9D335C052952F6C3070861D9F32363AE641AED27</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9D335C052952F6C3070861D9F32363AE641AED27</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Dillo%20Day</string>
+		</dict>
+	</array>
+</dict>
+</plist>

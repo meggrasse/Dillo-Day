@@ -12,6 +12,7 @@
 @interface ColorSegueViewController ()
 @property (strong, nonatomic) FMColorTransition *colorTransition;
 @property (strong, nonatomic) UIButton *dilloButton;
+@property (strong, nonatomic) FMDirectionTransition *directionTransition;
 @end
 
 @implementation ColorSegueViewController
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.colorTransition = [FMColorTransition new];
+    self.directionTransition = [FMDirectionTransition new];
 }
 
 
@@ -28,13 +30,18 @@
     self.colorTransition.transitionType = type;
 }
 
+- (void)configureDirectionTransition:(FMDirectionTransitionType)direction {
+    self.directionTransition.direction = direction;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIViewController *controller = [segue destinationViewController];
-    controller.transitioningDelegate = self.colorTransition;
-    if ([controller isMemberOfClass:[ColorSegueViewController class]]) {
-        ColorSegueViewController *colorSequeVC = (ColorSegueViewController *)controller;
-        colorSequeVC.previousColorTransition = self.colorTransition;
-    }
+    controller.transitioningDelegate = self.directionTransition;
+//    controller.transitioningDelegate = self.colorTransition;
+//    if ([controller isMemberOfClass:[ColorSegueViewController class]]) {
+//        ColorSegueViewController *colorSequeVC = (ColorSegueViewController *)controller;
+//        colorSequeVC.previousColorTransition = self.colorTransition;
+//    }
 }
 
 

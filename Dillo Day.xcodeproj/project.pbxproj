@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */; };
 		217946B21A87C96100224737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B11A87C96100224737 /* main.m */; };
 		217946B51A87C96100224737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B41A87C96100224737 /* AppDelegate.m */; };
 		217946B81A87C96100224737 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B71A87C96100224737 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212CFAAD1A89AEEC00BCFC90 /* FMDirectionTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDirectionTransition.h; sourceTree = "<group>"; };
+		212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDirectionTransition.m; sourceTree = "<group>"; };
 		217946AC1A87C96100224737 /* Dillo Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dillo Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		217946B01A87C96100224737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217946B11A87C96100224737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +104,15 @@
 				6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		212CFAB01A89AEEF00BCFC90 /* FMDirectionTransition */ = {
+			isa = PBXGroup;
+			children = (
+				212CFAAD1A89AEEC00BCFC90 /* FMDirectionTransition.h */,
+				212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */,
+			);
+			name = FMDirectionTransition;
 			sourceTree = "<group>";
 		};
 		217946A31A87C96100224737 = {
@@ -211,6 +223,7 @@
 		217946E71A88005200224737 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				212CFAB01A89AEEF00BCFC90 /* FMDirectionTransition */,
 				217946DC1A87FCB300224737 /* FMColorTransition */,
 			);
 			name = Controls;
@@ -365,6 +378,7 @@
 				217946B51A87C96100224737 /* AppDelegate.m in Sources */,
 				217947901A88200F00224737 /* SocialCSViewController.m in Sources */,
 				217946E51A88004800224737 /* DirectionLabelView.m in Sources */,
+				212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */,
 				2179478D1A88200200224737 /* MapCSViewController.m in Sources */,
 				217946B21A87C96100224737 /* main.m in Sources */,
 				217946E21A87FFCE00224737 /* MainCSViewController.m in Sources */,

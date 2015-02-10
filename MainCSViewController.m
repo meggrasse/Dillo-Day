@@ -95,15 +95,19 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];
     if ([segue.identifier isEqualToString:@"lineup"]) {
-        [self configureColorTransition:[UIColor robinEggColor] transitionType:FMColorTransitionTypeUp];
+//        [self configureColorTransition:[UIColor robinEggColor] transitionType:FMColorTransitionTypeUp];
+        [self configureDirectionTransition:FMDirectionTransitionTypeUp];
     } else if ([segue.identifier isEqualToString:@"merch"]) {
-        [self configureColorTransition:[UIColor pinkLipstickColor] transitionType:FMColorTransitionTypeDown];
+//        [self configureColorTransition:[UIColor pinkLipstickColor] transitionType:FMColorTransitionTypeDown];
+        [self configureDirectionTransition:FMDirectionTransitionTypeDown];
     } else if ([segue.identifier isEqualToString:@"social"]) {
-        [self configureColorTransition:[UIColor lavenderColor] transitionType:FMColorTransitionTypeRight];
+//        [self configureColorTransition:[UIColor lavenderColor] transitionType:FMColorTransitionTypeRight];
+        [self configureDirectionTransition:FMDirectionTransitionTypeRight];
     } else if ([segue.identifier isEqualToString:@"help"]) {
         
     } else if ([segue.identifier isEqualToString:@"map"]) {
-        [self configureColorTransition:[UIColor grassColor] transitionType:FMColorTransitionTypeLeft];
+//        [self configureColorTransition:[UIColor grassColor] transitionType:FMColorTransitionTypeLeft];
+        [self configureDirectionTransition:FMDirectionTransitionTypeLeft];
     }
 }
 
