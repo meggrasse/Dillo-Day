@@ -182,22 +182,13 @@
 		217946D51A87FAAC00224737 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				217946DD1A87FE9A00224737 /* ColorSegueViewController.h */,
-				217946DE1A87FE9A00224737 /* ColorSegueViewController.m */,
-				217946D61A87FAB900224737 /* DDViewController.h */,
-				217946D71A87FAB900224737 /* DDViewController.m */,
-				217946E01A87FFCE00224737 /* MainCSViewController.h */,
-				217946E11A87FFCE00224737 /* MainCSViewController.m */,
-				217947851A881FF000224737 /* LineupCSViewController.h */,
-				217947861A881FF000224737 /* LineupCSViewController.m */,
-				217947881A881FF800224737 /* MerchCSViewController.h */,
-				217947891A881FF800224737 /* MerchCSViewController.m */,
-				2179478B1A88200200224737 /* MapCSViewController.h */,
-				2179478C1A88200200224737 /* MapCSViewController.m */,
-				2179478E1A88200F00224737 /* SocialCSViewController.h */,
-				2179478F1A88200F00224737 /* SocialCSViewController.m */,
-				217947911A88201E00224737 /* HelpCSViewController.h */,
-				217947921A88201E00224737 /* HelpCSViewController.m */,
+				21AD3A1F1A8BFAAB00EDAF3C /* UIViewController Subclasses */,
+				21AD3A181A8BFA7E00EDAF3C /* Main */,
+				21AD3A191A8BFA8400EDAF3C /* Lineup */,
+				21AD3A1A1A8BFA8B00EDAF3C /* Merch */,
+				21AD3A1B1A8BFA9100EDAF3C /* Map */,
+				21AD3A1C1A8BFA9600EDAF3C /* Social */,
+				21AD3A1D1A8BFA9C00EDAF3C /* Help */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -227,6 +218,71 @@
 				217946DC1A87FCB300224737 /* FMColorTransition */,
 			);
 			name = Controls;
+			sourceTree = "<group>";
+		};
+		21AD3A181A8BFA7E00EDAF3C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				217946E01A87FFCE00224737 /* MainCSViewController.h */,
+				217946E11A87FFCE00224737 /* MainCSViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		21AD3A191A8BFA8400EDAF3C /* Lineup */ = {
+			isa = PBXGroup;
+			children = (
+				217947851A881FF000224737 /* LineupCSViewController.h */,
+				217947861A881FF000224737 /* LineupCSViewController.m */,
+			);
+			name = Lineup;
+			sourceTree = "<group>";
+		};
+		21AD3A1A1A8BFA8B00EDAF3C /* Merch */ = {
+			isa = PBXGroup;
+			children = (
+				217947881A881FF800224737 /* MerchCSViewController.h */,
+				217947891A881FF800224737 /* MerchCSViewController.m */,
+			);
+			name = Merch;
+			sourceTree = "<group>";
+		};
+		21AD3A1B1A8BFA9100EDAF3C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				2179478B1A88200200224737 /* MapCSViewController.h */,
+				2179478C1A88200200224737 /* MapCSViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		21AD3A1C1A8BFA9600EDAF3C /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				2179478E1A88200F00224737 /* SocialCSViewController.h */,
+				2179478F1A88200F00224737 /* SocialCSViewController.m */,
+			);
+			name = Social;
+			sourceTree = "<group>";
+		};
+		21AD3A1D1A8BFA9C00EDAF3C /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				217947911A88201E00224737 /* HelpCSViewController.h */,
+				217947921A88201E00224737 /* HelpCSViewController.m */,
+			);
+			name = Help;
+			sourceTree = "<group>";
+		};
+		21AD3A1F1A8BFAAB00EDAF3C /* UIViewController Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				217946DD1A87FE9A00224737 /* ColorSegueViewController.h */,
+				217946DE1A87FE9A00224737 /* ColorSegueViewController.m */,
+				217946D61A87FAB900224737 /* DDViewController.h */,
+				217946D71A87FAB900224737 /* DDViewController.m */,
+			);
+			name = "UIViewController Subclasses";
 			sourceTree = "<group>";
 		};
 		FC22692339283960782E818F /* Pods */ = {

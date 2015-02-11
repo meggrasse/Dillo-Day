@@ -15,16 +15,35 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - Colours (5.6.1)
+  - FMDB (2.3):
+    - FMDB/standard
+  - FMDB/common (2.3)
+  - FMDB/standard (2.3):
+    - FMDB/common
+  - GRMustache (7.3.0):
+    - JRSwizzle (~> 1.0)
+  - JRSwizzle (1.0)
+  - Mapbox-iOS-SDK (1.6.0):
+    - FMDB (= 2.3)
+    - GRMustache (= 7.3.0)
+    - SMCalloutView (= 2.0)
   - Masonry (0.6.1)
+  - SMCalloutView (2.0)
 
 DEPENDENCIES:
   - BlocksKit
   - Colours (~> 5.6)
+  - Mapbox-iOS-SDK
   - Masonry
 
 SPEC CHECKSUMS:
   BlocksKit: 4439e7f30a9f90743462ca63545a15c1f4304cef
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
+  FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
+  GRMustache: efecd3b603f0a7a99cf6bdf3998782ee0c465726
+  JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
+  Mapbox-iOS-SDK: 189a35013e100f1464cd2f9f6c489d6326fbb927
   Masonry: 2cb49fd14d203d2db5ca6bb017135b235dde9980
+  SMCalloutView: c1906604d47c058400ade5c9d52ab98aa77b7e76
 
 COCOAPODS: 0.34.4

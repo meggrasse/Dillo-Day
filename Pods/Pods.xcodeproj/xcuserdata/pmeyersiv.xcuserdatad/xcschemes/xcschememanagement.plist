@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Mapbox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Dillo Day-BlocksKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,7 +19,32 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Dillo Day-FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-GRMustache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-JRSwizzle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-Mapbox-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Dillo Day-Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-SMCalloutView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3A396D307BB32C434F6FB34E</key>
+		<key>1EC1DC56EAEC2CF296D8CC69</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D40E3D9EC21EFC562A933D6</key>
+		<key>50B26179C59CF5BAD960ABC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6090032396DD445202CF653</key>
+		<key>63D5132A4D67C6C34ACFD150</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E06EF1E91094ACA9C0095D35</key>
+		<key>6ED2E3BF7174A7A5643D64A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71730128A1290A4FBAE4B53C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7CE526662B90F8EADACCCD28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>899D9CA71AD38B31361E33EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B3033ECF0AA5BA7675115C91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BBDEF94573AC45239DDC85B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6E2D6DD29237C1A684D55C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
