@@ -36,8 +36,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UIViewController *controller = [segue destinationViewController];
+//    controller.transitioningDelegate = self.directionTransition;
     controller.transitioningDelegate = self.directionTransition;
-//    controller.transitioningDelegate = self.colorTransition;
 //    if ([controller isMemberOfClass:[ColorSegueViewController class]]) {
 //        ColorSegueViewController *colorSequeVC = (ColorSegueViewController *)controller;
 //        colorSequeVC.previousColorTransition = self.colorTransition;
