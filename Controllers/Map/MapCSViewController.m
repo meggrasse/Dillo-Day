@@ -20,10 +20,19 @@
 
 @implementation MapCSViewController
 
-
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSArray * controllerArray = [[self navigationController] viewControllers];
+    
+    for (UIViewController *controller in controllerArray){
+        //Code here.. e.g. print their titles to see the array setup;
+        NSLog(@"%@",controller.title);
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.title = @"map";
     [self configureMap];
     [self configureDilloButtonToUnwindOnTap:YES];
 }

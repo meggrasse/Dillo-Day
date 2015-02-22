@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import <RDVTabBarController/RDVTabBarController.h>
+
+#import "LineupViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +22,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"zpDqUtE6y2RIcuWeUPwKPUJYZi12qal1vF83n2GF"
                   clientKey:@"LDaDgElWPLhahqdw3MjYlouCWFzHzewaxHWYvEgb"];
+    /*
+    LineupViewController *lineupVC = [[LineupViewController alloc] initWithNibName:nil bundle:nil];
+    [lineupVC rdv_setTabBarItem:[LineupViewController tabBarItem]];
+    UINavigationController *lineupNavController = [[UINavigationController alloc] initWithRootViewController:lineupVC];
+    
+    NSArray *navigationControllerArray = @[lineupNavController];
+    
+    RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
+    [tabBarController setViewControllers:navigationControllerArray];
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = tabBarController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+     */
     
     return YES;
 }

@@ -11,7 +11,7 @@
 
 @interface ColorSegueViewController ()
 @property (strong, nonatomic) FMColorTransition *colorTransition;
-@property (strong, nonatomic) UIButton *dilloButton;
+
 @property (strong, nonatomic) FMDirectionTransition *directionTransition;
 @end
 

@@ -12,6 +12,7 @@
 
 @interface ColorSegueViewController : UIViewController
 @property (strong, nonatomic) FMColorTransition *previousColorTransition;
+@property (strong, nonatomic) UIButton *dilloButton;
 - (void)configureColorTransition:(UIColor *)color transitionType:(FMColorTransitionType)type;
 - (void)configureDirectionTransition:(FMDirectionTransitionType)direction;
 

@@ -1,4 +1,6 @@
 PODS:
+  - BFPaperButton (2.0.16):
+    - UIColor+BFPaperColors
   - BlocksKit (2.2.5):
     - BlocksKit/All
   - BlocksKit/All (2.2.5):
@@ -14,6 +16,7 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
+  - BOString (0.0.9)
   - Colours (5.6.1)
   - FMDB (2.3):
     - FMDB/standard
@@ -22,28 +25,62 @@ PODS:
     - FMDB/common
   - GRMustache (7.3.0):
     - JRSwizzle (~> 1.0)
+  - HTHorizontalSelectionList (0.3.1)
+  - HTKDynamicResizingCell (0.0.2)
   - JRSwizzle (1.0)
+  - L360Confetti (1.1.1)
   - Mapbox-iOS-SDK (1.6.0):
     - FMDB (= 2.3)
     - GRMustache (= 7.3.0)
     - SMCalloutView (= 2.0)
   - Masonry (0.6.1)
+  - NSAttributedString+CCLFormat (1.0.1)
+  - PureLayout (2.0.5)
+  - RDVTabBarController (1.1.9)
+  - Shimmer (1.0.2)
   - SMCalloutView (2.0)
+  - UIAlertView+Blocks (0.8.1)
+  - UIColor+BFPaperColors (1.3.1)
 
 DEPENDENCIES:
+  - BFPaperButton (~> 2.0)
   - BlocksKit
+  - BOString (~> 0.0)
   - Colours (~> 5.6)
+  - HTHorizontalSelectionList (~> 0.3.1)
+  - HTKDynamicResizingCell (~> 0.0.1)
+  - L360Confetti (from `https://github.com/life360/confetti.git`)
   - Mapbox-iOS-SDK
   - Masonry
+  - NSAttributedString+CCLFormat
+  - PureLayout
+  - RDVTabBarController
+  - Shimmer (~> 1.0)
+  - UIAlertView+Blocks
+
+EXTERNAL SOURCES:
+  L360Confetti:
+    :git: https://github.com/life360/confetti.git
 
 SPEC CHECKSUMS:
+  BFPaperButton: 93aa911ee3a2c63e8b23fe55ac4a8318b637d4d0
   BlocksKit: 4439e7f30a9f90743462ca63545a15c1f4304cef
+  BOString: 340630743b6d43d85bae29abe678cbc619f170e7
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
   FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
   GRMustache: efecd3b603f0a7a99cf6bdf3998782ee0c465726
+  HTHorizontalSelectionList: d8352b1a8a11112ef3b4fb1f23a7fc4fe2c6d54d
+  HTKDynamicResizingCell: ef19a37818f634a165a408d8f65a7596ba17b002
   JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
+  L360Confetti: 4d39886c6a827007819bb63fd4b3114a9505ed6c
   Mapbox-iOS-SDK: 189a35013e100f1464cd2f9f6c489d6326fbb927
   Masonry: 2cb49fd14d203d2db5ca6bb017135b235dde9980
+  NSAttributedString+CCLFormat: 2a86edf8354db227bb3964c12b5f9572bab512f2
+  PureLayout: 63a3257320223e8edddcd3afb407445f85a6bf74
+  RDVTabBarController: c1c826e2d2f2e26a5221e425a646d295b9dfe936
+  Shimmer: 057fcfe9c1c978d69d50b64fce93a61080cd08ec
   SMCalloutView: c1906604d47c058400ade5c9d52ab98aa77b7e76
+  UIAlertView+Blocks: 0b749f1f7bd5131ff2233b30a406c1585a7171b2
+  UIColor+BFPaperColors: c7e4c6e4d82e889d507b3c2d09e6caf816529f18
 
 COCOAPODS: 0.34.4

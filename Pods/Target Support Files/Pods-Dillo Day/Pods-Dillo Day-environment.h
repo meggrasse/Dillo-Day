@@ -6,6 +6,18 @@
 // project.
 
 
+// BFPaperButton
+#define COCOAPODS_POD_AVAILABLE_BFPaperButton
+#define COCOAPODS_VERSION_MAJOR_BFPaperButton 2
+#define COCOAPODS_VERSION_MINOR_BFPaperButton 0
+#define COCOAPODS_VERSION_PATCH_BFPaperButton 16
+
+// BOString
+#define COCOAPODS_POD_AVAILABLE_BOString
+#define COCOAPODS_VERSION_MAJOR_BOString 0
+#define COCOAPODS_VERSION_MINOR_BOString 0
+#define COCOAPODS_VERSION_PATCH_BOString 9
+
 // BlocksKit
 #define COCOAPODS_POD_AVAILABLE_BlocksKit
 #define COCOAPODS_VERSION_MAJOR_BlocksKit 2
@@ -72,11 +84,29 @@
 #define COCOAPODS_VERSION_MINOR_GRMustache 3
 #define COCOAPODS_VERSION_PATCH_GRMustache 0
 
+// HTHorizontalSelectionList
+#define COCOAPODS_POD_AVAILABLE_HTHorizontalSelectionList
+#define COCOAPODS_VERSION_MAJOR_HTHorizontalSelectionList 0
+#define COCOAPODS_VERSION_MINOR_HTHorizontalSelectionList 3
+#define COCOAPODS_VERSION_PATCH_HTHorizontalSelectionList 1
+
+// HTKDynamicResizingCell
+#define COCOAPODS_POD_AVAILABLE_HTKDynamicResizingCell
+#define COCOAPODS_VERSION_MAJOR_HTKDynamicResizingCell 0
+#define COCOAPODS_VERSION_MINOR_HTKDynamicResizingCell 0
+#define COCOAPODS_VERSION_PATCH_HTKDynamicResizingCell 2
+
 // JRSwizzle
 #define COCOAPODS_POD_AVAILABLE_JRSwizzle
 #define COCOAPODS_VERSION_MAJOR_JRSwizzle 1
 #define COCOAPODS_VERSION_MINOR_JRSwizzle 0
 #define COCOAPODS_VERSION_PATCH_JRSwizzle 0
+
+// L360Confetti
+#define COCOAPODS_POD_AVAILABLE_L360Confetti
+#define COCOAPODS_VERSION_MAJOR_L360Confetti 1
+#define COCOAPODS_VERSION_MINOR_L360Confetti 1
+#define COCOAPODS_VERSION_PATCH_L360Confetti 1
 
 // Mapbox-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Mapbox_iOS_SDK
@@ -90,9 +120,45 @@
 #define COCOAPODS_VERSION_MINOR_Masonry 6
 #define COCOAPODS_VERSION_PATCH_Masonry 1
 
+// NSAttributedString+CCLFormat
+#define COCOAPODS_POD_AVAILABLE_NSAttributedString_CCLFormat
+#define COCOAPODS_VERSION_MAJOR_NSAttributedString_CCLFormat 1
+#define COCOAPODS_VERSION_MINOR_NSAttributedString_CCLFormat 0
+#define COCOAPODS_VERSION_PATCH_NSAttributedString_CCLFormat 1
+
+// PureLayout
+#define COCOAPODS_POD_AVAILABLE_PureLayout
+#define COCOAPODS_VERSION_MAJOR_PureLayout 2
+#define COCOAPODS_VERSION_MINOR_PureLayout 0
+#define COCOAPODS_VERSION_PATCH_PureLayout 5
+
+// RDVTabBarController
+#define COCOAPODS_POD_AVAILABLE_RDVTabBarController
+#define COCOAPODS_VERSION_MAJOR_RDVTabBarController 1
+#define COCOAPODS_VERSION_MINOR_RDVTabBarController 1
+#define COCOAPODS_VERSION_PATCH_RDVTabBarController 9
+
 // SMCalloutView
 #define COCOAPODS_POD_AVAILABLE_SMCalloutView
 #define COCOAPODS_VERSION_MAJOR_SMCalloutView 2
 #define COCOAPODS_VERSION_MINOR_SMCalloutView 0
 #define COCOAPODS_VERSION_PATCH_SMCalloutView 0
+
+// Shimmer
+#define COCOAPODS_POD_AVAILABLE_Shimmer
+#define COCOAPODS_VERSION_MAJOR_Shimmer 1
+#define COCOAPODS_VERSION_MINOR_Shimmer 0
+#define COCOAPODS_VERSION_PATCH_Shimmer 2
+
+// UIAlertView+Blocks
+#define COCOAPODS_POD_AVAILABLE_UIAlertView_Blocks
+#define COCOAPODS_VERSION_MAJOR_UIAlertView_Blocks 0
+#define COCOAPODS_VERSION_MINOR_UIAlertView_Blocks 8
+#define COCOAPODS_VERSION_PATCH_UIAlertView_Blocks 1
+
+// UIColor+BFPaperColors
+#define COCOAPODS_POD_AVAILABLE_UIColor_BFPaperColors
+#define COCOAPODS_VERSION_MAJOR_UIColor_BFPaperColors 1
+#define COCOAPODS_VERSION_MINOR_UIColor_BFPaperColors 3
+#define COCOAPODS_VERSION_PATCH_UIColor_BFPaperColors 1
 

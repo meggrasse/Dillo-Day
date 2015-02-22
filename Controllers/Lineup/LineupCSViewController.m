@@ -7,9 +7,15 @@
 //
 
 #import "LineupCSViewController.h"
+#import <PureLayout/PureLayout.h>
+#import "LineupTextHTKCollectionViewCell.h"
+#import "LineupModel.h"
 
-@interface LineupCSViewController ()
+static NSString *LineupTextHTKCollectionViewCellIdentifier = @"LineupTextHTKCollectionViewCellIdentifier";
 
+@interface LineupCSViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@property (strong, nonatomic) UICollectionView *lineupCollectionView;
+@property (strong, nonatomic) LineupModel *lineupModel;
 @end
 
 @implementation LineupCSViewController
@@ -17,21 +23,72 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureDilloButtonToUnwindOnTap:YES];
+    [self configureLineupCollectionView];
+    [self configureLineupModel];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)configureLineupModel {
+    self.lineupModel = [LineupModel new];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)configureLineupCollectionView {
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.minimumLineSpacing = 0;
+    
+    self.lineupCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    self.lineupCollectionView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.lineupCollectionView.alwaysBounceVertical = YES;
+    
+    self.lineupCollectionView.delegate = self;
+    self.lineupCollectionView.dataSource = self;
+    if (self.dilloButton) {
+        [self.view insertSubview:self.lineupCollectionView belowSubview:self.dilloButton];
+    } else {
+        [self.view addSubview:self.lineupCollectionView];
+    }
+    [self.lineupCollectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    
+    if (self.dilloButton) {
+        [self.lineupCollectionView setContentInset:UIEdgeInsetsMake(CGRectGetMaxY(self.dilloButton.frame), 0, 0, 0)];
+        self.lineupCollectionView.layer.zPosition = self.dilloButton.layer.zPosition - 1;
+    }
+    
+    self.lineupCollectionView.backgroundColor = [UIColor clearColor];
+    
+    [self.lineupCollectionView registerClass:[LineupTextHTKCollectionViewCell class] forCellWithReuseIdentifier:LineupTextHTKCollectionViewCellIdentifier];
 }
-*/
 
+#pragma mark - UICollectionView Delegate Implementation
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [self.lineupModel numberOfItemsInSection:section];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return [self.lineupModel numberOfSections];
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    LineupTextHTKCollectionViewCell *lineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:LineupTextHTKCollectionViewCellIdentifier forIndexPath:indexPath];
+    [self configureLineupHTKCollectionViewCell:lineupCell ForRowAtIndexPath:indexPath];
+    return lineupCell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGSize defaultSize = DEFAULT_LINEUP_TEXT_CELL_SIZE;
+    return [LineupTextHTKCollectionViewCell sizeForCellWithDefaultSize:defaultSize setupCellBlock:^id(id<HTKDynamicResizingCellProtocol> cellToSetup) {
+        [self configureLineupHTKCollectionViewCell:(LineupTextHTKCollectionViewCell *)cellToSetup ForRowAtIndexPath:indexPath];
+        return cellToSetup;
+    }];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    Artist *selectedArtist = [self.lineupModel artistForRowAtIndexPath:indexPath];
+}
+
+#pragma mark - Helper Methods
+- (void)configureLineupHTKCollectionViewCell:(LineupTextHTKCollectionViewCell *)lineupCell ForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Artist *artistForCell = [self.lineupModel artistForRowAtIndexPath:indexPath];
+    [lineupCell setupCellWithArtist:artistForCell.name atTime:artistForCell.time];
+}
 @end

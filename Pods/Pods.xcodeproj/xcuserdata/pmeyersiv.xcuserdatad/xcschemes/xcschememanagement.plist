@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Dillo Day-BFPaperButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-BOString.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Dillo Day-BlocksKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,7 +39,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Dillo Day-HTHorizontalSelectionList.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-HTKDynamicResizingCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Dillo Day-JRSwizzle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-L360Confetti.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,7 +69,37 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Dillo Day-NSAttributedString+CCLFormat.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-RDVTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Dillo Day-SMCalloutView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-Shimmer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-UIAlertView+Blocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Dillo Day-UIColor+BFPaperColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,52 +112,107 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2C160B73C8605CB94A9FC3A8</key>
+		<key>010FD2988729EB1431CD5C36</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D3DAFA759445FD977105664</key>
+		<key>0C534897EBDE0F3CC9B89945</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E086E7D1BD037ED8F9A074E</key>
+		<key>0CC760168CBFBEC82F0AF02B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71EFCA80441EE2DAB9ED56DC</key>
+		<key>0ED24A935D152CCC0E84CF61</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98F630C5D90645447EDE8A55</key>
+		<key>1DFA7DBBDF967B73B8732487</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D927A6379BC4A70360E1A3F</key>
+		<key>2594FD32320AC2A90F8BCA6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E7C41EB363895654D2A7A6D</key>
+		<key>2A046397E443E5DC7696593F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB00903334F9825600560FFC</key>
+		<key>34695BE081FDE82E6FBE5854</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CC33F06830B3756902360C47</key>
+		<key>3C8B11CE1124D0277160140D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F49E03D5382BCEAA47F91AE6</key>
+		<key>3D896E4E47A1D499128230B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C4462F93A5D792015A2FD91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CC73CCFDC6761E29D6320E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C245CFA36A363081BABAB54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>73EDF7D6B251D77041CE9700</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8630733CDA9A3548B3E97561</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D4077DE7D19E832A40FBB14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>967CBD3B4D3458C5CF3A8BA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B52099137DB04C446EC8E23F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC487A96CBB3D76456D802DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD9FD99C9593325A821C131D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE9E8AA19DE6D6AC5B2963B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

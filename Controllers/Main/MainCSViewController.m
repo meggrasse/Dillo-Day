@@ -10,9 +10,10 @@
 #import "DirectionLabelView.h"
 #import <Masonry/Masonry.h>
 #import <Colours/Colours.h>
+#import "NavigationTreeView.h"
 
 @interface MainCSViewController ()
-
+@property (strong, nonatomic) NavigationTreeView *treeView;
 @end
 
 @implementation MainCSViewController
@@ -21,6 +22,16 @@
     [super viewDidLoad];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+}
+
+- (void)configureTreeView {
+        self.treeView = [NavigationTreeView sharedInstance];
+        self.treeView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200);
+        [self.view addSubview:self.treeView];
+}
 
 - (void)configureNavigationButtons {
     DirectionLabelView *lineupDirection = [[DirectionLabelView alloc] initWithTitle:@"lineup" image:[UIImage imageNamed:@"up7"] onTap:^{
@@ -85,10 +96,6 @@
         
     }
      */
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
