@@ -7,9 +7,11 @@
 //
 
 #import "LineupViewController.h"
-#import <PureLayout/PureLayout.h>
+
 #import "LineupTextHTKCollectionViewCell.h"
 #import "LineupModel.h"
+
+#import "ArtistInfoViewController.h"
 
 @interface LineupViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) UICollectionView *lineupCollectionView;
@@ -76,6 +78,9 @@ static NSString *LineupTextHTKCollectionViewCellIdentifier = @"LineupTextHTKColl
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     Artist *selectedArtist = [self.lineupModel artistForRowAtIndexPath:indexPath];
+    ArtistInfoViewController *artistInfoVC = [[ArtistInfoViewController alloc] init];
+    artistInfoVC.artist = selectedArtist;
+    [self showViewController:artistInfoVC sender:self];
 }
 
 #pragma mark - Helper Methods

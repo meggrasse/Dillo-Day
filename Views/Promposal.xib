@@ -35,6 +35,6 @@
         </view>
     </objects>
     <resources>
-        <image name="JPProm" width="961" height="848"/>
+        <image name="JPProm" width="961" height="1009"/>
     </resources>
 </document>

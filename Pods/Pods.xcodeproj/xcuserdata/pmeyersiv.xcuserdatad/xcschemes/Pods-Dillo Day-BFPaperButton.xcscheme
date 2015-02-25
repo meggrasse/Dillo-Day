@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "34695BE081FDE82E6FBE5854"
+               BlueprintIdentifier = "16A477E9BDB06985CF014B0B"
                BuildableName = "libPods-Dillo Day-BFPaperButton.a"
                BlueprintName = "Pods-Dillo Day-BFPaperButton"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -15,6 +15,7 @@ pod 'BFPaperButton', '~> 2.0'
 pod 'Shimmer', '~> 1.0'
 pod 'UIAlertView+Blocks'
 pod 'L360Confetti', :git => 'https://github.com/life360/confetti.git'
+pod 'FXBlurView', '~> 1.6'
 end
 
 target 'Dillo DayTests' do

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6C245CFA36A363081BABAB54"
+               BlueprintIdentifier = "83CED90FFA3C8EE6A8EC7AEE"
                BuildableName = "libPods-Dillo Day-HTKDynamicResizingCell.a"
                BlueprintName = "Pods-Dillo Day-HTKDynamicResizingCell"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -11,4 +11,6 @@
 @interface Artist : NSObject
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *time;
+@property (strong, nonatomic) UIImage *bigImage;
+@property (strong, nonatomic) UIImage *smallImage;
 @end

@@ -42,10 +42,31 @@
                              @"6:00 PM",
                              @"7:00 PM",
                              @"8:00 PM"];
+    
+    NSArray *bigPics = @[[UIImage imageNamed:@"pizza big"],
+                         [UIImage imageNamed:@"radio big"],
+                         [UIImage imageNamed:@"lana big"],
+                         [UIImage imageNamed:@"kid cudi big"],
+                         [UIImage imageNamed:@"gorillaz big"],
+                         [UIImage imageNamed:@"50 big"],
+                         [UIImage imageNamed:@"lil b big"],
+                         [UIImage imageNamed:@"u2 big"]];
+    
+    NSArray *smallPics = @[[UIImage imageNamed:@"pizza small"],
+                         [UIImage imageNamed:@"radio small"],
+                         [UIImage imageNamed:@"lana small"],
+                         [UIImage imageNamed:@"kid cudi small"],
+                         [UIImage imageNamed:@"gorillaz small"],
+                         [UIImage imageNamed:@"50 small"],
+                         [UIImage imageNamed:@"lil b small"],
+                         [UIImage imageNamed:@"u2 small"]];
+    
     for (int i = 0; i < [artistNames count]; i++) {
         Artist *newArtist = [Artist new];
         newArtist.name = artistNames[i];
         newArtist.time = artistTimes[i];
+        newArtist.bigImage = bigPics[i];
+        newArtist.smallImage = smallPics[i];
         [self.lineupArray addObject:newArtist];
     }
 }

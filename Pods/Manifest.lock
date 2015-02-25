@@ -23,6 +23,7 @@ PODS:
   - FMDB/common (2.3)
   - FMDB/standard (2.3):
     - FMDB/common
+  - FXBlurView (1.6.3)
   - GRMustache (7.3.0):
     - JRSwizzle (~> 1.0)
   - HTHorizontalSelectionList (0.3.1)
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - BlocksKit
   - BOString (~> 0.0)
   - Colours (~> 5.6)
+  - FXBlurView (~> 1.6)
   - HTHorizontalSelectionList (~> 0.3.1)
   - HTKDynamicResizingCell (~> 0.0.1)
   - L360Confetti (from `https://github.com/life360/confetti.git`)
@@ -68,6 +70,7 @@ SPEC CHECKSUMS:
   BOString: 340630743b6d43d85bae29abe678cbc619f170e7
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
   FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
+  FXBlurView: abe1046285813c4f6e9008abbc324fc5ab32af90
   GRMustache: efecd3b603f0a7a99cf6bdf3998782ee0c465726
   HTHorizontalSelectionList: d8352b1a8a11112ef3b4fb1f23a7fc4fe2c6d54d
   HTKDynamicResizingCell: ef19a37818f634a165a408d8f65a7596ba17b002
