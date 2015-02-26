@@ -61,12 +61,29 @@
                          [UIImage imageNamed:@"lil b small"],
                          [UIImage imageNamed:@"u2 small"]];
     
+    NSString *artistText = @"Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. \n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.\n\nCras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec id elit non mi porta gravida at eget metus.";
+    
+    
+//    NSDictionary *videoIds = @{@"Bangarang feat. Sirah" : @"YJVmu6yttiw",
+//                               @"First of The Year (Equinox)" : @"2cXDgFwE13g",
+//                               @"Toulouse" : @"KrVC5dm5fFc",
+//                               @"Ruffneck" : @"_t2TzJOyops"};
+    
+    NSArray *videoIds = @[@"YJVmu6yttiw",
+                          @"2cXDgFwE13g",
+                           @"KrVC5dm5fFc",
+                        @"_t2TzJOyops"];
+    
+
+    
     for (int i = 0; i < [artistNames count]; i++) {
         Artist *newArtist = [Artist new];
         newArtist.name = artistNames[i];
         newArtist.time = artistTimes[i];
         newArtist.bigImage = bigPics[i];
         newArtist.smallImage = smallPics[i];
+        newArtist.aboutText = artistText;
+        newArtist.youtubeVideoIds = videoIds;
         [self.lineupArray addObject:newArtist];
     }
 }

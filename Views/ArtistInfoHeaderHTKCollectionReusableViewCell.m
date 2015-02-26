@@ -9,6 +9,8 @@
 #import "ArtistInfoHeaderHTKCollectionReusableViewCell.h"
 #import <FXBlurView/FXBlurView.h>
 
+
+
 @interface ArtistInfoHeaderHTKCollectionReusableViewCell()
 @property (strong, nonatomic) UIImageView *backgroundImageView;
 @property (strong, nonatomic) UIImageView *circleImageView;

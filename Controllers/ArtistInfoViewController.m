@@ -8,6 +8,8 @@
 
 #import "ArtistInfoViewController.h"
 #import "ArtistInfoHeaderHTKCollectionReusableViewCell.h"
+#import "ArtistInfoAboutHTKCollectionViewCell.h"
+#import "ArtistInfoVideoCollectionViewCell.h"
 
 @interface ArtistInfoViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) UICollectionView *infoCollectionView;
@@ -15,6 +17,9 @@
 
 
 static NSString *ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier = @"ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier";
+static NSString *ArtistInfoAboutHTKCollectionViewCellIdentifier = @"ArtistInfoAboutHTKCollectionViewCellIdentifier";
+static NSString *ArtistInfoVideoCollectionViewCellIdentifier = @"ArtistInfoVideoCollectionViewCellIdentifier";
+
 @implementation ArtistInfoViewController
 
 - (void)viewDidLoad {
@@ -42,29 +47,85 @@ static NSString *ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier = @"Art
     collectionView.backgroundColor = [UIColor whiteColor];
     
     [collectionView registerClass:[ArtistInfoHeaderHTKCollectionReusableViewCell class] forCellWithReuseIdentifier:ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier];
+    [collectionView registerClass:[ArtistInfoAboutHTKCollectionViewCell class] forCellWithReuseIdentifier:ArtistInfoAboutHTKCollectionViewCellIdentifier];
+    [collectionView registerClass:[ArtistInfoVideoCollectionViewCell class] forCellWithReuseIdentifier:ArtistInfoVideoCollectionViewCellIdentifier];
     
 //    [self.collectionView registerClass:[LineupTextHTKCollectionViewCell class] forCellWithReuseIdentifier:LineupTextHTKCollectionViewCellIdentifier];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
+    if (section == 0) {
+        return 2;
+    } else return [self.artist.youtubeVideos count];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ArtistInfoHeaderHTKCollectionReusableViewCell *artistHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier forIndexPath:indexPath];
-    [artistHeaderCell setupCellWithArtist:self.artist];
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            ArtistInfoHeaderHTKCollectionReusableViewCell *artistHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier forIndexPath:indexPath];
+            [artistHeaderCell setupCellWithArtist:self.artist];
+
+            return artistHeaderCell;
+        } else {
+            ArtistInfoAboutHTKCollectionViewCell *artistAboutCell = [collectionView dequeueReusableCellWithReuseIdentifier:ArtistInfoAboutHTKCollectionViewCellIdentifier forIndexPath:indexPath];
+            [artistAboutCell setupCelWithArtist:self.artist];
+            
+            return artistAboutCell;
+        }
+    } else {
+        ArtistInfoVideoCollectionViewCell *artistVideoCell = [collectionView dequeueReusableCellWithReuseIdentifier:ArtistInfoVideoCollectionViewCellIdentifier forIndexPath:indexPath];
+        [artistVideoCell setupCellWithVideo:self.artist.youtubeVideos[indexPath.row]];
+        return artistVideoCell;
+    }
     
-    return artistHeaderCell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(CGRectGetWidth(self.infoCollectionView.bounds), 275);
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            return CGSizeMake(CGRectGetWidth(self.infoCollectionView.bounds), 275);
+        } else {
+            CGSize defaultSize = DEFAULT_ARTIST_INFO_ABOUT_CELL_SIZE;
+            return [ArtistInfoAboutHTKCollectionViewCell sizeForCellWithDefaultSize:defaultSize setupCellBlock:^id(id<HTKDynamicResizingCellProtocol> cellToSetup) {
+                [(ArtistInfoAboutHTKCollectionViewCell*)cellToSetup setupCelWithArtist:self.artist];
+                return cellToSetup;
+            }];
+        }
+    } else {
+        CGFloat videoCellWidth = (CGRectGetWidth(self.infoCollectionView.bounds) - 10*3)/2.0;
+        return CGSizeMake(videoCellWidth, videoCellWidth);
+    }
 }
 
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    if (section == 0) {
+        return UIEdgeInsetsZero;
+    } else if (section == 1) {
+        return UIEdgeInsetsMake(10, 10, 10, 10);
+    } else return UIEdgeInsetsZero;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    CGFloat minimumLineSpacing;
+    if (section == 1) {
+        minimumLineSpacing = 10;
+    }
+    
+    return minimumLineSpacing;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        XCDYouTubeVideo *selectedVideo = self.artist.youtubeVideos[indexPath.row];
+        
+        XCDYouTubeVideoPlayerViewController *playerVC = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:selectedVideo.identifier];
+        [self presentMoviePlayerViewControllerAnimated:playerVC];
+    }
+}
 /*
 #pragma mark - Navigation
 

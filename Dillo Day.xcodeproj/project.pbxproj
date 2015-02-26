@@ -41,6 +41,9 @@
 		217947901A88200F00224737 /* SocialCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2179478F1A88200F00224737 /* SocialCSViewController.m */; };
 		217947931A88201E00224737 /* HelpCSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 217947921A88201E00224737 /* HelpCSViewController.m */; };
 		217D91CE1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 217D91CD1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m */; };
+		217D91D11A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 217D91D01A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.m */; };
+		217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 217D91D31A9E65F0006F3ABB /* DDConstants.m */; };
+		219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */; };
 		219AD4721A9A458500C9E5A6 /* Promposal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219AD4711A9A458500C9E5A6 /* Promposal.xib */; };
 		21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF15951A8DBAA00022953A /* RGCardViewLayout.m */; };
 		21EF159D1A8EAF270022953A /* NavigationTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF159C1A8EAF270022953A /* NavigationTreeView.m */; };
@@ -116,6 +119,12 @@
 		217D91C91A9DAA25006F3ABB /* DDPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDPrefixHeader.pch; sourceTree = "<group>"; };
 		217D91CC1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoHeaderHTKCollectionReusableViewCell.h; sourceTree = "<group>"; };
 		217D91CD1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoHeaderHTKCollectionReusableViewCell.m; sourceTree = "<group>"; };
+		217D91CF1A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoAboutHTKCollectionViewCell.h; sourceTree = "<group>"; };
+		217D91D01A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoAboutHTKCollectionViewCell.m; sourceTree = "<group>"; };
+		217D91D21A9E65F0006F3ABB /* DDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDConstants.h; sourceTree = "<group>"; };
+		217D91D31A9E65F0006F3ABB /* DDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDConstants.m; sourceTree = "<group>"; };
+		219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoVideoCollectionViewCell.h; sourceTree = "<group>"; };
+		219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoVideoCollectionViewCell.m; sourceTree = "<group>"; };
 		219AD4711A9A458500C9E5A6 /* Promposal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Promposal.xib; sourceTree = "<group>"; };
 		21EF15951A8DBAA00022953A /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
 		21EF15961A8DBAA00022953A /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
@@ -251,6 +260,8 @@
 			isa = PBXGroup;
 			children = (
 				217D91C91A9DAA25006F3ABB /* DDPrefixHeader.pch */,
+				217D91D21A9E65F0006F3ABB /* DDConstants.h */,
+				217D91D31A9E65F0006F3ABB /* DDConstants.m */,
 				217946B31A87C96100224737 /* AppDelegate.h */,
 				217946B41A87C96100224737 /* AppDelegate.m */,
 				217946B91A87C96100224737 /* Main.storyboard */,
@@ -335,8 +346,12 @@
 		217D91CA1A9DAC36006F3ABB /* Artist Info */ = {
 			isa = PBXGroup;
 			children = (
+				217D91CF1A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.h */,
+				217D91D01A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.m */,
 				217D91CC1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.h */,
 				217D91CD1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m */,
+				219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */,
+				219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */,
 			);
 			name = "Artist Info";
 			sourceTree = "<group>";
@@ -585,9 +600,12 @@
 				217946E21A87FFCE00224737 /* MainCSViewController.m in Sources */,
 				21EF15F91A8EB1EC0022953A /* NSStack.m in Sources */,
 				217947931A88201E00224737 /* HelpCSViewController.m in Sources */,
+				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
 				21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */,
 				21EF159D1A8EAF270022953A /* NavigationTreeView.m in Sources */,
 				217D91CE1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m in Sources */,
+				219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */,
+				217D91D11A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.m in Sources */,
 				21EFF9B51A97DCEE00F225ED /* Artist.m in Sources */,
 				2179478A1A881FF800224737 /* MerchCSViewController.m in Sources */,
 				217947871A881FF000224737 /* LineupCSViewController.m in Sources */,

@@ -16,6 +16,10 @@ pod 'Shimmer', '~> 1.0'
 pod 'UIAlertView+Blocks'
 pod 'L360Confetti', :git => 'https://github.com/life360/confetti.git'
 pod 'FXBlurView', '~> 1.6'
+pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+#pod 'CSStickyHeaderFlowLayout'
+pod "XCDYouTubeKit", "~> 2.1.1"
+pod 'SDWebImage', '~>3.6'
 end
 
 target 'Dillo DayTests' do

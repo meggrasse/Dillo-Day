@@ -144,6 +144,18 @@
 #define COCOAPODS_VERSION_MINOR_RDVTabBarController 1
 #define COCOAPODS_VERSION_PATCH_RDVTabBarController 9
 
+// SDWebImage
+#define COCOAPODS_POD_AVAILABLE_SDWebImage
+#define COCOAPODS_VERSION_MAJOR_SDWebImage 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage 1
+
+// SDWebImage/Core
+#define COCOAPODS_POD_AVAILABLE_SDWebImage_Core
+#define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage_Core 1
+
 // SMCalloutView
 #define COCOAPODS_POD_AVAILABLE_SMCalloutView
 #define COCOAPODS_VERSION_MAJOR_SMCalloutView 2
@@ -168,3 +180,19 @@
 #define COCOAPODS_VERSION_MINOR_UIColor_BFPaperColors 3
 #define COCOAPODS_VERSION_PATCH_UIColor_BFPaperColors 1
 
+// XCDYouTubeKit
+#define COCOAPODS_POD_AVAILABLE_XCDYouTubeKit
+#define COCOAPODS_VERSION_MAJOR_XCDYouTubeKit 2
+#define COCOAPODS_VERSION_MINOR_XCDYouTubeKit 1
+#define COCOAPODS_VERSION_PATCH_XCDYouTubeKit 1
+
+// Debug build configuration
+#ifdef DEBUG
+
+  // Reveal-iOS-SDK
+  #define COCOAPODS_POD_AVAILABLE_Reveal_iOS_SDK
+  #define COCOAPODS_VERSION_MAJOR_Reveal_iOS_SDK 1
+  #define COCOAPODS_VERSION_MINOR_Reveal_iOS_SDK 5
+  #define COCOAPODS_VERSION_PATCH_Reveal_iOS_SDK 1
+
+#endif
