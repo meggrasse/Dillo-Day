@@ -11,6 +11,7 @@
 #import <RDVTabBarController/RDVTabBarController.h>
 
 #import "LineupViewController.h"
+#import "MapViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,10 +28,19 @@
 //    [lineupVC rdv_setTabBarItem:[LineupViewController tabBarItem]];
     UINavigationController *lineupNavController = [[UINavigationController alloc] initWithRootViewController:lineupVC];
     
-    NSArray *navigationControllerArray = @[lineupNavController];
+    MapViewController *mapVC = [[MapViewController alloc] init];
+    mapVC.title = @"Map";
+    UIViewController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
+    
+    
+    NSArray *navigationControllerArray = @[lineupNavController, mapNavController];
     
     
     UITabBarController *tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
+    UITabBar *tabBar = tabBarController.tabBar;
+    tabBar.translucent = NO;
+    tabBar.barTintColor = [UIColor blackColor];
+    tabBar.tintColor = [UIColor whiteColor];
     [tabBarController setViewControllers:navigationControllerArray];
     
     /*

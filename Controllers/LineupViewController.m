@@ -26,7 +26,7 @@ static NSString *LineupTextHTKCollectionViewCellIdentifier = @"LineupTextHTKColl
     [self configureLineupCollectionView];
     [self configureLineupModel];
     
-    self.title = @"lineup";
+    self.title = @"Lineup";
     
 }
 

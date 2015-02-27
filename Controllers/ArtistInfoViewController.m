@@ -96,17 +96,18 @@ static NSString *ArtistInfoVideoCollectionViewCellIdentifier = @"ArtistInfoVideo
             }];
         }
     } else {
-        CGFloat videoCellWidth = (CGRectGetWidth(self.infoCollectionView.bounds) - 10*3)/2.0;
+        CGFloat videoCellWidth = (CGRectGetWidth(self.infoCollectionView.bounds) - 10*2);
         return CGSizeMake(videoCellWidth, videoCellWidth);
     }
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    if (section == 0) {
-        return UIEdgeInsetsZero;
-    } else if (section == 1) {
-        return UIEdgeInsetsMake(10, 10, 10, 10);
-    } else return UIEdgeInsetsZero;
+    UIEdgeInsets sectionInsets;
+    if (section == 1) {
+        sectionInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+    }
+    
+    return sectionInsets;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
