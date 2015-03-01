@@ -12,6 +12,7 @@
 
 #import "LineupViewController.h"
 #import "MapViewController.h"
+#import "HelpViewController.h"
 
 @interface AppDelegate ()
 
@@ -32,8 +33,11 @@
     mapVC.title = @"Map";
     UIViewController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
     
+    HelpViewController *helpVC = [HelpViewController new];
+    helpVC.title = @"Emergency";
+    UIViewController *helpNavController = [[UINavigationController alloc] initWithRootViewController:helpVC];
     
-    NSArray *navigationControllerArray = @[lineupNavController, mapNavController];
+    NSArray *navigationControllerArray = @[lineupNavController, mapNavController, helpNavController];
     
     
     UITabBarController *tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];

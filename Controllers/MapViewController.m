@@ -27,7 +27,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    if (!self.mapView) {
+    if (!_mapView) {
         [self configureMap];
     }
 }
