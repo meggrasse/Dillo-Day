@@ -29,7 +29,7 @@
 
 - (void)setupCell {
 //    _artistImageView = [[FMParallaxImageView alloc] initForAutoLayout];
-    _artistImageView = [[FMParallaxImageView alloc] initWithFrame:CGRectZero parallaxPercentage:.40];
+    _artistImageView = [[FMParallaxImageView alloc] initWithFrame:CGRectZero parallaxPercentage:.35];
     _artistImageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:_artistImageView];
     _artistImageView.backgroundColor = [UIColor clearColor];
