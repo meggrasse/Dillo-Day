@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NSString *aboutText;
 @property (strong, nonatomic) NSMutableArray *youtubeVideoIds;
 @property (strong, nonatomic) NSMutableArray *youtubeVideos;
+@property (strong, nonatomic) NSString *sponsor;
 
 @end

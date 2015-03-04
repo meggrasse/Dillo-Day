@@ -19,11 +19,13 @@
 
 - (void)setYoutubeVideoIds:(NSMutableArray *)youtubeVideoIds {
     _youtubeVideoIds = youtubeVideoIds;
+    /*
     for (NSString *videoId in youtubeVideoIds) {
         [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:videoId completionHandler:^(XCDYouTubeVideo *video, NSError *error) {
             [self.youtubeVideos addObject:video];
         }];
     }
+     */
 }
 
 @end
