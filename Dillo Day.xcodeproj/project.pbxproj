@@ -24,6 +24,11 @@
 		214C5DA21A8D6114009BC7F0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5DA11A8D6114009BC7F0 /* libsqlite3.dylib */; };
 		214C5DA41A8D611A009BC7F0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5DA31A8D611A009BC7F0 /* Accounts.framework */; };
 		214C5DA61A8D6133009BC7F0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5DA51A8D6133009BC7F0 /* Social.framework */; };
+		214FD6C71AA510E4001D6619 /* LineupCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214FD6C61AA510E4001D6619 /* LineupCollectionViewCell.m */; };
+		214FD6CA1AA5542D001D6619 /* UIFont+SytemFontOverride.m in Sources */ = {isa = PBXBuildFile; fileRef = 214FD6C91AA5542D001D6619 /* UIFont+SytemFontOverride.m */; };
+		214FD6CD1AA558B4001D6619 /* MJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214FD6CB1AA558B4001D6619 /* MJCollectionViewCell.m */; };
+		214FD6CF1AA558FE001D6619 /* MJRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214FD6CE1AA558FE001D6619 /* MJRootViewController.m */; };
+		214FD6D21AA55D9E001D6619 /* FMParallaxImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214FD6D11AA55D9E001D6619 /* FMParallaxImageView.m */; };
 		217946B21A87C96100224737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B11A87C96100224737 /* main.m */; };
 		217946B51A87C96100224737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B41A87C96100224737 /* AppDelegate.m */; };
 		217946BB1A87C96100224737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217946B91A87C96100224737 /* Main.storyboard */; };
@@ -87,6 +92,15 @@
 		214C5DA11A8D6114009BC7F0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		214C5DA31A8D611A009BC7F0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		214C5DA51A8D6133009BC7F0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		214FD6C51AA510E4001D6619 /* LineupCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineupCollectionViewCell.h; sourceTree = "<group>"; };
+		214FD6C61AA510E4001D6619 /* LineupCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineupCollectionViewCell.m; sourceTree = "<group>"; };
+		214FD6C81AA5542D001D6619 /* UIFont+SytemFontOverride.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+SytemFontOverride.h"; sourceTree = "<group>"; };
+		214FD6C91AA5542D001D6619 /* UIFont+SytemFontOverride.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SytemFontOverride.m"; sourceTree = "<group>"; };
+		214FD6CB1AA558B4001D6619 /* MJCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCollectionViewCell.m; sourceTree = "<group>"; };
+		214FD6CC1AA558B4001D6619 /* MJCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCollectionViewCell.h; sourceTree = "<group>"; };
+		214FD6CE1AA558FE001D6619 /* MJRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRootViewController.m; sourceTree = "<group>"; };
+		214FD6D01AA55D9E001D6619 /* FMParallaxImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMParallaxImageView.h; sourceTree = "<group>"; };
+		214FD6D11AA55D9E001D6619 /* FMParallaxImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMParallaxImageView.m; sourceTree = "<group>"; };
 		217946AC1A87C96100224737 /* Dillo Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dillo Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		217946B01A87C96100224737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217946B11A87C96100224737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -265,6 +279,8 @@
 		217946AE1A87C96100224737 /* Dillo Day */ = {
 			isa = PBXGroup;
 			children = (
+				214FD6C81AA5542D001D6619 /* UIFont+SytemFontOverride.h */,
+				214FD6C91AA5542D001D6619 /* UIFont+SytemFontOverride.m */,
 				217D91C91A9DAA25006F3ABB /* DDPrefixHeader.pch */,
 				217D91D21A9E65F0006F3ABB /* DDConstants.h */,
 				217D91D31A9E65F0006F3ABB /* DDConstants.m */,
@@ -311,6 +327,7 @@
 				21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */,
 				2139036C1A994EF90037BB5E /* LineupViewController.h */,
 				2139036D1A994EF90037BB5E /* LineupViewController.m */,
+				214FD6CE1AA558FE001D6619 /* MJRootViewController.m */,
 				219893931A9FE59F006257F5 /* MapViewController.h */,
 				219893941A9FE59F006257F5 /* MapViewController.m */,
 				219893961AA1173B006257F5 /* HelpViewController.h */,
@@ -332,6 +349,8 @@
 		217946E61A88004B00224737 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				214FD6D01AA55D9E001D6619 /* FMParallaxImageView.h */,
+				214FD6D11AA55D9E001D6619 /* FMParallaxImageView.m */,
 				217D91CB1A9DAC42006F3ABB /* Navigation */,
 				217D91CA1A9DAC36006F3ABB /* Artist Info */,
 				21EFF9A91A97CFDA00F225ED /* Lineup Views */,
@@ -445,6 +464,10 @@
 		21EFF9A91A97CFDA00F225ED /* Lineup Views */ = {
 			isa = PBXGroup;
 			children = (
+				214FD6CC1AA558B4001D6619 /* MJCollectionViewCell.h */,
+				214FD6CB1AA558B4001D6619 /* MJCollectionViewCell.m */,
+				214FD6C51AA510E4001D6619 /* LineupCollectionViewCell.h */,
+				214FD6C61AA510E4001D6619 /* LineupCollectionViewCell.m */,
 				21EFF9AA1A97D05600F225ED /* LineupTextHTKCollectionViewCell.h */,
 				21EFF9AB1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m */,
 			);
@@ -599,22 +622,27 @@
 			files = (
 				2139036E1A994EF90037BB5E /* LineupViewController.m in Sources */,
 				21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */,
+				214FD6CF1AA558FE001D6619 /* MJRootViewController.m in Sources */,
 				217946D81A87FAB900224737 /* DDViewController.m in Sources */,
 				21417F821A998F7B00A02B25 /* ArtistInfoViewController.m in Sources */,
 				217946B51A87C96100224737 /* AppDelegate.m in Sources */,
 				217947901A88200F00224737 /* SocialCSViewController.m in Sources */,
 				217946E51A88004800224737 /* DirectionLabelView.m in Sources */,
 				219893951A9FE59F006257F5 /* MapViewController.m in Sources */,
+				214FD6CA1AA5542D001D6619 /* UIFont+SytemFontOverride.m in Sources */,
 				212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */,
 				2179478D1A88200200224737 /* MapCSViewController.m in Sources */,
 				217946B21A87C96100224737 /* main.m in Sources */,
 				217946E21A87FFCE00224737 /* MainCSViewController.m in Sources */,
 				21EF15F91A8EB1EC0022953A /* NSStack.m in Sources */,
 				217947931A88201E00224737 /* HelpCSViewController.m in Sources */,
+				214FD6CD1AA558B4001D6619 /* MJCollectionViewCell.m in Sources */,
 				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
 				21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */,
 				219893981AA1173B006257F5 /* HelpViewController.m in Sources */,
+				214FD6C71AA510E4001D6619 /* LineupCollectionViewCell.m in Sources */,
 				21EF159D1A8EAF270022953A /* NavigationTreeView.m in Sources */,
+				214FD6D21AA55D9E001D6619 /* FMParallaxImageView.m in Sources */,
 				217D91CE1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m in Sources */,
 				219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */,
 				217D91D11A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.m in Sources */,

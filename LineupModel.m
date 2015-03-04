@@ -75,6 +75,7 @@
                         @"_t2TzJOyops"];
     
 
+    NSString *sponsor = @"Sollicitudin Inceptos Malesuada";
     
     for (int i = 0; i < [artistNames count]; i++) {
         Artist *newArtist = [Artist new];
@@ -84,6 +85,7 @@
         newArtist.smallImage = smallPics[i];
         newArtist.aboutText = artistText;
         newArtist.youtubeVideoIds = videoIds;
+        newArtist.sponsor = sponsor;
         [self.lineupArray addObject:newArtist];
     }
 }
