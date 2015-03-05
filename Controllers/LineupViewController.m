@@ -120,7 +120,7 @@ static NSString *LineupCollectionViewCellIdentifier = @"LineupCollectionViewCell
 
 - (void)updateLineupCollectionViewCellParallax:(LineupCollectionViewCell *)cell {
     CGFloat yDifference = 2 * (CGRectGetMidY(self.lineupCollectionView.bounds) - CGRectGetMidY(cell.frame))/CGRectGetHeight(self.lineupCollectionView.bounds);
-    cell.imageOffset = CGPointMake(0, yDifference);
+    cell.imageOffset = CGPointMake(0, -yDifference);
 }
 
 #pragma mark - Helper Methods
