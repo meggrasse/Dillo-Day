@@ -28,6 +28,7 @@ static NSString *LineupCollectionViewCellIdentifier = @"LineupCollectionViewCell
     [self configureLineupCollectionView];
     [self configureLineupModel];
     
+    
     self.title = @"Lineup";
     
 }
@@ -84,7 +85,7 @@ static NSString *LineupCollectionViewCellIdentifier = @"LineupCollectionViewCell
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(CGRectGetWidth(self.lineupCollectionView.bounds), 215);
+    return CGSizeMake(CGRectGetWidth(self.lineupCollectionView.bounds), 275);
 }
 
 /*

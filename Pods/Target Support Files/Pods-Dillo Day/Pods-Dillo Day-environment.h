@@ -54,6 +54,12 @@
 #define COCOAPODS_VERSION_MINOR_BlocksKit_UIKit 2
 #define COCOAPODS_VERSION_PATCH_BlocksKit_UIKit 5
 
+// CSStickyHeaderFlowLayout
+#define COCOAPODS_POD_AVAILABLE_CSStickyHeaderFlowLayout
+#define COCOAPODS_VERSION_MAJOR_CSStickyHeaderFlowLayout 0
+#define COCOAPODS_VERSION_MINOR_CSStickyHeaderFlowLayout 2
+#define COCOAPODS_VERSION_PATCH_CSStickyHeaderFlowLayout 4
+
 // Colours
 #define COCOAPODS_POD_AVAILABLE_Colours
 #define COCOAPODS_VERSION_MAJOR_Colours 5
@@ -131,6 +137,12 @@
 #define COCOAPODS_VERSION_MAJOR_NSAttributedString_CCLFormat 1
 #define COCOAPODS_VERSION_MINOR_NSAttributedString_CCLFormat 0
 #define COCOAPODS_VERSION_PATCH_NSAttributedString_CCLFormat 1
+
+// NYSegmentedControl
+#define COCOAPODS_POD_AVAILABLE_NYSegmentedControl
+#define COCOAPODS_VERSION_MAJOR_NYSegmentedControl 1
+#define COCOAPODS_VERSION_MINOR_NYSegmentedControl 0
+#define COCOAPODS_VERSION_PATCH_NYSegmentedControl 3
 
 // PureLayout
 #define COCOAPODS_POD_AVAILABLE_PureLayout

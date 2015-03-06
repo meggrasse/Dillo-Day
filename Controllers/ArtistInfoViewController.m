@@ -10,6 +10,9 @@
 #import "ArtistInfoHeaderHTKCollectionReusableViewCell.h"
 #import "ArtistInfoAboutHTKCollectionViewCell.h"
 #import "ArtistInfoVideoCollectionViewCell.h"
+#import "ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h"
+
+#import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 
 @interface ArtistInfoViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) UICollectionView *infoCollectionView;
@@ -19,6 +22,7 @@
 static NSString *ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier = @"ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier";
 static NSString *ArtistInfoAboutHTKCollectionViewCellIdentifier = @"ArtistInfoAboutHTKCollectionViewCellIdentifier";
 static NSString *ArtistInfoVideoCollectionViewCellIdentifier = @"ArtistInfoVideoCollectionViewCellIdentifier";
+static NSString *ArtistInfoAlwaysOnTopHeaderCollectionViewCellIdentifier = @"ArtistInfoAlwaysOnTopHeaderCollectionViewCellIdentifier";
 
 @implementation ArtistInfoViewController
 
@@ -26,17 +30,32 @@ static NSString *ArtistInfoVideoCollectionViewCellIdentifier = @"ArtistInfoVideo
     [super viewDidLoad];
     [self configureInfoCollectionView];
     // Do any additional setup after loading the view.
+//    [self.navigationController setNavigationBarHidden:YES];
+    self.navigationController.navigationBar.clipsToBounds = YES;
 }
 
 - (void)configureInfoCollectionView {
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumLineSpacing = 0;
+//    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    CSStickyHeaderFlowLayout *layout = [CSStickyHeaderFlowLayout new];
+    layout.minimumLineSpacing = 0;
     
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    
+    if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
+        layout.parallaxHeaderReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 300);
+        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 44);
+        layout.parallaxHeaderAlwaysOnTop = YES;
+        
+        // If we want to disable the sticky header effect
+        layout.disableStickyHeaders = YES;
+    }
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     self.infoCollectionView = collectionView;
     
+    collectionView.contentInset = UIEdgeInsetsZero;
     collectionView.translatesAutoresizingMaskIntoConstraints = NO;
     collectionView.alwaysBounceVertical = YES;
+    collectionView.clipsToBounds = YES;
     
     collectionView.delegate = self;
     collectionView.dataSource = self;
@@ -49,20 +68,25 @@ static NSString *ArtistInfoVideoCollectionViewCellIdentifier = @"ArtistInfoVideo
     [collectionView registerClass:[ArtistInfoHeaderHTKCollectionReusableViewCell class] forCellWithReuseIdentifier:ArtistInfoHeaderHTKCollectionReusableViewCellIdentifier];
     [collectionView registerClass:[ArtistInfoAboutHTKCollectionViewCell class] forCellWithReuseIdentifier:ArtistInfoAboutHTKCollectionViewCellIdentifier];
     [collectionView registerClass:[ArtistInfoVideoCollectionViewCell class] forCellWithReuseIdentifier:ArtistInfoVideoCollectionViewCellIdentifier];
+    [collectionView registerClass:[ArtistInfoAlwaysOnTopHeaderCollectionViewCell class] forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader withReuseIdentifier:ArtistInfoAlwaysOnTopHeaderCollectionViewCellIdentifier];
+    
+    [collectionView registerNib:[UINib nibWithNibName:@"CSAlwaysOnTopHeader" bundle:nil]
+          forSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
+                 withReuseIdentifier:@"header"];
+
     
 //    [self.collectionView registerClass:[LineupTextHTKCollectionViewCell class] forCellWithReuseIdentifier:LineupTextHTKCollectionViewCellIdentifier];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 2;
-    } else return [self.artist.youtubeVideos count];
+    return 1;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
+/*
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
@@ -83,32 +107,44 @@ static NSString *ArtistInfoVideoCollectionViewCellIdentifier = @"ArtistInfoVideo
     }
     
 }
+ */
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            return CGSizeMake(CGRectGetWidth(self.infoCollectionView.bounds), 275);
-        } else {
-            CGSize defaultSize = DEFAULT_ARTIST_INFO_ABOUT_CELL_SIZE;
-            return [ArtistInfoAboutHTKCollectionViewCell sizeForCellWithDefaultSize:defaultSize setupCellBlock:^id(id<HTKDynamicResizingCellProtocol> cellToSetup) {
-                [(ArtistInfoAboutHTKCollectionViewCell*)cellToSetup setupCelWithArtist:self.artist];
-                return cellToSetup;
-            }];
-        }
-    } else {
-        CGFloat videoCellWidth = (CGRectGetWidth(self.infoCollectionView.bounds) - 10*2);
-        return CGSizeMake(videoCellWidth, videoCellWidth);
-    }
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    ArtistInfoAboutHTKCollectionViewCell *artistAboutCell = [collectionView dequeueReusableCellWithReuseIdentifier:ArtistInfoAboutHTKCollectionViewCellIdentifier forIndexPath:indexPath];
+    [artistAboutCell setupCelWithArtist:self.artist];
+    
+    return artistAboutCell;
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    UIEdgeInsets sectionInsets;
-    if (section == 1) {
-        sectionInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:CSStickyHeaderParallaxHeader]) {
+        NSString *identifier = ArtistInfoAlwaysOnTopHeaderCollectionViewCellIdentifier;
+//        NSString *identifier = @"header";
+        UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                                            withReuseIdentifier:identifier
+                                                                                   forIndexPath:indexPath];
+        if ([cell isMemberOfClass:[ArtistInfoAlwaysOnTopHeaderCollectionViewCell class]]) {
+            [((ArtistInfoAlwaysOnTopHeaderCollectionViewCell *)cell) setupCellWithArtist:self.artist];
+        }
+        
+        return cell;
     }
     
-    return sectionInsets;
+    return nil;
+
 }
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGSize defaultSize = DEFAULT_ARTIST_INFO_ABOUT_CELL_SIZE;
+    CGSize cellSize = [ArtistInfoAboutHTKCollectionViewCell sizeForCellWithDefaultSize:defaultSize setupCellBlock:^id(id<HTKDynamicResizingCellProtocol> cellToSetup) {
+        [(ArtistInfoAboutHTKCollectionViewCell*)cellToSetup setupCelWithArtist:self.artist];
+        return cellToSetup;
+
+    }];
+    
+    return cellSize;
+}
+
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     CGFloat minimumLineSpacing;

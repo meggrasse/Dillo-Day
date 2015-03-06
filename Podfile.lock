@@ -18,6 +18,7 @@ PODS:
     - BlocksKit/DynamicDelegate
   - BOString (0.0.9)
   - Colours (5.6.1)
+  - CSStickyHeaderFlowLayout (0.2.4)
   - FMDB (2.3):
     - FMDB/standard
   - FMDB/common (2.3)
@@ -36,6 +37,7 @@ PODS:
     - SMCalloutView (= 2.0)
   - Masonry (0.6.1)
   - NSAttributedString+CCLFormat (1.0.1)
+  - NYSegmentedControl (1.0.3)
   - PureLayout (2.0.5)
   - RDVTabBarController (1.1.9)
   - Reveal-iOS-SDK (1.5.1)
@@ -53,6 +55,7 @@ DEPENDENCIES:
   - BlocksKit
   - BOString (~> 0.0)
   - Colours (~> 5.6)
+  - CSStickyHeaderFlowLayout (~> 0.2)
   - FXBlurView (~> 1.6)
   - HTHorizontalSelectionList (~> 0.3.1)
   - HTKDynamicResizingCell (~> 0.0.1)
@@ -60,6 +63,7 @@ DEPENDENCIES:
   - Mapbox-iOS-SDK
   - Masonry
   - NSAttributedString+CCLFormat
+  - NYSegmentedControl
   - PureLayout
   - RDVTabBarController
   - Reveal-iOS-SDK
@@ -77,6 +81,7 @@ SPEC CHECKSUMS:
   BlocksKit: 4439e7f30a9f90743462ca63545a15c1f4304cef
   BOString: 340630743b6d43d85bae29abe678cbc619f170e7
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
+  CSStickyHeaderFlowLayout: 739e87ee20cfe0c67b49d606ce47bd1f2b6efc9c
   FMDB: 31ec26773c7f7b7890a6038235a1f2bbd933a7cb
   FXBlurView: abe1046285813c4f6e9008abbc324fc5ab32af90
   GRMustache: efecd3b603f0a7a99cf6bdf3998782ee0c465726
@@ -87,6 +92,7 @@ SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 189a35013e100f1464cd2f9f6c489d6326fbb927
   Masonry: 2cb49fd14d203d2db5ca6bb017135b235dde9980
   NSAttributedString+CCLFormat: 2a86edf8354db227bb3964c12b5f9572bab512f2
+  NYSegmentedControl: 74094b886a80bfc4e9f6d415601e9b11797b22b7
   PureLayout: 63a3257320223e8edddcd3afb407445f85a6bf74
   RDVTabBarController: c1c826e2d2f2e26a5221e425a646d295b9dfe936
   Reveal-iOS-SDK: dcfeb671c7da222c85f18f866da2ce88de075524

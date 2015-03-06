@@ -20,6 +20,9 @@ pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 #pod 'CSStickyHeaderFlowLayout'
 pod "XCDYouTubeKit", "~> 2.1.1"
 pod 'SDWebImage', '~>3.6'
+pod 'NYSegmentedControl'
+pod 'CSStickyHeaderFlowLayout', '~> 0.2'
+
 end
 
 target 'Dillo DayTests' do

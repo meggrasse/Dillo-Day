@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */; };
+		212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */; };
+		212028681AA842B500E9E028 /* DilloDayStyleSheet.nss in Resources */ = {isa = PBXBuildFile; fileRef = 212028671AA842B500E9E028 /* DilloDayStyleSheet.nss */; };
 		212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */; };
 		2139036E1A994EF90037BB5E /* LineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2139036D1A994EF90037BB5E /* LineupViewController.m */; };
 		21417F821A998F7B00A02B25 /* ArtistInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */; };
@@ -72,6 +75,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212028511AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m; sourceTree = "<group>"; wrapsLines = 0; };
+		212028641AA8362B00E9E028 /* UIView+FindUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindUIViewController.h"; sourceTree = "<group>"; };
+		212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindUIViewController.m"; sourceTree = "<group>"; };
+		212028671AA842B500E9E028 /* DilloDayStyleSheet.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DilloDayStyleSheet.nss; sourceTree = "<group>"; };
 		212CFAAD1A89AEEC00BCFC90 /* FMDirectionTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDirectionTransition.h; sourceTree = "<group>"; };
 		212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDirectionTransition.m; sourceTree = "<group>"; };
 		2139036C1A994EF90037BB5E /* LineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineupViewController.h; sourceTree = "<group>"; };
@@ -279,6 +287,8 @@
 		217946AE1A87C96100224737 /* Dillo Day */ = {
 			isa = PBXGroup;
 			children = (
+				212028641AA8362B00E9E028 /* UIView+FindUIViewController.h */,
+				212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */,
 				214FD6C81AA5542D001D6619 /* UIFont+SytemFontOverride.h */,
 				214FD6C91AA5542D001D6619 /* UIFont+SytemFontOverride.m */,
 				217D91C91A9DAA25006F3ABB /* DDPrefixHeader.pch */,
@@ -286,6 +296,7 @@
 				217D91D31A9E65F0006F3ABB /* DDConstants.m */,
 				217946B31A87C96100224737 /* AppDelegate.h */,
 				217946B41A87C96100224737 /* AppDelegate.m */,
+				212028671AA842B500E9E028 /* DilloDayStyleSheet.nss */,
 				217946B91A87C96100224737 /* Main.storyboard */,
 				217946BC1A87C96100224737 /* Images.xcassets */,
 				217946BE1A87C96100224737 /* LaunchScreen.xib */,
@@ -381,6 +392,8 @@
 				217D91CD1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m */,
 				219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */,
 				219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */,
+				212028511AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h */,
+				212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */,
 			);
 			name = "Artist Info";
 			sourceTree = "<group>";
@@ -568,6 +581,7 @@
 			files = (
 				217946BB1A87C96100224737 /* Main.storyboard in Resources */,
 				217946C01A87C96100224737 /* LaunchScreen.xib in Resources */,
+				212028681AA842B500E9E028 /* DilloDayStyleSheet.nss in Resources */,
 				217946BD1A87C96100224737 /* Images.xcassets in Resources */,
 				219AD4721A9A458500C9E5A6 /* Promposal.xib in Resources */,
 			);
@@ -620,11 +634,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */,
 				2139036E1A994EF90037BB5E /* LineupViewController.m in Sources */,
 				21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */,
 				214FD6CF1AA558FE001D6619 /* MJRootViewController.m in Sources */,
 				217946D81A87FAB900224737 /* DDViewController.m in Sources */,
 				21417F821A998F7B00A02B25 /* ArtistInfoViewController.m in Sources */,
+				212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */,
 				217946B51A87C96100224737 /* AppDelegate.m in Sources */,
 				217947901A88200F00224737 /* SocialCSViewController.m in Sources */,
 				217946E51A88004800224737 /* DirectionLabelView.m in Sources */,

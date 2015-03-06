@@ -29,10 +29,11 @@
 
 - (void)setupCell {
 //    _artistImageView = [[FMParallaxImageView alloc] initForAutoLayout];
-    _artistImageView = [[FMParallaxImageView alloc] initWithFrame:CGRectZero parallaxPercentage:.35];
-    _artistImageView.translatesAutoresizingMaskIntoConstraints = NO;
+//    _artistImageView = [[FMParallaxImageView alloc] initWithFrame:CGRectZero parallaxPercentage:.35];
+//    _artistImageView = [[FMParallaxImageView alloc] initForAutoLayoutWithParallaxPercentage:0.35];
+    _artistImageView = [[FMParallaxImageView alloc] initForAutoLayoutwithParallaxDistance:50];
     [self addSubview:_artistImageView];
-    _artistImageView.backgroundColor = [UIColor clearColor];
+    _artistImageView.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:.2];
     _artistImageView.contentMode = UIViewContentModeScaleAspectFill;
     _artistImageView.clipsToBounds = YES;
     
