@@ -646,11 +646,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Views/ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m"
-            timestampString = "447234301.105301"
+            timestampString = "447310118.355546"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "@implementation ArtistInfoAlwaysOnTopHeaderCollectionViewCell"
             landmarkType = "3">
          </BreakpointContent>
@@ -756,11 +756,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Views/ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m"
-            timestampString = "447234210.65801"
+            timestampString = "447310118.355546"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "-setupCell"
             landmarkType = "5">
          </BreakpointContent>

@@ -12,6 +12,8 @@
 #import <FXBlurView/FXBlurView.h>
 #import "UIView+FindUIViewController.h"
 
+#import <Colours/Colours.h>
+
 @interface ArtistInfoAlwaysOnTopHeaderCollectionViewCell()
 
 @property (strong, nonatomic) UIImageView *artistImageView;
@@ -23,6 +25,8 @@
 
 @property (weak, nonatomic) UIViewController *viewController;
 @property (strong, nonatomic) UIImage *shadowBarImage;
+@property (strong, nonatomic) FXBlurView *collapsedView;
+@property (strong, nonatomic) UILabel *collapsedArtistLabel;
 @end
 
 
@@ -50,6 +54,13 @@
     [self addSubview:self.itemView];
     self.itemView.backgroundColor = [UIColor clearColor];
     
+    self.collapsedView = [[FXBlurView alloc] initForAutoLayout];
+    [self addSubview:self.collapsedView];
+    self.collapsedView.blurEnabled = NO;
+    self.collapsedView.dynamic = YES;
+    self.collapsedView.tintColor = [UIColor blackColor];
+    self.collapsedView.underlyingView = self.backgroundImageView;
+    
     self.navigationBarConnector = [[UIView alloc] initForAutoLayout];
     [self addSubview:self.navigationBarConnector];
 //    self.navigationBarConnector.backgroundColor = self.viewController.navigationController.navigationBar.backgroundColor;
@@ -61,7 +72,18 @@
     [self.segmentedControl insertSegmentWithTitle:@"About" atIndex:0];
     [self.segmentedControl insertSegmentWithTitle:@"Music" atIndex:1];
     [self.segmentedControl insertSegmentWithTitle:@"Misc" atIndex:2];
-    
+    CGFloat segmentedControlHeight = 44;
+    self.segmentedControl.cornerRadius = segmentedControlHeight/2.0;
+    self.segmentedControl.borderColor = [UIColor clearColor];
+    self.segmentedControl.borderWidth = 0;
+    self.segmentedControl.segmentIndicatorBorderWidth = 0;
+    self.segmentedControl.drawsGradientBackground = NO;
+    self.segmentedControl.drawsSegmentIndicatorGradientBackground = NO;
+    self.segmentedControl.backgroundColor = [UIColor waveColor];
+    self.segmentedControl.segmentIndicatorBackgroundColor = [UIColor whiteColor];
+    self.segmentedControl.titleTextColor = self.segmentedControl.segmentIndicatorBackgroundColor;
+    self.segmentedControl.selectedTitleTextColor = self.segmentedControl.backgroundColor;
+    self.segmentedControl.segmentIndicatorInset = 1;
     self.artistImageView = [[UIImageView alloc] initForAutoLayout];
     [self.itemView addSubview:self.artistImageView];
     self.artistImageView.clipsToBounds = YES;
@@ -75,8 +97,19 @@
     self.artistLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.artistLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.itemView.bounds) - 20;
     
+    self.collapsedArtistLabel = [[UILabel alloc] initForAutoLayout];
+    [self.collapsedView addSubview:self.collapsedArtistLabel];
+    self.collapsedArtistLabel.textColor = [UIColor blackColor];
+    self.collapsedArtistLabel.numberOfLines = 1;
+    self.collapsedArtistLabel.font = [UIFont systemFontOfSize:40];
+    self.collapsedArtistLabel.adjustsFontSizeToFitWidth = YES;
+    self.collapsedArtistLabel.minimumScaleFactor = 0.1;
+    self.collapsedArtistLabel.textAlignment = NSTextAlignmentCenter;
+    self.collapsedArtistLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    self.collapsedArtistLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.itemView.bounds) - 10;
+    
     [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
-        CGFloat segmentedControlHeight = 44;
+        
         [self.segmentedControl autoAlignAxisToSuperviewAxis:ALAxisVertical];
         [self.segmentedControl autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
         [self.segmentedControl autoSetDimensionsToSize:CGSizeMake(250, segmentedControlHeight)];
@@ -100,6 +133,15 @@
         
         [self.navigationBarConnector autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
         [self.navigationBarConnector autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.segmentedControl withOffset:segmentedControlHeight/2.0];
+        
+        [self.collapsedArtistLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+        [self.collapsedArtistLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [self.collapsedArtistLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:5 relation:NSLayoutRelationGreaterThanOrEqual];
+        [self.collapsedArtistLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:5 relation:NSLayoutRelationGreaterThanOrEqual];
+        [self.collapsedArtistLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:5 relation:NSLayoutRelationGreaterThanOrEqual];
+        [self.collapsedArtistLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:5 relation:NSLayoutRelationGreaterThanOrEqual];
+        [self.collapsedView autoSetDimension:ALDimensionHeight toSize:70];
+        [self.collapsedView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
     }];
     
     [UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
@@ -112,21 +154,30 @@
     self.backgroundImageView.image = [artist.bigImage blurredImageWithRadius:10 iterations:10 tintColor:[UIColor blackColor]];
     self.artistImageView.image = artist.smallImage;
     self.artistLabel.text = artist.name;
+    self.collapsedArtistLabel.text = artist.name;
+    [self.segmentedControl sizeToFit];
 }
 
 - (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes {
+//    NSLog(@"%@", NSStringFromCGRect(self.bounds));
     if (!self.shadowBarImage) {
         self.shadowBarImage = self.viewController.navigationController.navigationBar.shadowImage;
     }
     
-    CGFloat navigationBarConnectorAppearingThreshold = .20;
+    CGFloat navigationBarConnectorAppearingThreshold = .25;
     if (layoutAttributes.progressiveness < navigationBarConnectorAppearingThreshold) {
-        self.navigationBarConnector.alpha = (navigationBarConnectorAppearingThreshold - layoutAttributes.progressiveness)/navigationBarConnectorAppearingThreshold;
-        [self.viewController.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-        [self.viewController.navigationController.navigationBar setShadowImage:[UIImage new]];
+        CGFloat alpha = (navigationBarConnectorAppearingThreshold - layoutAttributes.progressiveness)/navigationBarConnectorAppearingThreshold;
+//        self.navigationBarConnector.alpha = alpha;
+//        self.collapsedArtistLabel.alpha = alpha;
+        self.collapsedView.alpha = alpha;
+//        [self.viewController.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//        [self.viewController.navigationController.navigationBar setShadowImage:[UIImage new]];
     } else {
-        self.navigationBarConnector.alpha = 0;
-        [self.viewController.navigationController.navigationBar setShadowImage:self.shadowBarImage];
+//        self.navigationBarConnector.alpha = self.collapsedArtistLabel.alpha = 0;
+        self.collapsedView.alpha = self.collapsedView.blurRadius = 0;
+
+//        self.collapsedArtistLabel.alpha = 0;
+//        [self.viewController.navigationController.navigationBar setShadowImage:self.shadowBarImage];
     }
 }
 

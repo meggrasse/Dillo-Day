@@ -27,7 +27,7 @@ static NSString *LineupCollectionViewCellIdentifier = @"LineupCollectionViewCell
     [super viewDidLoad];
     [self configureLineupCollectionView];
     [self configureLineupModel];
-    
+    self.navigationController.navigationBar.translucent = NO;
     
     self.title = @"Lineup";
     

@@ -31,7 +31,7 @@ static NSString *ArtistInfoAlwaysOnTopHeaderCollectionViewCellIdentifier = @"Art
     [self configureInfoCollectionView];
     // Do any additional setup after loading the view.
 //    [self.navigationController setNavigationBarHidden:YES];
-    self.navigationController.navigationBar.clipsToBounds = YES;
+//    self.navigationController.navigationBar.clipsToBounds = YES;
 }
 
 - (void)configureInfoCollectionView {
@@ -42,7 +42,7 @@ static NSString *ArtistInfoAlwaysOnTopHeaderCollectionViewCellIdentifier = @"Art
     
     if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
         layout.parallaxHeaderReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 300);
-        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 44);
+        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 44+70);
         layout.parallaxHeaderAlwaysOnTop = YES;
         
         // If we want to disable the sticky header effect
