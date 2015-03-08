@@ -83,9 +83,11 @@
     self.segmentedControl.titleTextColor = self.segmentedControl.segmentIndicatorBackgroundColor;
     self.segmentedControl.selectedTitleTextColor = self.segmentedControl.backgroundColor;
     self.segmentedControl.segmentIndicatorInset = 1;
+    
     self.artistImageView = [[UIImageView alloc] initForAutoLayout];
     [self.itemView addSubview:self.artistImageView];
     self.artistImageView.clipsToBounds = YES;
+    self.artistImageView.contentMode = UIViewContentModeScaleAspectFill;
     
     self.artistLabel = [[UILabel alloc] initForAutoLayout];
     [self.itemView addSubview:self.artistLabel];

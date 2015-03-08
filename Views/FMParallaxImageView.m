@@ -22,7 +22,7 @@
 
 - (id)initForAutoLayoutwithParallaxDistance:(CGFloat)distance {
     if (self = [super initForAutoLayout]) {
-         NSLog(@"%@", NSStringFromCGRect(self.bounds));
+//         NSLog(@"%@", NSStringFromCGRect(self.bounds));
         self.distance = distance;
         self.imageView = [[UIImageView alloc] initForAutoLayout];
         self.imageView.contentMode = UIViewContentModeScaleAspectFill;

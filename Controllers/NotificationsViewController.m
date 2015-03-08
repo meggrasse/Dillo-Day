@@ -75,9 +75,11 @@ static NSString *NotificationHTKCollectionViewCellIdentifier = @"NotificationHTK
         [(NotificationHTKCollectionViewCell*)cellToSetup setupCellWithNotification:[self.notificationModel notificationForRowAtIndexPath:indexPath]];
         return cellToSetup;
     }];
-    Notification *notification = [self.notificationModel notificationForRowAtIndexPath:indexPath];
-//    NSLog(@"%@: %@", notification.message, NSStringFromCGSize(cellSize));
     return cellSize;
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsZero;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
