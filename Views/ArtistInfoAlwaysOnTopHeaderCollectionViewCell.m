@@ -74,12 +74,11 @@
     [self.segmentedControl insertSegmentWithTitle:@"Misc" atIndex:2];
     CGFloat segmentedControlHeight = 44;
     self.segmentedControl.cornerRadius = segmentedControlHeight/2.0;
-    self.segmentedControl.borderColor = [UIColor clearColor];
     self.segmentedControl.borderWidth = 0;
     self.segmentedControl.segmentIndicatorBorderWidth = 0;
     self.segmentedControl.drawsGradientBackground = NO;
     self.segmentedControl.drawsSegmentIndicatorGradientBackground = NO;
-    self.segmentedControl.backgroundColor = [UIColor waveColor];
+    self.segmentedControl.backgroundColor = [UIColor blackColor];
     self.segmentedControl.segmentIndicatorBackgroundColor = [UIColor whiteColor];
     self.segmentedControl.titleTextColor = self.segmentedControl.segmentIndicatorBackgroundColor;
     self.segmentedControl.selectedTitleTextColor = self.segmentedControl.backgroundColor;

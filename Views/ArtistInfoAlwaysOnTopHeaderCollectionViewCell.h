@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Artist.h"
+#import "ArtistInfoViewController.h"
+
+@class ArtistInfoAlwaysOnTopHeaderCollectionViewCell;
+
+@protocol ArtistInfoAlwaysOnHeaderTopDelegate <NSObject>
+@required
+- (void)displayArtistInfo:(ArtistInfoType)type;
+@end
 
 @interface ArtistInfoAlwaysOnTopHeaderCollectionViewCell : UICollectionViewCell
 - (void)setupCellWithArtist:(Artist *)artist;

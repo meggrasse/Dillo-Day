@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Artist.h"
 
+typedef enum NSUInteger {
+    ArtistInfoTypeBio = 0,
+    ArtistInfoTypeMusic,
+    ArtistInfoTypeShare
+} ArtistInfoType;
+
 @interface ArtistInfoViewController : UIViewController
 @property (strong, nonatomic) Artist *artist;
 @end

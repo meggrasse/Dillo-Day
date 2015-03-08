@@ -14,8 +14,9 @@
 
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 
-@interface ArtistInfoViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface ArtistInfoViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, ArtistInfoAlwaysOnHeaderTopDelegate>
 @property (strong, nonatomic) UICollectionView *infoCollectionView;
+@property (nonatomic) ArtistInfoType type;
 @end
 
 
@@ -29,6 +30,7 @@ static NSString *ArtistInfoAlwaysOnTopHeaderCollectionViewCellIdentifier = @"Art
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureInfoCollectionView];
+    self.type = ArtistInfoTypeBio;
     // Do any additional setup after loading the view.
 //    [self.navigationController setNavigationBarHidden:YES];
 //    self.navigationController.navigationBar.clipsToBounds = YES;
@@ -163,6 +165,12 @@ static NSString *ArtistInfoAlwaysOnTopHeaderCollectionViewCellIdentifier = @"Art
         [self presentMoviePlayerViewControllerAnimated:playerVC];
     }
 }
+
+#pragma mark - ArtistInfoAlwaysOnTopDelegate
+- (void)displayArtistInfo:(ArtistInfoType)type {
+    
+}
+
 /*
 #pragma mark - Navigation
 
