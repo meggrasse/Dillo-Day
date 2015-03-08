@@ -32,6 +32,7 @@
     self.messageLabel.textAlignment = NSTextAlignmentJustified;
     self.messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.messageLabel.textColor = [UIColor blackColor];
+    self.messageLabel.font = [UIFont systemFontOfSize:18];
     
     [self.contentView addSubview:self.messageLabel];
     

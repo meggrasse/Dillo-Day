@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6370A3FA447ED0EE725E5E1B"
+               BlueprintIdentifier = "18B8A6CB46E408E287E68F0E"
                BuildableName = "libPods-Dillo Day-UIAlertView+Blocks.a"
                BlueprintName = "Pods-Dillo Day-UIAlertView+Blocks"
                ReferencedContainer = "container:Pods.xcodeproj">
