@@ -29,6 +29,7 @@ pod 'BFPaperCheckbox', '~> 1.2.5'
 pod 'Modality', '~> 0.0.1'
 pod 'PromiseKit', '~> 1.4'
 pod 'SVProgressHUD'
+pod 'Realm', '~> 0.91'
 end
 
 target 'Dillo DayTests' do

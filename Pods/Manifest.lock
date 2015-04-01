@@ -85,6 +85,9 @@ PODS:
     - PromiseKit/Promise
   - PureLayout (2.0.5)
   - RDVTabBarController (1.1.9)
+  - Realm (0.91.1):
+    - Realm/Headers (= 0.91.1)
+  - Realm/Headers (0.91.1)
   - Reveal-iOS-SDK (1.5.1)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
@@ -116,6 +119,7 @@ DEPENDENCIES:
   - PromiseKit (~> 1.4)
   - PureLayout
   - RDVTabBarController
+  - Realm (~> 0.91)
   - Reveal-iOS-SDK
   - SDWebImage (~> 3.6)
   - Shimmer (~> 1.0)
@@ -151,6 +155,7 @@ SPEC CHECKSUMS:
   PromiseKit: ea36001b558f42aa104a1422f305b46f8c343f2e
   PureLayout: a0fe75f1cf485801e7e00b723b8a3c32dca558e2
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  Realm: b9c1fd9defa26aa7276ce938a8df52ec81f24528
   Reveal-iOS-SDK: c9c55cad2729c85f6ced415f1b21857c9a2d8ef9
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86

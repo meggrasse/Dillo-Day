@@ -1,7 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86b4bdc0-dc73-441e-b326-9ac1a3e45ecd" name="Default" comment="" />
+    <list default="true" id="86b4bdc0-dc73-441e-b326-9ac1a3e45ecd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/DILFollowArtist.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/DILFollowArtist.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dillo Day.xcworkspace/xcuserdata/pmeyersiv.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Dillo Day.xcworkspace/xcuserdata/pmeyersiv.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dillo Day.xcworkspace/xcuserdata/pmeyersiv.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/Dillo Day.xcworkspace/xcuserdata/pmeyersiv.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m" afterPath="$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/DILLineupViewController.m" afterPath="$PROJECT_DIR$/Controllers/DILLineupViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BFPaperButton/Pods-Dillo Day-BFPaperButton-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BFPaperButton/Pods-Dillo Day-BFPaperButton-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-BFPaperButton.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-BFPaperButton.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BFPaperCheckbox/Pods-Dillo Day-BFPaperCheckbox-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BFPaperCheckbox/Pods-Dillo Day-BFPaperCheckbox-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-BFPaperCheckbox.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-BFPaperCheckbox.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BOString/Pods-Dillo Day-BOString-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BOString/Pods-Dillo Day-BOString-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-BOString.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-BOString.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BlocksKit/Pods-Dillo Day-BlocksKit-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BlocksKit/Pods-Dillo Day-BlocksKit-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-BlocksKit.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-BlocksKit.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-CSStickyHeaderFlowLayout/Pods-Dillo Day-CSStickyHeaderFlowLayout-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-CSStickyHeaderFlowLayout/Pods-Dillo Day-CSStickyHeaderFlowLayout-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-CSStickyHeaderFlowLayout.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-CSStickyHeaderFlowLayout.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Colours/Pods-Dillo Day-Colours-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Colours/Pods-Dillo Day-Colours-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Colours.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Colours.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-FMDB/Pods-Dillo Day-FMDB-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-FMDB/Pods-Dillo Day-FMDB-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-FMDB.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-FMDB.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-FXBlurView/Pods-Dillo Day-FXBlurView-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-FXBlurView/Pods-Dillo Day-FXBlurView-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-FXBlurView.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-FXBlurView.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-FontasticIcons/Pods-Dillo Day-FontasticIcons-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-FontasticIcons/Pods-Dillo Day-FontasticIcons-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-FontasticIcons.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-FontasticIcons.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-GRMustache/Pods-Dillo Day-GRMustache-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-GRMustache/Pods-Dillo Day-GRMustache-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-GRMustache.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-GRMustache.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-HTHorizontalSelectionList/Pods-Dillo Day-HTHorizontalSelectionList-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-HTHorizontalSelectionList/Pods-Dillo Day-HTHorizontalSelectionList-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-HTHorizontalSelectionList.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-HTHorizontalSelectionList.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-HTKDynamicResizingCell/Pods-Dillo Day-HTKDynamicResizingCell-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-HTKDynamicResizingCell/Pods-Dillo Day-HTKDynamicResizingCell-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-HTKDynamicResizingCell.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-HTKDynamicResizingCell.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-JRSwizzle/Pods-Dillo Day-JRSwizzle-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-JRSwizzle/Pods-Dillo Day-JRSwizzle-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-JRSwizzle.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-JRSwizzle.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-L360Confetti/Pods-Dillo Day-L360Confetti-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-L360Confetti/Pods-Dillo Day-L360Confetti-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-L360Confetti.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-L360Confetti.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Mapbox-iOS-SDK/Pods-Dillo Day-Mapbox-iOS-SDK-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Mapbox-iOS-SDK/Pods-Dillo Day-Mapbox-iOS-SDK-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Mapbox-iOS-SDK.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Mapbox-iOS-SDK.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Masonry/Pods-Dillo Day-Masonry-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Masonry/Pods-Dillo Day-Masonry-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Masonry.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Masonry.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Modality/Pods-Dillo Day-Modality-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Modality/Pods-Dillo Day-Modality-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Modality.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Modality.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-NSAttributedString+CCLFormat/Pods-Dillo Day-NSAttributedString+CCLFormat-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-NSAttributedString+CCLFormat/Pods-Dillo Day-NSAttributedString+CCLFormat-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-NSAttributedString+CCLFormat.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-NSAttributedString+CCLFormat.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-NYSegmentedControl/Pods-Dillo Day-NYSegmentedControl-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-NYSegmentedControl/Pods-Dillo Day-NYSegmentedControl-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-NYSegmentedControl.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-NYSegmentedControl.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-OMGHTTPURLRQ/Pods-Dillo Day-OMGHTTPURLRQ-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-OMGHTTPURLRQ/Pods-Dillo Day-OMGHTTPURLRQ-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-OMGHTTPURLRQ.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-OMGHTTPURLRQ.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-PromiseKit/Pods-Dillo Day-PromiseKit-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-PromiseKit/Pods-Dillo Day-PromiseKit-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-PromiseKit.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-PromiseKit.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-PureLayout/Pods-Dillo Day-PureLayout-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-PureLayout/Pods-Dillo Day-PureLayout-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-PureLayout.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-PureLayout.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-RDVTabBarController/Pods-Dillo Day-RDVTabBarController-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-RDVTabBarController/Pods-Dillo Day-RDVTabBarController-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-RDVTabBarController.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-RDVTabBarController.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SDWebImage/Pods-Dillo Day-SDWebImage-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SDWebImage/Pods-Dillo Day-SDWebImage-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-SDWebImage.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-SDWebImage.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SMCalloutView/Pods-Dillo Day-SMCalloutView-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SMCalloutView/Pods-Dillo Day-SMCalloutView-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-SMCalloutView.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-SMCalloutView.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SVProgressHUD/Pods-Dillo Day-SVProgressHUD-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SVProgressHUD/Pods-Dillo Day-SVProgressHUD-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-SVProgressHUD.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-SVProgressHUD.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Shimmer/Pods-Dillo Day-Shimmer-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Shimmer/Pods-Dillo Day-Shimmer-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Shimmer.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Shimmer.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-UIAlertView+Blocks/Pods-Dillo Day-UIAlertView+Blocks-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-UIAlertView+Blocks/Pods-Dillo Day-UIAlertView+Blocks-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-UIAlertView+Blocks.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-UIAlertView+Blocks.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-UIColor+BFPaperColors/Pods-Dillo Day-UIColor+BFPaperColors-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-UIColor+BFPaperColors/Pods-Dillo Day-UIColor+BFPaperColors-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-UIColor+BFPaperColors.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-UIColor+BFPaperColors.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-XCDYouTubeKit/Pods-Dillo Day-XCDYouTubeKit-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-XCDYouTubeKit/Pods-Dillo Day-XCDYouTubeKit-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-XCDYouTubeKit.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-XCDYouTubeKit.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day-acknowledgements.markdown" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day-acknowledgements.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day-acknowledgements.plist" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day-acknowledgements.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day-environment.h" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day-environment.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dillo Day.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Dillo Day.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/xcschememanagement.plist" />
+    </list>
     <ignored path="Dillo Day.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +108,7 @@
       <file leaf-file-name="NSStack.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controls/NSStack.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="403">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -37,7 +118,7 @@
       <file leaf-file-name="NSStack.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controls/NSStack.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1027">
+            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1343">
               <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding />
             </state>
@@ -47,8 +128,8 @@
       <file leaf-file-name="Artist.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Artist.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="476">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,18 +138,40 @@
       <file leaf-file-name="Artist.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/Artist.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="481">
+            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="629">
               <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LineupModel.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LineupModel.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DILLineupCenterTextCollectionViewCell.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2737">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding>
+                <element signature="e#163#212#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DILFollowArtist.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Models/DILFollowArtist.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.38449112" vertical-offset="0" max-vertical-offset="619">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -76,13 +179,24 @@
       </file>
     </leaf>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="47" />
-    <option name="y" value="23" />
-    <option name="width" value="1633" />
-    <option name="height" value="1027" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m" />
+        <option value="$PROJECT_DIR$/Models/DILFollowArtist.h" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1873" />
+    <option name="y" value="23" />
+    <option name="width" value="1873" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -105,13 +219,26 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dillo Day" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -154,6 +281,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -183,13 +311,6 @@
       </EXTENSION>
       <RunnerSettings RunnerId="AppRunner" />
       <ConfigurationWrapper RunnerId="AppRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Mapbox" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Mapbox" CONFIG_NAME="Debug" SCHEME_NAME="Mapbox" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
       <method />
     </configuration>
     <configuration default="false" name="Pods-Dillo Day-BFPaperButton" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-BFPaperButton" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-BFPaperButton" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -318,13 +439,6 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Pods-Dillo Day-Reveal-iOS-SDK" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-Reveal-iOS-SDK" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-Reveal-iOS-SDK" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
     <configuration default="false" name="Pods-Dillo Day-SDWebImage" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-SDWebImage" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-SDWebImage" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
@@ -381,36 +495,90 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="29">
+    <configuration default="false" name="Pods-Dillo Day-BFPaperCheckbox" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-BFPaperCheckbox" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-BFPaperCheckbox" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-Dillo Day-Modality" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-Modality" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-Modality" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-Dillo Day-OMGHTTPURLRQ" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-OMGHTTPURLRQ" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-OMGHTTPURLRQ" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-Dillo Day-PromiseKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-PromiseKit" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-PromiseKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-Dillo Day-Realm" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-Realm" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-Realm" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-Dillo Day-SVProgressHUD" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-SVProgressHUD" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-SVProgressHUD" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="34">
       <item index="0" class="java.lang.String" itemvalue="Application.Dillo Day" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Mapbox" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BFPaperButton" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BlocksKit" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BOString" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Colours" />
-      <item index="6" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-CSStickyHeaderFlowLayout" />
-      <item index="7" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-FMDB" />
-      <item index="8" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-FXBlurView" />
-      <item index="9" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-GRMustache" />
-      <item index="10" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-HTHorizontalSelectionList" />
-      <item index="11" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-HTKDynamicResizingCell" />
-      <item index="12" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-JRSwizzle" />
-      <item index="13" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-L360Confetti" />
-      <item index="14" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Mapbox-iOS-SDK" />
-      <item index="15" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Masonry" />
-      <item index="16" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-NSAttributedString+CCLFormat" />
-      <item index="17" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-NYSegmentedControl" />
-      <item index="18" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-PureLayout" />
-      <item index="19" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-RDVTabBarController" />
-      <item index="20" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Reveal-iOS-SDK" />
-      <item index="21" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-SDWebImage" />
-      <item index="22" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Shimmer" />
-      <item index="23" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-SMCalloutView" />
-      <item index="24" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-UIAlertView+Blocks" />
-      <item index="25" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-UIColor+BFPaperColors" />
-      <item index="26" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-XCDYouTubeKit" />
-      <item index="27" class="java.lang.String" itemvalue="Application.Pods-Dillo Day" />
-      <item index="28" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-FontasticIcons" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BFPaperButton" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BlocksKit" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BOString" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Colours" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-CSStickyHeaderFlowLayout" />
+      <item index="6" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-FMDB" />
+      <item index="7" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-FXBlurView" />
+      <item index="8" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-GRMustache" />
+      <item index="9" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-HTHorizontalSelectionList" />
+      <item index="10" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-HTKDynamicResizingCell" />
+      <item index="11" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-JRSwizzle" />
+      <item index="12" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-L360Confetti" />
+      <item index="13" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Mapbox-iOS-SDK" />
+      <item index="14" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Masonry" />
+      <item index="15" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-NSAttributedString+CCLFormat" />
+      <item index="16" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-NYSegmentedControl" />
+      <item index="17" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-PureLayout" />
+      <item index="18" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-RDVTabBarController" />
+      <item index="19" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-SDWebImage" />
+      <item index="20" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Shimmer" />
+      <item index="21" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-SMCalloutView" />
+      <item index="22" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-UIAlertView+Blocks" />
+      <item index="23" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-UIColor+BFPaperColors" />
+      <item index="24" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-XCDYouTubeKit" />
+      <item index="25" class="java.lang.String" itemvalue="Application.Pods-Dillo Day" />
+      <item index="26" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-FontasticIcons" />
+      <item index="27" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BFPaperCheckbox" />
+      <item index="28" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox" />
+      <item index="29" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Modality" />
+      <item index="30" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-OMGHTTPURLRQ" />
+      <item index="31" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-PromiseKit" />
+      <item index="32" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Realm" />
+      <item index="33" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-SVProgressHUD" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -424,16 +592,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="47" y="23" width="1633" height="1027" extended-state="6" />
+    <frame x="-1873" y="23" width="1873" height="1057" extended-state="7" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20759338" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18574513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -442,7 +611,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -480,7 +648,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controls/NSStack.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1027">
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1343">
           <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding />
         </state>
@@ -488,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Artist.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -496,21 +664,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Artist.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="481">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="629">
           <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/LineupModel.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -562,7 +722,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controls/NSStack.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controls/NSStack.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1027">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Artist.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/Artist.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="481">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/LineupModel.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -584,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/Artist.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="476">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -602,14 +808,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19569893" vertical-offset="338" max-vertical-offset="1430">
           <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2737">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#163#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/DILFollowArtist.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38449112" vertical-offset="0" max-vertical-offset="619">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>

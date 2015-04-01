@@ -270,6 +270,18 @@
 #define COCOAPODS_VERSION_MINOR_RDVTabBarController 1
 #define COCOAPODS_VERSION_PATCH_RDVTabBarController 9
 
+// Realm
+#define COCOAPODS_POD_AVAILABLE_Realm
+#define COCOAPODS_VERSION_MAJOR_Realm 0
+#define COCOAPODS_VERSION_MINOR_Realm 91
+#define COCOAPODS_VERSION_PATCH_Realm 1
+
+// Realm/Headers
+#define COCOAPODS_POD_AVAILABLE_Realm_Headers
+#define COCOAPODS_VERSION_MAJOR_Realm_Headers 0
+#define COCOAPODS_VERSION_MINOR_Realm_Headers 91
+#define COCOAPODS_VERSION_PATCH_Realm_Headers 1
+
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
 #define COCOAPODS_VERSION_MAJOR_SDWebImage 3

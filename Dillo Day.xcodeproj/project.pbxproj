@@ -38,6 +38,7 @@
 		214FD6D21AA55D9E001D6619 /* FMParallaxImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214FD6D11AA55D9E001D6619 /* FMParallaxImageView.m */; };
 		2159BC301ACB7CB000D48F5F /* DILFakeDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC2F1ACB7CB000D48F5F /* DILFakeDataGenerator.m */; };
 		2159BC331ACB8C3E00D48F5F /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC311ACB8C3E00D48F5F /* NSDate+Utilities.m */; };
+		2159BC371ACC422000D48F5F /* DILFollowArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC361ACC422000D48F5F /* DILFollowArtist.m */; };
 		217946B21A87C96100224737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B11A87C96100224737 /* main.m */; };
 		217946B51A87C96100224737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B41A87C96100224737 /* AppDelegate.m */; };
 		217946BB1A87C96100224737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217946B91A87C96100224737 /* Main.storyboard */; };
@@ -136,6 +137,8 @@
 		2159BC2F1ACB7CB000D48F5F /* DILFakeDataGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILFakeDataGenerator.m; sourceTree = "<group>"; };
 		2159BC311ACB8C3E00D48F5F /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		2159BC321ACB8C3E00D48F5F /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		2159BC351ACC422000D48F5F /* DILFollowArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILFollowArtist.h; sourceTree = "<group>"; };
+		2159BC361ACC422000D48F5F /* DILFollowArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILFollowArtist.m; sourceTree = "<group>"; };
 		217946AC1A87C96100224737 /* Dillo Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dillo Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		217946B01A87C96100224737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217946B11A87C96100224737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -326,6 +329,8 @@
 				21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */,
 				21C4C1121AC750EE00AE4561 /* DILPFStage.h */,
 				21C4C1131AC750EE00AE4561 /* DILPFStage.m */,
+				2159BC351ACC422000D48F5F /* DILFollowArtist.h */,
+				2159BC361ACC422000D48F5F /* DILFollowArtist.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -779,6 +784,7 @@
 				21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */,
 				217946DF1A87FE9A00224737 /* ColorSegueViewController.m in Sources */,
 				217946DB1A87FCAD00224737 /* FMColorTransition.m in Sources */,
+				2159BC371ACC422000D48F5F /* DILFollowArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
