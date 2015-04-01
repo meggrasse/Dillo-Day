@@ -10,10 +10,11 @@
 #import <Parse/Parse.h>
 #import <RDVTabBarController/RDVTabBarController.h>
 
-#import "LineupViewController.h"
+#import "DILLineupViewController.h"
 #import "MapViewController.h"
 #import "HelpViewController.h"
-#import "NotificationsViewController.h"
+#import "DILNotificationsViewController.h"
+#import "DILFakeDataGenerator.h"
 
 @interface AppDelegate ()
 
@@ -25,19 +26,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"zpDqUtE6y2RIcuWeUPwKPUJYZi12qal1vF83n2GF"
                   clientKey:@"LDaDgElWPLhahqdw3MjYlouCWFzHzewaxHWYvEgb"];
-    
-    LineupViewController *lineupVC = [[LineupViewController alloc] initWithNibName:nil bundle:nil];
-//    [lineupVC rdv_setTabBarItem:[LineupViewController tabBarItem]];
+
+//    [[DILFakeDataGenerator new] generateData];
+
+    DILLineupViewController *lineupVC = [DILLineupViewController new];
+    lineupVC.title = @"Lineup";
     UINavigationController *lineupNavController = [[UINavigationController alloc] initWithRootViewController:lineupVC];
     
     MapViewController *mapVC = [[MapViewController alloc] init];
     mapVC.title = @"Map";
     UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
-    
-    NotificationsViewController *notificationVC = [[NotificationsViewController alloc] init];
+
+
+    DILNotificationsViewController *notificationVC = [[DILNotificationsViewController alloc] init];
     notificationVC.title = @"Notifications";
     UINavigationController *notificationsNavController = [[UINavigationController alloc] initWithRootViewController:notificationVC];
-    
+
+
     HelpViewController *helpVC = [HelpViewController new];
     helpVC.title = @"Emergency";
     UINavigationController *helpNavController = [[UINavigationController alloc] initWithRootViewController:helpVC];
@@ -56,6 +61,7 @@
     RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
     [tabBarController setViewControllers:navigationControllerArray];
     */
+
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tabBarController;

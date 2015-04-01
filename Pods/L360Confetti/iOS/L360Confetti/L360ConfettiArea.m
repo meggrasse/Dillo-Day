@@ -27,7 +27,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.swayLength = 50.0;
-        self.blastSpread = 1.0;
+        self.blastSpread = 0.1;
         self.confettiBursts = [NSMutableSet set];
         self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self];
         

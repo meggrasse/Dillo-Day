@@ -84,7 +84,7 @@
         newArtist.bigImage = bigPics[i];
         newArtist.smallImage = smallPics[i];
         newArtist.aboutText = artistText;
-        newArtist.youtubeVideoIds = videoIds;
+        newArtist.youtubeVideoIds = [videoIds mutableCopy];
         newArtist.sponsor = sponsor;
         [self.lineupArray addObject:newArtist];
     }

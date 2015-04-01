@@ -72,6 +72,7 @@
     [self.segmentedControl insertSegmentWithTitle:@"About" atIndex:0];
     [self.segmentedControl insertSegmentWithTitle:@"Music" atIndex:1];
     [self.segmentedControl insertSegmentWithTitle:@"Misc" atIndex:2];
+    [self.segmentedControl addTarget:self action:@selector(handleSegmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
     CGFloat segmentedControlHeight = 44;
     self.segmentedControl.cornerRadius = segmentedControlHeight/2.0;
     self.segmentedControl.borderWidth = 0;
@@ -180,6 +181,12 @@
 //        self.collapsedArtistLabel.alpha = 0;
 //        [self.viewController.navigationController.navigationBar setShadowImage:self.shadowBarImage];
     }
+}
+
+
+#pragma mark - UISegmentedControlImplementation
+- (void)handleSegmentedControlValueChanged:(UISegmentedControl *)sender {
+//    NSString *newValue = sender.
 }
 
 @end

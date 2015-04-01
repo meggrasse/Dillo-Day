@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RGCardViewLayout : UICollectionViewFlowLayout
 
+
+@interface RGCardViewLayout : UICollectionViewFlowLayout
+@property (nonatomic, strong) NSString * timerString;
 @end

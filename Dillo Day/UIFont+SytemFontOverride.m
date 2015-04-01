@@ -16,11 +16,11 @@ static NSString *fontName = @"GillSans-Light";
 static NSString *boldFontName = @"GillSans";
 
 + (UIFont *)boldSystemFontOfSize:(CGFloat)fontSize {
-    return [UIFont fontWithName:fontName size:fontSize];
+    return [UIFont fontWithName:boldFontName size:fontSize];
 }
 
 + (UIFont *)systemFontOfSize:(CGFloat)fontSize {
-    return [UIFont fontWithName:boldFontName size:fontSize];
+    return [UIFont fontWithName:fontName size:fontSize];
 }
 
 #pragma clang diagnostic pop

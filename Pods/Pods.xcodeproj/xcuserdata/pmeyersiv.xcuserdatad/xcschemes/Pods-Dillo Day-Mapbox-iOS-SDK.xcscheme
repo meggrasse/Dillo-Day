@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E3DEA0E0CFDBEA62BFDC0827"
+               BlueprintIdentifier = "1E14DFB39AA50B3AE06340DC"
                BuildableName = "libPods-Dillo Day-Mapbox-iOS-SDK.a"
                BlueprintName = "Pods-Dillo Day-Mapbox-iOS-SDK"
                ReferencedContainer = "container:Pods.xcodeproj">

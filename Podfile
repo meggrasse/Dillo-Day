@@ -1,5 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
 target 'Dillo Day' do
 pod 'BlocksKit'
 pod 'Masonry'
@@ -17,12 +20,15 @@ pod 'UIAlertView+Blocks'
 pod 'L360Confetti', :git => 'https://github.com/life360/confetti.git'
 pod 'FXBlurView', '~> 1.6'
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']
-#pod 'CSStickyHeaderFlowLayout'
 pod "XCDYouTubeKit", "~> 2.1.1"
 pod 'SDWebImage', '~>3.6'
 pod 'NYSegmentedControl'
 pod 'CSStickyHeaderFlowLayout', '~> 0.2'
-
+pod 'FontasticIcons'
+pod 'BFPaperCheckbox', '~> 1.2.5'
+pod 'Modality', '~> 0.0.1'
+pod 'PromiseKit', '~> 1.4'
+pod 'SVProgressHUD'
 end
 
 target 'Dillo DayTests' do
