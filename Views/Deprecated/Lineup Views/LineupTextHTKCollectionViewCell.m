@@ -39,8 +39,6 @@
     self.timeLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.timeLabel.numberOfLines = 0;
     
-    CGRect bounds = self.bounds;
-    
     [self.contentView addSubview:_artistLabel];
 //    [self.contentView addSubview:_timeLabel];
 

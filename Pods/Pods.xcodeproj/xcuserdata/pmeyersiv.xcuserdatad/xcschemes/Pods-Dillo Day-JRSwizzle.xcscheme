@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "803116AB6AC8B8504B0EF06F"
+               BlueprintIdentifier = "6F93A3AF2B04924AEADF81C2"
                BuildableName = "libPods-Dillo Day-JRSwizzle.a"
                BlueprintName = "Pods-Dillo Day-JRSwizzle"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6F93A3AF2B04924AEADF81C2"
+            BuildableName = "libPods-Dillo Day-JRSwizzle.a"
+            BlueprintName = "Pods-Dillo Day-JRSwizzle"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

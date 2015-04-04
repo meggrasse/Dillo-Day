@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "612BE0D6D5C0F7F660BC179C"
+               BlueprintIdentifier = "EEC17A4B260B83091B4C2573"
                BuildableName = "libPods-Dillo Day-Mapbox-iOS-SDK.a"
                BlueprintName = "Pods-Dillo Day-Mapbox-iOS-SDK"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "EEC17A4B260B83091B4C2573"
+            BuildableName = "libPods-Dillo Day-Mapbox-iOS-SDK.a"
+            BlueprintName = "Pods-Dillo Day-Mapbox-iOS-SDK"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

@@ -30,6 +30,7 @@ pod 'Modality', '~> 0.0.1'
 pod 'PromiseKit', '~> 1.4'
 pod 'SVProgressHUD'
 pod 'Realm', '~> 0.91'
+pod 'ReactiveCocoa'
 end
 
 target 'Dillo DayTests' do

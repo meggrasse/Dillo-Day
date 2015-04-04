@@ -85,6 +85,13 @@ PODS:
     - PromiseKit/Promise
   - PureLayout (2.0.5)
   - RDVTabBarController (1.1.9)
+  - ReactiveCocoa (2.4.7):
+    - ReactiveCocoa/UI (= 2.4.7)
+  - ReactiveCocoa/Core (2.4.7):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.7)
+  - ReactiveCocoa/UI (2.4.7):
+    - ReactiveCocoa/Core
   - Realm (0.91.1):
     - Realm/Headers (= 0.91.1)
   - Realm/Headers (0.91.1)
@@ -119,6 +126,7 @@ DEPENDENCIES:
   - PromiseKit (~> 1.4)
   - PureLayout
   - RDVTabBarController
+  - ReactiveCocoa
   - Realm (~> 0.91)
   - Reveal-iOS-SDK
   - SDWebImage (~> 3.6)
@@ -155,6 +163,7 @@ SPEC CHECKSUMS:
   PromiseKit: ea36001b558f42aa104a1422f305b46f8c343f2e
   PureLayout: a0fe75f1cf485801e7e00b723b8a3c32dca558e2
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   Realm: b9c1fd9defa26aa7276ce938a8df52ec81f24528
   Reveal-iOS-SDK: c9c55cad2729c85f6ced415f1b21857c9a2d8ef9
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575

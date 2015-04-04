@@ -2,13 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86b4bdc0-dc73-441e-b326-9ac1a3e45ecd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/DILFollowArtist.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/DILFollowArtist.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/DILArtistBioHTKCollectionViewCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/DILArtistBioHTKCollectionViewCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/DILArtistCollectionViewModel.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/DILArtistCollectionViewModel.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/DILArtistStickyHeaderCollectionViewCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/DILArtistStickyHeaderCollectionViewCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controllers/DILArtistViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/DILArtistYoutubeVideoCollectionViewCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/DILArtistYoutubeVideoCollectionViewCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/DILYoutubeVideoFetcher.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/DILYoutubeVideoFetcher.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Help/HelpCSViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Help/HelpCSViewController.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Lineup/LineupCSViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Lineup/LineupCSViewController.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Main/MainCSViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Main/MainCSViewController.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Map/MapCSViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Map/MapCSViewController.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Merch/MerchCSViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Merch/MerchCSViewController.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Social/SocialCSViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/UIViewController Subclasses/ColorSegueViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/UIViewController Subclasses/ColorSegueViewController.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/UIViewController Subclasses/DDViewController.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/UIViewController Subclasses/DDViewController.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controls/NSStack.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Controls/NSStack.m" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Controllers/Deprecated VCs/ColorSegue VCs/Social/SocialCSViewController.m" afterPath="$PROJECT_DIR$/Controllers/DILArtistViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dillo Day.xcworkspace/xcuserdata/pmeyersiv.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Dillo Day.xcworkspace/xcuserdata/pmeyersiv.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dillo Day.xcworkspace/xcuserdata/pmeyersiv.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/Dillo Day.xcworkspace/xcuserdata/pmeyersiv.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m" afterPath="$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/DILFakeDataGenerator.m" afterPath="$PROJECT_DIR$/Models/DILFakeDataGenerator.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/DILLineupCollectionViewModel.h" afterPath="$PROJECT_DIR$/Models/DILLineupCollectionViewModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/DILLineupCollectionViewModel.m" afterPath="$PROJECT_DIR$/Models/DILLineupCollectionViewModel.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/DILLineupViewController.m" afterPath="$PROJECT_DIR$/Controllers/DILLineupViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/DILPFArtist.h" afterPath="$PROJECT_DIR$/Models/DILPFArtist.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dillo Day.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Dillo Day.xcscheme" afterPath="$PROJECT_DIR$/Dillo Day.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Dillo Day.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Deprecated/Lineup Views/LineupTextHTKCollectionViewCell.m" afterPath="$PROJECT_DIR$/Views/Deprecated/Lineup Views/LineupTextHTKCollectionViewCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dillo Day/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/Dillo Day/Base.lproj/Main.storyboard" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controls/NSDate+Utilities/NSDate+Utilities.m" afterPath="$PROJECT_DIR$/Controls/NSDate+Utilities/NSDate+Utilities.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BFPaperButton/Pods-Dillo Day-BFPaperButton-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-BFPaperButton/Pods-Dillo Day-BFPaperButton-Private.xcconfig" />
@@ -58,6 +92,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-PureLayout.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-PureLayout.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-RDVTabBarController/Pods-Dillo Day-RDVTabBarController-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-RDVTabBarController/Pods-Dillo Day-RDVTabBarController-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-RDVTabBarController.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-RDVTabBarController.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Realm/Pods-Dillo Day-Realm-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-Realm/Pods-Dillo Day-Realm-Private.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Realm.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-Realm.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SDWebImage/Pods-Dillo Day-SDWebImage-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SDWebImage/Pods-Dillo Day-SDWebImage-Private.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-SDWebImage.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day-SDWebImage.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SMCalloutView/Pods-Dillo Day-SMCalloutView-Private.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Dillo Day-SMCalloutView/Pods-Dillo Day-SMCalloutView-Private.xcconfig" />
@@ -80,7 +116,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/Pods-Dillo Day.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dillo Day.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Dillo Day.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pmeyersiv.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
     <ignored path="Dillo Day.iws" />
@@ -99,80 +135,20 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_3295f52795af9528667ae7560838293d56886ebe" />
   <component name="FavoritesManager">
     <favorites_list name="Dillo Day" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NSStack.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controls/NSStack.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NSStack.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controls/NSStack.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1343">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Artist.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/Artist.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="476">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Artist.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/Artist.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="629">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LineupModel.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DILLineupCenterTextCollectionViewCell.m" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DILLineupCenterTextCollectionViewCell.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2737">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2958">
+              <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
               <folding>
                 <element signature="e#163#212#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DILFollowArtist.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Models/DILFollowArtist.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38449112" vertical-offset="0" max-vertical-offset="619">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -191,10 +167,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1873" />
+    <option name="x" value="46" />
     <option name="y" value="23" />
-    <option name="width" value="1873" />
-    <option name="height" value="1057" />
+    <option name="width" value="1634" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -219,6 +195,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,7 +258,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -544,7 +520,14 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="34">
+    <configuration default="false" name="Pods-Dillo Day-ReactiveCocoa" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Dillo Day-ReactiveCocoa" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Dillo Day-ReactiveCocoa" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="35">
       <item index="0" class="java.lang.String" itemvalue="Application.Dillo Day" />
       <item index="1" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BFPaperButton" />
       <item index="2" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-BlocksKit" />
@@ -579,6 +562,7 @@
       <item index="31" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-PromiseKit" />
       <item index="32" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-Realm" />
       <item index="33" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-SVProgressHUD" />
+      <item index="34" class="java.lang.String" itemvalue="Application.Pods-Dillo Day-ReactiveCocoa" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -592,29 +576,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1873" y="23" width="1873" height="1057" extended-state="7" />
-    <editor active="true" />
+    <frame x="46" y="23" width="1634" height="1027" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18574513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21264724" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34010696" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -638,190 +622,19 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Controls/NSStack.h">
+    <entry file="file://$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/NSStack.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1343">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Artist.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Artist.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="629">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/NSStack.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/NSStack.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1027">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Artist.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Artist.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="481">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/LineupModel.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/NSStack.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/NSStack.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1027">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Artist.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Artist.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="481">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/LineupModel.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/NSStack.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="930">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controls/NSStack.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1027">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Artist.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="476">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Artist.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="481">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/LineupModel.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19569893" vertical-offset="338" max-vertical-offset="1430">
-          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/LineupModel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#163#212#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2737">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2737">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="e#163#212#0" expanded="true" />
@@ -831,9 +644,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Models/DILFollowArtist.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38449112" vertical-offset="0" max-vertical-offset="619">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2737">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#163#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/DILFollowArtist.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/DILFollowArtist.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20572057" vertical-offset="0" max-vertical-offset="909">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/DILLineupCenterTextCollectionViewCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2958">
+          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+          <folding>
+            <element signature="e#163#212#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

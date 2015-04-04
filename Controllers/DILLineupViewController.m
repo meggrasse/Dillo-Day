@@ -15,8 +15,9 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <PromiseKit/PromiseKit.h>
 
+#import "DILArtistViewController.h"
 
-@interface DILLineupViewController ()<DILStageSelectionDelegate>
+@interface DILLineupViewController ()<DILStageSelectionDelegate, DILLineupCollectionViewDelegate>
 @property (strong, nonatomic) UICollectionView *lineupCollectionView;
 @property (strong, nonatomic) DILLineupCollectionViewModel *lineupCollectionViewModel;
 @property (strong, nonatomic) UIButton *lineupNavigationTitleButton;
@@ -40,6 +41,7 @@
     self.lineupCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowlayout];
     self.lineupCollectionView.translatesAutoresizingMaskIntoConstraints = NO;
     self.lineupCollectionViewModel = [DILLineupCollectionViewModel new];
+    self.lineupCollectionViewModel.delegate = self;
     
     self.lineupCollectionView.dataSource = self.lineupCollectionViewModel;
     self.lineupCollectionView.delegate = self.lineupCollectionViewModel;
@@ -52,11 +54,12 @@
 - (void)configureTitleViewWithTitle:(NSString *)title {
     self.lineupNavigationTitleButton = [[UIButton alloc] initWithFrame:CGRectZero];
     [self.lineupNavigationTitleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    self.lineupNavigationTitleButton.titleLabel.font = [UIFont boldSystemFontOfSize:self.lineupNavigationTitleButton.titleLabel.font.pointSize];
     [self.lineupNavigationTitleButton setTitle:title forState:UIControlStateNormal];
     [self.lineupNavigationTitleButton addTarget:self action:@selector(handleLineupNavigationTitleButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.lineupNavigationTitleButton sizeToFit];
 
-        self.navigationItem.titleView = self.lineupNavigationTitleButton;
+    self.navigationItem.titleView = self.lineupNavigationTitleButton;
 }
 
 - (void)handleLineupNavigationTitleButtonTapped {
@@ -80,10 +83,19 @@
     }
 }
 
+#pragma mark - DILLineupCollectionViewDelegate
+- (void)didSelectArtist:(DILPFArtist *)artist {
+    DILArtistViewController *artistVC = [DILArtistViewController new];
+    artistVC.artist = artist;
+    [self showViewController:artistVC sender:self];
+}
+
 #pragma mark - DILStageSelectionDelegate
 - (void)didSelectStage:(DILPFStage *)stage {
     self.lineupCollectionViewModel.stage = stage;
     [self.lineupCollectionView reloadData];
+    [self.lineupNavigationTitleButton setTitle:stage.name forState:UIControlStateNormal];
+    [self.lineupNavigationTitleButton sizeToFit];
 }
 
 #pragma mark - Promises

@@ -10,6 +10,13 @@
 #import <UIKit/UIKit.h>
 #import "DILPFStage.h"
 
+@class DILLineupCollectionViewModel;
+@protocol DILLineupCollectionViewDelegate <NSObject>
+@required
+- (void)didSelectArtist:(DILPFArtist *)artist;
+@end
+
 @interface DILLineupCollectionViewModel : NSObject<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) DILPFStage *stage;
+@property (weak, nonatomic) id<DILLineupCollectionViewDelegate> delegate;
 @end

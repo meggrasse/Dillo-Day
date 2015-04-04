@@ -24,6 +24,12 @@
         stage.artists = [NSMutableArray new];
         [stage save];
 
+        NSArray *youtubeVideoIds = @[@"debIyWS6Byc",
+                                     @"WMq6MLo_eSM",
+                                     @"CdLhdrNgGu4",
+                                     @"HkMNOlYcpHg",
+                                     @"AOPMlIIg_38"];
+
         NSArray *artistNames = @[@"pizza!",
                                  @"radio frenzy",
                                  @"Lana Del Rey",
@@ -50,6 +56,7 @@
             newArtist.performanceTime = [NSDate date];
             newArtist.lineupImage = [PFFile fileWithData:UIImagePNGRepresentation((UIImage *)bigPics[i])];
             newArtist.about = artistText;
+            newArtist.youtubeVideoIds = youtubeVideoIds;
             [newArtist save];
 
             DILPFSponsor *sponsor = [DILPFSponsor object];

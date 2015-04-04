@@ -12,6 +12,8 @@
  Include GMT and time zone utilities?
 */
 
+#pragma GCC diagnostic ignored "-Wwarning-flag"
+#pragma GCC diagnostic ignored "-Wwarning-flag"
 #import "NSDate+Utilities.h"
 
 // Thanks, AshFurrow

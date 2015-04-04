@@ -9,12 +9,12 @@
 #import "DILLineupCollectionViewModel.h"
 
 #import "DILLineupCenterTextCollectionViewCell.h"
-#import "Artist.h"
 #import "DILPFArtist.h"
 
 #import <PromiseKit/PromiseKit.h>
 
 @interface DILLineupCollectionViewModel()
+@property (nonatomic) BOOL hasRegisteredClass;
 @end
 
 static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLineupCenterTextCollectionViewCellIdentifier";
@@ -22,7 +22,7 @@ static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLi
 @implementation DILLineupCollectionViewModel
 - (id)init {
     if (self = [super init]) {
-
+        self.hasRegisteredClass = NO;
     }
     return self;
 }
@@ -37,10 +37,10 @@ static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLi
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static dispatch_once_t classRegisterToken;
-    dispatch_once(&classRegisterToken, ^{
+    if (!self.hasRegisteredClass) {
         [collectionView registerClass:[DILLineupCenterTextCollectionViewCell class] forCellWithReuseIdentifier:DILLineupCenterTextCollectionViewCellIdentifier];
-    });
+        self.hasRegisteredClass = YES;
+    }
 
     DILLineupCenterTextCollectionViewCell *lineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:DILLineupCenterTextCollectionViewCellIdentifier forIndexPath:indexPath];
     DILPFArtist *artistForCell = [self artistForIndexPath:indexPath];
@@ -70,7 +70,7 @@ static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLi
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-
+    [self.delegate didSelectArtist:[self artistForIndexPath:indexPath]];
 }
 
 @end
