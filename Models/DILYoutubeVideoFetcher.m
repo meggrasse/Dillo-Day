@@ -11,6 +11,9 @@
 #import <SDWebImage/SDWebImageManager.h>
 #import <PromiseKit/PromiseKit.h>
 
+#import "UIApplication+NetworkActivityIndicator.h"
+#import <TMCache/TMCache.h>
+
 @interface DILYoutubeVideoFetcher()
 
 @end
@@ -32,25 +35,49 @@ static NSString *const kDownloadVideoImagePromiseFulfillImageKey = @"kDownloadVi
 
 - (void)fetchVideosForIds:(NSArray *)youtubeVideoIds forSender:(id<DILYoutubeVideoFetcherDelegate>)sender {
     for (NSString *youtubeVideoId in youtubeVideoIds) {
+        [[UIApplication sharedApplication] beganNetworkActivity];
         [self fetchVideoPromise:youtubeVideoId].then(^(XCDYouTubeVideo *video){
             return [self downloadVideoImagePromise:video];
         }).then(^(NSDictionary *downloadVideoImagePromiseDictionary){
             XCDYouTubeVideo *video = downloadVideoImagePromiseDictionary[kDownloadVideoImagePromiseFulfillVideoKey];
             UIImage *image = downloadVideoImagePromiseDictionary[kDownloadVideoImagePromiseFulfillImageKey];
             [sender fetchedVideo:video image:image];
+        }).finally(^(){
+            [[UIApplication sharedApplication] endedNetworkActivity];
         });
     }
 }
 
+#pragma mark - Caching
+- (void)cacheYoutubeVideo:(XCDYouTubeVideo *)videoToCache {
+    [[[TMCache sharedCache] memoryCache] setObject:videoToCache forKey:videoToCache.identifier];
+}
+
+- (PMKPromise *)retrieveVideoFromCachePromise:(NSString *)videoIdentifier {
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        [[[TMCache sharedCache] memoryCache] objectForKey:videoIdentifier block:^(TMMemoryCache *cache, NSString *key, id object) {
+            fulfill(object);
+        }];
+    }];
+}
+
+#pragma mark - Video Fetching
 - (PMKPromise *)fetchVideoPromise:(NSString *)youtubeVideoId {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
-        [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:youtubeVideoId completionHandler:^(XCDYouTubeVideo *video, NSError *error) {
-            if (error) {
-                reject(error);
-            } else {
+        [self retrieveVideoFromCachePromise:youtubeVideoId].then(^(XCDYouTubeVideo *video){
+            if (video) {
                 fulfill(video);
+            } else {
+                [[XCDYouTubeClient defaultClient] getVideoWithIdentifier:youtubeVideoId completionHandler:^(XCDYouTubeVideo *video, NSError *error) {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        [self cacheYoutubeVideo:video];
+                        fulfill(video);
+                    }
+                }];
             }
-        }];
+        });
     }];
 }
 

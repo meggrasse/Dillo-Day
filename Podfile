@@ -31,8 +31,9 @@ pod 'PromiseKit', '~> 1.4'
 pod 'SVProgressHUD'
 pod 'Realm', '~> 0.91'
 pod 'ReactiveCocoa'
-#pod 'ParseUI'
-#pod 'Parse'
+pod 'ParseUI'
+pod 'Parse'
+pod 'TMCache', '~> 1.2'
 end
 
 target 'Dillo DayTests' do

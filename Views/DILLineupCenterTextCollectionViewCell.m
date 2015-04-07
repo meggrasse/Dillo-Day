@@ -11,11 +11,11 @@
 #import "Artist.h"
 #import <FontasticIcons/FontasticIcons.h>
 #import "DILFollowArtist.h"
-#import <Parse
+#import <ParseUI/ParseUI.h>
 
 @interface DILLineupCenterTextCollectionViewCell()
 @property (strong, nonatomic) DILPFArtist *artist;
-@property (strong, nonatomic) UIImageView *artistImageView;
+@property (strong, nonatomic) PFImageView *artistImageView;
 @property (strong, nonatomic) UILabel *nameLabel;
 @property (strong, nonatomic) UILabel *performanceTimeLabel;
 @property (strong, nonatomic) UIButton *favoriteButton;
@@ -63,9 +63,9 @@
 
 }
 
-- (UIImageView *)artistImageView {
+- (PFImageView *)artistImageView {
     if (!_artistImageView) {
-        _artistImageView = [[UIImageView alloc] initForAutoLayout];
+        _artistImageView = [[PFImageView alloc] initForAutoLayout];
         _artistImageView.contentMode = UIViewContentModeScaleAspectFill;
         _artistImageView.clipsToBounds = YES;
     }
@@ -153,9 +153,11 @@
 - (void)configureCellWithArtist:(DILPFArtist *)artist {
     self.artist = artist;
     
-    [artist imageDownloadPromise].then(^(UIImage *image){
-        self.artistImageView.image = image;
-    });
+//    [artist imageDownloadPromise].then(^(UIImage *image){
+//        self.artistImageView.image = image;
+//    });
+    self.artistImageView.file = artist.lineupImage;
+    [self.artistImageView loadInBackground];
 
     self.nameLabel.text = artist.name;
     self.performanceTimeLabel.text = [artist.performanceTime mediumTimeString];

@@ -60,6 +60,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Strings/FontAwesomeRegular+Deprecation.strings"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Strings/FontAwesomeRegular.strings"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Strings/IconicStroke.strings"
+  install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/Mapbox.bundle"
 fi
@@ -73,6 +74,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Strings/FontAwesomeRegular+Deprecation.strings"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Strings/FontAwesomeRegular.strings"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Strings/IconicStroke.strings"
+  install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/Mapbox.bundle"
 fi

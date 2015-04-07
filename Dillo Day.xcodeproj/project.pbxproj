@@ -19,8 +19,6 @@
 		212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */; };
 		2139036E1A994EF90037BB5E /* LineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2139036D1A994EF90037BB5E /* LineupViewController.m */; };
 		21417F821A998F7B00A02B25 /* ArtistInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */; };
-		214C5D8C1A8D60BE009BC7F0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5D8B1A8D60BE009BC7F0 /* Parse.framework */; };
-		214C5D8E1A8D60C9009BC7F0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5D8D1A8D60C9009BC7F0 /* Bolts.framework */; };
 		214C5D901A8D60D7009BC7F0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5D8F1A8D60D7009BC7F0 /* AudioToolbox.framework */; };
 		214C5D921A8D60DD009BC7F0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5D911A8D60DD009BC7F0 /* CFNetwork.framework */; };
 		214C5D941A8D60E3009BC7F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5D931A8D60E3009BC7F0 /* CoreGraphics.framework */; };
@@ -67,6 +65,7 @@
 		21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */; };
 		21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1131AC750EE00AE4561 /* DILPFStage.m */; };
 		21C4C1171AC7662500AE4561 /* DILStageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1161AC7662500AE4561 /* DILStageSelectionViewController.m */; };
+		21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */; };
 		21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF15951A8DBAA00022953A /* RGCardViewLayout.m */; };
 		21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFF9AB1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m */; };
 		21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFF9AE1A97DAF200F225ED /* LineupModel.m */; };
@@ -108,8 +107,6 @@
 		2139036D1A994EF90037BB5E /* LineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineupViewController.m; sourceTree = "<group>"; };
 		21417F801A998F7B00A02B25 /* ArtistInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoViewController.h; sourceTree = "<group>"; };
 		21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoViewController.m; sourceTree = "<group>"; };
-		214C5D8B1A8D60BE009BC7F0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		214C5D8D1A8D60C9009BC7F0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		214C5D8F1A8D60D7009BC7F0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		214C5D911A8D60DD009BC7F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		214C5D931A8D60E3009BC7F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -189,6 +186,8 @@
 		21C4C1131AC750EE00AE4561 /* DILPFStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFStage.m; sourceTree = "<group>"; };
 		21C4C1151AC7662500AE4561 /* DILStageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectionViewController.h; sourceTree = "<group>"; };
 		21C4C1161AC7662500AE4561 /* DILStageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectionViewController.m; sourceTree = "<group>"; };
+		21DEA9711AD436D000987379 /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
+		21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
 		21EF15951A8DBAA00022953A /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
 		21EF15961A8DBAA00022953A /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
 		21EFF9AA1A97D05600F225ED /* LineupTextHTKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineupTextHTKCollectionViewCell.h; sourceTree = "<group>"; };
@@ -219,8 +218,6 @@
 				214C5D941A8D60E3009BC7F0 /* CoreGraphics.framework in Frameworks */,
 				214C5D921A8D60DD009BC7F0 /* CFNetwork.framework in Frameworks */,
 				214C5D901A8D60D7009BC7F0 /* AudioToolbox.framework in Frameworks */,
-				214C5D8E1A8D60C9009BC7F0 /* Bolts.framework in Frameworks */,
-				214C5D8C1A8D60BE009BC7F0 /* Parse.framework in Frameworks */,
 				9E0BDF8DD8C012C4C3F4ED85 /* libPods-Dillo Day.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,8 +247,6 @@
 				214C5D931A8D60E3009BC7F0 /* CoreGraphics.framework */,
 				214C5D911A8D60DD009BC7F0 /* CFNetwork.framework */,
 				214C5D8F1A8D60D7009BC7F0 /* AudioToolbox.framework */,
-				214C5D8D1A8D60C9009BC7F0 /* Bolts.framework */,
-				214C5D8B1A8D60BE009BC7F0 /* Parse.framework */,
 				6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */,
 			);
 			name = Frameworks;
@@ -463,6 +458,7 @@
 		217946E71A88005200224737 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */,
 				2159BC341ACB8C4200D48F5F /* NSDate+Utilities */,
 				21EF15961A8DBAA00022953A /* RGCardViewLayout.h */,
 				21EF15951A8DBAA00022953A /* RGCardViewLayout.m */,
@@ -494,6 +490,15 @@
 				2185F7C91AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m */,
 			);
 			path = Notifications;
+			sourceTree = "<group>";
+		};
+		21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				21DEA9711AD436D000987379 /* UIApplication+NetworkActivityIndicator.h */,
+				21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */,
+			);
+			name = "UIApplication + NetworkActivityIndicator";
 			sourceTree = "<group>";
 		};
 		21EFF9A91A97CFDA00F225ED /* Lineup Views */ = {
@@ -687,6 +692,7 @@
 				21BAFE381ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m in Sources */,
 				214FD6D21AA55D9E001D6619 /* FMParallaxImageView.m in Sources */,
 				217D91CE1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m in Sources */,
+				21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */,
 				219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */,
 				21C4C10E1AC74C9900AE4561 /* DILPFArtist.m in Sources */,
 				217D91D11A9E6417006F3ABB /* ArtistInfoAboutHTKCollectionViewCell.m in Sources */,

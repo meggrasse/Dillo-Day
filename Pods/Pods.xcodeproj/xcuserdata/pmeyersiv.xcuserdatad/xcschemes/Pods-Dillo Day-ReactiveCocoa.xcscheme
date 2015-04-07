@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "24F9C8E4F6F61EBE6B7666E0"
+               BlueprintIdentifier = "E1C7BD5F20982002CECEAB4E"
                BuildableName = "libPods-Dillo Day-ReactiveCocoa.a"
                BlueprintName = "Pods-Dillo Day-ReactiveCocoa"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "24F9C8E4F6F61EBE6B7666E0"
-            BuildableName = "libPods-Dillo Day-ReactiveCocoa.a"
-            BlueprintName = "Pods-Dillo Day-ReactiveCocoa"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

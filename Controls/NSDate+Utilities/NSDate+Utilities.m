@@ -13,7 +13,7 @@
 */
 
 #pragma GCC diagnostic ignored "-Wwarning-flag"
-#pragma GCC diagnostic ignored "-Wwarning-flag"
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #import "NSDate+Utilities.h"
 
 // Thanks, AshFurrow
