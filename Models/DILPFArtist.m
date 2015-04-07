@@ -18,6 +18,7 @@ NSString *const kDILPFArtistSponsorKey = @"sponsor";
 @dynamic about;
 @dynamic sponsor;
 @dynamic stage;
+@dynamic youtubeVideoIds;
 
 + (NSString *)parseClassName {
     return kDILPFArtistClassKey;

@@ -11,6 +11,7 @@
 #import "Artist.h"
 #import <FontasticIcons/FontasticIcons.h>
 #import "DILFollowArtist.h"
+#import <Parse
 
 @interface DILLineupCenterTextCollectionViewCell()
 @property (strong, nonatomic) DILPFArtist *artist;

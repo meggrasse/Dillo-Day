@@ -139,7 +139,7 @@
             return cellSize;
         }
         case DILArtistInfoTypeMusic: {
-            CGFloat videoCellWidth = CGRectGetWidth(collectionView.bounds) - 30;
+            CGFloat videoCellWidth = CGRectGetWidth(collectionView.bounds) - 15*2;
             CGFloat videoCellHeight = videoCellWidth * (9.0/16.0);
             return CGSizeMake(videoCellWidth, videoCellHeight);
         }
@@ -152,18 +152,24 @@
 
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 1;
+    return 15;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 1;
+    return 15;
 }
 
-
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(15, 0, 15, 0);
+}
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if ([[collectionView cellForItemAtIndexPath:indexPath] isMemberOfClass:[DILArtistYoutubeVideoCollectionViewCell class]]) {
+        XCDYouTubeVideo *video = [self youtubeVideoForIndexPath:indexPath];
+        XCDYouTubeVideoPlayerViewController *youtubeVideoVC = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:video.identifier];
+        [self.delegate presentVideoPlayerViewController:youtubeVideoVC];
+    }
 }
 
 #pragma mark - DILArtistStickyHeaderCollectionViewCellDelegate

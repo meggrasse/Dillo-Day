@@ -45,6 +45,9 @@ static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLi
     DILLineupCenterTextCollectionViewCell *lineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:DILLineupCenterTextCollectionViewCellIdentifier forIndexPath:indexPath];
     DILPFArtist *artistForCell = [self artistForIndexPath:indexPath];
     [lineupCell configureCellWithArtist:artistForCell];
+
+    lineupCell.layer.shouldRasterize = YES;
+    lineupCell.layer.rasterizationScale = [UIScreen mainScreen].scale;
     
     return lineupCell;
 }

@@ -38,6 +38,8 @@
     self.artistCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     self.artistCollectionView.translatesAutoresizingMaskIntoConstraints = NO;
     self.artistCollectionView.alwaysBounceVertical = YES;
+    self.artistCollectionView.backgroundColor = [UIColor whiteColor];
+    
     self.artistCollectionViewModel = [[DILArtistCollectionViewModel alloc] initWithArtist:self.artist];
     self.artistCollectionViewModel.delegate = self;
 
@@ -55,5 +57,9 @@
 
 - (void)reloadSection:(NSUInteger)section {
     [self.artistCollectionView reloadSections:[NSIndexSet indexSetWithIndex:section]];
+}
+
+- (void)presentVideoPlayerViewController:(XCDYouTubeVideoPlayerViewController *)player {
+    [self presentViewController:player animated:YES completion:NULL];
 }
 @end
