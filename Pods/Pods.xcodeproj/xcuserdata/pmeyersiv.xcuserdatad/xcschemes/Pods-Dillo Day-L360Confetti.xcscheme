@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "275BECE650F8A92C679974A8"
+               BlueprintIdentifier = "7B1181F45D2ED4C9B96D6A7C"
                BuildableName = "libPods-Dillo Day-L360Confetti.a"
                BlueprintName = "Pods-Dillo Day-L360Confetti"
                ReferencedContainer = "container:Pods.xcodeproj">

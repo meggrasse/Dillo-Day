@@ -360,6 +360,12 @@
 #define COCOAPODS_VERSION_MINOR_TMCache 2
 #define COCOAPODS_VERSION_PATCH_TMCache 4
 
+// UAProgressView
+#define COCOAPODS_POD_AVAILABLE_UAProgressView
+#define COCOAPODS_VERSION_MAJOR_UAProgressView 0
+#define COCOAPODS_VERSION_MINOR_UAProgressView 1
+#define COCOAPODS_VERSION_PATCH_UAProgressView 1
+
 // UIAlertView+Blocks
 #define COCOAPODS_POD_AVAILABLE_UIAlertView_Blocks
 #define COCOAPODS_VERSION_MAJOR_UIAlertView_Blocks 0

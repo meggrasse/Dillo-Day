@@ -34,6 +34,7 @@ pod 'ReactiveCocoa'
 pod 'ParseUI'
 pod 'Parse'
 pod 'TMCache', '~> 1.2'
+pod 'UAProgressView'
 end
 
 target 'Dillo DayTests' do

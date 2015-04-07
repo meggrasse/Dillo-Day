@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94AAED9448725CD7DF1E20DC"
+               BlueprintIdentifier = "1AE0CF623302A8F209C5C0E5"
                BuildableName = "libPods-Dillo Day-FontasticIcons.a"
                BlueprintName = "Pods-Dillo Day-FontasticIcons"
                ReferencedContainer = "container:Pods.xcodeproj">

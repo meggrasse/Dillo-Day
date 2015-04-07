@@ -12,6 +12,7 @@
 #import <FontasticIcons/FontasticIcons.h>
 #import "DILFollowArtist.h"
 #import <ParseUI/ParseUI.h>
+#import <UAProgressView/UAProgressView.h>
 
 @interface DILLineupCenterTextCollectionViewCell()
 @property (strong, nonatomic) DILPFArtist *artist;
@@ -20,6 +21,7 @@
 @property (strong, nonatomic) UILabel *performanceTimeLabel;
 @property (strong, nonatomic) UIButton *favoriteButton;
 @property (strong, nonatomic) UILabel *sponsorLabel;
+@property (strong, nonatomic) UAProgressView *progressView;
 @end
 
 @implementation DILLineupCenterTextCollectionViewCell
@@ -149,6 +151,28 @@
     return image;
 }
 
+- (UAProgressView *)progressView {
+    if (!_progressView) {
+        _progressView = [[UAProgressView alloc] initForAutoLayout];
+        _progressView.tintColor = [UIColor whiteColor];
+        _progressView.fillOnTouch = NO;
+    }
+    return _progressView;
+}
+
+- (void)setupProgressView {
+    [self.artistImageView addSubview:self.progressView];
+
+    CGFloat progressViewDimension = 50;
+    [self.progressView autoSetDimensionsToSize:CGSizeMake(progressViewDimension, progressViewDimension)];
+    [self.progressView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.progressView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+}
+
+- (void)terminateProgressView {
+    [self.progressView removeFromSuperview];
+}
+
 #pragma mark - Public Methods
 - (void)configureCellWithArtist:(DILPFArtist *)artist {
     self.artist = artist;
@@ -157,7 +181,12 @@
 //        self.artistImageView.image = image;
 //    });
     self.artistImageView.file = artist.lineupImage;
-    [self.artistImageView loadInBackground];
+    [self setupProgressView];
+    [self.artistImageView loadInBackground:^(UIImage *image, NSError *error) {
+        [self terminateProgressView];
+    } progressBlock:^(int percentDone) {
+        [self.progressView setProgress:((float)percentDone)/100.0 animated:YES];
+    }];
 
     self.nameLabel.text = artist.name;
     self.performanceTimeLabel.text = [artist.performanceTime mediumTimeString];

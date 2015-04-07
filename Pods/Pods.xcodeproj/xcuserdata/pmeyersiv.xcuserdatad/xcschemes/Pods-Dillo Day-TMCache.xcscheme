@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09BD7A78E7248853A80B8B75"
+               BlueprintIdentifier = "3EEFAAC9839ADDCC6C6F0F67"
                BuildableName = "libPods-Dillo Day-TMCache.a"
                BlueprintName = "Pods-Dillo Day-TMCache"
                ReferencedContainer = "container:Pods.xcodeproj">
