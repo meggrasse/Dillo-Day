@@ -57,6 +57,7 @@
 		2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */; };
 		2191555D1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */; };
 		219155601AD4BE8400FC61E8 /* DILStageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */; };
+		219155661AD4CC2F00FC61E8 /* DilloDayStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155641AD4CC2F00FC61E8 /* DilloDayStyleKit.m */; };
 		219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */; };
 		219893951A9FE59F006257F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893941A9FE59F006257F5 /* MapViewController.m */; };
 		219893981AA1173B006257F5 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893971AA1173B006257F5 /* HelpViewController.m */; };
@@ -71,7 +72,6 @@
 		21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */; };
 		21DEA9791AD44B1A00987379 /* JGTransitionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9771AD44B1A00987379 /* JGTransitionCollectionView.swift */; };
 		21DEA97A1AD44B1A00987379 /* JGTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9781AD44B1A00987379 /* JGTransitionLayout.swift */; };
-		21DEA98A1AD4968700987379 /* DilloDayStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9891AD4968700987379 /* DilloDayStyleKit.m */; };
 		21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF15951A8DBAA00022953A /* RGCardViewLayout.m */; };
 		21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFF9AB1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m */; };
 		21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFF9AE1A97DAF200F225ED /* LineupModel.m */; };
@@ -178,6 +178,8 @@
 		2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILSwipeLineupViewController.m; sourceTree = "<group>"; };
 		2191555E1AD4BE8400FC61E8 /* DILStageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectionViewController.h; sourceTree = "<group>"; };
 		2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectionViewController.m; sourceTree = "<group>"; };
+		219155641AD4CC2F00FC61E8 /* DilloDayStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DilloDayStyleKit.m; sourceTree = SOURCE_ROOT; };
+		219155651AD4CC2F00FC61E8 /* DilloDayStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DilloDayStyleKit.h; sourceTree = SOURCE_ROOT; };
 		219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoVideoCollectionViewCell.m; sourceTree = "<group>"; };
 		219893931A9FE59F006257F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
@@ -204,8 +206,6 @@
 		21DEA9761AD44B1900987379 /* Dillo Day-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dillo Day-Bridging-Header.h"; sourceTree = "<group>"; };
 		21DEA9771AD44B1A00987379 /* JGTransitionCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGTransitionCollectionView.swift; sourceTree = "<group>"; };
 		21DEA9781AD44B1A00987379 /* JGTransitionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGTransitionLayout.swift; sourceTree = "<group>"; };
-		21DEA9881AD4968700987379 /* DilloDayStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DilloDayStyleKit.h; sourceTree = "<group>"; };
-		21DEA9891AD4968700987379 /* DilloDayStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DilloDayStyleKit.m; sourceTree = "<group>"; };
 		21EF15951A8DBAA00022953A /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
 		21EF15961A8DBAA00022953A /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
 		21EFF9AA1A97D05600F225ED /* LineupTextHTKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineupTextHTKCollectionViewCell.h; sourceTree = "<group>"; };
@@ -382,8 +382,8 @@
 		217946AE1A87C96100224737 /* Dillo Day */ = {
 			isa = PBXGroup;
 			children = (
-				21DEA9881AD4968700987379 /* DilloDayStyleKit.h */,
-				21DEA9891AD4968700987379 /* DilloDayStyleKit.m */,
+				219155641AD4CC2F00FC61E8 /* DilloDayStyleKit.m */,
+				219155651AD4CC2F00FC61E8 /* DilloDayStyleKit.h */,
 				21DEA9861AD48FD900987379 /* Categories */,
 				217D91C91A9DAA25006F3ABB /* DDPrefixHeader.pch */,
 				217D91D21A9E65F0006F3ABB /* DDConstants.h */,
@@ -740,7 +740,7 @@
 				217946B21A87C96100224737 /* main.m in Sources */,
 				210A816B1AC626DD0091C134 /* DILLineupCollectionViewModel.m in Sources */,
 				21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */,
-				21DEA98A1AD4968700987379 /* DilloDayStyleKit.m in Sources */,
+				219155661AD4CC2F00FC61E8 /* DilloDayStyleKit.m in Sources */,
 				215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */,
 				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
 				21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */,

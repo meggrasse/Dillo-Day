@@ -28,7 +28,7 @@ static UIColor* _barButtonItemHighlightedColor = nil;
 + (void)initialize
 {
     // Colors Initialization
-    _tabBarColor = [UIColor colorWithRed: 0.102 green: 0.737 blue: 0.612 alpha: 1];
+    _tabBarColor = [UIColor colorWithRed: 0.608 green: 0.349 blue: 0.714 alpha: 1];
     CGFloat tabBarColorHSBA[4];
     [_tabBarColor getHue: &tabBarColorHSBA[0] saturation: &tabBarColorHSBA[1] brightness: &tabBarColorHSBA[2] alpha: &tabBarColorHSBA[3]];
 

@@ -58,8 +58,8 @@
         [self configureFlatNavigationController:controller];
     }
 
-    [UIBarButtonItem configureFlatButtonsWithColor:[DilloDayStyleKit barButtonItemColor] highlightedColor:[DilloDayStyleKit barButtonItemHighlightedColor] cornerRadius:3];
-    
+//    [UIBarButtonItem configureFlatButtonsWithColor:[DilloDayStyleKit barButtonItemColor] highlightedColor:[DilloDayStyleKit barButtonItemHighlightedColor] cornerRadius:3];
+
     UITabBarController *tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
     UITabBar *tabBar = tabBarController.tabBar;
     tabBar.tintColor = [UIColor whiteColor];
