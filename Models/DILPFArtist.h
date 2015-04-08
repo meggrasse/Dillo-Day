@@ -27,6 +27,7 @@ extern NSString *const kDILPFArtistSponsorKey;
 @property (retain) DILPFSponsor *sponsor;
 @property (retain) DILPFStage *stage;
 @property (retain) NSMutableArray *youtubeVideoIds;
+@property (nonatomic) BOOL artistAlerts;
 
 /**
  *  Returns a promise that returns a UIImage of the DILPFArtist object's lineupImage.

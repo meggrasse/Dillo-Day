@@ -17,6 +17,7 @@
 @property (strong, nonatomic) UIImageView *circularImageView;
 @property (strong, nonatomic) UILabel *timeLabel;
 @property (strong, nonatomic) NYSegmentedControl *segmentedControl;
+@property (strong, nonatomic) NSMutableArray *circularImageViewLayoutConstraints;
 @end
 
 static NSString *const kSegmentedControlBio     = @"BIO";
@@ -26,6 +27,7 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self configureCell];
+        self.circularImageViewLayoutConstraints = [NSMutableArray new];
     }
     return self;
 }
@@ -33,7 +35,6 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 - (void)configureCell {
     self.clipsToBounds = YES;
     [self addSubview:self.backgroundImageView];
-    [self addSubview:self.circularImageView];
     [self addSubview:self.timeLabel];
     [self addSubview:self.segmentedControl];
 
@@ -44,19 +45,7 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     [self.backgroundImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
     [self.backgroundImageView autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.segmentedControl];
 
-    [self.circularImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.backgroundImageView];
-    [self.circularImageView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.backgroundImageView];
-//    CGFloat circularImageVieWDimension = 100;
-    [self.circularImageView autoSetDimension:ALDimensionHeight toSize:0 relation:NSLayoutRelationGreaterThanOrEqual];
-    [self.circularImageView autoSetDimension:ALDimensionWidth toSize:0 relation:NSLayoutRelationGreaterThanOrEqual];
-    [self.circularImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.circularImageView];
-    CGFloat circularImageViewInset = 30;
-//    [self.circularImageView autoSetDimensionsToSize:CGSizeMake(circularImageViewInset, circularImageViewInset)];
-    [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
-        [self.circularImageView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.backgroundImageView withOffset:circularImageViewInset relation:NSLayoutRelationGreaterThanOrEqual];
-        [self.circularImageView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.backgroundImageView withOffset:-circularImageViewInset relation:NSLayoutRelationGreaterThanOrEqual];
-
-    }];
+    [self addCircularImageView];
 
     CGFloat timeLabelInset = 10;
     [self.timeLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.backgroundImageView withOffset:-timeLabelInset];
@@ -88,12 +77,36 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     return _circularImageView;
 }
 
+- (void)removeCircularImageView {
+    if (_circularImageView) {
+        [self.circularImageView removeFromSuperview];
+        _circularImageView = nil;
+    }
+}
+
+- (void)addCircularImageView {
+    [self.backgroundImageView addSubview:self.circularImageView];
+    [self.circularImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.backgroundImageView];
+    [self.circularImageView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.backgroundImageView];
+
+    CGFloat inset = 60;
+    [self.circularImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.backgroundImageView withOffset:-inset];
+    [self.circularImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.circularImageView];
+
+//    [RACObserve(self, self.backgroundImageView.bounds) subscribeNext:^(NSNumber *bounds) {
+//        if (CGRectGetWidth(bounds.CGRectValue) && CGRectGetHeight(bounds.CGRectValue) <= inset) {
+//            [self removeCircularImageView];
+//        }
+//    }];
+}
+
 - (UILabel *)timeLabel {
     if (!_timeLabel) {
         _timeLabel = [[UILabel alloc] initForAutoLayout];
     }
     return _timeLabel;
 }
+
 
 - (NYSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {

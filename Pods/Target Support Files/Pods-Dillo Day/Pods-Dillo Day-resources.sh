@@ -51,6 +51,11 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "FlatUIKit/Resources/flat-ui-icons-regular.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Bold.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Italic.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Light.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Regular.ttf"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Fonts/Entypo-Social.otf"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Fonts/Entypo.otf"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Fonts/fontawesome.ttf"
@@ -65,6 +70,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${BUILT_PRODUCTS_DIR}/Mapbox.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "FlatUIKit/Resources/flat-ui-icons-regular.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Bold.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Italic.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Light.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Regular.ttf"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Fonts/Entypo-Social.otf"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Fonts/Entypo.otf"
   install_resource "FontasticIcons/FontasticIcons/Sources/Resources/Fonts/fontawesome.ttf"

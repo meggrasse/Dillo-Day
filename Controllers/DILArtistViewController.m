@@ -9,10 +9,12 @@
 #import "DILArtistViewController.h"
 #import "DILArtistCollectionViewModel.h"
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
+#import <FlatUIKit/FlatUIKit.h>
 
 @interface DILArtistViewController ()<DILArtistCollectionViewModelDelegate>
 @property (strong, nonatomic) UICollectionView *artistCollectionView;
 @property (strong, nonatomic) DILArtistCollectionViewModel *artistCollectionViewModel;
+@property (strong, nonatomic) UIBarButtonItem *artistAlertsBarButton;
 @end
 
 @implementation DILArtistViewController
@@ -20,6 +22,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self configureArtistAlertBarButtonItem];
+}
+
+- (void)configureArtistAlertBarButtonItem {
+    self.artistAlertsBarButton = [[UIBarButtonItem alloc] initWithImage:[self artistAlertsImage] style:UIBarButtonItemStylePlain target:self action:@selector(handleArtistAlertsTap)];
+    self.navigationItem.rightBarButtonItem = self.artistAlertsBarButton;
+}
+
+- (UIImage *)artistAlertsImage {
+    UIImage *image;
+
+    if (self.artist.artistAlerts) {
+        image = [UIImage imageNamed:@"check with circle"];
+    } else {
+        image = [UIImage imageNamed:@"Add with circle"];
+    }
+    return image;
+}
+
+- (void)handleArtistAlertsTap {
+    self.artist.artistAlerts = !self.artist.artistAlerts;
+    [self.artistAlertsBarButton setImage:[self artistAlertsImage]];
 }
 
 - (void)configureArtistCollectionView {
@@ -57,6 +81,7 @@
 
 - (void)reloadSection:(NSUInteger)section {
     [self.artistCollectionView reloadSections:[NSIndexSet indexSetWithIndex:section]];
+//    [self.artistCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
 }
 
 - (void)presentVideoPlayerViewController:(XCDYouTubeVideoPlayerViewController *)player {

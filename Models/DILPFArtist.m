@@ -7,6 +7,8 @@
 //
 
 #import "DILPFArtist.h"
+#import <Realm/Realm.h>
+#import "DILFollowArtist.h"
 
 NSString *const kDILPFArtistClassKey = @"DILPFArtist";
 NSString *const kDILPFArtistSponsorKey = @"sponsor";
@@ -39,5 +41,26 @@ NSString *const kDILPFArtistSponsorKey = @"sponsor";
             }
         }];
     }];
+}
+
+- (BOOL)artistAlerts {
+    DILFollowArtist *followArtistResult = [DILFollowArtist objectForPrimaryKey:self.objectId];
+    return followArtistResult && followArtistResult.follow;
+}
+
+- (void)setArtistAlerts:(BOOL)artistAlerts {
+    DILFollowArtist *followArtistResult = [DILFollowArtist objectForPrimaryKey:self.objectId];
+
+    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+    [defaultRealm beginWriteTransaction];
+    if (!followArtistResult) {
+        followArtistResult = [[DILFollowArtist alloc] init];
+        followArtistResult.artistObjectId = self.objectId;
+        followArtistResult.follow = NO;
+        [defaultRealm addObject:followArtistResult];
+    }
+
+    followArtistResult.follow = artistAlerts;
+    [defaultRealm commitWriteTransaction];
 }
 @end

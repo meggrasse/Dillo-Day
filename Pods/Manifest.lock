@@ -22,6 +22,7 @@ PODS:
   - BOString (0.0.9)
   - Colours (5.6.1)
   - CSStickyHeaderFlowLayout (0.2.4)
+  - FlatUIKit (1.6)
   - FMDB (2.3):
     - FMDB/standard (= 2.3)
   - FMDB/common (2.3)
@@ -31,6 +32,7 @@ PODS:
   - FXBlurView (1.6.3)
   - GRMustache (7.3.0):
     - JRSwizzle (~> 1.0)
+  - GUITabPagerViewController (0.0.5)
   - HTHorizontalSelectionList (0.3.1)
   - HTKDynamicResizingCell (0.0.2)
   - JRSwizzle (1.0)
@@ -120,8 +122,10 @@ DEPENDENCIES:
   - BOString (~> 0.0)
   - Colours (~> 5.6)
   - CSStickyHeaderFlowLayout (~> 0.2)
+  - FlatUIKit (~> 1.6)
   - FontasticIcons
   - FXBlurView (~> 1.6)
+  - GUITabPagerViewController (~> 0.0.5)
   - HTHorizontalSelectionList (~> 0.3.1)
   - HTKDynamicResizingCell (~> 0.0.1)
   - L360Confetti (from `https://github.com/life360/confetti.git`)
@@ -158,10 +162,12 @@ SPEC CHECKSUMS:
   BOString: c896f83b514996bbe874c0a3afd61f4c6764e0ed
   Colours: cad6964a7c178253356403d206eef600a3dc59c8
   CSStickyHeaderFlowLayout: a04d4bc7d6f6668073d19d22d42c27a682dd71da
+  FlatUIKit: a59c93fe2fde5329dfb71dd9317b1b0386d6a178
   FMDB: 773d79bb74226959b7e2286b1d6e0bd857c88915
   FontasticIcons: f20740bf8f1d3565c312f1c3b9806339212b58aa
   FXBlurView: c6d23f3d35af2c6282296a2930f61c6e2c788d01
   GRMustache: 6baee020c5644416c034f5afb1607f6219e7f753
+  GUITabPagerViewController: 4ddde36aaf9d125d0558cfc6cb00f81c982b3df3
   HTHorizontalSelectionList: 35ff501e07b50a7c6a4a19105b69067a8ce6b1f3
   HTKDynamicResizingCell: 9358514816f0737a8d20329617ee126a1498357c
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3

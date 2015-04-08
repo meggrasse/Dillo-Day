@@ -17,6 +17,7 @@
 
 #import "DILArtistViewController.h"
 
+
 @interface DILLineupViewController ()<DILStageSelectionDelegate, DILLineupCollectionViewDelegate>
 @property (strong, nonatomic) UICollectionView *lineupCollectionView;
 @property (strong, nonatomic) DILLineupCollectionViewModel *lineupCollectionViewModel;

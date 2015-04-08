@@ -15,7 +15,6 @@
 		210A816E1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210A816D1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m */; };
 		212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */; };
 		212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */; };
-		212028681AA842B500E9E028 /* DilloDayStyleSheet.nss in Resources */ = {isa = PBXBuildFile; fileRef = 212028671AA842B500E9E028 /* DilloDayStyleSheet.nss */; };
 		212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */; };
 		2139036E1A994EF90037BB5E /* LineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2139036D1A994EF90037BB5E /* LineupViewController.m */; };
 		21417F821A998F7B00A02B25 /* ArtistInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */; };
@@ -53,6 +52,11 @@
 		2185F7C41AABBB0F008D5544 /* NotificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2185F7C31AABBB0F008D5544 /* NotificationModel.m */; };
 		2185F7C71AABBB25008D5544 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 2185F7C61AABBB25008D5544 /* Notification.m */; };
 		2185F7CA1AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2185F7C91AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m */; };
+		219155541AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155531AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m */; };
+		219155571AD4BD6F00FC61E8 /* DILStageLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155561AD4BD6F00FC61E8 /* DILStageLineupViewController.m */; };
+		2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */; };
+		2191555D1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */; };
+		219155601AD4BE8400FC61E8 /* DILStageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */; };
 		219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */; };
 		219893951A9FE59F006257F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893941A9FE59F006257F5 /* MapViewController.m */; };
 		219893981AA1173B006257F5 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893971AA1173B006257F5 /* HelpViewController.m */; };
@@ -64,8 +68,10 @@
 		21C4C10E1AC74C9900AE4561 /* DILPFArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */; };
 		21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */; };
 		21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1131AC750EE00AE4561 /* DILPFStage.m */; };
-		21C4C1171AC7662500AE4561 /* DILStageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1161AC7662500AE4561 /* DILStageSelectionViewController.m */; };
 		21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */; };
+		21DEA9791AD44B1A00987379 /* JGTransitionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9771AD44B1A00987379 /* JGTransitionCollectionView.swift */; };
+		21DEA97A1AD44B1A00987379 /* JGTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9781AD44B1A00987379 /* JGTransitionLayout.swift */; };
+		21DEA98A1AD4968700987379 /* DilloDayStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9891AD4968700987379 /* DilloDayStyleKit.m */; };
 		21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF15951A8DBAA00022953A /* RGCardViewLayout.m */; };
 		21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFF9AB1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m */; };
 		21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFF9AE1A97DAF200F225ED /* LineupModel.m */; };
@@ -100,13 +106,12 @@
 		212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m; sourceTree = "<group>"; wrapsLines = 0; };
 		212028641AA8362B00E9E028 /* UIView+FindUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindUIViewController.h"; sourceTree = "<group>"; };
 		212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindUIViewController.m"; sourceTree = "<group>"; };
-		212028671AA842B500E9E028 /* DilloDayStyleSheet.nss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DilloDayStyleSheet.nss; sourceTree = "<group>"; };
 		212CFAAD1A89AEEC00BCFC90 /* FMDirectionTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDirectionTransition.h; sourceTree = "<group>"; };
 		212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDirectionTransition.m; sourceTree = "<group>"; };
 		2139036C1A994EF90037BB5E /* LineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineupViewController.h; sourceTree = "<group>"; };
 		2139036D1A994EF90037BB5E /* LineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineupViewController.m; sourceTree = "<group>"; };
-		21417F801A998F7B00A02B25 /* ArtistInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoViewController.h; sourceTree = "<group>"; };
-		21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoViewController.m; sourceTree = "<group>"; };
+		21417F801A998F7B00A02B25 /* ArtistInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArtistInfoViewController.h; path = ../ArtistInfoViewController.h; sourceTree = "<group>"; };
+		21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArtistInfoViewController.m; path = ../ArtistInfoViewController.m; sourceTree = "<group>"; };
 		214C5D8F1A8D60D7009BC7F0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		214C5D911A8D60DD009BC7F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		214C5D931A8D60E3009BC7F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -163,12 +168,22 @@
 		2185F7C61AABBB25008D5544 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		2185F7C81AABBE0C008D5544 /* NotificationHTKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationHTKCollectionViewCell.h; sourceTree = "<group>"; };
 		2185F7C91AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationHTKCollectionViewCell.m; sourceTree = "<group>"; };
+		219155521AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeNavigation.h; sourceTree = "<group>"; };
+		219155531AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeNavigation.m; sourceTree = "<group>"; };
+		219155551AD4BD6F00FC61E8 /* DILStageLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageLineupViewController.h; sourceTree = "<group>"; };
+		219155561AD4BD6F00FC61E8 /* DILStageLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageLineupViewController.m; sourceTree = "<group>"; };
+		219155581AD4BD9600FC61E8 /* DILLineupCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILLineupCollectionViewController.h; sourceTree = "<group>"; };
+		219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupCollectionViewController.m; sourceTree = "<group>"; };
+		2191555B1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILSwipeLineupViewController.h; sourceTree = "<group>"; };
+		2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILSwipeLineupViewController.m; sourceTree = "<group>"; };
+		2191555E1AD4BE8400FC61E8 /* DILStageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectionViewController.h; sourceTree = "<group>"; };
+		2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectionViewController.m; sourceTree = "<group>"; };
 		219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoVideoCollectionViewCell.m; sourceTree = "<group>"; };
-		219893931A9FE59F006257F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		219893941A9FE59F006257F5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		219893961AA1173B006257F5 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
-		219893971AA1173B006257F5 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		219893931A9FE59F006257F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
+		219893941A9FE59F006257F5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
+		219893961AA1173B006257F5 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpViewController.h; path = ../HelpViewController.h; sourceTree = "<group>"; };
+		219893971AA1173B006257F5 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpViewController.m; path = ../HelpViewController.m; sourceTree = "<group>"; };
 		219AD4711A9A458500C9E5A6 /* Promposal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Promposal.xib; sourceTree = "<group>"; };
 		21BAFE361ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILArtistStickyHeaderCollectionViewCell.h; sourceTree = "<group>"; };
 		21BAFE371ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILArtistStickyHeaderCollectionViewCell.m; sourceTree = "<group>"; };
@@ -184,10 +199,13 @@
 		21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFSponsor.m; sourceTree = "<group>"; };
 		21C4C1121AC750EE00AE4561 /* DILPFStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFStage.h; sourceTree = "<group>"; };
 		21C4C1131AC750EE00AE4561 /* DILPFStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFStage.m; sourceTree = "<group>"; };
-		21C4C1151AC7662500AE4561 /* DILStageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectionViewController.h; sourceTree = "<group>"; };
-		21C4C1161AC7662500AE4561 /* DILStageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectionViewController.m; sourceTree = "<group>"; };
 		21DEA9711AD436D000987379 /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
 		21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
+		21DEA9761AD44B1900987379 /* Dillo Day-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dillo Day-Bridging-Header.h"; sourceTree = "<group>"; };
+		21DEA9771AD44B1A00987379 /* JGTransitionCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGTransitionCollectionView.swift; sourceTree = "<group>"; };
+		21DEA9781AD44B1A00987379 /* JGTransitionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGTransitionLayout.swift; sourceTree = "<group>"; };
+		21DEA9881AD4968700987379 /* DilloDayStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DilloDayStyleKit.h; sourceTree = "<group>"; };
+		21DEA9891AD4968700987379 /* DilloDayStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DilloDayStyleKit.m; sourceTree = "<group>"; };
 		21EF15951A8DBAA00022953A /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
 		21EF15961A8DBAA00022953A /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
 		21EFF9AA1A97D05600F225ED /* LineupTextHTKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineupTextHTKCollectionViewCell.h; sourceTree = "<group>"; };
@@ -255,6 +273,12 @@
 		210A81651AC625730091C134 /* Deprecated VCs */ = {
 			isa = PBXGroup;
 			children = (
+				219893931A9FE59F006257F5 /* MapViewController.h */,
+				219893941A9FE59F006257F5 /* MapViewController.m */,
+				219893961AA1173B006257F5 /* HelpViewController.h */,
+				219893971AA1173B006257F5 /* HelpViewController.m */,
+				21417F801A998F7B00A02B25 /* ArtistInfoViewController.h */,
+				21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */,
 				2139036C1A994EF90037BB5E /* LineupViewController.h */,
 				2139036D1A994EF90037BB5E /* LineupViewController.m */,
 				2185F7BF1AABB94F008D5544 /* NotificationsViewController.h */,
@@ -358,16 +382,14 @@
 		217946AE1A87C96100224737 /* Dillo Day */ = {
 			isa = PBXGroup;
 			children = (
-				212028641AA8362B00E9E028 /* UIView+FindUIViewController.h */,
-				212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */,
-				214FD6C81AA5542D001D6619 /* UIFont+SytemFontOverride.h */,
-				214FD6C91AA5542D001D6619 /* UIFont+SytemFontOverride.m */,
+				21DEA9881AD4968700987379 /* DilloDayStyleKit.h */,
+				21DEA9891AD4968700987379 /* DilloDayStyleKit.m */,
+				21DEA9861AD48FD900987379 /* Categories */,
 				217D91C91A9DAA25006F3ABB /* DDPrefixHeader.pch */,
 				217D91D21A9E65F0006F3ABB /* DDConstants.h */,
 				217D91D31A9E65F0006F3ABB /* DDConstants.m */,
 				217946B31A87C96100224737 /* AppDelegate.h */,
 				217946B41A87C96100224737 /* AppDelegate.m */,
-				212028671AA842B500E9E028 /* DilloDayStyleSheet.nss */,
 				217946B91A87C96100224737 /* Main.storyboard */,
 				217946BC1A87C96100224737 /* Images.xcassets */,
 				217946BE1A87C96100224737 /* LaunchScreen.xib */,
@@ -405,20 +427,20 @@
 		217946D51A87FAAC00224737 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				21C4C1151AC7662500AE4561 /* DILStageSelectionViewController.h */,
-				21C4C1161AC7662500AE4561 /* DILStageSelectionViewController.m */,
+				2191555E1AD4BE8400FC61E8 /* DILStageSelectionViewController.h */,
+				2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */,
 				210A815C1AC5FFE80091C134 /* DILNotificationsViewController.h */,
 				210A815D1AC5FFE80091C134 /* DILNotificationsViewController.m */,
 				210A81661AC625A80091C134 /* DILLineupViewController.h */,
 				210A81671AC625A80091C134 /* DILLineupViewController.m */,
+				2191555B1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.h */,
+				2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */,
+				219155581AD4BD9600FC61E8 /* DILLineupCollectionViewController.h */,
+				219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */,
+				219155551AD4BD6F00FC61E8 /* DILStageLineupViewController.h */,
+				219155561AD4BD6F00FC61E8 /* DILStageLineupViewController.m */,
 				21BAFE391ACE1C49003F5ADD /* DILArtistViewController.h */,
 				21BAFE3A1ACE1C49003F5ADD /* DILArtistViewController.m */,
-				21417F801A998F7B00A02B25 /* ArtistInfoViewController.h */,
-				21417F811A998F7B00A02B25 /* ArtistInfoViewController.m */,
-				219893931A9FE59F006257F5 /* MapViewController.h */,
-				219893941A9FE59F006257F5 /* MapViewController.m */,
-				219893961AA1173B006257F5 /* HelpViewController.h */,
-				219893971AA1173B006257F5 /* HelpViewController.m */,
 				210A81651AC625730091C134 /* Deprecated VCs */,
 			);
 			path = Controllers;
@@ -458,12 +480,15 @@
 		217946E71A88005200224737 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				219155511AD4BCA800FC61E8 /* CarbonTabSwipeNavigation */,
+				21DEA97B1AD44B2000987379 /* JGTransitionCollectionView */,
 				21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */,
 				2159BC341ACB8C4200D48F5F /* NSDate+Utilities */,
 				21EF15961A8DBAA00022953A /* RGCardViewLayout.h */,
 				21EF15951A8DBAA00022953A /* RGCardViewLayout.m */,
 				212CFAB01A89AEEF00BCFC90 /* FMDirectionTransition */,
 				217946DC1A87FCB300224737 /* FMColorTransition */,
+				21DEA9761AD44B1900987379 /* Dillo Day-Bridging-Header.h */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -492,6 +517,15 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
+		219155511AD4BCA800FC61E8 /* CarbonTabSwipeNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				219155521AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.h */,
+				219155531AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m */,
+			);
+			path = CarbonTabSwipeNavigation;
+			sourceTree = "<group>";
+		};
 		21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +533,26 @@
 				21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */,
 			);
 			name = "UIApplication + NetworkActivityIndicator";
+			sourceTree = "<group>";
+		};
+		21DEA97B1AD44B2000987379 /* JGTransitionCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				21DEA9771AD44B1A00987379 /* JGTransitionCollectionView.swift */,
+				21DEA9781AD44B1A00987379 /* JGTransitionLayout.swift */,
+			);
+			name = JGTransitionCollectionView;
+			sourceTree = "<group>";
+		};
+		21DEA9861AD48FD900987379 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				212028641AA8362B00E9E028 /* UIView+FindUIViewController.h */,
+				212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */,
+				214FD6C81AA5542D001D6619 /* UIFont+SytemFontOverride.h */,
+				214FD6C91AA5542D001D6619 /* UIFont+SytemFontOverride.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		21EFF9A91A97CFDA00F225ED /* Lineup Views */ = {
@@ -606,7 +660,6 @@
 			files = (
 				217946BB1A87C96100224737 /* Main.storyboard in Resources */,
 				217946C01A87C96100224737 /* LaunchScreen.xib in Resources */,
-				212028681AA842B500E9E028 /* DilloDayStyleSheet.nss in Resources */,
 				217946BD1A87C96100224737 /* Images.xcassets in Resources */,
 				219AD4721A9A458500C9E5A6 /* Promposal.xib in Resources */,
 			);
@@ -659,8 +712,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219155541AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m in Sources */,
+				21DEA9791AD44B1A00987379 /* JGTransitionCollectionView.swift in Sources */,
 				212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */,
+				2191555D1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m in Sources */,
 				210A81681AC625A80091C134 /* DILLineupViewController.m in Sources */,
+				219155571AD4BD6F00FC61E8 /* DILStageLineupViewController.m in Sources */,
+				219155601AD4BE8400FC61E8 /* DILStageSelectionViewController.m in Sources */,
 				2139036E1A994EF90037BB5E /* LineupViewController.m in Sources */,
 				21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */,
 				2185F7CA1AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m in Sources */,
@@ -668,6 +726,7 @@
 				2185F7C41AABBB0F008D5544 /* NotificationModel.m in Sources */,
 				212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */,
 				2185F7C71AABBB25008D5544 /* Notification.m in Sources */,
+				21DEA97A1AD44B1A00987379 /* JGTransitionLayout.swift in Sources */,
 				217946B51A87C96100224737 /* AppDelegate.m in Sources */,
 				21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */,
 				2185F7C11AABB94F008D5544 /* NotificationsViewController.m in Sources */,
@@ -681,13 +740,14 @@
 				217946B21A87C96100224737 /* main.m in Sources */,
 				210A816B1AC626DD0091C134 /* DILLineupCollectionViewModel.m in Sources */,
 				21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */,
-				21C4C1171AC7662500AE4561 /* DILStageSelectionViewController.m in Sources */,
+				21DEA98A1AD4968700987379 /* DilloDayStyleKit.m in Sources */,
 				215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */,
 				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
 				21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */,
 				219893981AA1173B006257F5 /* HelpViewController.m in Sources */,
 				214FD6C71AA510E4001D6619 /* LineupCollectionViewCell.m in Sources */,
 				21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */,
+				2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */,
 				21BAFE3B1ACE1C49003F5ADD /* DILArtistViewController.m in Sources */,
 				21BAFE381ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m in Sources */,
 				214FD6D21AA55D9E001D6619 /* FMParallaxImageView.m in Sources */,
@@ -826,6 +886,7 @@
 			baseConfigurationReference = 6D331DFBD86CF821E61B852F /* Pods-Dillo Day.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -837,6 +898,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Controls/Dillo Day-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -845,6 +908,7 @@
 			baseConfigurationReference = BB9D6A9B72E6CB8B1378584F /* Pods-Dillo Day.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -856,6 +920,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Controls/Dillo Day-Bridging-Header.h";
 			};
 			name = Release;
 		};

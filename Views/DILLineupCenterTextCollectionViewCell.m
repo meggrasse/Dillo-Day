@@ -120,33 +120,20 @@
 }
 
 - (void)handleFavoriteButtonTapped:(UIButton *)sender {
-    DILFollowArtist *followArtistResult = [DILFollowArtist objectForPrimaryKey:self.artist.objectId];
-
-    RLMRealm *defaultRealm = [RLMRealm defaultRealm];
-    [defaultRealm beginWriteTransaction];
-    if (!followArtistResult) {
-        followArtistResult = [[DILFollowArtist alloc] init];
-        followArtistResult.artistObjectId = self.artist.objectId;
-        followArtistResult.follow = NO;
-        [defaultRealm addObject:followArtistResult];
-    }
-    followArtistResult.follow = !followArtistResult.follow;
-    [defaultRealm commitWriteTransaction];
-
+    self.artist.artistAlerts = !self.artist.artistAlerts;
     [self.favoriteButton setImage:[self followImageForArtist:self.artist] forState:UIControlStateNormal];
 }
 
 - (UIImage *)followImageForArtist:(DILPFArtist *)artist {
     UIImage *image;
-    CGFloat imageDimension = 15;
-    CGRect imageBounds = CGRectMake(0, 0, imageDimension, imageDimension);
-    UIColor *imageColor = [UIColor whiteColor];
+//    CGFloat imageDimension = 15;
+//    CGRect imageBounds = CGRectMake(0, 0, imageDimension, imageDimension);
+//    UIColor *imageColor = [UIColor whiteColor];
 
-    DILFollowArtist *followArtistResult = [DILFollowArtist objectForPrimaryKey:artist.objectId];
-    if (followArtistResult && followArtistResult.follow) {
-        image = [[FIIconicIcon heartFillIcon] imageWithBounds:imageBounds color:imageColor];
+    if (self.artist.artistAlerts) {
+        image = [UIImage imageNamed:@"Check without bg"];
     } else {
-        image = [[FIIconicIcon plusIcon] imageWithBounds:imageBounds color:imageColor];
+        image = [UIImage imageNamed:@"Add without bg"];
     }
     return image;
 }

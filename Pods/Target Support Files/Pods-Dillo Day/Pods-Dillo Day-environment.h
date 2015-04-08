@@ -102,6 +102,12 @@
 #define COCOAPODS_VERSION_MINOR_FXBlurView 6
 #define COCOAPODS_VERSION_PATCH_FXBlurView 3
 
+// FlatUIKit
+#define COCOAPODS_POD_AVAILABLE_FlatUIKit
+#define COCOAPODS_VERSION_MAJOR_FlatUIKit 1
+#define COCOAPODS_VERSION_MINOR_FlatUIKit 6
+#define COCOAPODS_VERSION_PATCH_FlatUIKit 0
+
 // FontasticIcons
 #define COCOAPODS_POD_AVAILABLE_FontasticIcons
 #define COCOAPODS_VERSION_MAJOR_FontasticIcons 0
@@ -113,6 +119,12 @@
 #define COCOAPODS_VERSION_MAJOR_GRMustache 7
 #define COCOAPODS_VERSION_MINOR_GRMustache 3
 #define COCOAPODS_VERSION_PATCH_GRMustache 0
+
+// GUITabPagerViewController
+#define COCOAPODS_POD_AVAILABLE_GUITabPagerViewController
+#define COCOAPODS_VERSION_MAJOR_GUITabPagerViewController 0
+#define COCOAPODS_VERSION_MINOR_GUITabPagerViewController 0
+#define COCOAPODS_VERSION_PATCH_GUITabPagerViewController 5
 
 // HTHorizontalSelectionList
 #define COCOAPODS_POD_AVAILABLE_HTHorizontalSelectionList
