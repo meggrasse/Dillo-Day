@@ -13,10 +13,11 @@
 #import "DILLineupViewController.h"
 #import "DILSwipeLineupViewController.h"
 #import "MapViewController.h"
-#import "HelpViewController.h"
+#import "DILHelpViewController.h"
 #import "DILNotificationsViewController.h"
 #import "DILFakeDataGenerator.h"
-
+#import "DILParseClassGeneration.h"
+#import "DILPushNotificationHandler.h"
 
 @interface AppDelegate ()
 
@@ -29,7 +30,20 @@
     [Parse setApplicationId:@"zpDqUtE6y2RIcuWeUPwKPUJYZi12qal1vF83n2GF"
                   clientKey:@"LDaDgElWPLhahqdw3MjYlouCWFzHzewaxHWYvEgb"];
 
+
+
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+
+
 //    [[DILFakeDataGenerator new] generateData];
+//    [DILParseClassGeneration createAllRoles];
 
     DILLineupViewController *lineupVC = [DILLineupViewController new];
     lineupVC.title = @"Lineup";
@@ -49,8 +63,8 @@
     UINavigationController *notificationsNavController = [[UINavigationController alloc] initWithRootViewController:notificationVC];
 
 
-    HelpViewController *helpVC = [HelpViewController new];
-    helpVC.title = @"Emergency";
+    DILHelpViewController *helpVC = [DILHelpViewController new];
+    helpVC.title = @"Help";
     UINavigationController *helpNavController = [[UINavigationController alloc] initWithRootViewController:helpVC];
     
     NSArray *navigationControllerArray = @[lineupNavController, swipeLineupNavController, mapNavController, notificationsNavController, helpNavController];
@@ -80,4 +94,15 @@
     navigationBar.tintColor = [UIColor whiteColor];
 }
 
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    currentInstallation.channels = @[ @"global" ];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [[DILPushNotificationHandler sharedPushNotificationHandler] handlePushNotification:userInfo[@"aps"]];
+}
 @end

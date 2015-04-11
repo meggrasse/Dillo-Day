@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface DILNotificationsTableViewModel : NSObject<UITableViewDataSource, UITableViewDelegate>
+@protocol DILNotificationsTableViewProtocol <NSObject>
+@required
+- (void)reloadTableDataScrollToTop:(BOOL)scrollToTop;
+@end
 
+@interface DILNotificationsTableViewModel : NSObject<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) id<DILNotificationsTableViewProtocol> delegate;
+
+- (void)markDisplayedNotificationsRead;
+- (void)trackDisplayedNotifications;
 @end

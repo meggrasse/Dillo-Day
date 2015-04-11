@@ -174,6 +174,12 @@
 #define COCOAPODS_VERSION_MINOR_NSAttributedString_CCLFormat 0
 #define COCOAPODS_VERSION_PATCH_NSAttributedString_CCLFormat 1
 
+// NSDate+TimeAgo
+#define COCOAPODS_POD_AVAILABLE_NSDate_TimeAgo
+#define COCOAPODS_VERSION_MAJOR_NSDate_TimeAgo 1
+#define COCOAPODS_VERSION_MINOR_NSDate_TimeAgo 0
+#define COCOAPODS_VERSION_PATCH_NSDate_TimeAgo 3
+
 // NYSegmentedControl
 #define COCOAPODS_POD_AVAILABLE_NYSegmentedControl
 #define COCOAPODS_VERSION_MAJOR_NYSegmentedControl 1

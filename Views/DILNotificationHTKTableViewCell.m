@@ -8,6 +8,7 @@
 
 #import "DILNotificationHTKTableViewCell.h"
 #import <FontasticIcons/FontasticIcons.h>
+#import <NSDate+TimeAgo/NSDate+TimeAgo.h>
 
 @interface DILNotificationHTKTableViewCell()
 @property (strong, nonatomic) UILabel *notificationMessageLabel;
@@ -91,13 +92,12 @@
     return _unreadImageView;
 }
 
-- (UIImage *)imageForUnreadImageView {
-    NSUInteger r = arc4random_uniform(2);
+- (UIImage *)imageForUnreadImageView:(BOOL)unread {
     UIImage *image;
     CGFloat imageDimension = 20;
     CGRect imageBounds = CGRectMake(0, 0, imageDimension, imageDimension);
     UIColor *imageColor = [UIColor blackColor];
-    if (r) {
+    if (unread) {
         image = [[FIFontAwesomeIcon circleIcon] imageWithBounds:imageBounds color:imageColor];
     } else {
         image = [[FIFontAwesomeIcon circleBlankIcon] imageWithBounds:imageBounds color:imageColor];
@@ -110,10 +110,10 @@
     return CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]), 85);
 }
 
-- (void)configureCellWithNotification:(Notification *)notification {
-    self.notificationMessageLabel.text = notification.message;
-    self.notificationTimeLabel.text = @"Just now";
-    self.imageView.image = [self imageForUnreadImageView];
 
+- (void)configureCellWithNotification:(DILNotification *)notification {
+    self.notificationMessageLabel.text = notification.alert;
+    self.notificationTimeLabel.text = [notification.dateRecieved dateTimeAgo];
+    self.imageView.image = [self imageForUnreadImageView:notification.unread];
 }
 @end

@@ -316,7 +316,7 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright (C) 2014 Gwendal Roué
+			<string>Copyright (C) 2014 Gwendal Rou&#233;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -333,7 +333,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
-Copyright (c) 2014 Guilherme Araújo
+Copyright (c) 2014 Guilherme Ara&#250;jo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -938,6 +938,27 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright (c) 2011-2013, Kevin Lawler
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright notice
+and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.
+</string>
+			<key>Title</key>
+			<string>NSDate+TimeAgo</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
 Copyright (c) 2014 Nealon Young
@@ -1463,7 +1484,7 @@ This License does not allow the use of the Software other than for business purp
 
 ### 3.1 TITLE
 
-‘REVEAL’™ and ‘ITTY BITTY APPS’™ represent proprietary common law trademarks owned by the Company and must not be used without written permission.
+&#8216;REVEAL&#8217;&#8482; and &#8216;ITTY BITTY APPS&#8217;&#8482; represent proprietary common law trademarks owned by the Company and must not be used without written permission.
 
 The Company shall own and retain all right, title and interest in and to all Intellectual Property Rights related to the Software, the Documentation and all improvements to any of them however so created. You do not acquire any other rights, express or implied, in the Software. ALL RIGHTS NOT EXPRESSLY GRANTED HEREUNDER ARE RESERVED TO THE COMPANY.
 
@@ -1473,7 +1494,7 @@ You may copy the Software for backup and archival purposes only, provided that t
 
 ### 3.3 THINGS YOU MUST NOT DO
 
-The Software and Documentation are protected by Australian and international copyright law. You must treat the Software and Documentation like any other copyrighted material—for example, a book. You may not:
+The Software and Documentation are protected by Australian and international copyright law. You must treat the Software and Documentation like any other copyrighted material&#8212;for example, a book. You may not:
 
 * copy the Documentation,
 * copy the Software except to make archival or backup copies as provided above,
@@ -2125,7 +2146,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			<key>FooterText</key>
 			<string>The MIT License (MIT)
 
-Copyright (c) 2013-2014 Cédric Luthi
+Copyright (c) 2013-2014 C&#233;dric Luthi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

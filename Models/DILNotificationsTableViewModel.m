@@ -8,6 +8,8 @@
 
 #import "DILNotificationsTableViewModel.h"
 #import "Notification.h"
+#import "DILNotification.h"
+#import "DILPushNotificationHandler.h"
 #import "DILNotificationHTKTableViewCell.h"
 
 #define WEATHER_IMAGE [UIImage imageNamed:@"cloud394"]
@@ -15,27 +17,40 @@
 #define TIME_IMAGE [UIImage imageNamed:@"clock97"]
 
 @interface DILNotificationsTableViewModel()
-@property (strong, nonatomic) NSMutableArray *notificationArray;
+@property (strong, nonatomic) RLMResults *notificationArray;
+@property (strong, nonatomic) NSMutableSet *displayedNotifications;
 @property BOOL hasRegisteredCell;
 @end
 
 @implementation DILNotificationsTableViewModel
 - (id)init {
     if (self = [super init]) {
-        self.notificationArray = [NSMutableArray new];
-        [self constructFakeDatabase];
+        [self updateNotificationArray];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNotificationArray) name:kDILPushNotificationHandlerRecievedNewNotificationKey object:nil];
     }
 
     return self;
 }
 
-- (void)constructFakeDatabase {
-    [self.notificationArray addObject:[[Notification alloc] initWithMessage:@"Kid Cudi is playing at the Main Stage in 30 minutes!" image:TIME_IMAGE dateReceived:nil]];
-    [self.notificationArray addObject:[[Notification alloc] initWithMessage:@"You won the Dillo Day photo contest! Come to the Mayfest stand in Norris to pick up your backstage passes to 50 Cent with a private performance of Temperature by Sean Paul!" image:WARNING_IMAGE dateReceived:nil]];
-    [self.notificationArray addObject:[[Notification alloc] initWithMessage:@"Storms spotted in the area. Take shelter in Norris. Music will resume in 1 hour." image:WEATHER_IMAGE dateReceived:nil]];
-    [self.notificationArray addObject:[[Notification alloc] initWithMessage:@"Congratulations! You have won a Dillo Day tee and free lunch and 3 friends!" image:WARNING_IMAGE dateReceived:nil]];
+- (void)updateNotificationArray {
+    self.notificationArray = [[DILNotification allObjectsInRealm:[[DILPushNotificationHandler sharedPushNotificationHandler] notificationRealm]] sortedResultsUsingProperty:@"dateRecieved" ascending:NO];
+    [self.delegate reloadTableDataScrollToTop:YES];
 }
 
+
+- (void)trackDisplayedNotifications {
+    self.displayedNotifications = [NSMutableSet new];
+}
+
+- (void)markDisplayedNotificationsRead {
+    [[[DILPushNotificationHandler sharedPushNotificationHandler] notificationRealm] beginWriteTransaction];
+    for (DILNotification *notification in self.displayedNotifications) {
+        notification.unread = NO;
+    }
+    [[[DILPushNotificationHandler sharedPushNotificationHandler] notificationRealm] commitWriteTransaction];
+}
+
+#pragma mark - UITableViewDelegate and DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -53,13 +68,13 @@
 
     DILNotificationHTKTableViewCell *notificationCell = [tableView dequeueReusableCellWithIdentifier:DILNotificationHTKTableViewCellIdentifier forIndexPath:indexPath];
 
-    Notification *notificationForCell = [self notificationForRowAtIndexPath:indexPath];
+    DILNotification *notificationForCell = [self notificationForRowAtIndexPath:indexPath];
     [notificationCell configureCellWithNotification:notificationForCell];
     return notificationCell;
 }
 
-- (Notification *)notificationForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (Notification *)self.notificationArray[indexPath.row];
+- (DILNotification *)notificationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return (DILNotification *)self.notificationArray[indexPath.row];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -67,11 +82,10 @@
     CGSize defaultSize = [DILNotificationHTKTableViewCell defaultCellSize];
 
     CGSize cellSize = [DILNotificationHTKTableViewCell sizeForCellWithDefaultSize:defaultSize setupCellBlock:^id(id<HTKDynamicResizingCellProtocol> cellToSetup) {
-        Notification *notificationForCell = [self notificationForRowAtIndexPath:indexPath];
+        DILNotification *notificationForCell = [self notificationForRowAtIndexPath:indexPath];
         [((DILNotificationHTKTableViewCell *)cellToSetup) configureCellWithNotification:notificationForCell];
         return cellToSetup;
     }];
-
 
     return cellSize.height + 1; //accounting for the "magic pixel"
 }
@@ -79,4 +93,10 @@
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     return [[UIView alloc] init];
 }
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    DILNotification *notificationForCell = [self notificationForRowAtIndexPath:indexPath];
+    [self.displayedNotifications addObject:notificationForCell];
+}
+
 @end

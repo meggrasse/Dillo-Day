@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0620"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "076DBFD4EDD2E40A06B3F0F6"
+               BlueprintIdentifier = "1B7E2438F04B460D4B030C38"
                BuildableName = "libPods-Dillo Day-GUITabPagerViewController.a"
                BlueprintName = "Pods-Dillo Day-GUITabPagerViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1B7E2438F04B460D4B030C38"
+            BuildableName = "libPods-Dillo Day-GUITabPagerViewController.a"
+            BlueprintName = "Pods-Dillo Day-GUITabPagerViewController"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

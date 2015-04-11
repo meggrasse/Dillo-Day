@@ -37,6 +37,7 @@ pod 'TMCache', '~> 1.2'
 pod 'UAProgressView'
 pod 'FlatUIKit', '~> 1.6'
 pod 'GUITabPagerViewController', '~> 0.0.5'
+pod 'NSDate+TimeAgo'
 end
 
 target 'Dillo DayTests' do

@@ -44,6 +44,7 @@ PODS:
   - Masonry (0.6.1)
   - Modality (0.0.1)
   - NSAttributedString+CCLFormat (1.0.1)
+  - NSDate+TimeAgo (1.0.3)
   - NYSegmentedControl (1.0.3)
   - OMGHTTPURLRQ (2.1):
     - OMGHTTPURLRQ/RQ (= 2.1)
@@ -133,6 +134,7 @@ DEPENDENCIES:
   - Masonry
   - Modality (~> 0.0.1)
   - NSAttributedString+CCLFormat
+  - NSDate+TimeAgo
   - NYSegmentedControl
   - Parse
   - ParseUI
@@ -176,6 +178,7 @@ SPEC CHECKSUMS:
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   Modality: c5717913d654831433a5a65caac401a056c276e1
   NSAttributedString+CCLFormat: ed7a2c814ac5444d0747c11ec0e532d46839a480
+  NSDate+TimeAgo: 416f55d2696d3744c313091c5a9280d47f8238fe
   NYSegmentedControl: c24774be62ed17442595d33f74e6eb23bcff3412
   OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
   Parse: fa8ec29de6d82035635986c11946299fb1b38316
@@ -196,4 +199,4 @@ SPEC CHECKSUMS:
   UIColor+BFPaperColors: 0517728d63d8cfd977a112dd5c4627c2d3c12630
   XCDYouTubeKit: 5f9bda3a51f2d8af80404b3377bc4696f650d856
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.36.3

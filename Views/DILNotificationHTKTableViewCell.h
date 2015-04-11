@@ -7,9 +7,9 @@
 //
 
 #import "HTKDynamicResizingTableViewCell.h"
-#import "Notification.h"
+#import "DILNotification.h"
 
 @interface DILNotificationHTKTableViewCell : HTKDynamicResizingTableViewCell
-- (void)configureCellWithNotification:(Notification *)notification;
+- (void)configureCellWithNotification:(DILNotification *)notification;
 + (CGSize)defaultCellSize;
 @end
