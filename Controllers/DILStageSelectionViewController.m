@@ -20,6 +20,7 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self configureNotificationsTableView];
     self.title = @"Pick a Stage";
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 //    self.hasRegisteredCells = NO;
     // Do any additional setup after loading the view.
 }
@@ -33,6 +34,7 @@
     if (!_stagesTableView) {
         _stagesTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _stagesTableView.translatesAutoresizingMaskIntoConstraints = NO;
+        _stagesTableView.separatorColor = [UIColor clearColor];
         _stagesTableView.delegate = self;
         _stagesTableView.dataSource = self;
         _stagesTableView.bounces = NO;

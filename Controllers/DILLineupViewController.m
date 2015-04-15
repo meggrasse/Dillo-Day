@@ -95,7 +95,7 @@
 - (void)didSelectStage:(DILPFStage *)stage {
     self.lineupCollectionViewModel.stage = stage;
     [self.lineupCollectionView reloadData];
-    [self.lineupNavigationTitleButton setTitle:stage.name forState:UIControlStateNormal];
+    [self.lineupNavigationTitleButton setTitle:[stage.name uppercaseString] forState:UIControlStateNormal];
     [self.lineupNavigationTitleButton sizeToFit];
 }
 

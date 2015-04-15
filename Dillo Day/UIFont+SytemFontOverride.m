@@ -12,8 +12,8 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 
-static NSString *fontName = @"GillSans-Light";
-static NSString *boldFontName = @"GillSans";
+static NSString *fontName = @"SourceSansPro-Regular";
+static NSString *boldFontName = @"SourceSansPro-Bold";
 
 + (UIFont *)boldSystemFontOfSize:(CGFloat)fontSize {
     return [UIFont fontWithName:boldFontName size:fontSize];

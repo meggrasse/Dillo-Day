@@ -1,41 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6214" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6207"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="589" height="701"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Mayfest. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="20" y="439" width="441" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dillo Day" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
-                    <rect key="frame" x="20" y="140" width="441" height="43"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dillologo_1024" translatesAutoresizingMaskIntoConstraints="NO" id="hea-ri-w6f">
+                    <rect key="frame" x="124" y="197" width="341" height="306"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjX-3d-wuV">
+                    <rect key="frame" x="194.5" y="570" width="200" height="97.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dillo_day" translatesAutoresizingMaskIntoConstraints="NO" id="yMU-ur-KAC">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="FsK-sM-f5I"/>
+                                <constraint firstAttribute="width" constant="200" id="dXp-fX-3Du"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="-_2015_-" translatesAutoresizingMaskIntoConstraints="NO" id="Cky-Zk-vjB">
+                            <rect key="frame" x="50" y="48" width="100" height="49.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Cky-Zk-vjB" secondAttribute="height" multiplier="147:73" id="zUh-8B-b6p"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="yMU-ur-KAC" firstAttribute="top" secondItem="EjX-3d-wuV" secondAttribute="top" id="2Vk-8Y-5z6"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yMU-ur-KAC" secondAttribute="bottom" id="4dI-2H-qSK"/>
+                        <constraint firstAttribute="trailing" secondItem="yMU-ur-KAC" secondAttribute="trailing" id="QH2-cX-49t"/>
+                        <constraint firstItem="yMU-ur-KAC" firstAttribute="leading" secondItem="EjX-3d-wuV" secondAttribute="leading" id="dgE-80-xeF"/>
+                        <constraint firstItem="Cky-Zk-vjB" firstAttribute="top" secondItem="yMU-ur-KAC" secondAttribute="bottom" constant="-2" id="eLQ-yg-a6a"/>
+                        <constraint firstItem="Cky-Zk-vjB" firstAttribute="leading" secondItem="EjX-3d-wuV" secondAttribute="leading" constant="50" id="jei-LR-p0S"/>
+                        <constraint firstItem="Cky-Zk-vjB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EjX-3d-wuV" secondAttribute="top" id="kQR-na-UvX"/>
+                        <constraint firstAttribute="trailing" secondItem="Cky-Zk-vjB" secondAttribute="trailing" constant="50" id="oSr-AD-28w"/>
+                        <constraint firstAttribute="bottom" secondItem="Cky-Zk-vjB" secondAttribute="bottom" id="wLj-5U-Gdb"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="kQR-na-UvX"/>
+                        </mask>
+                    </variation>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.62745098039215685" green="0.85098039215686272" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="1/3" constant="1" id="5cJ-9S-tgC"/>
-                <constraint firstAttribute="centerX" secondItem="kId-c2-rCX" secondAttribute="centerX" id="Koa-jz-hwk"/>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="fvb-Df-36g"/>
+                <constraint firstAttribute="centerY" secondItem="hea-ri-w6f" secondAttribute="centerY" id="0pi-AK-wRA"/>
+                <constraint firstAttribute="centerX" secondItem="EjX-3d-wuV" secondAttribute="centerX" id="9P9-c6-9ni"/>
+                <constraint firstAttribute="centerX" secondItem="hea-ri-w6f" secondAttribute="centerX" id="P2g-Cp-wry"/>
+                <constraint firstItem="hea-ri-w6f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="XBu-6d-yhr"/>
+                <constraint firstItem="hea-ri-w6f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="auT-Ov-vVQ"/>
+                <constraint firstAttribute="bottom" secondItem="hea-ri-w6f" secondAttribute="bottom" constant="100" id="ehS-zP-T7q"/>
+                <constraint firstAttribute="trailing" secondItem="hea-ri-w6f" secondAttribute="trailing" constant="100" id="nwq-fd-NRM"/>
+                <constraint firstItem="EjX-3d-wuV" firstAttribute="top" secondItem="hea-ri-w6f" secondAttribute="bottom" constant="67" id="sH7-uo-bzY"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="XBu-6d-yhr"/>
+                    <exclude reference="auT-Ov-vVQ"/>
+                    <exclude reference="ehS-zP-T7q"/>
+                    <exclude reference="nwq-fd-NRM"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="602.5" y="565.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="-_2015_-" width="177" height="41"/>
+        <image name="dillo_day" width="151" height="23"/>
+        <image name="dillologo_1024" width="341" height="306"/>
+    </resources>
 </document>

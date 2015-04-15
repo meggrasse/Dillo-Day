@@ -27,6 +27,29 @@
 		210FE3371AD795D2009BC3DE /* SVWebViewControllerActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 210FE3271AD795D2009BC3DE /* SVWebViewControllerActivitySafari.m */; };
 		210FE3381AD795D2009BC3DE /* SVWebViewControllerActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210FE3281AD795D2009BC3DE /* SVWebViewControllerActivitySafari@2x.png */; };
 		210FE3391AD795D2009BC3DE /* SVWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 210FE32A1AD795D2009BC3DE /* SVWebViewControllerActivity.m */; };
+		21171CEA1ADDF4CB00CDDFBD /* DilloDayStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 21171CE81ADDF4CB00CDDFBD /* DilloDayStyleKit.m */; };
+		21171CF91ADDF57800CDDFBD /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21171CEC1ADDF57800CDDFBD /* SIL Open Font License.txt */; };
+		21171CFA1ADDF57800CDDFBD /* SourceSansPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CED1ADDF57800CDDFBD /* SourceSansPro-Black.otf */; };
+		21171CFB1ADDF57800CDDFBD /* SourceSansPro-BlackIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CEE1ADDF57800CDDFBD /* SourceSansPro-BlackIt.otf */; };
+		21171CFC1ADDF57800CDDFBD /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CEF1ADDF57800CDDFBD /* SourceSansPro-Bold.otf */; };
+		21171CFD1ADDF57800CDDFBD /* SourceSansPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF01ADDF57800CDDFBD /* SourceSansPro-BoldIt.otf */; };
+		21171CFE1ADDF57800CDDFBD /* SourceSansPro-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF11ADDF57800CDDFBD /* SourceSansPro-ExtraLight.otf */; };
+		21171CFF1ADDF57800CDDFBD /* SourceSansPro-ExtraLightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF21ADDF57800CDDFBD /* SourceSansPro-ExtraLightIt.otf */; };
+		21171D001ADDF57800CDDFBD /* SourceSansPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF31ADDF57800CDDFBD /* SourceSansPro-It.otf */; };
+		21171D011ADDF57800CDDFBD /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF41ADDF57800CDDFBD /* SourceSansPro-Light.otf */; };
+		21171D021ADDF57800CDDFBD /* SourceSansPro-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF51ADDF57800CDDFBD /* SourceSansPro-LightIt.otf */; };
+		21171D031ADDF57800CDDFBD /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF61ADDF57800CDDFBD /* SourceSansPro-Regular.otf */; };
+		21171D041ADDF57800CDDFBD /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF71ADDF57800CDDFBD /* SourceSansPro-Semibold.otf */; };
+		21171D051ADDF57800CDDFBD /* SourceSansPro-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21171CF81ADDF57800CDDFBD /* SourceSansPro-SemiboldIt.otf */; };
+		21171D101ADE002E00CDDFBD /* Paratype PT Sans Free Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21171D071ADE002E00CDDFBD /* Paratype PT Sans Free Font License.txt */; };
+		21171D111ADE002E00CDDFBD /* PTC55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D081ADE002E00CDDFBD /* PTC55F.ttf */; };
+		21171D121ADE002E00CDDFBD /* PTC75F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D091ADE002E00CDDFBD /* PTC75F.ttf */; };
+		21171D131ADE002E00CDDFBD /* PTN57F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0A1ADE002E00CDDFBD /* PTN57F.ttf */; };
+		21171D141ADE002E00CDDFBD /* PTN77F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0B1ADE002E00CDDFBD /* PTN77F.ttf */; };
+		21171D151ADE002E00CDDFBD /* PTS55F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0C1ADE002E00CDDFBD /* PTS55F.ttf */; };
+		21171D161ADE002E00CDDFBD /* PTS56F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0D1ADE002E00CDDFBD /* PTS56F.ttf */; };
+		21171D171ADE002E00CDDFBD /* PTS75F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0E1ADE002E00CDDFBD /* PTS75F.ttf */; };
+		21171D181ADE002E00CDDFBD /* PTS76F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0F1ADE002E00CDDFBD /* PTS76F.ttf */; };
 		212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */; };
 		212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */; };
 		212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */; };
@@ -73,7 +96,6 @@
 		2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */; };
 		2191555D1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */; };
 		219155601AD4BE8400FC61E8 /* DILStageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */; };
-		219155661AD4CC2F00FC61E8 /* DilloDayStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155641AD4CC2F00FC61E8 /* DilloDayStyleKit.m */; };
 		219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */; };
 		219893951A9FE59F006257F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893941A9FE59F006257F5 /* MapViewController.m */; };
 		219893981AA1173B006257F5 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893971AA1173B006257F5 /* HelpViewController.m */; };
@@ -148,6 +170,30 @@
 		210FE32A1AD795D2009BC3DE /* SVWebViewControllerActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivity.m; sourceTree = "<group>"; };
 		210FE32B1AD795D2009BC3DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
 		210FE32C1AD795D2009BC3DE /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		21171CE81ADDF4CB00CDDFBD /* DilloDayStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DilloDayStyleKit.m; sourceTree = SOURCE_ROOT; };
+		21171CE91ADDF4CB00CDDFBD /* DilloDayStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DilloDayStyleKit.h; sourceTree = SOURCE_ROOT; };
+		21171CEC1ADDF57800CDDFBD /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		21171CED1ADDF57800CDDFBD /* SourceSansPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.otf"; sourceTree = "<group>"; };
+		21171CEE1ADDF57800CDDFBD /* SourceSansPro-BlackIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackIt.otf"; sourceTree = "<group>"; };
+		21171CEF1ADDF57800CDDFBD /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
+		21171CF01ADDF57800CDDFBD /* SourceSansPro-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldIt.otf"; sourceTree = "<group>"; };
+		21171CF11ADDF57800CDDFBD /* SourceSansPro-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.otf"; sourceTree = "<group>"; };
+		21171CF21ADDF57800CDDFBD /* SourceSansPro-ExtraLightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightIt.otf"; sourceTree = "<group>"; };
+		21171CF31ADDF57800CDDFBD /* SourceSansPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-It.otf"; sourceTree = "<group>"; };
+		21171CF41ADDF57800CDDFBD /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.otf"; sourceTree = "<group>"; };
+		21171CF51ADDF57800CDDFBD /* SourceSansPro-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightIt.otf"; sourceTree = "<group>"; };
+		21171CF61ADDF57800CDDFBD /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
+		21171CF71ADDF57800CDDFBD /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
+		21171CF81ADDF57800CDDFBD /* SourceSansPro-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldIt.otf"; sourceTree = "<group>"; };
+		21171D071ADE002E00CDDFBD /* Paratype PT Sans Free Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Paratype PT Sans Free Font License.txt"; sourceTree = "<group>"; };
+		21171D081ADE002E00CDDFBD /* PTC55F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTC55F.ttf; sourceTree = "<group>"; };
+		21171D091ADE002E00CDDFBD /* PTC75F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTC75F.ttf; sourceTree = "<group>"; };
+		21171D0A1ADE002E00CDDFBD /* PTN57F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTN57F.ttf; sourceTree = "<group>"; };
+		21171D0B1ADE002E00CDDFBD /* PTN77F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTN77F.ttf; sourceTree = "<group>"; };
+		21171D0C1ADE002E00CDDFBD /* PTS55F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS55F.ttf; sourceTree = "<group>"; };
+		21171D0D1ADE002E00CDDFBD /* PTS56F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS56F.ttf; sourceTree = "<group>"; };
+		21171D0E1ADE002E00CDDFBD /* PTS75F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS75F.ttf; sourceTree = "<group>"; };
+		21171D0F1ADE002E00CDDFBD /* PTS76F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS76F.ttf; sourceTree = "<group>"; };
 		212028511AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h; sourceTree = "<group>"; };
 		212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m; sourceTree = "<group>"; wrapsLines = 0; };
 		212028641AA8362B00E9E028 /* UIView+FindUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindUIViewController.h"; sourceTree = "<group>"; };
@@ -228,8 +274,6 @@
 		2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILSwipeLineupViewController.m; sourceTree = "<group>"; };
 		2191555E1AD4BE8400FC61E8 /* DILStageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectionViewController.h; sourceTree = "<group>"; };
 		2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectionViewController.m; sourceTree = "<group>"; };
-		219155641AD4CC2F00FC61E8 /* DilloDayStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DilloDayStyleKit.m; sourceTree = SOURCE_ROOT; };
-		219155651AD4CC2F00FC61E8 /* DilloDayStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DilloDayStyleKit.h; sourceTree = SOURCE_ROOT; };
 		219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoVideoCollectionViewCell.m; sourceTree = "<group>"; };
 		219893931A9FE59F006257F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
@@ -403,6 +447,42 @@
 			path = Safari;
 			sourceTree = "<group>";
 		};
+		21171CEB1ADDF57800CDDFBD /* source-sans-pro */ = {
+			isa = PBXGroup;
+			children = (
+				21171CEC1ADDF57800CDDFBD /* SIL Open Font License.txt */,
+				21171CED1ADDF57800CDDFBD /* SourceSansPro-Black.otf */,
+				21171CEE1ADDF57800CDDFBD /* SourceSansPro-BlackIt.otf */,
+				21171CEF1ADDF57800CDDFBD /* SourceSansPro-Bold.otf */,
+				21171CF01ADDF57800CDDFBD /* SourceSansPro-BoldIt.otf */,
+				21171CF11ADDF57800CDDFBD /* SourceSansPro-ExtraLight.otf */,
+				21171CF21ADDF57800CDDFBD /* SourceSansPro-ExtraLightIt.otf */,
+				21171CF31ADDF57800CDDFBD /* SourceSansPro-It.otf */,
+				21171CF41ADDF57800CDDFBD /* SourceSansPro-Light.otf */,
+				21171CF51ADDF57800CDDFBD /* SourceSansPro-LightIt.otf */,
+				21171CF61ADDF57800CDDFBD /* SourceSansPro-Regular.otf */,
+				21171CF71ADDF57800CDDFBD /* SourceSansPro-Semibold.otf */,
+				21171CF81ADDF57800CDDFBD /* SourceSansPro-SemiboldIt.otf */,
+			);
+			path = "source-sans-pro";
+			sourceTree = "<group>";
+		};
+		21171D061ADE002E00CDDFBD /* PT-Sans */ = {
+			isa = PBXGroup;
+			children = (
+				21171D071ADE002E00CDDFBD /* Paratype PT Sans Free Font License.txt */,
+				21171D081ADE002E00CDDFBD /* PTC55F.ttf */,
+				21171D091ADE002E00CDDFBD /* PTC75F.ttf */,
+				21171D0A1ADE002E00CDDFBD /* PTN57F.ttf */,
+				21171D0B1ADE002E00CDDFBD /* PTN77F.ttf */,
+				21171D0C1ADE002E00CDDFBD /* PTS55F.ttf */,
+				21171D0D1ADE002E00CDDFBD /* PTS56F.ttf */,
+				21171D0E1ADE002E00CDDFBD /* PTS75F.ttf */,
+				21171D0F1ADE002E00CDDFBD /* PTS76F.ttf */,
+			);
+			path = "PT-Sans";
+			sourceTree = "<group>";
+		};
 		212CFAB01A89AEEF00BCFC90 /* FMDirectionTransition */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,8 +584,10 @@
 		217946AE1A87C96100224737 /* Dillo Day */ = {
 			isa = PBXGroup;
 			children = (
-				219155641AD4CC2F00FC61E8 /* DilloDayStyleKit.m */,
-				219155651AD4CC2F00FC61E8 /* DilloDayStyleKit.h */,
+				21171D061ADE002E00CDDFBD /* PT-Sans */,
+				21171CEB1ADDF57800CDDFBD /* source-sans-pro */,
+				21171CE91ADDF4CB00CDDFBD /* DilloDayStyleKit.h */,
+				21171CE81ADDF4CB00CDDFBD /* DilloDayStyleKit.m */,
 				21DEA9861AD48FD900987379 /* Categories */,
 				217D91C91A9DAA25006F3ABB /* DDPrefixHeader.pch */,
 				217D91D21A9E65F0006F3ABB /* DDConstants.h */,
@@ -786,17 +868,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21171D011ADDF57800CDDFBD /* SourceSansPro-Light.otf in Resources */,
+				21171D031ADDF57800CDDFBD /* SourceSansPro-Regular.otf in Resources */,
+				21171D001ADDF57800CDDFBD /* SourceSansPro-It.otf in Resources */,
+				21171D111ADE002E00CDDFBD /* PTC55F.ttf in Resources */,
 				217946BB1A87C96100224737 /* Main.storyboard in Resources */,
+				21171D041ADDF57800CDDFBD /* SourceSansPro-Semibold.otf in Resources */,
 				210FE3351AD795D2009BC3DE /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
+				21171CFD1ADDF57800CDDFBD /* SourceSansPro-BoldIt.otf in Resources */,
+				21171CFC1ADDF57800CDDFBD /* SourceSansPro-Bold.otf in Resources */,
 				210FE3381AD795D2009BC3DE /* SVWebViewControllerActivitySafari@2x.png in Resources */,
 				210FE3341AD795D2009BC3DE /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				217946C01A87C96100224737 /* LaunchScreen.xib in Resources */,
 				210FE32F1AD795D2009BC3DE /* SVWebViewController.bundle in Resources */,
+				21171CF91ADDF57800CDDFBD /* SIL Open Font License.txt in Resources */,
+				21171D161ADE002E00CDDFBD /* PTS56F.ttf in Resources */,
 				210FE3361AD795D2009BC3DE /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
 				210FE32D1AD795D2009BC3DE /* SVWebViewController.strings in Resources */,
+				21171D021ADDF57800CDDFBD /* SourceSansPro-LightIt.otf in Resources */,
+				21171D131ADE002E00CDDFBD /* PTN57F.ttf in Resources */,
+				21171CFE1ADDF57800CDDFBD /* SourceSansPro-ExtraLight.otf in Resources */,
+				21171D101ADE002E00CDDFBD /* Paratype PT Sans Free Font License.txt in Resources */,
+				21171D121ADE002E00CDDFBD /* PTC75F.ttf in Resources */,
+				21171CFF1ADDF57800CDDFBD /* SourceSansPro-ExtraLightIt.otf in Resources */,
+				21171CFB1ADDF57800CDDFBD /* SourceSansPro-BlackIt.otf in Resources */,
+				21171D181ADE002E00CDDFBD /* PTS76F.ttf in Resources */,
+				21171D051ADDF57800CDDFBD /* SourceSansPro-SemiboldIt.otf in Resources */,
 				217946BD1A87C96100224737 /* Images.xcassets in Resources */,
+				21171D171ADE002E00CDDFBD /* PTS75F.ttf in Resources */,
 				210FE3311AD795D2009BC3DE /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
+				21171D151ADE002E00CDDFBD /* PTS55F.ttf in Resources */,
+				21171CFA1ADDF57800CDDFBD /* SourceSansPro-Black.otf in Resources */,
 				210FE3321AD795D2009BC3DE /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
+				21171D141ADE002E00CDDFBD /* PTN77F.ttf in Resources */,
 				219AD4721A9A458500C9E5A6 /* Promposal.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -880,10 +984,10 @@
 				210A816E1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m in Sources */,
 				2159BC331ACB8C3E00D48F5F /* NSDate+Utilities.m in Sources */,
 				2159BC301ACB7CB000D48F5F /* DILFakeDataGenerator.m in Sources */,
+				21171CEA1ADDF4CB00CDDFBD /* DilloDayStyleKit.m in Sources */,
 				217946B21A87C96100224737 /* main.m in Sources */,
 				210A816B1AC626DD0091C134 /* DILLineupCollectionViewModel.m in Sources */,
 				21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */,
-				219155661AD4CC2F00FC61E8 /* DilloDayStyleKit.m in Sources */,
 				215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */,
 				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
 				21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */,
@@ -1048,6 +1152,7 @@
 			baseConfigurationReference = 6D331DFBD86CF821E61B852F /* Pods-Dillo Day.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1070,6 +1175,7 @@
 			baseConfigurationReference = BB9D6A9B72E6CB8B1378584F /* Pods-Dillo Day.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
