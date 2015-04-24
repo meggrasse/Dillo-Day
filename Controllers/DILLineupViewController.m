@@ -106,6 +106,7 @@
     self.stageSelectTitleView.selectedStage = stage;
     self.lineupCollectionViewModel.stage = stage;
     [self.lineupCollectionView reloadData];
+    [self.lineupCollectionView setContentOffset:CGPointZero animated:NO];
 }
 
 #pragma mark - Promises
