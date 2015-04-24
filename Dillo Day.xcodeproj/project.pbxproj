@@ -92,10 +92,7 @@
 		2185F7C71AABBB25008D5544 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 2185F7C61AABBB25008D5544 /* Notification.m */; };
 		2185F7CA1AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2185F7C91AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m */; };
 		219155541AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155531AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m */; };
-		219155571AD4BD6F00FC61E8 /* DILStageLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155561AD4BD6F00FC61E8 /* DILStageLineupViewController.m */; };
 		2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */; };
-		2191555D1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */; };
-		219155601AD4BE8400FC61E8 /* DILStageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */; };
 		219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */; };
 		219893951A9FE59F006257F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893941A9FE59F006257F5 /* MapViewController.m */; };
 		219893981AA1173B006257F5 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893971AA1173B006257F5 /* HelpViewController.m */; };
@@ -268,14 +265,8 @@
 		2185F7C91AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationHTKCollectionViewCell.m; sourceTree = "<group>"; };
 		219155521AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeNavigation.h; sourceTree = "<group>"; };
 		219155531AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeNavigation.m; sourceTree = "<group>"; };
-		219155551AD4BD6F00FC61E8 /* DILStageLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageLineupViewController.h; sourceTree = "<group>"; };
-		219155561AD4BD6F00FC61E8 /* DILStageLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageLineupViewController.m; sourceTree = "<group>"; };
 		219155581AD4BD9600FC61E8 /* DILLineupCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILLineupCollectionViewController.h; sourceTree = "<group>"; };
 		219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupCollectionViewController.m; sourceTree = "<group>"; };
-		2191555B1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILSwipeLineupViewController.h; sourceTree = "<group>"; };
-		2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILSwipeLineupViewController.m; sourceTree = "<group>"; };
-		2191555E1AD4BE8400FC61E8 /* DILStageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectionViewController.h; sourceTree = "<group>"; };
-		2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectionViewController.m; sourceTree = "<group>"; };
 		219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoVideoCollectionViewCell.m; sourceTree = "<group>"; };
 		219893931A9FE59F006257F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
@@ -394,14 +385,10 @@
 		210FE3091AD78E16009BC3DE /* DILLineup */ = {
 			isa = PBXGroup;
 			children = (
-				219155581AD4BD9600FC61E8 /* DILLineupCollectionViewController.h */,
-				219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */,
 				210A81661AC625A80091C134 /* DILLineupViewController.h */,
 				210A81671AC625A80091C134 /* DILLineupViewController.m */,
-				2191555B1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.h */,
-				2191555C1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m */,
-				219155551AD4BD6F00FC61E8 /* DILStageLineupViewController.h */,
-				219155561AD4BD6F00FC61E8 /* DILStageLineupViewController.m */,
+				219155581AD4BD9600FC61E8 /* DILLineupCollectionViewController.h */,
+				219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */,
 			);
 			name = DILLineup;
 			sourceTree = "<group>";
@@ -639,8 +626,6 @@
 		217946D51A87FAAC00224737 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2191555E1AD4BE8400FC61E8 /* DILStageSelectionViewController.h */,
-				2191555F1AD4BE8400FC61E8 /* DILStageSelectionViewController.m */,
 				210A815C1AC5FFE80091C134 /* DILNotificationsViewController.h */,
 				210A815D1AC5FFE80091C134 /* DILNotificationsViewController.m */,
 				210FE3091AD78E16009BC3DE /* DILLineup */,
@@ -969,13 +954,10 @@
 				219155541AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m in Sources */,
 				210FE3371AD795D2009BC3DE /* SVWebViewControllerActivitySafari.m in Sources */,
 				212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */,
-				2191555D1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m in Sources */,
 				217A8EE51AD89B2C0046F45F /* DILPushNotificationHandler.m in Sources */,
 				210A81681AC625A80091C134 /* DILLineupViewController.m in Sources */,
 				210FE3391AD795D2009BC3DE /* SVWebViewControllerActivity.m in Sources */,
-				219155571AD4BD6F00FC61E8 /* DILStageLineupViewController.m in Sources */,
 				210FE3301AD795D2009BC3DE /* SVWebViewController.m in Sources */,
-				219155601AD4BE8400FC61E8 /* DILStageSelectionViewController.m in Sources */,
 				2139036E1A994EF90037BB5E /* LineupViewController.m in Sources */,
 				21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */,
 				2185F7CA1AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m in Sources */,

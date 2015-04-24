@@ -9,7 +9,6 @@
 #import "DILLineupViewController.h"
 
 #import "DILLineupCollectionViewModel.h"
-#import "DILStageSelectionViewController.h"
 #import <Modality/UIViewController+Modality.h>
 #import <Modality/MODTransitionAnimatorSlideModal.h>
 #import <SVProgressHUD/SVProgressHUD.h>
@@ -18,13 +17,14 @@
 #import "DILArtistViewController.h"
 #import "DILStageSelectTitleView.h"
 
-@interface DILLineupViewController ()<DILStageSelectionDelegate, DILLineupCollectionViewDelegate, DILStageSelectTitleViewDelegate>
+@interface DILLineupViewController ()<DILLineupCollectionViewDelegate, DILStageSelectTitleViewDelegate>
 @property (strong, nonatomic) UICollectionView *lineupCollectionView;
 @property (strong, nonatomic) DILLineupCollectionViewModel *lineupCollectionViewModel;
 @property (strong, nonatomic) UIButton *lineupNavigationTitleButton;
 @property (strong, nonatomic) NSArray *stageArray;
 @property (nonatomic) BOOL waitingForStageFetch;
 @property (strong, nonatomic) DILStageSelectTitleView *stageSelectTitleView;
+@property (strong, nonatomic) NSMutableArray *stageSelectTitleViewAutoLayoutConstraintArray;
 @end
 
 @implementation DILLineupViewController
@@ -32,8 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.stageSelectTitleViewAutoLayoutConstraintArray = [NSMutableArray new];
     [self configureLineupCollectionView];
-//    [self configureTitleViewWithTitle:@"Main Stage"];
     [self configureStageSelectionTitleView];
 
     [self fetchStages];
@@ -56,44 +56,30 @@
 
 - (void)configureStageSelectionTitleView {
     self.stageSelectTitleView = [[DILStageSelectTitleView alloc] initForAutoLayoutWithViewController:self];
+    self.stageSelectTitleView.viewController = self;
     self.stageSelectTitleView.delegate = self;
     self.navigationItem.titleView = self.stageSelectTitleView;
-    [self.stageSelectTitleView autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [self.stageSelectTitleView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [self.stageSelectTitleViewAutoLayoutConstraintArray addObject:[self.stageSelectTitleView autoAlignAxisToSuperviewAxis:ALAxisVertical]];
+    [self.stageSelectTitleViewAutoLayoutConstraintArray addObject:[self.stageSelectTitleView autoAlignAxisToSuperviewAxis:ALAxisHorizontal]];
 }
 
-- (void)configureTitleViewWithTitle:(NSString *)title {
-    self.lineupNavigationTitleButton = [[UIButton alloc] initWithFrame:CGRectZero];
-    [self.lineupNavigationTitleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    self.lineupNavigationTitleButton.titleLabel.font = [UIFont boldSystemFontOfSize:self.lineupNavigationTitleButton.titleLabel.font.pointSize];
-    [self.lineupNavigationTitleButton setTitle:title forState:UIControlStateNormal];
-    [self.lineupNavigationTitleButton addTarget:self action:@selector(handleLineupNavigationTitleButtonTapped) forControlEvents:UIControlEventTouchUpInside];
-    [self.lineupNavigationTitleButton sizeToFit];
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 
-    self.navigationItem.titleView = self.lineupNavigationTitleButton;
-}
-
-- (void)handleLineupNavigationTitleButtonTapped {
-    [self displayStageSelection];
-}
-
-- (void)displayStageSelection {
-    if (self.stageArray) {
-        DILStageSelectionViewController *stageSelectionVC = [DILStageSelectionViewController new];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:stageSelectionVC];
-        stageSelectionVC.delegate = self;
-        stageSelectionVC.stageArray = self.stageArray;
-
-        CGFloat modalViewLength = [stageSelectionVC heightForViewController];
-        if (modalViewLength) {
-            MODTransitionAnimatorSlideModal *modalSlideAnimator = [MODTransitionAnimatorSlideModal transitionAnimatorWithDirection:MODDirectionTop destinationViewLength:modalViewLength];
-            [self MOD_presentViewController:navController withTransitionAnimator:modalSlideAnimator duration:MODDefaulTransitionDuration completion:^{
-                
-            }];
-        }
+    self.stageSelectTitleView.translatesAutoresizingMaskIntoConstraints = YES;
+    for (NSLayoutConstraint *constraint in self.stageSelectTitleViewAutoLayoutConstraintArray) {
+        [constraint autoRemove];
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.stageSelectTitleView.translatesAutoresizingMaskIntoConstraints = NO;
+    for (NSLayoutConstraint *constraint in self.stageSelectTitleViewAutoLayoutConstraintArray) {
+        [constraint autoInstall];
+    }
+}
 #pragma mark - DILLineupCollectionViewDelegate
 - (void)didSelectArtist:(DILPFArtist *)artist {
     DILArtistViewController *artistVC = [DILArtistViewController new];
@@ -134,3 +120,4 @@
     }];
 }
 @end
+//

@@ -12,7 +12,6 @@
 #import <RDVTabBarController/RDVTabBarItem.h>
 
 #import "DILLineupViewController.h"
-#import "DILSwipeLineupViewController.h"
 #import "MapViewController.h"
 #import "DILHelpViewController.h"
 #import "DILNotificationsViewController.h"
