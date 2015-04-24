@@ -107,6 +107,7 @@
 		21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BAFE3D1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m */; };
 		21BAFE411ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BAFE401ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m */; };
 		21C4AE431AE9C86D005A911E /* DILStageSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4AE421AE9C86D005A911E /* DILStageSelectTableViewCell.m */; };
+		21C4AE461AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4AE451AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m */; };
 		21C4C10E1AC74C9900AE4561 /* DILPFArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */; };
 		21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */; };
 		21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1131AC750EE00AE4561 /* DILPFStage.m */; };
@@ -296,6 +297,8 @@
 		21BAFE401ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILArtistBioHTKCollectionViewCell.m; sourceTree = "<group>"; };
 		21C4AE411AE9C86D005A911E /* DILStageSelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectTableViewCell.h; sourceTree = "<group>"; };
 		21C4AE421AE9C86D005A911E /* DILStageSelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectTableViewCell.m; sourceTree = "<group>"; };
+		21C4AE441AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DILLineupCenterTextCollectionViewCellRadialShadowView.h; path = ../DILLineupCenterTextCollectionViewCellRadialShadowView.h; sourceTree = "<group>"; };
+		21C4AE451AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DILLineupCenterTextCollectionViewCellRadialShadowView.m; path = ../DILLineupCenterTextCollectionViewCellRadialShadowView.m; sourceTree = "<group>"; };
 		21C4C10C1AC74C9900AE4561 /* DILPFArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFArtist.h; sourceTree = "<group>"; };
 		21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFArtist.m; sourceTree = "<group>"; };
 		21C4C10F1AC74F8C00AE4561 /* DILPFSponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFSponsor.h; sourceTree = "<group>"; };
@@ -671,6 +674,8 @@
 				21BAFE401ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m */,
 				210A816C1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.h */,
 				210A816D1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m */,
+				21C4AE441AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.h */,
+				21C4AE451AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m */,
 				210A81621AC609DA0091C134 /* DILNotificationHTKTableViewCell.h */,
 				210A81631AC609DA0091C134 /* DILNotificationHTKTableViewCell.m */,
 				2185F7CB1AABBE10008D5544 /* Notifications */,
@@ -1004,6 +1009,7 @@
 				214FD6C71AA510E4001D6619 /* LineupCollectionViewCell.m in Sources */,
 				21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */,
 				2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */,
+				21C4AE461AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m in Sources */,
 				21BAFE3B1ACE1C49003F5ADD /* DILArtistViewController.m in Sources */,
 				210FE32E1AD795D2009BC3DE /* SVModalWebViewController.m in Sources */,
 				21BAFE381ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m in Sources */,

@@ -7,6 +7,9 @@
 //
 
 #import "DILLineupCenterTextCollectionViewCell.h"
+
+#import "DILLineupCenterTextCollectionViewCellRadialShadowView.h"
+
 #import "NSDate+Utilities.h"
 #import "Artist.h"
 #import <FontasticIcons/FontasticIcons.h>
@@ -22,6 +25,7 @@
 @property (strong, nonatomic) UIButton *favoriteButton;
 @property (strong, nonatomic) UILabel *sponsorLabel;
 @property (strong, nonatomic) UAProgressView *progressView;
+@property (strong, nonatomic) DILLineupCenterTextCollectionViewCellRadialShadowView *shadowView;
 @end
 
 @implementation DILLineupCenterTextCollectionViewCell
@@ -36,15 +40,19 @@
     self.clipsToBounds = YES;
 
     [self addSubview:self.artistImageView];
+    [self addSubview:self.shadowView];
     [self addSubview:self.nameLabel];
     [self addSubview:self.performanceTimeLabel];
-    [self addSubview:self.favoriteButton];
+//    [self addSubview:self.favoriteButton];
     [self addSubview:self.sponsorLabel];
 
     [self.artistImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+
+    [self.shadowView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+
     [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [self.nameLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self.favoriteButton withOffset:50 relation:NSLayoutRelationGreaterThanOrEqual];
+//    [self.nameLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self.favoriteButton withOffset:50 relation:NSLayoutRelationGreaterThanOrEqual];
 
     CGFloat verticalTextOffset = 0;
     [self.performanceTimeLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.nameLabel];
@@ -54,13 +62,13 @@
     [self.sponsorLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:sponsorLabelInset];
     [self.sponsorLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sponsorLabelInset];
 
-    [self.favoriteButton autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    CGFloat favoriteButtonDimension = 30;
-    [self.favoriteButton autoSetDimensionsToSize:CGSizeMake(favoriteButtonDimension, favoriteButtonDimension)];
-    self.favoriteButton.layer.cornerRadius = favoriteButtonDimension/2.0;
-    self.favoriteButton.clipsToBounds = YES;
-    CGFloat favoriteButtonInset = 20;
-    [self.favoriteButton autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:favoriteButtonInset];
+//    [self.favoriteButton autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+//    CGFloat favoriteButtonDimension = 30;
+//    [self.favoriteButton autoSetDimensionsToSize:CGSizeMake(favoriteButtonDimension, favoriteButtonDimension)];
+//    self.favoriteButton.layer.cornerRadius = favoriteButtonDimension/2.0;
+//    self.favoriteButton.clipsToBounds = YES;
+//    CGFloat favoriteButtonInset = 20;
+//    [self.favoriteButton autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:favoriteButtonInset];
 
 
 }
@@ -117,6 +125,14 @@
         _favoriteButton.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.5];
     }
     return _favoriteButton;
+}
+
+- (DILLineupCenterTextCollectionViewCellRadialShadowView *)shadowView {
+    if (!_shadowView) {
+        _shadowView = [[DILLineupCenterTextCollectionViewCellRadialShadowView alloc] initForAutoLayout];
+        _shadowView.backgroundColor = [UIColor clearColor];
+    }
+    return _shadowView;
 }
 
 - (void)handleFavoriteButtonTapped:(UIButton *)sender {
