@@ -342,6 +342,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[Artist setYoutubeVideoIds:]"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Artist.m"
                   timestampString = "446617868.418929"
                   startingColumnNumber = "9223372036854775807"
@@ -356,6 +357,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__29-[Artist setYoutubeVideoIds:]_block_invoke"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Artist.m"
                   timestampString = "446617868.419121"
                   startingColumnNumber = "9223372036854775807"
@@ -692,6 +694,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[ArtistInfoViewController collectionView:layout:sizeForItemAtIndexPath:]"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Controllers/ArtistInfoViewController.m"
                   timestampString = "447226728.727362"
                   startingColumnNumber = "9223372036854775807"
@@ -706,6 +709,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__73-[ArtistInfoViewController collectionView:layout:sizeForItemAtIndexPath:]_block_invoke"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Controllers/ArtistInfoViewController.m"
                   timestampString = "447226728.727494"
                   startingColumnNumber = "9223372036854775807"
@@ -974,11 +978,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/DILLineupViewController.m"
-            timestampString = "450120608.840008"
+            timestampString = "451527620.132232"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "-displayStageSelection"
             landmarkType = "5">
          </BreakpointContent>
@@ -990,11 +994,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/DILLineupViewController.m"
-            timestampString = "450120608.840008"
+            timestampString = "451527620.132232"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-fetchStages"
             landmarkType = "5">
          </BreakpointContent>
@@ -1070,11 +1074,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/DILLineupViewController.m"
-            timestampString = "450120608.840008"
+            timestampString = "451527620.132232"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-fetchStages"
             landmarkType = "5">
          </BreakpointContent>
@@ -1086,11 +1090,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/DILLineupViewController.m"
-            timestampString = "450120608.840008"
+            timestampString = "451527620.132232"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "-didSelectStage:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1150,11 +1154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Controllers/DILLineupViewController.m"
-            timestampString = "450120608.840008"
+            timestampString = "451527620.132232"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-didSelectArtist:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1436,6 +1440,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[DILSwipeLineupViewController stageQueryPromise]"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Controllers/DILSwipeLineupViewController.m"
                   timestampString = "450152250.843655"
                   startingColumnNumber = "9223372036854775807"
@@ -1450,6 +1455,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__49-[DILSwipeLineupViewController stageQueryPromise]_block_invoke"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Controllers/DILSwipeLineupViewController.m"
                   timestampString = "450152250.843812"
                   startingColumnNumber = "9223372036854775807"
@@ -1530,6 +1536,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[DILSwipeLineupViewController fetchStages]"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Controllers/DILSwipeLineupViewController.m"
                   timestampString = "450152403.559984"
                   startingColumnNumber = "9223372036854775807"
@@ -1544,6 +1551,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__43-[DILSwipeLineupViewController fetchStages]_block_invoke"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Controllers/DILSwipeLineupViewController.m"
                   timestampString = "450152403.56013"
                   startingColumnNumber = "9223372036854775807"
@@ -1702,6 +1710,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[AppDelegate application:didReceiveRemoteNotification:]"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Dillo%20Day/AppDelegate.m"
                   timestampString = "450408397.717855"
                   startingColumnNumber = "9223372036854775807"
@@ -1716,6 +1725,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__56-[AppDelegate application:didReceiveRemoteNotification:]_block_invoke"
                   moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Dillo%20Day/AppDelegate.m"
                   timestampString = "450408397.718002"
                   startingColumnNumber = "9223372036854775807"
@@ -1740,6 +1750,310 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528443.061968"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-handleTap"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528443.061968"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "-handleTap"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528443.061968"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "-handleTap"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528469.951405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "-showStageSelection"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528469.951405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "-showStageSelection"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528469.951405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "-showStageSelection"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528469.951405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "-showStageSelection"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DILStageSelectTitleView showStageSelection]"
+                  moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Views/DILStageSelectTitleView.m"
+                  timestampString = "451525352.230134"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "593">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45-[DILStageSelectTitleView showStageSelection]_block_invoke"
+                  moduleName = "Dillo Day"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pmeyersiv/Documents/Mayfest/Dillo%20Day/Views/DILStageSelectTitleView.m"
+                  timestampString = "451525352.230293"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528469.951405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "-showStageSelection"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528469.951405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "-showStageSelection"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528469.951405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "-showStageSelection"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528469.951405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "-showStageSelection"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528707.276288"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "-didSelectStage:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528576.425098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-stageSelectionOptions"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528589.212768"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-stageSelectionOptions"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTitleView.m"
+            timestampString = "451528621.075074"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-stageSelectionOptions"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTableViewCell.m"
+            timestampString = "451530413.18707"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "-initWithStyle:reuseIdentifier:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/DILStageSelectTableViewCell.m"
+            timestampString = "451530415.310994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "-initWithStyle:reuseIdentifier:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

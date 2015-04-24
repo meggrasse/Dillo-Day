@@ -16,14 +16,15 @@
 #import <PromiseKit/PromiseKit.h>
 
 #import "DILArtistViewController.h"
+#import "DILStageSelectTitleView.h"
 
-
-@interface DILLineupViewController ()<DILStageSelectionDelegate, DILLineupCollectionViewDelegate>
+@interface DILLineupViewController ()<DILStageSelectionDelegate, DILLineupCollectionViewDelegate, DILStageSelectTitleViewDelegate>
 @property (strong, nonatomic) UICollectionView *lineupCollectionView;
 @property (strong, nonatomic) DILLineupCollectionViewModel *lineupCollectionViewModel;
 @property (strong, nonatomic) UIButton *lineupNavigationTitleButton;
 @property (strong, nonatomic) NSArray *stageArray;
 @property (nonatomic) BOOL waitingForStageFetch;
+@property (strong, nonatomic) DILStageSelectTitleView *stageSelectTitleView;
 @end
 
 @implementation DILLineupViewController
@@ -32,7 +33,8 @@
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self configureLineupCollectionView];
-    [self configureTitleViewWithTitle:@"Main Stage"];
+//    [self configureTitleViewWithTitle:@"Main Stage"];
+    [self configureStageSelectionTitleView];
 
     [self fetchStages];
 }
@@ -50,6 +52,14 @@
     [self.view addSubview:self.lineupCollectionView];
     [self.lineupCollectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 
+}
+
+- (void)configureStageSelectionTitleView {
+    self.stageSelectTitleView = [[DILStageSelectTitleView alloc] initForAutoLayoutWithViewController:self];
+    self.stageSelectTitleView.delegate = self;
+    self.navigationItem.titleView = self.stageSelectTitleView;
+    [self.stageSelectTitleView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.stageSelectTitleView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
 }
 
 - (void)configureTitleViewWithTitle:(NSString *)title {
@@ -93,10 +103,9 @@
 
 #pragma mark - DILStageSelectionDelegate
 - (void)didSelectStage:(DILPFStage *)stage {
+    self.stageSelectTitleView.selectedStage = stage;
     self.lineupCollectionViewModel.stage = stage;
     [self.lineupCollectionView reloadData];
-    [self.lineupNavigationTitleButton setTitle:[stage.name uppercaseString] forState:UIControlStateNormal];
-    [self.lineupNavigationTitleButton sizeToFit];
 }
 
 #pragma mark - Promises

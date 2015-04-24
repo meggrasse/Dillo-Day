@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C3F7A476A9421A7C8B6D49B1"
+               BlueprintIdentifier = "80F021C7ED20B36D5A5ECDBD"
                BuildableName = "libPods-Dillo Day-CSStickyHeaderFlowLayout.a"
                BlueprintName = "Pods-Dillo Day-CSStickyHeaderFlowLayout"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C3F7A476A9421A7C8B6D49B1"
+            BlueprintIdentifier = "80F021C7ED20B36D5A5ECDBD"
             BuildableName = "libPods-Dillo Day-CSStickyHeaderFlowLayout.a"
             BlueprintName = "Pods-Dillo Day-CSStickyHeaderFlowLayout"
             ReferencedContainer = "container:Pods.xcodeproj">

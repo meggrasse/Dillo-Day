@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62390E633838D35E634389D3"
+               BlueprintIdentifier = "51D2CF2E3D14BCB7BED2F517"
                BuildableName = "libPods-Dillo Day-FontasticIcons.a"
                BlueprintName = "Pods-Dillo Day-FontasticIcons"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62390E633838D35E634389D3"
+            BlueprintIdentifier = "51D2CF2E3D14BCB7BED2F517"
             BuildableName = "libPods-Dillo Day-FontasticIcons.a"
             BlueprintName = "Pods-Dillo Day-FontasticIcons"
             ReferencedContainer = "container:Pods.xcodeproj">

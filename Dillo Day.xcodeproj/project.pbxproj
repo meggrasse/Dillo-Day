@@ -100,16 +100,17 @@
 		219893951A9FE59F006257F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893941A9FE59F006257F5 /* MapViewController.m */; };
 		219893981AA1173B006257F5 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 219893971AA1173B006257F5 /* HelpViewController.m */; };
 		219AD4721A9A458500C9E5A6 /* Promposal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 219AD4711A9A458500C9E5A6 /* Promposal.xib */; };
+		21A175811AE98F770094E5C2 /* DILStageSelectTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A175801AE98F770094E5C2 /* DILStageSelectTitleView.m */; };
+		21A175871AE99ADA0094E5C2 /* DILStageSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A175861AE99ADA0094E5C2 /* DILStageSelectView.m */; };
 		21BAFE381ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BAFE371ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m */; };
 		21BAFE3B1ACE1C49003F5ADD /* DILArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BAFE3A1ACE1C49003F5ADD /* DILArtistViewController.m */; };
 		21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BAFE3D1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m */; };
 		21BAFE411ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21BAFE401ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m */; };
+		21C4AE431AE9C86D005A911E /* DILStageSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4AE421AE9C86D005A911E /* DILStageSelectTableViewCell.m */; };
 		21C4C10E1AC74C9900AE4561 /* DILPFArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */; };
 		21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */; };
 		21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1131AC750EE00AE4561 /* DILPFStage.m */; };
 		21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */; };
-		21DEA9791AD44B1A00987379 /* JGTransitionCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9771AD44B1A00987379 /* JGTransitionCollectionView.swift */; };
-		21DEA97A1AD44B1A00987379 /* JGTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9781AD44B1A00987379 /* JGTransitionLayout.swift */; };
 		21EEC92B1AD61A1B00C968E9 /* DILParseClassGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */; };
 		21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF15951A8DBAA00022953A /* RGCardViewLayout.m */; };
 		21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFF9AB1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m */; };
@@ -281,6 +282,10 @@
 		219893961AA1173B006257F5 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpViewController.h; path = ../HelpViewController.h; sourceTree = "<group>"; };
 		219893971AA1173B006257F5 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelpViewController.m; path = ../HelpViewController.m; sourceTree = "<group>"; };
 		219AD4711A9A458500C9E5A6 /* Promposal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Promposal.xib; sourceTree = "<group>"; };
+		21A1757F1AE98F770094E5C2 /* DILStageSelectTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectTitleView.h; sourceTree = "<group>"; };
+		21A175801AE98F770094E5C2 /* DILStageSelectTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectTitleView.m; sourceTree = "<group>"; };
+		21A175851AE99ADA0094E5C2 /* DILStageSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectView.h; sourceTree = "<group>"; };
+		21A175861AE99ADA0094E5C2 /* DILStageSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectView.m; sourceTree = "<group>"; };
 		21BAFE361ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILArtistStickyHeaderCollectionViewCell.h; sourceTree = "<group>"; };
 		21BAFE371ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILArtistStickyHeaderCollectionViewCell.m; sourceTree = "<group>"; };
 		21BAFE391ACE1C49003F5ADD /* DILArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILArtistViewController.h; sourceTree = "<group>"; };
@@ -289,6 +294,8 @@
 		21BAFE3D1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILArtistCollectionViewModel.m; sourceTree = "<group>"; };
 		21BAFE3F1ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILArtistBioHTKCollectionViewCell.h; sourceTree = "<group>"; };
 		21BAFE401ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILArtistBioHTKCollectionViewCell.m; sourceTree = "<group>"; };
+		21C4AE411AE9C86D005A911E /* DILStageSelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILStageSelectTableViewCell.h; sourceTree = "<group>"; };
+		21C4AE421AE9C86D005A911E /* DILStageSelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILStageSelectTableViewCell.m; sourceTree = "<group>"; };
 		21C4C10C1AC74C9900AE4561 /* DILPFArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFArtist.h; sourceTree = "<group>"; };
 		21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFArtist.m; sourceTree = "<group>"; };
 		21C4C10F1AC74F8C00AE4561 /* DILPFSponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFSponsor.h; sourceTree = "<group>"; };
@@ -298,8 +305,6 @@
 		21DEA9711AD436D000987379 /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
 		21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
 		21DEA9761AD44B1900987379 /* Dillo Day-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dillo Day-Bridging-Header.h"; sourceTree = "<group>"; };
-		21DEA9771AD44B1A00987379 /* JGTransitionCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGTransitionCollectionView.swift; sourceTree = "<group>"; };
-		21DEA9781AD44B1A00987379 /* JGTransitionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGTransitionLayout.swift; sourceTree = "<group>"; };
 		21EEC9291AD61A1B00C968E9 /* DILParseClassGeneration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILParseClassGeneration.h; sourceTree = "<group>"; };
 		21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILParseClassGeneration.m; sourceTree = "<group>"; };
 		21EF15951A8DBAA00022953A /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
@@ -657,6 +662,7 @@
 		217946E61A88004B00224737 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				21A175881AE99AE20094E5C2 /* Stage Selection */,
 				215675911AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.h */,
 				215675921AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.m */,
 				21BAFE361ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.h */,
@@ -681,7 +687,6 @@
 			children = (
 				210FE30D1AD795D2009BC3DE /* SVWebViewController */,
 				219155511AD4BCA800FC61E8 /* CarbonTabSwipeNavigation */,
-				21DEA97B1AD44B2000987379 /* JGTransitionCollectionView */,
 				21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */,
 				2159BC341ACB8C4200D48F5F /* NSDate+Utilities */,
 				21EF15961A8DBAA00022953A /* RGCardViewLayout.h */,
@@ -727,6 +732,19 @@
 			path = CarbonTabSwipeNavigation;
 			sourceTree = "<group>";
 		};
+		21A175881AE99AE20094E5C2 /* Stage Selection */ = {
+			isa = PBXGroup;
+			children = (
+				21A1757F1AE98F770094E5C2 /* DILStageSelectTitleView.h */,
+				21A175801AE98F770094E5C2 /* DILStageSelectTitleView.m */,
+				21A175851AE99ADA0094E5C2 /* DILStageSelectView.h */,
+				21A175861AE99ADA0094E5C2 /* DILStageSelectView.m */,
+				21C4AE411AE9C86D005A911E /* DILStageSelectTableViewCell.h */,
+				21C4AE421AE9C86D005A911E /* DILStageSelectTableViewCell.m */,
+			);
+			name = "Stage Selection";
+			sourceTree = "<group>";
+		};
 		21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -734,15 +752,6 @@
 				21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */,
 			);
 			name = "UIApplication + NetworkActivityIndicator";
-			sourceTree = "<group>";
-		};
-		21DEA97B1AD44B2000987379 /* JGTransitionCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				21DEA9771AD44B1A00987379 /* JGTransitionCollectionView.swift */,
-				21DEA9781AD44B1A00987379 /* JGTransitionLayout.swift */,
-			);
-			name = JGTransitionCollectionView;
 			sourceTree = "<group>";
 		};
 		21DEA9861AD48FD900987379 /* Categories */ = {
@@ -954,7 +963,6 @@
 			files = (
 				219155541AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m in Sources */,
 				210FE3371AD795D2009BC3DE /* SVWebViewControllerActivitySafari.m in Sources */,
-				21DEA9791AD44B1A00987379 /* JGTransitionCollectionView.swift in Sources */,
 				212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */,
 				2191555D1AD4BDEE00FC61E8 /* DILSwipeLineupViewController.m in Sources */,
 				217A8EE51AD89B2C0046F45F /* DILPushNotificationHandler.m in Sources */,
@@ -970,7 +978,6 @@
 				2185F7C41AABBB0F008D5544 /* NotificationModel.m in Sources */,
 				212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */,
 				2185F7C71AABBB25008D5544 /* Notification.m in Sources */,
-				21DEA97A1AD44B1A00987379 /* JGTransitionLayout.swift in Sources */,
 				217946B51A87C96100224737 /* AppDelegate.m in Sources */,
 				21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */,
 				2185F7C11AABB94F008D5544 /* NotificationsViewController.m in Sources */,
@@ -990,14 +997,17 @@
 				21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */,
 				215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */,
 				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
+				21C4AE431AE9C86D005A911E /* DILStageSelectTableViewCell.m in Sources */,
 				21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */,
 				219893981AA1173B006257F5 /* HelpViewController.m in Sources */,
+				21A175811AE98F770094E5C2 /* DILStageSelectTitleView.m in Sources */,
 				214FD6C71AA510E4001D6619 /* LineupCollectionViewCell.m in Sources */,
 				21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */,
 				2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */,
 				21BAFE3B1ACE1C49003F5ADD /* DILArtistViewController.m in Sources */,
 				210FE32E1AD795D2009BC3DE /* SVModalWebViewController.m in Sources */,
 				21BAFE381ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m in Sources */,
+				21A175871AE99ADA0094E5C2 /* DILStageSelectView.m in Sources */,
 				214FD6D21AA55D9E001D6619 /* FMParallaxImageView.m in Sources */,
 				217D91CE1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m in Sources */,
 				210FE30C1AD78E32009BC3DE /* DILHelpViewController.m in Sources */,

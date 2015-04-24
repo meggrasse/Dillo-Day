@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0620"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "33E7E77A41BE2528FAE4443F"
+               BlueprintIdentifier = "E6BD7139DC5907C0ACB6A2F2"
                BuildableName = "libPods-Dillo Day-BFPaperCheckbox.a"
                BlueprintName = "Pods-Dillo Day-BFPaperCheckbox"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "33E7E77A41BE2528FAE4443F"
+            BlueprintIdentifier = "E6BD7139DC5907C0ACB6A2F2"
             BuildableName = "libPods-Dillo Day-BFPaperCheckbox.a"
             BlueprintName = "Pods-Dillo Day-BFPaperCheckbox"
             ReferencedContainer = "container:Pods.xcodeproj">
