@@ -41,8 +41,9 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
 
-//    [[DILFakeDataGenerator new] generateData];
-//    [DILParseClassGeneration createAllRoles];
+//    UIImage *backButtonImage  = [UIImage imageNamed:@"ArtistBackArrow"];
+//    backButtonImage = [backButtonImage stretchableImageWithLeftCapWidth: 15.0 topCapHeight: 30.0];
+//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage: backButtonImage forState: UIControlStateNormal barMetrics: UIBarMetricsDefault];
 
     DILLineupViewController *lineupVC = [DILLineupViewController new];
     lineupVC.title = @"Lineup";
@@ -105,7 +106,7 @@
 - (void)configureFlatNavigationController:(UINavigationController *)controller {
     UINavigationBar *navigationBar = controller.navigationBar;
     [navigationBar configureFlatNavigationBarWithColor:[DilloDayStyleKit navigationBarColor]];
-    navigationBar.tintColor = [UIColor whiteColor];
+    navigationBar.tintColor = [DilloDayStyleKit navigationBarTextColor];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

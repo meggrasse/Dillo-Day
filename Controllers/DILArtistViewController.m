@@ -14,7 +14,6 @@
 @interface DILArtistViewController ()<DILArtistCollectionViewModelDelegate>
 @property (strong, nonatomic) UICollectionView *artistCollectionView;
 @property (strong, nonatomic) DILArtistCollectionViewModel *artistCollectionViewModel;
-@property (strong, nonatomic) UIBarButtonItem *artistAlertsBarButton;
 @end
 
 @implementation DILArtistViewController
@@ -22,29 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self configureArtistAlertBarButtonItem];
 }
 
-- (void)configureArtistAlertBarButtonItem {
-    self.artistAlertsBarButton = [[UIBarButtonItem alloc] initWithImage:[self artistAlertsImage] style:UIBarButtonItemStylePlain target:self action:@selector(handleArtistAlertsTap)];
-    self.navigationItem.rightBarButtonItem = self.artistAlertsBarButton;
-}
-
-- (UIImage *)artistAlertsImage {
-    UIImage *image;
-
-    if (self.artist.artistAlerts) {
-        image = [UIImage imageNamed:@"check with circle"];
-    } else {
-        image = [UIImage imageNamed:@"Add with circle"];
-    }
-    return image;
-}
-
-- (void)handleArtistAlertsTap {
-    self.artist.artistAlerts = !self.artist.artistAlerts;
-    [self.artistAlertsBarButton setImage:[self artistAlertsImage]];
-}
 
 - (void)configureArtistCollectionView {
     CSStickyHeaderFlowLayout *layout = [CSStickyHeaderFlowLayout new];

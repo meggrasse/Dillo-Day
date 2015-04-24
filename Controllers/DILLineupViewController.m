@@ -91,6 +91,7 @@
 - (void)didSelectStage:(DILPFStage *)stage {
     self.stageSelectTitleView.selectedStage = stage;
     self.lineupCollectionViewModel.stage = stage;
+    self.title = [stage.name uppercaseString];
     [self.lineupCollectionView reloadData];
     [self.lineupCollectionView setContentOffset:CGPointZero animated:NO];
 }

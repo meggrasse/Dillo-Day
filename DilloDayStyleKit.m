@@ -43,10 +43,7 @@ static UIColor* _fontColor = nil;
     _barButtonItemHighlightedColor = [UIColor colorWithHue: barButtonItemColorHSBA[0] saturation: barButtonItemColorHSBA[1] brightness: 1 alpha: barButtonItemColorHSBA[3]];
     _notificationCellBackgroundColor = [UIColor colorWithRed: 0.973 green: 1 blue: 0.996 alpha: 1];
     _fontColor = [UIColor colorWithRed: 0.165 green: 0.165 blue: 0.165 alpha: 1];
-    CGFloat fontColorHSBA[4];
-    [_fontColor getHue: &fontColorHSBA[0] saturation: &fontColorHSBA[1] brightness: &fontColorHSBA[2] alpha: &fontColorHSBA[3]];
-
-    _navigationBarTextColor = [UIColor colorWithHue: fontColorHSBA[0] saturation: fontColorHSBA[1] brightness: 1 alpha: fontColorHSBA[3]];
+    _navigationBarTextColor = DilloDayStyleKit.fontColor;
 
 }
 
