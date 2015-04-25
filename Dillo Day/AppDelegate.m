@@ -105,8 +105,9 @@
 
 - (void)configureFlatNavigationController:(UINavigationController *)controller {
     UINavigationBar *navigationBar = controller.navigationBar;
-    [navigationBar configureFlatNavigationBarWithColor:[DilloDayStyleKit navigationBarColor]];
-    navigationBar.tintColor = [DilloDayStyleKit navigationBarTextColor];
+//    [navigationBar configureFlatNavigationBarWithColor:[DilloDayStyleKit navigationBarColor]];
+    navigationBar.tintColor = [DilloDayStyleKit navigationBarColor];
+    navigationBar.translucent = NO;
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

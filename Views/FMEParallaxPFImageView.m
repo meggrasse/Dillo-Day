@@ -112,7 +112,7 @@
     [self updateParallaxOffset];
 }
 - (void)updateParallaxOffset {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         CGRect convertedFrame = [self convertRect:self.frame toView:self.scrollView];
         CGRect scrollViewBounds = self.scrollView.bounds;
         scrollViewBounds.size.height += CGRectGetHeight(convertedFrame);
@@ -123,10 +123,10 @@
         CGFloat yParallaxImageViewFrameMidpoint = CGRectGetMidY(convertedFrame);
 
         CGFloat newOffsetFactor = (yScrollViewBoundsMidpoint - yParallaxImageViewFrameMidpoint)/(CGRectGetHeight(scrollViewBounds)) *-1.0;
-        dispatch_sync(dispatch_get_main_queue(), ^{
+//        dispatch_sync(dispatch_get_main_queue(), ^{
             self.imageOffsetFactor = newOffsetFactor;
-        });
-    });
+//        });
+//    });
 }
 
 - (void)layoutSubviews {

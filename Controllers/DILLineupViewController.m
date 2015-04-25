@@ -48,6 +48,8 @@
     
     self.lineupCollectionView.dataSource = self.lineupCollectionViewModel;
     self.lineupCollectionView.delegate = self.lineupCollectionViewModel;
+    self.lineupCollectionView.showsVerticalScrollIndicator = NO;
+    self.lineupCollectionView.backgroundColor = [DilloDayStyleKit notificationCellBackgroundColor];
 
     [self.view addSubview:self.lineupCollectionView];
     [self.lineupCollectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
