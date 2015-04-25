@@ -10,13 +10,15 @@
 #import "DILPFArtist.h"
 #import "DILArtistCollectionViewModel.h"
 
-@protocol DILArtistStickHeaderCollectionViewCellDelegate <NSObject>
+static CGFloat const kDILArtistStickyHeaderCollectionViewSegmentedControlHeight = 50.0;
+
+@protocol DILArtistStickyHeaderCollectionViewCellDelegate <NSObject>
 @required
 - (void)displayArtistInfoType:(DILArtistInfoType)type;
 @end
 
 @interface DILArtistStickyHeaderCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) id<DILArtistStickHeaderCollectionViewCellDelegate> delegate;
+@property (weak, nonatomic) id<DILArtistStickyHeaderCollectionViewCellDelegate> delegate;
 - (void)configureCellWithArtist:(DILPFArtist *)artist;
 + (NSString *)identifier;
 @end

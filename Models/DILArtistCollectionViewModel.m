@@ -16,7 +16,7 @@
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 #import "DILYoutubeVideoFetcher.h"
 
-@interface DILArtistCollectionViewModel()<DILArtistStickHeaderCollectionViewCellDelegate, DILYoutubeVideoFetcherDelegate>
+@interface DILArtistCollectionViewModel()<DILArtistStickyHeaderCollectionViewCellDelegate, DILYoutubeVideoFetcherDelegate>
 @property (nonatomic) BOOL hasRegisteredSupplementaryClasses;
 @property (nonatomic) BOOL hasRegisteredCellClasses;
 @property (strong, nonatomic) NSMutableArray *videos;

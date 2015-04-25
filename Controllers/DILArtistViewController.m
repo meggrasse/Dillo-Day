@@ -10,6 +10,7 @@
 #import "DILArtistCollectionViewModel.h"
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 #import <FlatUIKit/FlatUIKit.h>
+#import "DILArtistStickyHeaderCollectionViewCell.h"
 
 @interface DILArtistViewController ()<DILArtistCollectionViewModelDelegate>
 @property (strong, nonatomic) UICollectionView *artistCollectionView;
@@ -30,7 +31,7 @@
 
     if ([layout isKindOfClass:[CSStickyHeaderFlowLayout class]]) {
         layout.parallaxHeaderReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 225);
-        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 44);
+        layout.parallaxHeaderMinimumReferenceSize = CGSizeMake(CGRectGetWidth(self.view.bounds), kDILArtistStickyHeaderCollectionViewSegmentedControlHeight);
         layout.parallaxHeaderAlwaysOnTop = YES;
 
         // If we want to disable the sticky header effect

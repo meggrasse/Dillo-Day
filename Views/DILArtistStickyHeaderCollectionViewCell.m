@@ -43,7 +43,7 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     [self.backgroundImageViewTintView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 
     [self.segmentedControl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
-    CGFloat segmentedControlHeight = 44;
+    CGFloat segmentedControlHeight = kDILArtistStickyHeaderCollectionViewSegmentedControlHeight;
     [self.segmentedControl autoSetDimension:ALDimensionHeight toSize:segmentedControlHeight];
 
     [self.backgroundImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
