@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "405B66CDF37BE6D539216674"
+               BlueprintIdentifier = "AD573E5136B4A4F50B2F7034"
                BuildableName = "Mapbox.bundle"
                BlueprintName = "Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "405B66CDF37BE6D539216674"
+            BlueprintIdentifier = "AD573E5136B4A4F50B2F7034"
             BuildableName = "Mapbox.bundle"
             BlueprintName = "Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox"
             ReferencedContainer = "container:Pods.xcodeproj">

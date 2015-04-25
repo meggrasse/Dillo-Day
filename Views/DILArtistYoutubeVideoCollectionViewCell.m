@@ -12,6 +12,7 @@
 @interface DILArtistYoutubeVideoCollectionViewCell()
 @property (strong, nonatomic) UIImageView *thumbnailImageView;
 @property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) UIView *titleBackgroundView;
 @end
 
 @implementation DILArtistYoutubeVideoCollectionViewCell
@@ -23,11 +24,16 @@
 }
 
 - (void)configureCell {
-    [self addSubview:self.thumbnailImageView];
-    [self addSubview:self.titleLabel];
+    [self.contentView addSubview:self.thumbnailImageView];
+    [self.contentView addSubview:self.titleBackgroundView];
+    [self.titleBackgroundView addSubview:self.titleLabel];
 
     [self.thumbnailImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-    [self.titleLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self.titleBackgroundView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [self.titleBackgroundView autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [self.titleBackgroundView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+
+    [self.titleLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
 }
 
 - (UIImageView *)thumbnailImageView {
@@ -44,14 +50,22 @@
         _titleLabel = [[UILabel alloc] initForAutoLayout];
         _titleLabel.numberOfLines = 2;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
-//        _titleLabel.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+        _titleLabel.textColor = [DilloDayStyleKit artistInfoMusicVideoTitleTextColor];
     }
     return _titleLabel;
 }
 
+- (UIView *)titleBackgroundView {
+    if (!_titleBackgroundView) {
+        _titleBackgroundView = [[UIView alloc] initForAutoLayout];
+        _titleBackgroundView.backgroundColor = [DilloDayStyleKit artistInfoMusicVideoTitleBackgroundColor];
+    }
+    return _titleBackgroundView;
+}
+
 - (void)configureCellWithVideo:(XCDYouTubeVideo *)video {
     [self.thumbnailImageView sd_setImageWithURL:video.mediumThumbnailURL];
-    self.titleLabel.text = video.title;
+    self.titleLabel.text = [video.title uppercaseString];
 }
 
 + (NSString *)identifier {

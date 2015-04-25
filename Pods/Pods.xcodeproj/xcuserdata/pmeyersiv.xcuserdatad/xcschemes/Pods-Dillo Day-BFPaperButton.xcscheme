@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F31FBE65097B25070AB64BF4"
+               BlueprintIdentifier = "125D0A5C919D0438C8044D4A"
                BuildableName = "libPods-Dillo Day-BFPaperButton.a"
                BlueprintName = "Pods-Dillo Day-BFPaperButton"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F31FBE65097B25070AB64BF4"
+            BlueprintIdentifier = "125D0A5C919D0438C8044D4A"
             BuildableName = "libPods-Dillo Day-BFPaperButton.a"
             BlueprintName = "Pods-Dillo Day-BFPaperButton"
             ReferencedContainer = "container:Pods.xcodeproj">

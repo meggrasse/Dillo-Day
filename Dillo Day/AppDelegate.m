@@ -46,7 +46,7 @@
 //    [[UIBarButtonItem appearance] setBackButtonBackgroundImage: backButtonImage forState: UIControlStateNormal barMetrics: UIBarMetricsDefault];
 
     DILLineupViewController *lineupVC = [DILLineupViewController new];
-    lineupVC.title = @"Lineup";
+//    lineupVC.title = @"Lineup";
     UINavigationController *lineupNavController = [[UINavigationController alloc] initWithRootViewController:lineupVC];
 
     MapViewController *mapVC = [[MapViewController alloc] init];

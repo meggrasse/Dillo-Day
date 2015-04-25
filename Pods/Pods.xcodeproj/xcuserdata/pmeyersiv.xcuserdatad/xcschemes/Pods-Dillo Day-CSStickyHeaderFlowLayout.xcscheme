@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "80F021C7ED20B36D5A5ECDBD"
+               BlueprintIdentifier = "A25D3E57C240C677E2A5A154"
                BuildableName = "libPods-Dillo Day-CSStickyHeaderFlowLayout.a"
                BlueprintName = "Pods-Dillo Day-CSStickyHeaderFlowLayout"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "80F021C7ED20B36D5A5ECDBD"
+            BlueprintIdentifier = "A25D3E57C240C677E2A5A154"
             BuildableName = "libPods-Dillo Day-CSStickyHeaderFlowLayout.a"
             BlueprintName = "Pods-Dillo Day-CSStickyHeaderFlowLayout"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2EC6AC765EA401E06559439C"
+               BlueprintIdentifier = "6A2DE4083A5B7C3FD6F13403"
                BuildableName = "libPods-Dillo Day-Colours.a"
                BlueprintName = "Pods-Dillo Day-Colours"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2EC6AC765EA401E06559439C"
+            BlueprintIdentifier = "6A2DE4083A5B7C3FD6F13403"
             BuildableName = "libPods-Dillo Day-Colours.a"
             BlueprintName = "Pods-Dillo Day-Colours"
             ReferencedContainer = "container:Pods.xcodeproj">

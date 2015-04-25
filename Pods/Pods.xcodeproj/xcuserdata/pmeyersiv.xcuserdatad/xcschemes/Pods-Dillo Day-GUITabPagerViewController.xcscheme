@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9BBC928A09D692445FF4646A"
+               BlueprintIdentifier = "1F092EB624E3D05FBE063788"
                BuildableName = "libPods-Dillo Day-GUITabPagerViewController.a"
                BlueprintName = "Pods-Dillo Day-GUITabPagerViewController"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9BBC928A09D692445FF4646A"
+            BlueprintIdentifier = "1F092EB624E3D05FBE063788"
             BuildableName = "libPods-Dillo Day-GUITabPagerViewController.a"
             BlueprintName = "Pods-Dillo Day-GUITabPagerViewController"
             ReferencedContainer = "container:Pods.xcodeproj">

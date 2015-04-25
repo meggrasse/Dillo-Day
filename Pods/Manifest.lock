@@ -33,6 +33,7 @@ PODS:
   - GRMustache (7.3.0):
     - JRSwizzle (~> 1.0)
   - GUITabPagerViewController (0.0.5)
+  - HMSegmentedControl (1.5.1)
   - HTHorizontalSelectionList (0.3.1)
   - HTKDynamicResizingCell (0.0.2)
   - JRSwizzle (1.0)
@@ -128,6 +129,7 @@ DEPENDENCIES:
   - FontasticIcons
   - FXBlurView (~> 1.6)
   - GUITabPagerViewController (~> 0.0.5)
+  - HMSegmentedControl
   - HTHorizontalSelectionList (~> 0.3.1)
   - HTKDynamicResizingCell (~> 0.0.1)
   - L360Confetti (from `https://github.com/life360/confetti.git`)
@@ -172,6 +174,7 @@ SPEC CHECKSUMS:
   FXBlurView: c6d23f3d35af2c6282296a2930f61c6e2c788d01
   GRMustache: 6baee020c5644416c034f5afb1607f6219e7f753
   GUITabPagerViewController: 4ddde36aaf9d125d0558cfc6cb00f81c982b3df3
+  HMSegmentedControl: 35460abdd15c3087368db2d3d956717f088b34d1
   HTHorizontalSelectionList: 35ff501e07b50a7c6a4a19105b69067a8ce6b1f3
   HTKDynamicResizingCell: 9358514816f0737a8d20329617ee126a1498357c
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3

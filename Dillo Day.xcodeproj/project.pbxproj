@@ -108,6 +108,7 @@
 		21C4C10E1AC74C9900AE4561 /* DILPFArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */; };
 		21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */; };
 		21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1131AC750EE00AE4561 /* DILPFStage.m */; };
+		21D593931AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D593921AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m */; };
 		21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */; };
 		21EEC92B1AD61A1B00C968E9 /* DILParseClassGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */; };
 		21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF15951A8DBAA00022953A /* RGCardViewLayout.m */; };
@@ -296,6 +297,8 @@
 		21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFSponsor.m; sourceTree = "<group>"; };
 		21C4C1121AC750EE00AE4561 /* DILPFStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFStage.h; sourceTree = "<group>"; };
 		21C4C1131AC750EE00AE4561 /* DILPFStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFStage.m; sourceTree = "<group>"; };
+		21D593911AEB388A00339787 /* DILArtistSponsorCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DILArtistSponsorCollectionViewCell.h; path = "Artist Info/DILArtistSponsorCollectionViewCell.h"; sourceTree = "<group>"; };
+		21D593921AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DILArtistSponsorCollectionViewCell.m; path = "Artist Info/DILArtistSponsorCollectionViewCell.m"; sourceTree = "<group>"; };
 		21DEA9711AD436D000987379 /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
 		21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
 		21DEA9761AD44B1900987379 /* Dillo Day-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dillo Day-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -546,6 +549,7 @@
 		2159BC391ACC47D000D48F5F /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
+				217D91CA1A9DAC36006F3ABB /* Artist Info */,
 				21EFF9A91A97CFDA00F225ED /* Lineup Views */,
 				219AD4711A9A458500C9E5A6 /* Promposal.xib */,
 			);
@@ -651,22 +655,13 @@
 			isa = PBXGroup;
 			children = (
 				21A175881AE99AE20094E5C2 /* Stage Selection */,
-				215675911AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.h */,
-				215675921AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.m */,
-				21BAFE361ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.h */,
-				21BAFE371ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m */,
-				21BAFE3F1ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.h */,
-				21BAFE401ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m */,
-				210A816C1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.h */,
-				210A816D1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m */,
-				21C4AE441AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.h */,
-				21C4AE451AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m */,
+				21D593901AEB30EA00339787 /* DILArtistInfo Cells */,
+				21D5938F1AEB30DE00339787 /* DILLineup Cells */,
 				210A81621AC609DA0091C134 /* DILNotificationHTKTableViewCell.h */,
 				210A81631AC609DA0091C134 /* DILNotificationHTKTableViewCell.m */,
 				2185F7CB1AABBE10008D5544 /* Notifications */,
 				214FD6D01AA55D9E001D6619 /* FMParallaxImageView.h */,
 				214FD6D11AA55D9E001D6619 /* FMParallaxImageView.m */,
-				217D91CA1A9DAC36006F3ABB /* Artist Info */,
 				2159BC391ACC47D000D48F5F /* Deprecated */,
 			);
 			path = Views;
@@ -701,7 +696,8 @@
 				212028511AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h */,
 				212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */,
 			);
-			path = "Artist Info";
+			name = "Artist Info";
+			path = "../Artist Info";
 			sourceTree = "<group>";
 		};
 		2185F7CB1AABBE10008D5544 /* Notifications */ = {
@@ -733,6 +729,32 @@
 				21C4AE421AE9C86D005A911E /* DILStageSelectTableViewCell.m */,
 			);
 			name = "Stage Selection";
+			sourceTree = "<group>";
+		};
+		21D5938F1AEB30DE00339787 /* DILLineup Cells */ = {
+			isa = PBXGroup;
+			children = (
+				210A816C1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.h */,
+				210A816D1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m */,
+				21C4AE441AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.h */,
+				21C4AE451AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m */,
+			);
+			name = "DILLineup Cells";
+			sourceTree = "<group>";
+		};
+		21D593901AEB30EA00339787 /* DILArtistInfo Cells */ = {
+			isa = PBXGroup;
+			children = (
+				215675911AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.h */,
+				215675921AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.m */,
+				21BAFE361ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.h */,
+				21BAFE371ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m */,
+				21D593911AEB388A00339787 /* DILArtistSponsorCollectionViewCell.h */,
+				21D593921AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m */,
+				21BAFE3F1ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.h */,
+				21BAFE401ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m */,
+			);
+			name = "DILArtistInfo Cells";
 			sourceTree = "<group>";
 		};
 		21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */ = {
@@ -993,6 +1015,7 @@
 				2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */,
 				21C4AE461AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m in Sources */,
 				21BAFE3B1ACE1C49003F5ADD /* DILArtistViewController.m in Sources */,
+				21D593931AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m in Sources */,
 				210FE32E1AD795D2009BC3DE /* SVModalWebViewController.m in Sources */,
 				21BAFE381ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m in Sources */,
 				21A175871AE99ADA0094E5C2 /* DILStageSelectView.m in Sources */,

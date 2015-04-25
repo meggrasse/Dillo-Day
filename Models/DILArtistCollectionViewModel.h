@@ -19,7 +19,9 @@ typedef enum NSUInteger {
 @protocol DILArtistCollectionViewModelDelegate <NSObject>
 @required
 - (void)reloadSection:(NSUInteger)section;
+- (void)insertItemAtIndex:(NSIndexPath *)indexPath;
 - (void)presentVideoPlayerViewController:(XCDYouTubeVideoPlayerViewController *)player;
+
 @end
 
 @interface DILArtistCollectionViewModel : NSObject<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>

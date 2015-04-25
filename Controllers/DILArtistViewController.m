@@ -41,6 +41,7 @@
     self.artistCollectionView.translatesAutoresizingMaskIntoConstraints = NO;
     self.artistCollectionView.alwaysBounceVertical = YES;
     self.artistCollectionView.backgroundColor = [UIColor whiteColor];
+    self.artistCollectionView.showsVerticalScrollIndicator = NO;
     
     self.artistCollectionViewModel = [[DILArtistCollectionViewModel alloc] initWithArtist:self.artist];
     self.artistCollectionViewModel.delegate = self;
@@ -54,12 +55,17 @@
 
 - (void)setArtist:(DILPFArtist *)artist {
     _artist = artist;
+    self.title = [artist.name uppercaseString];
     [self configureArtistCollectionView];
 }
 
 - (void)reloadSection:(NSUInteger)section {
     [self.artistCollectionView reloadSections:[NSIndexSet indexSetWithIndex:section]];
 //    [self.artistCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+}
+
+- (void)insertItemAtIndex:(NSIndexPath *)indexPath {
+    [self.artistCollectionView insertItemsAtIndexPaths:@[indexPath]];
 }
 
 - (void)presentVideoPlayerViewController:(XCDYouTubeVideoPlayerViewController *)player {

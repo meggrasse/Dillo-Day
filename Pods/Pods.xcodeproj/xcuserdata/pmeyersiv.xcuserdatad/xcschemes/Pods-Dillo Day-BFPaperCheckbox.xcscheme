@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6BD7139DC5907C0ACB6A2F2"
+               BlueprintIdentifier = "2880F9C5445D7E1A1B891E49"
                BuildableName = "libPods-Dillo Day-BFPaperCheckbox.a"
                BlueprintName = "Pods-Dillo Day-BFPaperCheckbox"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E6BD7139DC5907C0ACB6A2F2"
+            BlueprintIdentifier = "2880F9C5445D7E1A1B891E49"
             BuildableName = "libPods-Dillo Day-BFPaperCheckbox.a"
             BlueprintName = "Pods-Dillo Day-BFPaperCheckbox"
             ReferencedContainer = "container:Pods.xcodeproj">

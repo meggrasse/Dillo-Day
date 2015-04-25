@@ -34,12 +34,14 @@
     UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc] init];
     self.lineupCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowlayout];
     self.lineupCollectionView.translatesAutoresizingMaskIntoConstraints = NO;
+
     self.lineupCollectionViewModel = [DILLineupCollectionViewModel new];
     self.lineupCollectionViewModel.delegate = self;
     self.lineupCollectionViewModel.stage = self.stage;
 
     self.lineupCollectionView.dataSource = self.lineupCollectionViewModel;
     self.lineupCollectionView.delegate = self.lineupCollectionViewModel;
+    self.lineupCollectionView.showsVerticalScrollIndicator = NO;
 
     [self.view addSubview:self.lineupCollectionView];
     [self.lineupCollectionView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];

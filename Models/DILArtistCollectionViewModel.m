@@ -11,6 +11,7 @@
 #import "DILArtistStickyHeaderCollectionViewCell.h"
 #import "DILArtistBioHTKCollectionViewCell.h"
 #import "DILArtistYoutubeVideoCollectionViewCell.h"
+#import "DILArtistSponsorCollectionViewCell.h"
 
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 #import "DILYoutubeVideoFetcher.h"
@@ -46,6 +47,10 @@
 
 - (void)fetchedVideo:(XCDYouTubeVideo *)video image:(UIImage *)image {
     [self.videos addObject:video];
+    if (self.artistInfoTypeForDisplay == DILArtistInfoTypeMusic) {
+        NSUInteger indexOfVideo = [self.videos indexOfObject:video];
+        [self.delegate insertItemAtIndex:[NSIndexPath indexPathForRow:indexOfVideo inSection:0]];
+    }
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -65,7 +70,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     switch (self.artistInfoTypeForDisplay) {
         case DILArtistInfoTypeBio: {
-            return 1;
+            return 2;
         }
         case DILArtistInfoTypeMusic: {
             return self.videos.count;
@@ -79,14 +84,27 @@
     if (!self.hasRegisteredCellClasses) {
         [collectionView registerClass:[DILArtistBioHTKCollectionViewCell class] forCellWithReuseIdentifier:[DILArtistBioHTKCollectionViewCell identifier]];
         [collectionView registerClass:[DILArtistYoutubeVideoCollectionViewCell class] forCellWithReuseIdentifier:[DILArtistYoutubeVideoCollectionViewCell identifier]];
+        [collectionView registerClass:[DILArtistSponsorCollectionViewCell class] forCellWithReuseIdentifier:[DILArtistSponsorCollectionViewCell identifier]];
         self.hasRegisteredCellClasses = YES;
     }
 
     switch (self.artistInfoTypeForDisplay) {
         case DILArtistInfoTypeBio: {
-            DILArtistBioHTKCollectionViewCell *bioCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistBioHTKCollectionViewCell identifier] forIndexPath:indexPath];
-            [bioCell configureCellWithArtist:self.artist];
-            return bioCell;
+            switch (indexPath.row) {
+                case 0: {
+                    DILArtistSponsorCollectionViewCell *sponsorCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistSponsorCollectionViewCell identifier] forIndexPath:indexPath];
+                    sponsorCell.clipsToBounds = YES;
+                    [sponsorCell configureCellWithSponsor:self.artist.sponsor];
+                    return sponsorCell;
+                }
+                case 1: {
+                    DILArtistBioHTKCollectionViewCell *bioCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistBioHTKCollectionViewCell identifier] forIndexPath:indexPath];
+                    [bioCell configureCellWithArtist:self.artist];
+                    return bioCell;
+                }
+                default:
+                    return nil;
+            }
         }
         case DILArtistInfoTypeMusic: {
             DILArtistYoutubeVideoCollectionViewCell *youtubeVideoCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistYoutubeVideoCollectionViewCell identifier] forIndexPath:indexPath];
@@ -131,12 +149,23 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     switch (self.artistInfoTypeForDisplay) {
         case DILArtistInfoTypeBio: {
-            CGSize cellSize = [DILArtistBioHTKCollectionViewCell sizeForCellWithDefaultSize:[DILArtistBioHTKCollectionViewCell defaultSize] setupCellBlock:^id(id<HTKDynamicResizingCellProtocol> cellToSetup) {
-                [(DILArtistBioHTKCollectionViewCell*)cellToSetup configureCellWithArtist:self.artist];
-                return cellToSetup;
-            }];
-
-            return cellSize;
+            switch (indexPath.row) {
+                case 0: {
+                    if (self.artist.sponsor) {
+                        return CGSizeMake(CGRectGetWidth(collectionView.bounds), 100);
+                    } else return CGSizeMake(CGRectGetWidth(collectionView.bounds), 0.000000001);
+                }
+                case 1: {
+                    CGSize cellSize = [DILArtistBioHTKCollectionViewCell sizeForCellWithDefaultSize:[DILArtistBioHTKCollectionViewCell defaultSize] setupCellBlock:^id(id<HTKDynamicResizingCellProtocol> cellToSetup) {
+                        [(DILArtistBioHTKCollectionViewCell*)cellToSetup configureCellWithArtist:self.artist];
+                        return cellToSetup;
+                    }];
+                    
+                    return cellSize;
+                }
+                default:
+                    return CGSizeZero;
+            }
         }
         case DILArtistInfoTypeMusic: {
             CGFloat videoCellWidth = CGRectGetWidth(collectionView.bounds) - 15*2;

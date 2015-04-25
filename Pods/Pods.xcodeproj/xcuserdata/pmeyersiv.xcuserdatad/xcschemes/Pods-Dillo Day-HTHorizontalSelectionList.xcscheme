@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EFCA76226D5AB1475D5DBDA4"
+               BlueprintIdentifier = "BA8B07AF94FD1A5ACF53CD22"
                BuildableName = "libPods-Dillo Day-HTHorizontalSelectionList.a"
                BlueprintName = "Pods-Dillo Day-HTHorizontalSelectionList"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EFCA76226D5AB1475D5DBDA4"
+            BlueprintIdentifier = "BA8B07AF94FD1A5ACF53CD22"
             BuildableName = "libPods-Dillo Day-HTHorizontalSelectionList.a"
             BlueprintName = "Pods-Dillo Day-HTHorizontalSelectionList"
             ReferencedContainer = "container:Pods.xcodeproj">

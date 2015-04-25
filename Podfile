@@ -39,6 +39,7 @@ pod 'FlatUIKit', '~> 1.6'
 pod 'GUITabPagerViewController', '~> 0.0.5'
 pod 'NSDate+TimeAgo'
 pod "TOMSMorphingLabel", "~> 0.5"
+pod 'HMSegmentedControl'
 end
 
 target 'Dillo DayTests' do

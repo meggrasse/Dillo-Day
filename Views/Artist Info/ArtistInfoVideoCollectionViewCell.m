@@ -32,11 +32,11 @@
     self.videoThumbnail.clipsToBounds = YES;
     
     self.videoName = [[UILabel alloc] initForAutoLayout];
-    self.videoName.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:12];
-    self.videoName.backgroundColor = [UIColor blackColor];
-    self.videoName.textColor = [UIColor whiteColor];
+    self.videoName.font = [UIFont boldSystemFontOfSize:18];
+    self.videoName.backgroundColor = [DilloDayStyleKit artistInfoMusicVideoTitleBackgroundColor];
+    self.videoName.textColor = [DilloDayStyleKit artistInfoMusicVideoTitleTextColor];
     self.videoName.numberOfLines = 2;
-    self.videoName.textAlignment = NSTextAlignmentLeft;
+    self.videoName.textAlignment = NSTextAlignmentCenter;
     self.videoName.lineBreakMode = NSLineBreakByWordWrapping;
     
     
@@ -44,10 +44,12 @@
     [self insertSubview:self.videoName aboveSubview:self.videoThumbnail];
     
     [self.videoThumbnail autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-    [self.videoName autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0];
-    [self.videoName autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
-    [self.videoName autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.videoName autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [self.videoName autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [self.videoName autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [self.videoName autoSetDimension:ALDimensionHeight toSize:30 relation:NSLayoutRelationGreaterThanOrEqual];
 }
+
 - (void)setupCellWithVideo:(XCDYouTubeVideo *)video {
     self.videoName.text = video.title;
     [self.videoThumbnail sd_setImageWithURL:video.mediumThumbnailURL placeholderImage:[UIImage imageNamed:@"DillogoSharpLarge"] options:0];

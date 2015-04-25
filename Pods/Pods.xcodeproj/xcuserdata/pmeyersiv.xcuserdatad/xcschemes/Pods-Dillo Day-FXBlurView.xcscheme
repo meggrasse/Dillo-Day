@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C85A1813D57310C7B980870"
+               BlueprintIdentifier = "6772DB105491001D1CB0B5CB"
                BuildableName = "libPods-Dillo Day-FXBlurView.a"
                BlueprintName = "Pods-Dillo Day-FXBlurView"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3C85A1813D57310C7B980870"
+            BlueprintIdentifier = "6772DB105491001D1CB0B5CB"
             BuildableName = "libPods-Dillo Day-FXBlurView.a"
             BlueprintName = "Pods-Dillo Day-FXBlurView"
             ReferencedContainer = "container:Pods.xcodeproj">

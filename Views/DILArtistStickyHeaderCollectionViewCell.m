@@ -10,14 +10,15 @@
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayoutAttributes.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "NSDate+Utilities.h"
-#import <NYSegmentedControl/NYSegmentedControl.h>
+#import <HMSegmentedControl/HMSegmentedControl.h>
 
 @interface DILArtistStickyHeaderCollectionViewCell()
 @property (strong, nonatomic) UIImageView *backgroundImageView;
 @property (strong, nonatomic) UIImageView *circularImageView;
 @property (strong, nonatomic) UILabel *timeLabel;
-@property (strong, nonatomic) NYSegmentedControl *segmentedControl;
+@property (strong, nonatomic) HMSegmentedControl *segmentedControl;
 @property (strong, nonatomic) NSMutableArray *circularImageViewLayoutConstraints;
+@property (strong, nonatomic) UIView *backgroundImageViewTintView;
 @end
 
 static NSString *const kSegmentedControlBio     = @"BIO";
@@ -35,8 +36,11 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 - (void)configureCell {
     self.clipsToBounds = YES;
     [self addSubview:self.backgroundImageView];
+    [self.backgroundImageView addSubview:self.backgroundImageViewTintView];
     [self addSubview:self.timeLabel];
     [self addSubview:self.segmentedControl];
+
+    [self.backgroundImageViewTintView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 
     [self.segmentedControl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
     CGFloat segmentedControlHeight = 44;
@@ -92,12 +96,6 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     CGFloat inset = 60;
     [self.circularImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.backgroundImageView withOffset:-inset];
     [self.circularImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.circularImageView];
-
-//    [RACObserve(self, self.backgroundImageView.bounds) subscribeNext:^(NSNumber *bounds) {
-//        if (CGRectGetWidth(bounds.CGRectValue) && CGRectGetHeight(bounds.CGRectValue) <= inset) {
-//            [self removeCircularImageView];
-//        }
-//    }];
 }
 
 - (UILabel *)timeLabel {
@@ -108,25 +106,42 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 }
 
 
-- (NYSegmentedControl *)segmentedControl {
+- (HMSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {
-        _segmentedControl = [[NYSegmentedControl alloc] initForAutoLayout];
-        [_segmentedControl insertSegmentWithTitle:kSegmentedControlBio atIndex:0];
-        [_segmentedControl insertSegmentWithTitle:kSegmentedControlMusic atIndex:1];
+        _segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[kSegmentedControlBio, kSegmentedControlMusic]];
+        _segmentedControl.translatesAutoresizingMaskIntoConstraints = NO;
+        _segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+        _segmentedControl.selectionIndicatorEdgeInsets = UIEdgeInsetsZero;
+        _segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
+        _segmentedControl.backgroundColor = [DilloDayStyleKit artistInfoSegmentedControlBackgroundColor];
+        _segmentedControl.selectionIndicatorColor = [DilloDayStyleKit artistInfoSegmentedControlSelectedSegmentIndicatorColor];
+        [_segmentedControl setTitleFormatter:^NSAttributedString *(HMSegmentedControl *segmentedControl, NSString *title, NSUInteger index, BOOL selected) {
+            NSAttributedString *formattedTitleString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : [DilloDayStyleKit artistInfoSegmentedControlTextColor], NSFontAttributeName : [UIFont boldFlatFontOfSize:18]}];
+            return formattedTitleString;
+        }];
         [_segmentedControl addTarget:self action:@selector(handleSegmentedControlChange:) forControlEvents:UIControlEventValueChanged];
     }
     return _segmentedControl;
 }
 
-- (void)handleSegmentedControlChange:(UISegmentedControl *)sender {
+- (void)handleSegmentedControlChange:(HMSegmentedControl *)sender {
     DILArtistInfoType type;
-    NSString *selectedTitle = [sender titleForSegmentAtIndex:sender.selectedSegmentIndex];
+    NSString *selectedTitle = sender.sectionTitles[sender.selectedSegmentIndex];
     if ([selectedTitle isEqualToString:kSegmentedControlBio]) {
         type = DILArtistInfoTypeBio;
     } else if ([selectedTitle isEqualToString:kSegmentedControlMusic]) {
         type = DILArtistInfoTypeMusic;
     }
     [self.delegate displayArtistInfoType:type];
+}
+
+- (UIView *)backgroundImageViewTintView {
+    if (!_backgroundImageViewTintView) {
+        _backgroundImageViewTintView = [[UIView alloc] initForAutoLayout];
+        _backgroundImageViewTintView.backgroundColor = [UIColor blackColor];
+        _backgroundImageViewTintView.alpha = 0.20;
+    }
+    return _backgroundImageViewTintView;
 }
 
 - (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes {
