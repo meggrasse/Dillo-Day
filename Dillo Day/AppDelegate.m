@@ -106,7 +106,7 @@
 - (void)configureFlatNavigationController:(UINavigationController *)controller {
     UINavigationBar *navigationBar = controller.navigationBar;
 //    [navigationBar configureFlatNavigationBarWithColor:[DilloDayStyleKit navigationBarColor]];
-    navigationBar.tintColor = [DilloDayStyleKit navigationBarColor];
+    navigationBar.tintColor = [DilloDayStyleKit navigationBarTextColor];
     navigationBar.translucent = NO;
 }
 
