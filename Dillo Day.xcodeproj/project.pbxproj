@@ -74,6 +74,8 @@
 		2159BC301ACB7CB000D48F5F /* DILFakeDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC2F1ACB7CB000D48F5F /* DILFakeDataGenerator.m */; };
 		2159BC331ACB8C3E00D48F5F /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC311ACB8C3E00D48F5F /* NSDate+Utilities.m */; };
 		2159BC371ACC422000D48F5F /* DILFollowArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC361ACC422000D48F5F /* DILFollowArtist.m */; };
+		215BB6711AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6701AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m */; };
+		215BB6741AEC38270062BA50 /* FMEParallaxPFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */; };
 		215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */; };
 		217946B21A87C96100224737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B11A87C96100224737 /* main.m */; };
 		217946B51A87C96100224737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B41A87C96100224737 /* AppDelegate.m */; };
@@ -109,6 +111,7 @@
 		21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */; };
 		21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C4C1131AC750EE00AE4561 /* DILPFStage.m */; };
 		21D593931AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D593921AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m */; };
+		21D593961AEC21B000339787 /* FMEParallaxImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D593951AEC21B000339787 /* FMEParallaxImageView.m */; };
 		21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */; };
 		21EEC92B1AD61A1B00C968E9 /* DILParseClassGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */; };
 		21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF15951A8DBAA00022953A /* RGCardViewLayout.m */; };
@@ -230,6 +233,10 @@
 		2159BC321ACB8C3E00D48F5F /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		2159BC351ACC422000D48F5F /* DILFollowArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILFollowArtist.h; sourceTree = "<group>"; };
 		2159BC361ACC422000D48F5F /* DILFollowArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILFollowArtist.m; sourceTree = "<group>"; };
+		215BB66F1AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILLineupParallaxCollectionViewCell.h; sourceTree = "<group>"; };
+		215BB6701AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupParallaxCollectionViewCell.m; sourceTree = "<group>"; };
+		215BB6721AEC38270062BA50 /* FMEParallaxPFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMEParallaxPFImageView.h; sourceTree = "<group>"; };
+		215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEParallaxPFImageView.m; sourceTree = "<group>"; };
 		215BFB731ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILYoutubeVideoFetcher.h; sourceTree = "<group>"; };
 		215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILYoutubeVideoFetcher.m; sourceTree = "<group>"; };
 		217946AC1A87C96100224737 /* Dillo Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dillo Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +306,8 @@
 		21C4C1131AC750EE00AE4561 /* DILPFStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFStage.m; sourceTree = "<group>"; };
 		21D593911AEB388A00339787 /* DILArtistSponsorCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DILArtistSponsorCollectionViewCell.h; path = "Artist Info/DILArtistSponsorCollectionViewCell.h"; sourceTree = "<group>"; };
 		21D593921AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DILArtistSponsorCollectionViewCell.m; path = "Artist Info/DILArtistSponsorCollectionViewCell.m"; sourceTree = "<group>"; };
+		21D593941AEC21B000339787 /* FMEParallaxImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMEParallaxImageView.h; sourceTree = "<group>"; };
+		21D593951AEC21B000339787 /* FMEParallaxImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEParallaxImageView.m; sourceTree = "<group>"; };
 		21DEA9711AD436D000987379 /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
 		21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
 		21DEA9761AD44B1900987379 /* Dillo Day-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dillo Day-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -662,6 +671,10 @@
 				2185F7CB1AABBE10008D5544 /* Notifications */,
 				214FD6D01AA55D9E001D6619 /* FMParallaxImageView.h */,
 				214FD6D11AA55D9E001D6619 /* FMParallaxImageView.m */,
+				21D593941AEC21B000339787 /* FMEParallaxImageView.h */,
+				21D593951AEC21B000339787 /* FMEParallaxImageView.m */,
+				215BB6721AEC38270062BA50 /* FMEParallaxPFImageView.h */,
+				215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */,
 				2159BC391ACC47D000D48F5F /* Deprecated */,
 			);
 			path = Views;
@@ -736,6 +749,8 @@
 			children = (
 				210A816C1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.h */,
 				210A816D1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m */,
+				215BB66F1AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.h */,
+				215BB6701AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m */,
 				21C4AE441AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.h */,
 				21C4AE451AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m */,
 			);
@@ -973,6 +988,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D593961AEC21B000339787 /* FMEParallaxImageView.m in Sources */,
 				219155541AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m in Sources */,
 				210FE3371AD795D2009BC3DE /* SVWebViewControllerActivitySafari.m in Sources */,
 				212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */,
@@ -992,8 +1008,10 @@
 				2185F7C11AABB94F008D5544 /* NotificationsViewController.m in Sources */,
 				21BAFE411ACF1CB7003F5ADD /* DILArtistBioHTKCollectionViewCell.m in Sources */,
 				219893951A9FE59F006257F5 /* MapViewController.m in Sources */,
+				215BB6741AEC38270062BA50 /* FMEParallaxPFImageView.m in Sources */,
 				214FD6CA1AA5542D001D6619 /* UIFont+SytemFontOverride.m in Sources */,
 				212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */,
+				215BB6711AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m in Sources */,
 				210FE3331AD795D2009BC3DE /* SVWebViewControllerActivityChrome.m in Sources */,
 				217A8EE81AD89B5C0046F45F /* DILNotification.m in Sources */,
 				21EEC92B1AD61A1B00C968E9 /* DILParseClassGeneration.m in Sources */,

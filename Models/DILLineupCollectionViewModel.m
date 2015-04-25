@@ -9,6 +9,7 @@
 #import "DILLineupCollectionViewModel.h"
 
 #import "DILLineupCenterTextCollectionViewCell.h"
+#import "DILLineupParallaxCollectionViewCell.h"
 #import "DILPFArtist.h"
 
 #import <PromiseKit/PromiseKit.h>
@@ -18,6 +19,7 @@
 @end
 
 static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLineupCenterTextCollectionViewCellIdentifier";
+static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLineupParallaxCollectionViewCellIdentifier";
 
 @implementation DILLineupCollectionViewModel
 - (id)init {
@@ -39,9 +41,17 @@ static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLi
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.hasRegisteredClass) {
         [collectionView registerClass:[DILLineupCenterTextCollectionViewCell class] forCellWithReuseIdentifier:DILLineupCenterTextCollectionViewCellIdentifier];
+        [collectionView registerClass:[DILLineupParallaxCollectionViewCell class] forCellWithReuseIdentifier:DILLineupParallaxCollectionViewCellIdentifier];
         self.hasRegisteredClass = YES;
     }
 
+    DILLineupParallaxCollectionViewCell *parallaxLineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:DILLineupParallaxCollectionViewCellIdentifier forIndexPath:indexPath];
+    DILPFArtist *artistForCell = [self artistForIndexPath:indexPath];
+    [parallaxLineupCell configureCellWithArtist:artistForCell scrollView:collectionView];
+    return parallaxLineupCell;
+
+
+    /*
     DILLineupCenterTextCollectionViewCell *lineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:DILLineupCenterTextCollectionViewCellIdentifier forIndexPath:indexPath];
     DILPFArtist *artistForCell = [self artistForIndexPath:indexPath];
     [lineupCell configureCellWithArtist:artistForCell];
@@ -50,6 +60,7 @@ static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLi
     lineupCell.layer.rasterizationScale = [UIScreen mainScreen].scale;
     
     return lineupCell;
+     */
 }
 
 - (DILPFArtist *)artistForIndexPath:(NSIndexPath *)indexPath {
@@ -58,7 +69,7 @@ static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLi
 
 #pragma mark - UICollectionViewFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return  CGSizeMake(CGRectGetWidth(collectionView.bounds), 150);
+    return  CGSizeMake(CGRectGetWidth(collectionView.bounds), 175);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {

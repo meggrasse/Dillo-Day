@@ -10,6 +10,7 @@
 
 #import "DILLineupCenterTextCollectionViewCellRadialShadowView.h"
 
+
 #import "NSDate+Utilities.h"
 #import "Artist.h"
 #import <FontasticIcons/FontasticIcons.h>
@@ -176,7 +177,10 @@
     [self.progressView removeFromSuperview];
 }
 
+
 #pragma mark - Public Methods
+
+
 - (void)configureCellWithArtist:(DILPFArtist *)artist {
     self.artist = artist;
     
