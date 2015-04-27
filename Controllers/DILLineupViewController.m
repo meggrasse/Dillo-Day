@@ -74,9 +74,9 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     self.stageSelectTitleView.translatesAutoresizingMaskIntoConstraints = NO;
     for (NSLayoutConstraint *constraint in self.stageSelectTitleViewAutoLayoutConstraintArray) {
         [constraint autoInstall];

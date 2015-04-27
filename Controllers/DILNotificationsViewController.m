@@ -45,6 +45,7 @@
         _notificationsTableView.delegate = self.notificationsTableViewModel;
         _notificationsTableView.dataSource = self.notificationsTableViewModel;
         _notificationsTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        _notificationsTableView.backgroundColor = [DilloDayStyleKit notificationCellBackgroundColor];
     }
     return _notificationsTableView;
 }

@@ -9,7 +9,6 @@
 #import "FMEParallaxPFImageView.h"
 #import <PureLayout/PureLayout.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import <ParseUI/ParseUI.h>
 
 @interface FMEParallaxPFImageView()
 @property (strong, nonatomic) PFImageView *imageView;
@@ -23,11 +22,9 @@
 @implementation FMEParallaxPFImageView
 - (void)setImageFile:(PFFile *)imageFile {
     self.imageView.file = imageFile;
-    [self.imageView loadInBackground:^(UIImage *image, NSError *error) {
-
-    } progressBlock:^(int percentDone) {
-
-    }];
+    if (!imageFile) {
+        self.imageView.image = nil;
+    }
 }
 
 - (id)initWithFrame:(CGRect)frame parallaxOffsetType:(FMEParallaxPFImageViewParallaxOffsetType)offsetType {
@@ -43,7 +40,7 @@
  */
 - (void)configureParallaxImageView {
     self.parallaxEnabled = YES;
-    self.parallaxOffset = .5;
+    self.parallaxOffset = .75;
 
     [self constructImageView];
 }
@@ -76,6 +73,7 @@
             break;
     }
 }
+
 
 - (void)setImageOffsetFactor:(CGFloat)imageOffsetFactor {
     if (imageOffsetFactor < -1) {
@@ -122,7 +120,7 @@
         CGFloat yScrollViewBoundsMidpoint = CGRectGetMidY(scrollViewBounds);
         CGFloat yParallaxImageViewFrameMidpoint = CGRectGetMidY(convertedFrame);
 
-        CGFloat newOffsetFactor = (yScrollViewBoundsMidpoint - yParallaxImageViewFrameMidpoint)/(CGRectGetHeight(scrollViewBounds)) *-1.0;
+        CGFloat newOffsetFactor = (yScrollViewBoundsMidpoint - yParallaxImageViewFrameMidpoint)/(CGRectGetHeight(scrollViewBounds)) *1.0;
 //        dispatch_sync(dispatch_get_main_queue(), ^{
             self.imageOffsetFactor = newOffsetFactor;
 //        });
@@ -134,5 +132,8 @@
     [self updateParallaxOffset];
 }
 
-
+#pragma mark - Public Methods
+- (void)loadInBackground:(FMEParallaxPFImageViewImageResultBlock)resultBlock progressBlock:(FMEParallaxPFImageViewImageProgressBlock)progressBlock {
+    [self.imageView loadInBackground:resultBlock progressBlock:progressBlock];
+}
 @end

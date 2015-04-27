@@ -62,6 +62,7 @@
             DILPFSponsor *sponsor = [DILPFSponsor object];
             sponsor.name = @"Dell Computers";
             sponsor.sponsoredArtist = newArtist;
+            sponsor.sponsorLogo = [PFFile fileWithData:UIImagePNGRepresentation([UIImage imageNamed:@"lana big"])];
             [sponsor save];
             
             newArtist.sponsor = sponsor;

@@ -40,6 +40,7 @@ pod 'GUITabPagerViewController', '~> 0.0.5'
 pod 'NSDate+TimeAgo'
 pod "TOMSMorphingLabel", "~> 0.5"
 pod 'HMSegmentedControl'
+pod 'DPMeterView', '0.0.1'
 end
 
 target 'Dillo DayTests' do

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "32EA14CCB6522B5ED436AA0A"
+               BlueprintIdentifier = "C36E12231EDFF793B9BB6DD9"
                BuildableName = "libPods-Dillo Day-TOMSMorphingLabel.a"
                BlueprintName = "Pods-Dillo Day-TOMSMorphingLabel"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "32EA14CCB6522B5ED436AA0A"
-            BuildableName = "libPods-Dillo Day-TOMSMorphingLabel.a"
-            BlueprintName = "Pods-Dillo Day-TOMSMorphingLabel"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

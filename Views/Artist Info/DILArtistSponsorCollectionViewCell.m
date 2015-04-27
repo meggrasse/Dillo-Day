@@ -29,6 +29,11 @@
 - (void)configureCell {
     UIView *centeredView = [[UIView alloc] initForAutoLayout];
     [self.contentView addSubview:centeredView];
+
+    [centeredView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [centeredView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [centeredView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [centeredView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [centeredView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [centeredView autoAlignAxisToSuperviewAxis:ALAxisVertical];
 
@@ -39,8 +44,8 @@
     [self.sponsorLogoImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeLeading];
     [self.sponsoredByLabel autoPinEdge:ALEdgeTrailing toEdge:ALEdgeLeading ofView:self.sponsorLogoImageView withOffset:-5];
 
-    CGSize sponsorLogoImageViewSize = CGSizeMake(50, 50);
-    [self.sponsorLogoImageView autoSetDimension:ALDimensionHeight toSize:sponsorLogoImageViewSize.height];
+    CGFloat sponsorLogoImageViewDimension = 200;
+    [self.sponsorLogoImageView autoSetDimension:ALDimensionHeight toSize:sponsorLogoImageViewDimension];
 }
 
 - (UILabel *)sponsoredByLabel {
@@ -48,6 +53,8 @@
         _sponsoredByLabel = [[UILabel alloc] initForAutoLayout];
         _sponsoredByLabel.numberOfLines = 1;
         _sponsoredByLabel.text = @"SPONSORED BY:";
+        _sponsoredByLabel.adjustsFontSizeToFitWidth = YES;
+        _sponsoredByLabel.minimumScaleFactor = 0.1;
         _sponsoredByLabel.textColor = [DilloDayStyleKit artistInfoSponsoredByTextColor];
         _sponsoredByLabel.font = [UIFont boldFlatFontOfSize:20];
     }
@@ -79,7 +86,7 @@
     [self.sponsorLogoImageView loadInBackground:^(UIImage *image, NSError *error) {
         [self terminateProgressView];
         if (image) {
-            CGFloat imageAspectRatio = image.size.height/image.size.width;
+            CGFloat imageAspectRatio = image.size.width/image.size.height;
             [self.sponsorLogoImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.sponsorLogoImageView withMultiplier:imageAspectRatio];
         }
     } progressBlock:^(int percentDone) {

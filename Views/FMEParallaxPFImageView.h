@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 typedef enum : NSUInteger {
     FMEParallaxPFImageViewParallaxOffsetTypeProportional,
@@ -15,6 +16,8 @@ typedef enum : NSUInteger {
 } FMEParallaxPFImageViewParallaxOffsetType;
 
 
+typedef void(^FMEParallaxPFImageViewImageResultBlock)(UIImage *image,  NSError *error);
+typedef void(^FMEParallaxPFImageViewImageProgressBlock)(int percentDone);
 
 @interface FMEParallaxPFImageView : UIView
 /**
@@ -35,6 +38,7 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, assign) PFFile *imageFile;
 
+
 /**
  *  Must set a scrollView
  */
@@ -49,5 +53,5 @@ typedef enum : NSUInteger {
  *  @return self
  */
 - (id)initWithFrame:(CGRect)frame parallaxOffsetType:(FMEParallaxPFImageViewParallaxOffsetType)offsetType;
-
+- (void)loadInBackground:(FMEParallaxPFImageViewImageResultBlock)resultBlock progressBlock:(FMEParallaxPFImageViewImageProgressBlock)progressBlock;
 @end

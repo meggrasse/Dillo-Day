@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E39335B0A89F300BB761203"
+               BlueprintIdentifier = "6F5C53D4A4F76214D33AFA89"
                BuildableName = "libPods-Dillo Day-HMSegmentedControl.a"
                BlueprintName = "Pods-Dillo Day-HMSegmentedControl"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,15 +39,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E39335B0A89F300BB761203"
-            BuildableName = "libPods-Dillo Day-HMSegmentedControl.a"
-            BlueprintName = "Pods-Dillo Day-HMSegmentedControl"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

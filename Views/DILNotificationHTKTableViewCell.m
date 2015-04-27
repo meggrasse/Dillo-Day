@@ -25,7 +25,7 @@
 }
 
 - (void)configureCell {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [DilloDayStyleKit notificationCellBackgroundColor];
     self.accessoryType = UITableViewCellAccessoryNone;
     self.accessoryView = nil;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -37,18 +37,18 @@
 
 
     CGFloat unreadInset = 20;
-    CGFloat unreadDimension = 20;
+    CGFloat unreadDimension = 25;
     [self.unreadImageView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:unreadInset];
     [self.unreadImageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [self.unreadImageView autoSetDimensionsToSize:CGSizeMake(unreadDimension, unreadDimension)];
 
-    CGFloat horizontalInset = 10;
+    CGFloat horizontalInset = 20;
     [self.notificationMessageLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:self.unreadImageView withOffset:unreadInset];
     [self.notificationMessageLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:horizontalInset relation:NSLayoutRelationGreaterThanOrEqual];
     [self.notificationMessageLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:unreadInset relation:NSLayoutRelationGreaterThanOrEqual];
     self.notificationMessageLabel.preferredMaxLayoutWidth = [DILNotificationHTKTableViewCell defaultCellSize].width - 2 * unreadInset - horizontalInset - unreadDimension;
 
-    CGFloat verticalTextOffset = 1;
+    CGFloat verticalTextOffset = -1;
     [self.notificationTimeLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.notificationMessageLabel];
     [self.notificationTimeLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.notificationMessageLabel withOffset:verticalTextOffset];
     [self.notificationTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:unreadInset relation:NSLayoutRelationGreaterThanOrEqual];
@@ -67,6 +67,8 @@
         _notificationMessageLabel = [[UILabel alloc] initForAutoLayout];
         _notificationMessageLabel.numberOfLines = 0;
         _notificationMessageLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        _notificationMessageLabel.font = [UIFont systemFontOfSize:16];
+        _notificationMessageLabel.textColor = [DilloDayStyleKit notificationCellMessageTextColor];
     }
     return _notificationMessageLabel;
 }
@@ -76,7 +78,8 @@
         _notificationTimeLabel = [[UILabel alloc] initForAutoLayout];
         _notificationTimeLabel.numberOfLines = 1;
         _notificationTimeLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        _notificationTimeLabel.font = [UIFont boldSystemFontOfSize:12];
+        _notificationTimeLabel.font = [UIFont fontWithName:@"SourceSansPro-Light" size:13];
+        _notificationTimeLabel.textColor = [DilloDayStyleKit notificationCellTimeAgoTextColor];
     }
     return _notificationTimeLabel;
 }
@@ -85,7 +88,7 @@
 - (UIImageView *)unreadImageView {
     if (!_unreadImageView) {
         _unreadImageView = [[UIImageView alloc] initForAutoLayout];
-        _unreadImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _unreadImageView.contentMode = UIViewContentModeScaleAspectFit;
         _unreadImageView.clipsToBounds = YES;
 //        _unreadImageView.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:.3];
     }
@@ -94,13 +97,13 @@
 
 - (UIImage *)imageForUnreadImageView:(BOOL)unread {
     UIImage *image;
-    CGFloat imageDimension = 20;
-    CGRect imageBounds = CGRectMake(0, 0, imageDimension, imageDimension);
-    UIColor *imageColor = [UIColor blackColor];
+//    CGFloat imageDimension = 20;
+//    CGRect imageBounds = CGRectMake(0, 0, imageDimension, imageDimension);
+//    UIColor *imageColor = [UIColor blackColor];
     if (unread) {
-        image = [[FIFontAwesomeIcon circleIcon] imageWithBounds:imageBounds color:imageColor];
+        image = [DilloDayStyleKit imageOfNotificationIndicatorUnread];
     } else {
-        image = [[FIFontAwesomeIcon circleBlankIcon] imageWithBounds:imageBounds color:imageColor];
+        image = [DilloDayStyleKit imageOfNotificationIndicatorRead];
     }
     return image;
 }
@@ -114,6 +117,6 @@
 - (void)configureCellWithNotification:(DILNotification *)notification {
     self.notificationMessageLabel.text = notification.alert;
     self.notificationTimeLabel.text = [notification.dateRecieved dateTimeAgo];
-    self.imageView.image = [self imageForUnreadImageView:notification.unread];
+    self.unreadImageView.image = [self imageForUnreadImageView:notification.unread];
 }
 @end

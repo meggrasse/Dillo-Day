@@ -10,11 +10,15 @@
 #import "FMEParallaxPFImageView.h"
 
 #import "NSDate+Utilities.h"
+#import <UAProgressView/UAProgressView.h>
+#import <DPMeterView/DPMeterView.h>
 
 @interface DILLineupParallaxCollectionViewCell()
 @property (strong, nonatomic) FMEParallaxPFImageView *parallaxImageView;
 @property (strong, nonatomic) UILabel *nameLabel;
 @property (strong, nonatomic) UILabel *performanceTimeLabel;
+@property (strong, nonatomic) UAProgressView *progressView;
+@property (strong, nonatomic) DPMeterView *meterView;
 @end
 
 @implementation DILLineupParallaxCollectionViewCell
@@ -87,12 +91,69 @@
     return _parallaxImageView;
 }
 
+- (UAProgressView *)progressView {
+    if (!_progressView) {
+        _progressView = [[UAProgressView alloc] initForAutoLayout];
+        _progressView.tintColor = [DilloDayStyleKit artistInfoSegmentedControlSelectedSegmentIndicatorColor];
+        _progressView.fillOnTouch = NO;
+    }
+    return _progressView;
+}
+
+- (void)setupProgressView {
+    [self.contentView addSubview:self.progressView];
+
+    CGFloat progressViewDimension = 50;
+    [self.progressView autoSetDimensionsToSize:CGSizeMake(progressViewDimension, progressViewDimension)];
+    [self.progressView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.progressView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+}
+
+- (void)terminateProgressView {
+    [self.progressView removeFromSuperview];
+}
+
+- (DPMeterView *)meterView {
+    if (!_meterView) {
+        _meterView = [[DPMeterView alloc] initForAutoLayout];
+        _meterView.meterType = DPMeterTypeLinearHorizontal;
+        _meterView.trackTintColor = [UIColor whiteColor];
+        _meterView.progressTintColor = [DilloDayStyleKit lineupCellProgressColor];
+    }
+    return _meterView;
+}
+- (void)setupMeterView {
+    [self.parallaxImageView addSubview:self.meterView];
+    [self.meterView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [self.meterView setProgress:0 animated:NO];
+}
+
+- (void)terminateMeterView {
+    [self.meterView removeFromSuperview];
+}
+
+
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView {
     self.nameLabel.text = [artist.name uppercaseString];
 
     self.performanceTimeLabel.text = [artist.performanceTime mediumTimeString];
     self.parallaxImageView.scrollView = scrollView;
     self.parallaxImageView.imageFile = artist.lineupImage;
+
+//    [self setupProgressView];
+    [self setupMeterView];
+    [self.parallaxImageView loadInBackground:^(UIImage *image, NSError *error) {
+//        [self terminateProgressView];
+        [self terminateMeterView];
+    } progressBlock:^(int percentDone) {
+        [self.meterView setProgress:((float)percentDone)/100.0 animated:YES];
+//        [self.progressView setProgress:((float)percentDone)/100.0 animated:YES];
+    }];
+
+}
+
+- (void)prepareForReuse {
+    self.parallaxImageView.imageFile = nil;
 }
 
 + (NSString *)identifier {
