@@ -41,6 +41,8 @@ pod 'NSDate+TimeAgo'
 pod "TOMSMorphingLabel", "~> 0.5"
 pod 'HMSegmentedControl'
 pod 'DPMeterView', '0.0.1'
+pod 'M13PDFKit', '1.0.2'
+pod 'CBStoreHouseRefreshControl'
 end
 
 target 'Dillo DayTests' do

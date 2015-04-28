@@ -16,6 +16,7 @@
 
 #import "DILArtistViewController.h"
 #import "DILStageSelectTitleView.h"
+//#import <CBStoreHouseRefreshControl/CBStoreHouseRefreshControl.h>
 
 @interface DILLineupViewController ()<DILLineupCollectionViewDelegate, DILStageSelectTitleViewDelegate>
 @property (strong, nonatomic) UICollectionView *lineupCollectionView;
@@ -35,6 +36,7 @@
     self.stageSelectTitleViewAutoLayoutConstraintArray = [NSMutableArray new];
     [self configureLineupCollectionView];
     [self configureStageSelectionTitleView];
+//    [self.lineupCollectionViewModel configurePullToRefresh];
 
     [self fetchStages];
 }
@@ -44,6 +46,7 @@
     self.lineupCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowlayout];
     self.lineupCollectionView.translatesAutoresizingMaskIntoConstraints = NO;
     self.lineupCollectionViewModel = [DILLineupCollectionViewModel new];
+    self.lineupCollectionViewModel.collectionView = self.lineupCollectionView;
     self.lineupCollectionViewModel.delegate = self;
     
     self.lineupCollectionView.dataSource = self.lineupCollectionViewModel;

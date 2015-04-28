@@ -136,7 +136,8 @@
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView {
     self.nameLabel.text = [artist.name uppercaseString];
 
-    self.performanceTimeLabel.text = [artist.performanceTime mediumTimeString];
+//    self.performanceTimeLabel.text = [artist.performanceTime mediumTimeString];
+    self.performanceTimeLabel.text = artist.objectId;
     self.parallaxImageView.scrollView = scrollView;
     self.parallaxImageView.imageFile = artist.lineupImage;
 

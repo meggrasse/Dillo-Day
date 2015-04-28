@@ -13,9 +13,11 @@
 #import "DILPFArtist.h"
 
 #import <PromiseKit/PromiseKit.h>
+#import <CBStoreHouseRefreshControl/CBStoreHouseRefreshControl.h>
 
 @interface DILLineupCollectionViewModel()
 @property (nonatomic) BOOL hasRegisteredClass;
+@property (strong, nonatomic) CBStoreHouseRefreshControl *refreshControl;
 @end
 
 static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLineupCenterTextCollectionViewCellIdentifier";
@@ -87,4 +89,39 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
     [self.delegate didSelectArtist:[self artistForIndexPath:indexPath]];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.refreshControl scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self.refreshControl scrollViewDidEndDragging];
+}
+
+#pragma mark - Pull to Refresh
+- (void)configurePullToRefresh {
+    /*
+    self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.collectionView
+                                                                  target:self
+                                                           refreshAction:@selector(refreshTriggered:)
+                                                                   plist:@"storehouse"
+                                                                   color:[UIColor redColor]
+                                                               lineWidth:2
+                                                              dropHeight:80
+                                                                   scale:1
+                                                    horizontalRandomness:150
+                                                 reverseLoadingAnimation:YES
+                                                 internalAnimationFactor:0.5];
+     */
+    self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.collectionView
+                                                                      target:self
+                                                               refreshAction:@selector(refreshTriggered:)
+                                                                   plist:@"storehouse"];
+}
+
+
+- (void)refreshTriggered:(CBStoreHouseRefreshControl *)refreshControl {
+    [self.refreshControl finishingLoading];
+}
 @end

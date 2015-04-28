@@ -68,6 +68,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "NSDate+TimeAgo/NSDateTimeAgo.bundle"
   install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity.png"
+  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity7.png"
+  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity7@2x.png"
+  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity@2x.png"
+  install_resource "${BUILT_PRODUCTS_DIR}/M13PDFKitResources.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/Mapbox.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -88,6 +93,11 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "NSDate+TimeAgo/NSDateTimeAgo.bundle"
   install_resource "ParseUI/ParseUI/Resources/Localization/en.lproj"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity.png"
+  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity7.png"
+  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity7@2x.png"
+  install_resource "TTOpenInAppActivity/TTOpenInAppActivity/TTOpenInAppActivity@2x.png"
+  install_resource "${BUILT_PRODUCTS_DIR}/M13PDFKitResources.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/Mapbox.bundle"
 fi
 

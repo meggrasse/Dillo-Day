@@ -19,4 +19,6 @@
 @interface DILLineupCollectionViewModel : NSObject<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (strong, nonatomic) DILPFStage *stage;
 @property (weak, nonatomic) id<DILLineupCollectionViewDelegate> delegate;
+@property (weak, nonatomic) UICollectionView *collectionView;
+- (void)configurePullToRefresh;
 @end

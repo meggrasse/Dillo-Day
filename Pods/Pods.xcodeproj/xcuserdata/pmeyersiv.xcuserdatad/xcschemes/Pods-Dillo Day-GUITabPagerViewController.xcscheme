@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "10732B6B280698D4FEE8B3C0"
+               BlueprintIdentifier = "838DBF0ADC2C8CF1F4995D6E"
                BuildableName = "libPods-Dillo Day-GUITabPagerViewController.a"
                BlueprintName = "Pods-Dillo Day-GUITabPagerViewController"
                ReferencedContainer = "container:Pods.xcodeproj">

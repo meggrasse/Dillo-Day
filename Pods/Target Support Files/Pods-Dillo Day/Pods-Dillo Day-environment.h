@@ -66,6 +66,12 @@
 #define COCOAPODS_VERSION_MINOR_Bolts 1
 #define COCOAPODS_VERSION_PATCH_Bolts 4
 
+// CBStoreHouseRefreshControl
+#define COCOAPODS_POD_AVAILABLE_CBStoreHouseRefreshControl
+#define COCOAPODS_VERSION_MAJOR_CBStoreHouseRefreshControl 1
+#define COCOAPODS_VERSION_MINOR_CBStoreHouseRefreshControl 0
+#define COCOAPODS_VERSION_PATCH_CBStoreHouseRefreshControl 0
+
 // CSStickyHeaderFlowLayout
 #define COCOAPODS_POD_AVAILABLE_CSStickyHeaderFlowLayout
 #define COCOAPODS_VERSION_MAJOR_CSStickyHeaderFlowLayout 0
@@ -161,6 +167,12 @@
 #define COCOAPODS_VERSION_MAJOR_L360Confetti 1
 #define COCOAPODS_VERSION_MINOR_L360Confetti 1
 #define COCOAPODS_VERSION_PATCH_L360Confetti 1
+
+// M13PDFKit
+#define COCOAPODS_POD_AVAILABLE_M13PDFKit
+#define COCOAPODS_VERSION_MAJOR_M13PDFKit 1
+#define COCOAPODS_VERSION_MINOR_M13PDFKit 0
+#define COCOAPODS_VERSION_PATCH_M13PDFKit 2
 
 // Mapbox-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Mapbox_iOS_SDK
@@ -395,6 +407,12 @@
 #define COCOAPODS_VERSION_MAJOR_TOMSMorphingLabel 0
 #define COCOAPODS_VERSION_MINOR_TOMSMorphingLabel 5
 #define COCOAPODS_VERSION_PATCH_TOMSMorphingLabel 1
+
+// TTOpenInAppActivity
+#define COCOAPODS_POD_AVAILABLE_TTOpenInAppActivity
+#define COCOAPODS_VERSION_MAJOR_TTOpenInAppActivity 1
+#define COCOAPODS_VERSION_MINOR_TTOpenInAppActivity 0
+#define COCOAPODS_VERSION_PATCH_TTOpenInAppActivity 0
 
 // UAProgressView
 #define COCOAPODS_POD_AVAILABLE_UAProgressView

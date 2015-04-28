@@ -70,7 +70,11 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     switch (self.artistInfoTypeForDisplay) {
         case DILArtistInfoTypeBio: {
-            return 2;
+            if (self.artist.sponsor) {
+                return 2;
+            } else {
+                return 1;
+            }
         }
         case DILArtistInfoTypeMusic: {
             return self.videos.count;
@@ -92,10 +96,12 @@
         case DILArtistInfoTypeBio: {
             switch (indexPath.row) {
                 case 0: {
-                    DILArtistSponsorCollectionViewCell *sponsorCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistSponsorCollectionViewCell identifier] forIndexPath:indexPath];
-                    sponsorCell.clipsToBounds = YES;
-                    [sponsorCell configureCellWithSponsor:self.artist.sponsor];
-                    return sponsorCell;
+                    if (self.artist.sponsor) {
+                        DILArtistSponsorCollectionViewCell *sponsorCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistSponsorCollectionViewCell identifier] forIndexPath:indexPath];
+                        sponsorCell.clipsToBounds = YES;
+                        [sponsorCell configureCellWithSponsor:self.artist.sponsor];
+                        return sponsorCell;
+                    }
                 }
                 case 1: {
                     DILArtistBioHTKCollectionViewCell *bioCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistBioHTKCollectionViewCell identifier] forIndexPath:indexPath];
@@ -153,7 +159,7 @@
                 case 0: {
                     if (self.artist.sponsor) {
                         return CGSizeMake(CGRectGetWidth(collectionView.bounds), 100);
-                    } else return CGSizeMake(CGRectGetWidth(collectionView.bounds), 0.000000001);
+                    }
                 }
                 case 1: {
                     CGSize cellSize = [DILArtistBioHTKCollectionViewCell sizeForCellWithDefaultSize:[DILArtistBioHTKCollectionViewCell defaultSize] setupCellBlock:^id(id<HTKDynamicResizingCellProtocol> cellToSetup) {

@@ -20,6 +20,7 @@ PODS:
     - BlocksKit/DynamicDelegate
   - Bolts (1.1.4)
   - BOString (0.0.9)
+  - CBStoreHouseRefreshControl (1.0)
   - Colours (5.6.1)
   - CSStickyHeaderFlowLayout (0.2.4)
   - DPMeterView (0.0.1)
@@ -39,6 +40,8 @@ PODS:
   - HTKDynamicResizingCell (0.0.2)
   - JRSwizzle (1.0)
   - L360Confetti (1.1.1)
+  - M13PDFKit (1.0.2):
+    - TTOpenInAppActivity
   - Mapbox-iOS-SDK (1.6.0):
     - FMDB (= 2.3)
     - GRMustache (= 7.3.0)
@@ -114,6 +117,7 @@ PODS:
   - SVProgressHUD (1.1.3)
   - TMCache (1.2.4)
   - TOMSMorphingLabel (0.5.1)
+  - TTOpenInAppActivity (1.0)
   - UAProgressView (0.1.1)
   - UIAlertView+Blocks (0.8.1)
   - UIColor+BFPaperColors (1.3.1)
@@ -124,6 +128,7 @@ DEPENDENCIES:
   - BFPaperCheckbox (~> 1.2.5)
   - BlocksKit
   - BOString (~> 0.0)
+  - CBStoreHouseRefreshControl
   - Colours (~> 5.6)
   - CSStickyHeaderFlowLayout (~> 0.2)
   - DPMeterView (= 0.0.1)
@@ -135,6 +140,7 @@ DEPENDENCIES:
   - HTHorizontalSelectionList (~> 0.3.1)
   - HTKDynamicResizingCell (~> 0.0.1)
   - L360Confetti (from `https://github.com/life360/confetti.git`)
+  - M13PDFKit (= 1.0.2)
   - Mapbox-iOS-SDK
   - Masonry
   - Modality (~> 0.0.1)
@@ -168,6 +174,7 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
   BOString: c896f83b514996bbe874c0a3afd61f4c6764e0ed
+  CBStoreHouseRefreshControl: a814bd725e74ff4c1e8dd96eb02358199b0da04f
   Colours: cad6964a7c178253356403d206eef600a3dc59c8
   CSStickyHeaderFlowLayout: a04d4bc7d6f6668073d19d22d42c27a682dd71da
   DPMeterView: a49f039d0dde33c2d3933c518c1b007dc5316951
@@ -182,6 +189,7 @@ SPEC CHECKSUMS:
   HTKDynamicResizingCell: 9358514816f0737a8d20329617ee126a1498357c
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   L360Confetti: 57ac02ba415ce3723dd04d11a57880d30783e87a
+  M13PDFKit: bc121a55ccb8ddfcf3982f1a5a8592b9f492cd73
   Mapbox-iOS-SDK: ee136ca5b7f853456b50dfd7a7f0e243288cf86f
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   Modality: c5717913d654831433a5a65caac401a056c276e1
@@ -203,6 +211,7 @@ SPEC CHECKSUMS:
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   TMCache: a93984b045a5ee84bd8941bd5e0b54296059cc52
   TOMSMorphingLabel: 3e88a2bf5257f8993ebc51fb3109187a0bfb2c4d
+  TTOpenInAppActivity: c2218fe419d03ddd4ffb1f07d52d66e0d213d0d4
   UAProgressView: 9518e321a5d4173f66c225717db873322ec1f070
   UIAlertView+Blocks: 45c3d3b7194906702d3e9a14c7ece5581505646d
   UIColor+BFPaperColors: 0517728d63d8cfd977a112dd5c4627c2d3c12630

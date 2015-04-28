@@ -50,6 +50,7 @@
 		21171D161ADE002E00CDDFBD /* PTS56F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0D1ADE002E00CDDFBD /* PTS56F.ttf */; };
 		21171D171ADE002E00CDDFBD /* PTS75F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0E1ADE002E00CDDFBD /* PTS75F.ttf */; };
 		21171D181ADE002E00CDDFBD /* PTS76F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21171D0F1ADE002E00CDDFBD /* PTS76F.ttf */; };
+		211A11D31AF03913008EB8C1 /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 211A11D21AF03913008EB8C1 /* storehouse.plist */; };
 		212028531AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */; };
 		212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 212028651AA8362B00E9E028 /* UIView+FindUIViewController.m */; };
 		212CFAAF1A89AEEC00BCFC90 /* FMDirectionTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 212CFAAE1A89AEEC00BCFC90 /* FMDirectionTransition.m */; };
@@ -197,6 +198,7 @@
 		21171D0D1ADE002E00CDDFBD /* PTS56F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS56F.ttf; sourceTree = "<group>"; };
 		21171D0E1ADE002E00CDDFBD /* PTS75F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS75F.ttf; sourceTree = "<group>"; };
 		21171D0F1ADE002E00CDDFBD /* PTS76F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PTS76F.ttf; sourceTree = "<group>"; };
+		211A11D21AF03913008EB8C1 /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
 		212028511AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoAlwaysOnTopHeaderCollectionViewCell.h; sourceTree = "<group>"; };
 		212028521AA80E8000E9E028 /* ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoAlwaysOnTopHeaderCollectionViewCell.m; sourceTree = "<group>"; wrapsLines = 0; };
 		212028641AA8362B00E9E028 /* UIView+FindUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindUIViewController.h"; sourceTree = "<group>"; };
@@ -275,6 +277,8 @@
 		219155531AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeNavigation.m; sourceTree = "<group>"; };
 		219155581AD4BD9600FC61E8 /* DILLineupCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILLineupCollectionViewController.h; sourceTree = "<group>"; };
 		219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupCollectionViewController.m; sourceTree = "<group>"; };
+		2194B62F1AEED04500678FC8 /* DILPFMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DILPFMap.h; sourceTree = "<group>"; };
+		2194B6301AEED04500678FC8 /* DILPFMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DILPFMap.m; sourceTree = "<group>"; };
 		219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoVideoCollectionViewCell.m; sourceTree = "<group>"; };
 		219893931A9FE59F006257F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
@@ -526,6 +530,8 @@
 				21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */,
 				21C4C1121AC750EE00AE4561 /* DILPFStage.h */,
 				21C4C1131AC750EE00AE4561 /* DILPFStage.m */,
+				2194B62F1AEED04500678FC8 /* DILPFMap.h */,
+				2194B6301AEED04500678FC8 /* DILPFMap.m */,
 				2159BC351ACC422000D48F5F /* DILFollowArtist.h */,
 				2159BC361ACC422000D48F5F /* DILFollowArtist.m */,
 				21EEC9291AD61A1B00C968E9 /* DILParseClassGeneration.h */,
@@ -613,6 +619,7 @@
 		217946AF1A87C96100224737 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				211A11D21AF03913008EB8C1 /* storehouse.plist */,
 				217946B01A87C96100224737 /* Info.plist */,
 				217946B11A87C96100224737 /* main.m */,
 			);
@@ -910,6 +917,7 @@
 				21171D111ADE002E00CDDFBD /* PTC55F.ttf in Resources */,
 				217946BB1A87C96100224737 /* Main.storyboard in Resources */,
 				21171D041ADDF57800CDDFBD /* SourceSansPro-Semibold.otf in Resources */,
+				211A11D31AF03913008EB8C1 /* storehouse.plist in Resources */,
 				210FE3351AD795D2009BC3DE /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				21171CFD1ADDF57800CDDFBD /* SourceSansPro-BoldIt.otf in Resources */,
 				21171CFC1ADDF57800CDDFBD /* SourceSansPro-Bold.otf in Resources */,
