@@ -54,9 +54,10 @@
             DILPFArtist *newArtist = [DILPFArtist object];
             newArtist.name = artistNames[i];
             newArtist.performanceTime = [NSDate date];
-            newArtist.lineupImage = [PFFile fileWithData:UIImagePNGRepresentation((UIImage *)bigPics[i])];
+            newArtist.lineupImage = newArtist.iconImage = [PFFile fileWithData:UIImagePNGRepresentation((UIImage *)bigPics[i])];
             newArtist.about = artistText;
-            newArtist.youtubeVideoIds = youtubeVideoIds;
+            newArtist.youtubeVideoIds = [youtubeVideoIds mutableCopy];
+            newArtist.announced = [NSNumber numberWithBool:NO];
             [newArtist save];
 
             DILPFSponsor *sponsor = [DILPFSponsor object];

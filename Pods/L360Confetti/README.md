@@ -69,3 +69,7 @@ confettiArea.delegate = self;
 If the community could help us figure out a few of the problems with the L360Confetti that would be great. Following is a list of the issues we're currently facing:
 * [Having to use square ConfettiViews](https://github.com/life360/confetti/issues/2) because of the layer rotations for fluttering
 * [Have different kinds of confetti](https://github.com/life360/confetti/issues/4), ones that swirl or loop down.
+
+## License
+
+L360Confetti is available under the [Apache License Version 2.0](https://github.com/life360/confetti/blob/master/iOS/LICENSE.md)

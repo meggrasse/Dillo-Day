@@ -16,6 +16,7 @@
 
 #import "DILArtistViewController.h"
 #import "DILStageSelectTitleView.h"
+
 //#import <CBStoreHouseRefreshControl/CBStoreHouseRefreshControl.h>
 
 @interface DILLineupViewController ()<DILLineupCollectionViewDelegate, DILStageSelectTitleViewDelegate>
@@ -39,6 +40,7 @@
 //    [self.lineupCollectionViewModel configurePullToRefresh];
 
     [self fetchStages];
+
 }
 
 - (void)configureLineupCollectionView {
@@ -52,6 +54,7 @@
     self.lineupCollectionView.dataSource = self.lineupCollectionViewModel;
     self.lineupCollectionView.delegate = self.lineupCollectionViewModel;
     self.lineupCollectionView.showsVerticalScrollIndicator = NO;
+    self.lineupCollectionView.alwaysBounceVertical = YES;
     self.lineupCollectionView.backgroundColor = [DilloDayStyleKit notificationCellBackgroundColor];
 
     [self.view addSubview:self.lineupCollectionView];
@@ -114,6 +117,7 @@
 - (PMKPromise *)stageQueryPromise {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         PFQuery *stageQuery = [DILPFStage query];
+        [stageQuery orderByAscending:@"order"];
         [stageQuery includeKey:kDILPFStageArtistsKey];
         [stageQuery includeKey:[NSString stringWithFormat:@"%@.%@",kDILPFStageArtistsKey,kDILPFArtistSponsorKey]];
         [stageQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

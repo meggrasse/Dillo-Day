@@ -40,7 +40,7 @@
  */
 - (void)configureParallaxImageView {
     self.parallaxEnabled = YES;
-    self.parallaxOffset = .75;
+    self.parallaxOffset = .5;
 
     [self constructImageView];
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0E99E4BEC355FAD39788F23"
+               BlueprintIdentifier = "E9575F313A398E92C576C599"
                BuildableName = "libPods-Dillo Day-NYSegmentedControl.a"
                BlueprintName = "Pods-Dillo Day-NYSegmentedControl"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -12,12 +12,13 @@
 #import <RDVTabBarController/RDVTabBarItem.h>
 
 #import "DILLineupViewController.h"
-#import "MapViewController.h"
+#import "DILMapViewController.h"
 #import "DILHelpViewController.h"
 #import "DILNotificationsViewController.h"
 #import "DILFakeDataGenerator.h"
 #import "DILParseClassGeneration.h"
 #import "DILPushNotificationHandler.h"
+
 
 @interface AppDelegate ()
 @property (strong, nonatomic) RDVTabBarController *tabBarController;
@@ -27,9 +28,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Parse setApplicationId:@"zpDqUtE6y2RIcuWeUPwKPUJYZi12qal1vF83n2GF"
-                  clientKey:@"LDaDgElWPLhahqdw3MjYlouCWFzHzewaxHWYvEgb"];
+    [Parse setApplicationId:@"S9JO4idIXxAkVtwsj6xXNAkCwPulJ3cSOhKNuYzc"
+                  clientKey:@"yUpokPMYESRM0jFDuP9jQOK2EHxewppqygEgS3uX"];
 
+    [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
 
 
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
@@ -41,6 +43,18 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
 
+
+//    DILVenueUser *venue = [DILVenueUser object];
+//    venue.name = @"Bar 63";
+//    venue.phoneNumber = @"123-456-7890";
+//    venue.venueLocation = @"Downtown Chicago";
+//    [venue saveInBackground];
+//
+//    DILSpotterUser *spotter = [DILSpotterUser object];
+//    spotter.firstName = @"Roshun";
+//    spotter.lastName = @"Patel";
+//    spotter.location = @"Bobb 220";
+//    [spotter saveInBackground];
 //     [[[DILFakeDataGenerator alloc] init] generateData];
 
 //    UIImage *backButtonImage  = [UIImage imageNamed:@"ArtistBackArrow"];
@@ -51,18 +65,18 @@
 //    lineupVC.title = @"Lineup";
     UINavigationController *lineupNavController = [[UINavigationController alloc] initWithRootViewController:lineupVC];
 
-    MapViewController *mapVC = [[MapViewController alloc] init];
-    mapVC.title = @"Map";
+    DILMapViewController *mapVC = [[DILMapViewController alloc] init];
+    mapVC.title = @"MAP";
     UINavigationController *mapNavController = [[UINavigationController alloc] initWithRootViewController:mapVC];
 
 
     DILNotificationsViewController *notificationVC = [[DILNotificationsViewController alloc] init];
-    notificationVC.title = @"Notifications";
+    notificationVC.title = @"NOTIFICATIONS";
     UINavigationController *notificationsNavController = [[UINavigationController alloc] initWithRootViewController:notificationVC];
 
 
     DILHelpViewController *helpVC = [DILHelpViewController new];
-    helpVC.title = @"Help";
+    helpVC.title = @"HELP";
     UINavigationController *helpNavController = [[UINavigationController alloc] initWithRootViewController:helpVC];
     
     NSArray *navigationControllerArray = @[lineupNavController, mapNavController, notificationsNavController, helpNavController];

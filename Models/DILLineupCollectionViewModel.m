@@ -14,10 +14,12 @@
 
 #import <PromiseKit/PromiseKit.h>
 #import <CBStoreHouseRefreshControl/CBStoreHouseRefreshControl.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface DILLineupCollectionViewModel()
 @property (nonatomic) BOOL hasRegisteredClass;
 @property (strong, nonatomic) CBStoreHouseRefreshControl *refreshControl;
+@property (readonly, nonatomic) NSArray *sortedArtistArray;
 @end
 
 static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLineupCenterTextCollectionViewCellIdentifier";
@@ -32,12 +34,22 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 }
 
 #pragma mark - UICollectionViewDataSource
+- (NSArray *)sortedArtistArray {
+    NSMutableArray *unsortedArray = [self.stage.artists mutableCopy];
+    [unsortedArray sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        DILPFArtist *LHS = (DILPFArtist *)obj1;
+        DILPFArtist *RHS = (DILPFArtist *)obj2;
+        return [LHS.performanceTime compare:RHS.performanceTime];
+    }];
+    return unsortedArray;
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.stage.artists.count;
+    return self.sortedArtistArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,7 +78,7 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 }
 
 - (DILPFArtist *)artistForIndexPath:(NSIndexPath *)indexPath {
-    return self.stage.artists[indexPath.row];
+    return self.sortedArtistArray[indexPath.row];
 }
 
 #pragma mark - UICollectionViewFlowLayout
@@ -86,7 +98,12 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.delegate didSelectArtist:[self artistForIndexPath:indexPath]];
+    DILPFArtist *selectedArtist = [self artistForIndexPath:indexPath];
+    if ([selectedArtist.announced boolValue]) {
+        [self.delegate didSelectArtist:selectedArtist];
+    } else {
+        [SVProgressHUD showInfoWithStatus:@"Artist not yet announced!"];
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

@@ -1,7 +1,7 @@
 PODS:
-  - BFPaperButton (2.0.16):
+  - BFPaperButton (2.0.17):
     - UIColor+BFPaperColors
-  - BFPaperCheckbox (1.2.5):
+  - BFPaperCheckbox (1.2.7):
     - UIColor+BFPaperColors
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
@@ -18,13 +18,13 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
-  - Bolts (1.1.4)
+  - Bolts/Tasks (1.1.5)
   - BOString (0.0.9)
   - CBStoreHouseRefreshControl (1.0)
-  - Colours (5.6.1)
-  - CSStickyHeaderFlowLayout (0.2.4)
+  - Colours (5.6.2)
+  - CSStickyHeaderFlowLayout (0.2.5)
   - DPMeterView (0.0.1)
-  - FlatUIKit (1.6)
+  - FlatUIKit (1.6.1)
   - FMDB (2.3):
     - FMDB/standard (= 2.3)
   - FMDB/common (2.3)
@@ -34,9 +34,9 @@ PODS:
   - FXBlurView (1.6.3)
   - GRMustache (7.3.0):
     - JRSwizzle (~> 1.0)
-  - GUITabPagerViewController (0.0.5)
+  - GUITabPagerViewController (0.0.6)
   - HMSegmentedControl (1.5.1)
-  - HTHorizontalSelectionList (0.3.1)
+  - HTHorizontalSelectionList (0.3.2)
   - HTKDynamicResizingCell (0.0.2)
   - JRSwizzle (1.0)
   - L360Confetti (1.1.1)
@@ -50,7 +50,7 @@ PODS:
   - Modality (0.0.1)
   - NSAttributedString+CCLFormat (1.0.1)
   - NSDate+TimeAgo (1.0.3)
-  - NYSegmentedControl (1.0.3)
+  - NYSegmentedControl (1.0.4)
   - OMGHTTPURLRQ (2.1):
     - OMGHTTPURLRQ/RQ (= 2.1)
   - OMGHTTPURLRQ/FormURLEncode (2.1)
@@ -58,70 +58,71 @@ PODS:
     - OMGHTTPURLRQ/FormURLEncode
     - OMGHTTPURLRQ/UserAgent
   - OMGHTTPURLRQ/UserAgent (2.1)
-  - Parse (1.7.1):
-    - Bolts (~> 1.1)
+  - Parse (1.7.2.1):
+    - Bolts/Tasks (>= 1.1.5)
   - ParseUI (1.1.3):
     - Parse (~> 1.7)
-  - PromiseKit (1.4.2):
-    - PromiseKit/CALayer (= 1.4.2)
-    - PromiseKit/NSNotificationCenter (= 1.4.2)
-    - PromiseKit/NSURLConnection (= 1.4.2)
-    - PromiseKit/Pause (= 1.4.2)
-    - PromiseKit/UIActionSheet (= 1.4.2)
-    - PromiseKit/UIAlertView (= 1.4.2)
-    - PromiseKit/UIView (= 1.4.2)
-    - PromiseKit/UIViewController (= 1.4.2)
-    - PromiseKit/Until (= 1.4.2)
-    - PromiseKit/When (= 1.4.2)
-  - PromiseKit/CALayer (1.4.2):
+  - PromiseKit (1.5.3):
+    - PromiseKit/CALayer (= 1.5.3)
+    - PromiseKit/NSNotificationCenter (= 1.5.3)
+    - PromiseKit/NSURLConnection (= 1.5.3)
+    - PromiseKit/Pause (= 1.5.3)
+    - PromiseKit/UIActionSheet (= 1.5.3)
+    - PromiseKit/UIAlertView (= 1.5.3)
+    - PromiseKit/UIView (= 1.5.3)
+    - PromiseKit/UIViewController (= 1.5.3)
+    - PromiseKit/Until (= 1.5.3)
+    - PromiseKit/When (= 1.5.3)
+  - PromiseKit/CALayer (1.5.3):
     - PromiseKit/Promise
-  - PromiseKit/NSNotificationCenter (1.4.2):
+  - PromiseKit/NSNotificationCenter (1.5.3):
     - PromiseKit/Promise
-  - PromiseKit/NSURLConnection (1.4.2):
+  - PromiseKit/NSURLConnection (1.5.3):
     - OMGHTTPURLRQ
     - PromiseKit/Promise
-  - PromiseKit/Pause (1.4.2):
+  - PromiseKit/Pause (1.5.3):
     - PromiseKit/Promise
-  - PromiseKit/Promise (1.4.2)
-  - PromiseKit/UIActionSheet (1.4.2):
+  - PromiseKit/Promise (1.5.3)
+  - PromiseKit/UIActionSheet (1.5.3):
     - PromiseKit/Promise
-  - PromiseKit/UIAlertView (1.4.2):
+  - PromiseKit/UIAlertView (1.5.3):
     - PromiseKit/Promise
-  - PromiseKit/UIView (1.4.2):
+  - PromiseKit/UIView (1.5.3):
     - PromiseKit/Promise
-  - PromiseKit/UIViewController (1.4.2):
+  - PromiseKit/UIViewController (1.5.3):
     - PromiseKit/Promise
-  - PromiseKit/Until (1.4.2):
+  - PromiseKit/Until (1.5.3):
     - PromiseKit/Promise
     - PromiseKit/When
-  - PromiseKit/When (1.4.2):
+  - PromiseKit/When (1.5.3):
     - PromiseKit/Promise
-  - PureLayout (2.0.5)
+  - PureLayout (2.0.6)
   - RDVTabBarController (1.1.9)
-  - ReactiveCocoa (2.4.7):
-    - ReactiveCocoa/UI (= 2.4.7)
-  - ReactiveCocoa/Core (2.4.7):
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
     - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.4.7)
-  - ReactiveCocoa/UI (2.4.7):
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - Realm (0.91.1):
-    - Realm/Headers (= 0.91.1)
-  - Realm/Headers (0.91.1)
+  - Realm (0.91.5):
+    - Realm/Headers (= 0.91.5)
+  - Realm/Headers (0.91.5)
   - Reveal-iOS-SDK (1.5.1)
-  - SDWebImage (3.7.1):
-    - SDWebImage/Core (= 3.7.1)
-  - SDWebImage/Core (3.7.1)
+  - SDWebImage (3.7.2):
+    - SDWebImage/Core (= 3.7.2)
+  - SDWebImage/Core (3.7.2)
   - Shimmer (1.0.2)
   - SMCalloutView (2.0)
+  - SMScrollView (0.1.0)
   - SVProgressHUD (1.1.3)
   - TMCache (1.2.4)
   - TOMSMorphingLabel (0.5.1)
   - TTOpenInAppActivity (1.0)
   - UAProgressView (0.1.1)
-  - UIAlertView+Blocks (0.8.1)
-  - UIColor+BFPaperColors (1.3.1)
-  - XCDYouTubeKit (2.1.1)
+  - UIAlertView+Blocks (0.9)
+  - UIColor+BFPaperColors (1.7.1)
+  - XCDYouTubeKit (2.1.2)
 
 DEPENDENCIES:
   - BFPaperButton (~> 2.0)
@@ -157,6 +158,7 @@ DEPENDENCIES:
   - Reveal-iOS-SDK
   - SDWebImage (~> 3.6)
   - Shimmer (~> 1.0)
+  - SMScrollView
   - SVProgressHUD
   - TMCache (~> 1.2)
   - TOMSMorphingLabel (~> 0.5)
@@ -168,24 +170,29 @@ EXTERNAL SOURCES:
   L360Confetti:
     :git: https://github.com/life360/confetti.git
 
+CHECKOUT OPTIONS:
+  L360Confetti:
+    :commit: f34d6da6a2292de1dd99f48178d4b96b594624b5
+    :git: https://github.com/life360/confetti.git
+
 SPEC CHECKSUMS:
-  BFPaperButton: b1980d33cd45b44b60427423b3ecfbd222855655
-  BFPaperCheckbox: f14199ef067ab6731d3acc45d106c80d61e24ca0
+  BFPaperButton: e00250c55dff6cc29d236231f8dd6a91f0f21862
+  BFPaperCheckbox: 55670e5d8dc1e060972b0d1db6380771339451d8
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
-  Bolts: f8e2f94edbf9fec7bb8de5ecaaa3aa6b7de6f64e
+  Bolts: aac24961496d504aa56fc267cde95162a71bac39
   BOString: c896f83b514996bbe874c0a3afd61f4c6764e0ed
   CBStoreHouseRefreshControl: a814bd725e74ff4c1e8dd96eb02358199b0da04f
-  Colours: cad6964a7c178253356403d206eef600a3dc59c8
-  CSStickyHeaderFlowLayout: a04d4bc7d6f6668073d19d22d42c27a682dd71da
+  Colours: 0afd4c3429656880fd4cff350ca3bf0ab86ca348
+  CSStickyHeaderFlowLayout: 75e439a59c23f609091d9a784c7b5db7de583f1f
   DPMeterView: a49f039d0dde33c2d3933c518c1b007dc5316951
-  FlatUIKit: a59c93fe2fde5329dfb71dd9317b1b0386d6a178
+  FlatUIKit: c602127a0c4a347e0632b2c5aef5c8c5f386f2cf
   FMDB: 773d79bb74226959b7e2286b1d6e0bd857c88915
   FontasticIcons: f20740bf8f1d3565c312f1c3b9806339212b58aa
   FXBlurView: c6d23f3d35af2c6282296a2930f61c6e2c788d01
   GRMustache: 6baee020c5644416c034f5afb1607f6219e7f753
-  GUITabPagerViewController: 4ddde36aaf9d125d0558cfc6cb00f81c982b3df3
+  GUITabPagerViewController: 1d715c12334ee1a43a67f60e24131562eed5d7b8
   HMSegmentedControl: 35460abdd15c3087368db2d3d956717f088b34d1
-  HTHorizontalSelectionList: 35ff501e07b50a7c6a4a19105b69067a8ce6b1f3
+  HTHorizontalSelectionList: e17b20a1b9b94ce2279c936a30dd80e43b10f4db
   HTKDynamicResizingCell: 9358514816f0737a8d20329617ee126a1498357c
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   L360Confetti: 57ac02ba415ce3723dd04d11a57880d30783e87a
@@ -195,26 +202,27 @@ SPEC CHECKSUMS:
   Modality: c5717913d654831433a5a65caac401a056c276e1
   NSAttributedString+CCLFormat: ed7a2c814ac5444d0747c11ec0e532d46839a480
   NSDate+TimeAgo: 416f55d2696d3744c313091c5a9280d47f8238fe
-  NYSegmentedControl: c24774be62ed17442595d33f74e6eb23bcff3412
+  NYSegmentedControl: d8bbbde8a34d5766fa447485719177b5bf3b4b41
   OMGHTTPURLRQ: f8c515dfd2f57a5d74c710978f600231f52afec5
-  Parse: fa8ec29de6d82035635986c11946299fb1b38316
+  Parse: 8213b05b52768b34b87e1e41fd9efc88a9933f3f
   ParseUI: 1a68e9cebc3bd458eed9605ce7b33d7cc082f473
-  PromiseKit: ea36001b558f42aa104a1422f305b46f8c343f2e
-  PureLayout: a0fe75f1cf485801e7e00b723b8a3c32dca558e2
+  PromiseKit: 7ecae7c190ab92ae00aae6ba7f88942107532b8f
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
-  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
-  Realm: b9c1fd9defa26aa7276ce938a8df52ec81f24528
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  Realm: 670059efdb212ab939c1745a60aff27820c0a9c4
   Reveal-iOS-SDK: c9c55cad2729c85f6ced415f1b21857c9a2d8ef9
-  SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
+  SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SMCalloutView: f758edd824b18bf4f42de00df1e299861a2d1950
+  SMScrollView: 5eb8928f90f5296cf65e0c8d23a7968e043bbf30
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   TMCache: a93984b045a5ee84bd8941bd5e0b54296059cc52
   TOMSMorphingLabel: 3e88a2bf5257f8993ebc51fb3109187a0bfb2c4d
   TTOpenInAppActivity: c2218fe419d03ddd4ffb1f07d52d66e0d213d0d4
   UAProgressView: 9518e321a5d4173f66c225717db873322ec1f070
-  UIAlertView+Blocks: 45c3d3b7194906702d3e9a14c7ece5581505646d
-  UIColor+BFPaperColors: 0517728d63d8cfd977a112dd5c4627c2d3c12630
-  XCDYouTubeKit: 5f9bda3a51f2d8af80404b3377bc4696f650d856
+  UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
+  UIColor+BFPaperColors: b1efa4320e2f56c4b14f73232faf967ba0e5b4a2
+  XCDYouTubeKit: 4687c62d8c858ecaa5f42192820eabf59bb2b9d3
 
 COCOAPODS: 0.36.3

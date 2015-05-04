@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "96132F7D4DF32AE219C73EFA"
+               BlueprintIdentifier = "72189DF65E5D02F3FF4A776B"
                BuildableName = "libPods-Dillo Day-DPMeterView.a"
                BlueprintName = "Pods-Dillo Day-DPMeterView"
                ReferencedContainer = "container:Pods.xcodeproj">

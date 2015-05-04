@@ -10,13 +10,13 @@
 #define COCOAPODS_POD_AVAILABLE_BFPaperButton
 #define COCOAPODS_VERSION_MAJOR_BFPaperButton 2
 #define COCOAPODS_VERSION_MINOR_BFPaperButton 0
-#define COCOAPODS_VERSION_PATCH_BFPaperButton 16
+#define COCOAPODS_VERSION_PATCH_BFPaperButton 17
 
 // BFPaperCheckbox
 #define COCOAPODS_POD_AVAILABLE_BFPaperCheckbox
 #define COCOAPODS_VERSION_MAJOR_BFPaperCheckbox 1
 #define COCOAPODS_VERSION_MINOR_BFPaperCheckbox 2
-#define COCOAPODS_VERSION_PATCH_BFPaperCheckbox 5
+#define COCOAPODS_VERSION_PATCH_BFPaperCheckbox 7
 
 // BOString
 #define COCOAPODS_POD_AVAILABLE_BOString
@@ -60,11 +60,11 @@
 #define COCOAPODS_VERSION_MINOR_BlocksKit_UIKit 2
 #define COCOAPODS_VERSION_PATCH_BlocksKit_UIKit 5
 
-// Bolts
-#define COCOAPODS_POD_AVAILABLE_Bolts
-#define COCOAPODS_VERSION_MAJOR_Bolts 1
-#define COCOAPODS_VERSION_MINOR_Bolts 1
-#define COCOAPODS_VERSION_PATCH_Bolts 4
+// Bolts/Tasks
+#define COCOAPODS_POD_AVAILABLE_Bolts_Tasks
+#define COCOAPODS_VERSION_MAJOR_Bolts_Tasks 1
+#define COCOAPODS_VERSION_MINOR_Bolts_Tasks 1
+#define COCOAPODS_VERSION_PATCH_Bolts_Tasks 5
 
 // CBStoreHouseRefreshControl
 #define COCOAPODS_POD_AVAILABLE_CBStoreHouseRefreshControl
@@ -76,13 +76,13 @@
 #define COCOAPODS_POD_AVAILABLE_CSStickyHeaderFlowLayout
 #define COCOAPODS_VERSION_MAJOR_CSStickyHeaderFlowLayout 0
 #define COCOAPODS_VERSION_MINOR_CSStickyHeaderFlowLayout 2
-#define COCOAPODS_VERSION_PATCH_CSStickyHeaderFlowLayout 4
+#define COCOAPODS_VERSION_PATCH_CSStickyHeaderFlowLayout 5
 
 // Colours
 #define COCOAPODS_POD_AVAILABLE_Colours
 #define COCOAPODS_VERSION_MAJOR_Colours 5
 #define COCOAPODS_VERSION_MINOR_Colours 6
-#define COCOAPODS_VERSION_PATCH_Colours 1
+#define COCOAPODS_VERSION_PATCH_Colours 2
 
 // DPMeterView
 #define COCOAPODS_POD_AVAILABLE_DPMeterView
@@ -118,7 +118,7 @@
 #define COCOAPODS_POD_AVAILABLE_FlatUIKit
 #define COCOAPODS_VERSION_MAJOR_FlatUIKit 1
 #define COCOAPODS_VERSION_MINOR_FlatUIKit 6
-#define COCOAPODS_VERSION_PATCH_FlatUIKit 0
+#define COCOAPODS_VERSION_PATCH_FlatUIKit 1
 
 // FontasticIcons
 #define COCOAPODS_POD_AVAILABLE_FontasticIcons
@@ -136,7 +136,7 @@
 #define COCOAPODS_POD_AVAILABLE_GUITabPagerViewController
 #define COCOAPODS_VERSION_MAJOR_GUITabPagerViewController 0
 #define COCOAPODS_VERSION_MINOR_GUITabPagerViewController 0
-#define COCOAPODS_VERSION_PATCH_GUITabPagerViewController 5
+#define COCOAPODS_VERSION_PATCH_GUITabPagerViewController 6
 
 // HMSegmentedControl
 #define COCOAPODS_POD_AVAILABLE_HMSegmentedControl
@@ -148,7 +148,7 @@
 #define COCOAPODS_POD_AVAILABLE_HTHorizontalSelectionList
 #define COCOAPODS_VERSION_MAJOR_HTHorizontalSelectionList 0
 #define COCOAPODS_VERSION_MINOR_HTHorizontalSelectionList 3
-#define COCOAPODS_VERSION_PATCH_HTHorizontalSelectionList 1
+#define COCOAPODS_VERSION_PATCH_HTHorizontalSelectionList 2
 
 // HTKDynamicResizingCell
 #define COCOAPODS_POD_AVAILABLE_HTKDynamicResizingCell
@@ -208,7 +208,7 @@
 #define COCOAPODS_POD_AVAILABLE_NYSegmentedControl
 #define COCOAPODS_VERSION_MAJOR_NYSegmentedControl 1
 #define COCOAPODS_VERSION_MINOR_NYSegmentedControl 0
-#define COCOAPODS_VERSION_PATCH_NYSegmentedControl 3
+#define COCOAPODS_VERSION_PATCH_NYSegmentedControl 4
 
 // OMGHTTPURLRQ
 #define COCOAPODS_POD_AVAILABLE_OMGHTTPURLRQ
@@ -236,9 +236,10 @@
 
 // Parse
 #define COCOAPODS_POD_AVAILABLE_Parse
-#define COCOAPODS_VERSION_MAJOR_Parse 1
-#define COCOAPODS_VERSION_MINOR_Parse 7
-#define COCOAPODS_VERSION_PATCH_Parse 1
+// This library does not follow semantic-versioning,
+// so we were not able to define version macros.
+// Please contact the author.
+// Version: 1.7.2.1.
 
 // ParseUI
 #define COCOAPODS_POD_AVAILABLE_ParseUI
@@ -249,80 +250,80 @@
 // PromiseKit
 #define COCOAPODS_POD_AVAILABLE_PromiseKit
 #define COCOAPODS_VERSION_MAJOR_PromiseKit 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit 3
 
 // PromiseKit/CALayer
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_CALayer
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_CALayer 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_CALayer 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_CALayer 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_CALayer 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_CALayer 3
 
 // PromiseKit/NSNotificationCenter
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_NSNotificationCenter
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_NSNotificationCenter 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_NSNotificationCenter 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_NSNotificationCenter 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_NSNotificationCenter 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_NSNotificationCenter 3
 
 // PromiseKit/NSURLConnection
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_NSURLConnection
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_NSURLConnection 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_NSURLConnection 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_NSURLConnection 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_NSURLConnection 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_NSURLConnection 3
 
 // PromiseKit/Pause
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Pause
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Pause 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_Pause 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Pause 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_Pause 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Pause 3
 
 // PromiseKit/Promise
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Promise
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Promise 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_Promise 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Promise 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_Promise 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Promise 3
 
 // PromiseKit/UIActionSheet
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIActionSheet
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIActionSheet 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_UIActionSheet 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIActionSheet 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIActionSheet 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIActionSheet 3
 
 // PromiseKit/UIAlertView
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIAlertView
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIAlertView 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_UIAlertView 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIAlertView 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIAlertView 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIAlertView 3
 
 // PromiseKit/UIView
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIView
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIView 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_UIView 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIView 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIView 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIView 3
 
 // PromiseKit/UIViewController
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_UIViewController
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_UIViewController 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_UIViewController 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_UIViewController 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_UIViewController 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_UIViewController 3
 
 // PromiseKit/Until
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_Until
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_Until 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_Until 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_Until 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_Until 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_Until 3
 
 // PromiseKit/When
 #define COCOAPODS_POD_AVAILABLE_PromiseKit_When
 #define COCOAPODS_VERSION_MAJOR_PromiseKit_When 1
-#define COCOAPODS_VERSION_MINOR_PromiseKit_When 4
-#define COCOAPODS_VERSION_PATCH_PromiseKit_When 2
+#define COCOAPODS_VERSION_MINOR_PromiseKit_When 5
+#define COCOAPODS_VERSION_PATCH_PromiseKit_When 3
 
 // PureLayout
 #define COCOAPODS_POD_AVAILABLE_PureLayout
 #define COCOAPODS_VERSION_MAJOR_PureLayout 2
 #define COCOAPODS_VERSION_MINOR_PureLayout 0
-#define COCOAPODS_VERSION_PATCH_PureLayout 5
+#define COCOAPODS_VERSION_PATCH_PureLayout 6
 
 // RDVTabBarController
 #define COCOAPODS_POD_AVAILABLE_RDVTabBarController
@@ -333,56 +334,62 @@
 // ReactiveCocoa
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 4
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 7
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 5
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 0
 
 // ReactiveCocoa/Core
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_Core
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_Core 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 4
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 7
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 5
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 0
 
 // ReactiveCocoa/UI
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_UI
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_UI 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_UI 4
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_UI 7
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_UI 5
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_UI 0
 
 // ReactiveCocoa/no-arc
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_no_arc
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_no_arc 2
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_no_arc 4
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_no_arc 7
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_no_arc 5
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_no_arc 0
 
 // Realm
 #define COCOAPODS_POD_AVAILABLE_Realm
 #define COCOAPODS_VERSION_MAJOR_Realm 0
 #define COCOAPODS_VERSION_MINOR_Realm 91
-#define COCOAPODS_VERSION_PATCH_Realm 1
+#define COCOAPODS_VERSION_PATCH_Realm 5
 
 // Realm/Headers
 #define COCOAPODS_POD_AVAILABLE_Realm_Headers
 #define COCOAPODS_VERSION_MAJOR_Realm_Headers 0
 #define COCOAPODS_VERSION_MINOR_Realm_Headers 91
-#define COCOAPODS_VERSION_PATCH_Realm_Headers 1
+#define COCOAPODS_VERSION_PATCH_Realm_Headers 5
 
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
 #define COCOAPODS_VERSION_MAJOR_SDWebImage 3
 #define COCOAPODS_VERSION_MINOR_SDWebImage 7
-#define COCOAPODS_VERSION_PATCH_SDWebImage 1
+#define COCOAPODS_VERSION_PATCH_SDWebImage 2
 
 // SDWebImage/Core
 #define COCOAPODS_POD_AVAILABLE_SDWebImage_Core
 #define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
-#define COCOAPODS_VERSION_PATCH_SDWebImage_Core 1
+#define COCOAPODS_VERSION_PATCH_SDWebImage_Core 2
 
 // SMCalloutView
 #define COCOAPODS_POD_AVAILABLE_SMCalloutView
 #define COCOAPODS_VERSION_MAJOR_SMCalloutView 2
 #define COCOAPODS_VERSION_MINOR_SMCalloutView 0
 #define COCOAPODS_VERSION_PATCH_SMCalloutView 0
+
+// SMScrollView
+#define COCOAPODS_POD_AVAILABLE_SMScrollView
+#define COCOAPODS_VERSION_MAJOR_SMScrollView 0
+#define COCOAPODS_VERSION_MINOR_SMScrollView 1
+#define COCOAPODS_VERSION_PATCH_SMScrollView 0
 
 // SVProgressHUD
 #define COCOAPODS_POD_AVAILABLE_SVProgressHUD
@@ -423,20 +430,20 @@
 // UIAlertView+Blocks
 #define COCOAPODS_POD_AVAILABLE_UIAlertView_Blocks
 #define COCOAPODS_VERSION_MAJOR_UIAlertView_Blocks 0
-#define COCOAPODS_VERSION_MINOR_UIAlertView_Blocks 8
-#define COCOAPODS_VERSION_PATCH_UIAlertView_Blocks 1
+#define COCOAPODS_VERSION_MINOR_UIAlertView_Blocks 9
+#define COCOAPODS_VERSION_PATCH_UIAlertView_Blocks 0
 
 // UIColor+BFPaperColors
 #define COCOAPODS_POD_AVAILABLE_UIColor_BFPaperColors
 #define COCOAPODS_VERSION_MAJOR_UIColor_BFPaperColors 1
-#define COCOAPODS_VERSION_MINOR_UIColor_BFPaperColors 3
+#define COCOAPODS_VERSION_MINOR_UIColor_BFPaperColors 7
 #define COCOAPODS_VERSION_PATCH_UIColor_BFPaperColors 1
 
 // XCDYouTubeKit
 #define COCOAPODS_POD_AVAILABLE_XCDYouTubeKit
 #define COCOAPODS_VERSION_MAJOR_XCDYouTubeKit 2
 #define COCOAPODS_VERSION_MINOR_XCDYouTubeKit 1
-#define COCOAPODS_VERSION_PATCH_XCDYouTubeKit 1
+#define COCOAPODS_VERSION_PATCH_XCDYouTubeKit 2
 
 // Debug build configuration
 #ifdef DEBUG

@@ -43,6 +43,7 @@ pod 'HMSegmentedControl'
 pod 'DPMeterView', '0.0.1'
 pod 'M13PDFKit', '1.0.2'
 pod 'CBStoreHouseRefreshControl'
+pod "SMScrollView"
 end
 
 target 'Dillo DayTests' do

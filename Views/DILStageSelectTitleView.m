@@ -98,7 +98,9 @@
             return YES;
         } else return NO;
     }];
-    [filteredStages removeObjectAtIndex:indexOfSelectedStage];
+    if (filteredStages && filteredStages.count) {
+        [filteredStages removeObjectAtIndex:indexOfSelectedStage];
+    }
     return filteredStages;
 }
 

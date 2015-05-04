@@ -13,6 +13,8 @@
 		210A81681AC625A80091C134 /* DILLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210A81671AC625A80091C134 /* DILLineupViewController.m */; };
 		210A816B1AC626DD0091C134 /* DILLineupCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 210A816A1AC626DD0091C134 /* DILLineupCollectionViewModel.m */; };
 		210A816E1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210A816D1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m */; };
+		210FBBDB1AF734F9009896D2 /* ImageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210FBBD01AF734F9009896D2 /* ImageScrollViewController.m */; };
+		210FBBE11AF73951009896D2 /* DILMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210FBBE01AF73951009896D2 /* DILMapViewController.m */; };
 		210FE30C1AD78E32009BC3DE /* DILHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210FE30B1AD78E32009BC3DE /* DILHelpViewController.m */; };
 		210FE32D1AD795D2009BC3DE /* SVWebViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 210FE30E1AD795D2009BC3DE /* SVWebViewController.strings */; };
 		210FE32E1AD795D2009BC3DE /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210FE3181AD795D2009BC3DE /* SVModalWebViewController.m */; };
@@ -114,6 +116,7 @@
 		21D593931AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D593921AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m */; };
 		21D593961AEC21B000339787 /* FMEParallaxImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D593951AEC21B000339787 /* FMEParallaxImageView.m */; };
 		21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */; };
+		21E6976C1AF4359A00494FA9 /* DILPFMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E6976B1AF4359A00494FA9 /* DILPFMap.m */; };
 		21EEC92B1AD61A1B00C968E9 /* DILParseClassGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */; };
 		21EF15971A8DBAA00022953A /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EF15951A8DBAA00022953A /* RGCardViewLayout.m */; };
 		21EFF9AC1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFF9AB1A97D05600F225ED /* LineupTextHTKCollectionViewCell.m */; };
@@ -145,6 +148,10 @@
 		210A816A1AC626DD0091C134 /* DILLineupCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupCollectionViewModel.m; sourceTree = "<group>"; };
 		210A816C1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILLineupCenterTextCollectionViewCell.h; sourceTree = "<group>"; };
 		210A816D1AC629520091C134 /* DILLineupCenterTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupCenterTextCollectionViewCell.m; sourceTree = "<group>"; };
+		210FBBCF1AF734F9009896D2 /* ImageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollViewController.h; sourceTree = "<group>"; };
+		210FBBD01AF734F9009896D2 /* ImageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollViewController.m; sourceTree = "<group>"; };
+		210FBBDF1AF73951009896D2 /* DILMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILMapViewController.h; sourceTree = "<group>"; };
+		210FBBE01AF73951009896D2 /* DILMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILMapViewController.m; sourceTree = "<group>"; };
 		210FE30A1AD78E32009BC3DE /* DILHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILHelpViewController.h; sourceTree = "<group>"; };
 		210FE30B1AD78E32009BC3DE /* DILHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILHelpViewController.m; sourceTree = "<group>"; };
 		210FE30F1AD795D2009BC3DE /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
@@ -277,8 +284,6 @@
 		219155531AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeNavigation.m; sourceTree = "<group>"; };
 		219155581AD4BD9600FC61E8 /* DILLineupCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILLineupCollectionViewController.h; sourceTree = "<group>"; };
 		219155591AD4BD9600FC61E8 /* DILLineupCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupCollectionViewController.m; sourceTree = "<group>"; };
-		2194B62F1AEED04500678FC8 /* DILPFMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DILPFMap.h; sourceTree = "<group>"; };
-		2194B6301AEED04500678FC8 /* DILPFMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DILPFMap.m; sourceTree = "<group>"; };
 		219893901A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfoVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		219893911A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfoVideoCollectionViewCell.m; sourceTree = "<group>"; };
 		219893931A9FE59F006257F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
@@ -315,6 +320,8 @@
 		21DEA9711AD436D000987379 /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
 		21DEA9721AD436D000987379 /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
 		21DEA9761AD44B1900987379 /* Dillo Day-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dillo Day-Bridging-Header.h"; sourceTree = "<group>"; };
+		21E6976A1AF4359A00494FA9 /* DILPFMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFMap.h; sourceTree = "<group>"; };
+		21E6976B1AF4359A00494FA9 /* DILPFMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFMap.m; sourceTree = "<group>"; };
 		21EEC9291AD61A1B00C968E9 /* DILParseClassGeneration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILParseClassGeneration.h; sourceTree = "<group>"; };
 		21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILParseClassGeneration.m; sourceTree = "<group>"; };
 		21EF15951A8DBAA00022953A /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
@@ -396,6 +403,15 @@
 				2185F7C01AABB94F008D5544 /* NotificationsViewController.m */,
 			);
 			path = "Deprecated VCs";
+			sourceTree = "<group>";
+		};
+		210FBBC31AF734F9009896D2 /* ImageScroll */ = {
+			isa = PBXGroup;
+			children = (
+				210FBBCF1AF734F9009896D2 /* ImageScrollViewController.h */,
+				210FBBD01AF734F9009896D2 /* ImageScrollViewController.m */,
+			);
+			path = ImageScroll;
 			sourceTree = "<group>";
 		};
 		210FE3091AD78E16009BC3DE /* DILLineup */ = {
@@ -526,12 +542,12 @@
 				217A8EE71AD89B5C0046F45F /* DILNotification.m */,
 				21C4C10C1AC74C9900AE4561 /* DILPFArtist.h */,
 				21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */,
+				21E6976A1AF4359A00494FA9 /* DILPFMap.h */,
+				21E6976B1AF4359A00494FA9 /* DILPFMap.m */,
 				21C4C10F1AC74F8C00AE4561 /* DILPFSponsor.h */,
 				21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */,
 				21C4C1121AC750EE00AE4561 /* DILPFStage.h */,
 				21C4C1131AC750EE00AE4561 /* DILPFStage.m */,
-				2194B62F1AEED04500678FC8 /* DILPFMap.h */,
-				2194B6301AEED04500678FC8 /* DILPFMap.m */,
 				2159BC351ACC422000D48F5F /* DILFollowArtist.h */,
 				2159BC361ACC422000D48F5F /* DILFollowArtist.m */,
 				21EEC9291AD61A1B00C968E9 /* DILParseClassGeneration.h */,
@@ -651,6 +667,8 @@
 				210FE3091AD78E16009BC3DE /* DILLineup */,
 				21BAFE391ACE1C49003F5ADD /* DILArtistViewController.h */,
 				21BAFE3A1ACE1C49003F5ADD /* DILArtistViewController.m */,
+				210FBBDF1AF73951009896D2 /* DILMapViewController.h */,
+				210FBBE01AF73951009896D2 /* DILMapViewController.m */,
 				210A81651AC625730091C134 /* Deprecated VCs */,
 				210FE30A1AD78E32009BC3DE /* DILHelpViewController.h */,
 				210FE30B1AD78E32009BC3DE /* DILHelpViewController.m */,
@@ -690,6 +708,7 @@
 		217946E71A88005200224737 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				210FBBC31AF734F9009896D2 /* ImageScroll */,
 				210FE30D1AD795D2009BC3DE /* SVWebViewController */,
 				219155511AD4BCA800FC61E8 /* CarbonTabSwipeNavigation */,
 				21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */,
@@ -1009,6 +1028,7 @@
 				2185F7CA1AABBE0C008D5544 /* NotificationHTKCollectionViewCell.m in Sources */,
 				21417F821A998F7B00A02B25 /* ArtistInfoViewController.m in Sources */,
 				2185F7C41AABBB0F008D5544 /* NotificationModel.m in Sources */,
+				210FBBE11AF73951009896D2 /* DILMapViewController.m in Sources */,
 				212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */,
 				2185F7C71AABBB25008D5544 /* Notification.m in Sources */,
 				217946B51A87C96100224737 /* AppDelegate.m in Sources */,
@@ -1040,6 +1060,8 @@
 				21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */,
 				2191555A1AD4BD9600FC61E8 /* DILLineupCollectionViewController.m in Sources */,
 				21C4AE461AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m in Sources */,
+				21E6976C1AF4359A00494FA9 /* DILPFMap.m in Sources */,
+				210FBBDB1AF734F9009896D2 /* ImageScrollViewController.m in Sources */,
 				21BAFE3B1ACE1C49003F5ADD /* DILArtistViewController.m in Sources */,
 				21D593931AEB388A00339787 /* DILArtistSponsorCollectionViewCell.m in Sources */,
 				210FE32E1AD795D2009BC3DE /* SVModalWebViewController.m in Sources */,
@@ -1209,6 +1231,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Dillo Day/DDPrefixHeader.pch";
 				INFOPLIST_FILE = "Dillo Day/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1232,6 +1255,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Dillo Day/DDPrefixHeader.pch";
 				INFOPLIST_FILE = "Dillo Day/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

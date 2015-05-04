@@ -1,18 +1,16 @@
 //
 //  DILPFMap.h
-//  Dillo Day
+//  
 //
-//  Created by Phil Meyers IV on 4/27/15.
-//  Copyright (c) 2015 Mayfest. All rights reserved.
+//  Created by Phil Meyers IV on 5/1/15.
+//
 //
 
-#import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
-
-
+#import <Parse/PFObject+Subclass.h>
 
 @interface DILPFMap : PFObject<PFSubclassing>
 @property (retain) PFFile *mapFile;
 @property (retain) NSString *mapName;
-@property (retain)
+@property (retain) NSNumber *currentMap;
 @end

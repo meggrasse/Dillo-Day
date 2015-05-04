@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import <Parse/PFObject+Subclass.h>
 
 extern NSString *const kDILPFRoleAdminKey;
 extern NSString *const kDILPFRoleMayfestExecKey;

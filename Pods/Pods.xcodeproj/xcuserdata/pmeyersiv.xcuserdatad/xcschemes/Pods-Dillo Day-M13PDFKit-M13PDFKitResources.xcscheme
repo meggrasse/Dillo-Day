@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "81EA8D9685916E928CA81186"
+               BlueprintIdentifier = "EBDE6161DAC19A70F957DACC"
                BuildableName = "M13PDFKitResources.bundle"
                BlueprintName = "Pods-Dillo Day-M13PDFKit-M13PDFKitResources"
                ReferencedContainer = "container:Pods.xcodeproj">

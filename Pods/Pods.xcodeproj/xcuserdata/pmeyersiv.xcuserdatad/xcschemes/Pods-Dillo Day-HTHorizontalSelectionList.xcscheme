@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F34A609E265654CF85B277C6"
+               BlueprintIdentifier = "337B32E6B558F5D75E319545"
                BuildableName = "libPods-Dillo Day-HTHorizontalSelectionList.a"
                BlueprintName = "Pods-Dillo Day-HTHorizontalSelectionList"
                ReferencedContainer = "container:Pods.xcodeproj">

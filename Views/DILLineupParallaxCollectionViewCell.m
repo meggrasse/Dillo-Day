@@ -33,23 +33,43 @@
 - (void)configureCell {
     self.clipsToBounds = YES;
 
-    [self addSubview:self.parallaxImageView];
-    [self addSubview:self.nameLabel];
-    [self addSubview:self.performanceTimeLabel];
+    [self.contentView addSubview:self.parallaxImageView];
+
+    UIView *centeredTextView = [[UIView alloc] initForAutoLayout];
+    [self.contentView addSubview:centeredTextView];
+
+    [centeredTextView addSubview:self.nameLabel];
+    [centeredTextView addSubview:self.performanceTimeLabel];
 
 
     [self.parallaxImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    [centeredTextView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [centeredTextView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+
+    CGFloat centeredTextViewInset = 20.f;
+//    [centeredTextView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(centeredTextViewInset, centeredTextViewInset, centeredTextViewInset, centeredTextViewInset)];
+    [centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
+    [centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
+    [centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
+    [centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
 
 
+//    [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
-    [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    CGFloat nameLabelInset = 20;
-    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:nameLabelInset relation:NSLayoutRelationGreaterThanOrEqual];
-    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:nameLabelInset relation:NSLayoutRelationGreaterThanOrEqual];
-    //    [self.nameLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self.favoriteButton withOffset:50 relation:NSLayoutRelationGreaterThanOrEqual];
+//    [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+//    CGFloat nameLabelInset = 20;
+//    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:nameLabelInset relation:NSLayoutRelationGreaterThanOrEqual];
+//    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:nameLabelInset relation:NSLayoutRelationGreaterThanOrEqual];
+//    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
 
     CGFloat verticalTextOffset = 0;
-    [self.performanceTimeLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.nameLabel];
+    [self.performanceTimeLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [self.performanceTimeLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.nameLabel withOffset:verticalTextOffset];
 
 
@@ -76,9 +96,13 @@
     if (!_performanceTimeLabel) {
         _performanceTimeLabel = [[UILabel alloc] initForAutoLayout];
         _performanceTimeLabel.numberOfLines = 1;
-        _performanceTimeLabel.font = [UIFont systemFontOfSize:20];
+        _performanceTimeLabel.font = [UIFont boldFlatFontOfSize:20];
         _performanceTimeLabel.textColor = [UIColor whiteColor];
         _performanceTimeLabel.textAlignment = NSTextAlignmentCenter;
+        _performanceTimeLabel.adjustsFontSizeToFitWidth = YES;
+        _performanceTimeLabel.minimumScaleFactor = 0.1;
+        _performanceTimeLabel.layer.shadowOpacity = .70;
+        _performanceTimeLabel.layer.shadowOffset = CGSizeZero;
         //        _performanceTimeLabel.backgroundColor = [UIColor blackColor];
     }
     return _performanceTimeLabel;
@@ -136,8 +160,8 @@
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView {
     self.nameLabel.text = [artist.name uppercaseString];
 
-//    self.performanceTimeLabel.text = [artist.performanceTime mediumTimeString];
-    self.performanceTimeLabel.text = artist.objectId;
+    self.performanceTimeLabel.text = [artist.performanceTime shortTimeString];
+//    self.performanceTimeLabel.text = artist.objectId;
     self.parallaxImageView.scrollView = scrollView;
     self.parallaxImageView.imageFile = artist.lineupImage;
 

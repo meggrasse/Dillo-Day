@@ -26,8 +26,10 @@ static const unsigned componentFlags = (NSYearCalendarUnit| NSMonthCalendarUnit 
 + (NSCalendar *) currentCalendar
 {
     static NSCalendar *sharedCalendar = nil;
-    if (!sharedCalendar)
+    if (!sharedCalendar) {
         sharedCalendar = [NSCalendar autoupdatingCurrentCalendar];
+    }
+
     return sharedCalendar;
 }
 
