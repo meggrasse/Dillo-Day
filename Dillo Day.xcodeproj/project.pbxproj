@@ -80,7 +80,9 @@
 		215BB6711AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6701AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m */; };
 		215BB6741AEC38270062BA50 /* FMEParallaxPFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */; };
 		215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */; };
+		216487521AF82DA3002D785C /* DILShuttleScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216487511AF82DA3002D785C /* DILShuttleScheduleViewController.m */; };
 		216D64E21AF8100D00C91D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216D64E11AF8100D00C91D5F /* Images.xcassets */; };
+		216D64E51AF8121600C91D5F /* DILPFShuttleSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 216D64E41AF8121600C91D5F /* DILPFShuttleSchedule.m */; };
 		217946B21A87C96100224737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B11A87C96100224737 /* main.m */; };
 		217946B51A87C96100224737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B41A87C96100224737 /* AppDelegate.m */; };
 		217946C01A87C96100224737 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217946BE1A87C96100224737 /* LaunchScreen.xib */; };
@@ -247,7 +249,11 @@
 		215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEParallaxPFImageView.m; sourceTree = "<group>"; };
 		215BFB731ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILYoutubeVideoFetcher.h; sourceTree = "<group>"; };
 		215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILYoutubeVideoFetcher.m; sourceTree = "<group>"; };
+		216487501AF82DA3002D785C /* DILShuttleScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILShuttleScheduleViewController.h; sourceTree = "<group>"; };
+		216487511AF82DA3002D785C /* DILShuttleScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILShuttleScheduleViewController.m; sourceTree = "<group>"; };
 		216D64E11AF8100D00C91D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		216D64E31AF8121600C91D5F /* DILPFShuttleSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFShuttleSchedule.h; sourceTree = "<group>"; };
+		216D64E41AF8121600C91D5F /* DILPFShuttleSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFShuttleSchedule.m; sourceTree = "<group>"; };
 		217946AC1A87C96100224737 /* Dillo Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dillo Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		217946B01A87C96100224737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217946B11A87C96100224737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -542,6 +548,8 @@
 				21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */,
 				21E6976A1AF4359A00494FA9 /* DILPFMap.h */,
 				21E6976B1AF4359A00494FA9 /* DILPFMap.m */,
+				216D64E31AF8121600C91D5F /* DILPFShuttleSchedule.h */,
+				216D64E41AF8121600C91D5F /* DILPFShuttleSchedule.m */,
 				21C4C10F1AC74F8C00AE4561 /* DILPFSponsor.h */,
 				21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */,
 				21C4C1121AC750EE00AE4561 /* DILPFStage.h */,
@@ -659,6 +667,8 @@
 		217946D51A87FAAC00224737 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				216487501AF82DA3002D785C /* DILShuttleScheduleViewController.h */,
+				216487511AF82DA3002D785C /* DILShuttleScheduleViewController.m */,
 				210A815C1AC5FFE80091C134 /* DILNotificationsViewController.h */,
 				210A815D1AC5FFE80091C134 /* DILNotificationsViewController.m */,
 				210FE3091AD78E16009BC3DE /* DILLineup */,
@@ -1048,6 +1058,7 @@
 				21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */,
 				215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */,
 				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
+				216487521AF82DA3002D785C /* DILShuttleScheduleViewController.m in Sources */,
 				21C4AE431AE9C86D005A911E /* DILStageSelectTableViewCell.m in Sources */,
 				21EFF9AF1A97DAF200F225ED /* LineupModel.m in Sources */,
 				219893981AA1173B006257F5 /* HelpViewController.m in Sources */,
@@ -1065,6 +1076,7 @@
 				21A175871AE99ADA0094E5C2 /* DILStageSelectView.m in Sources */,
 				214FD6D21AA55D9E001D6619 /* FMParallaxImageView.m in Sources */,
 				217D91CE1A9DACBA006F3ABB /* ArtistInfoHeaderHTKCollectionReusableViewCell.m in Sources */,
+				216D64E51AF8121600C91D5F /* DILPFShuttleSchedule.m in Sources */,
 				210FE30C1AD78E32009BC3DE /* DILHelpViewController.m in Sources */,
 				21DEA9731AD436D000987379 /* UIApplication+NetworkActivityIndicator.m in Sources */,
 				219893921A9ED170006257F5 /* ArtistInfoVideoCollectionViewCell.m in Sources */,

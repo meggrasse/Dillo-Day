@@ -30,7 +30,7 @@
 
 - (void)configureView {
     [self.view addSubview:self.scrollView];
-//    [self.scrollView addSubview:self.mapImageView];
+//    [self.scrollView addSubview:self.imageView];
     [self.scrollView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     self.scrollView.backgroundColor = [UIColor clearColor];
 }
