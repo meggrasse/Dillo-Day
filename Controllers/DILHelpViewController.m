@@ -117,7 +117,7 @@ static CGFloat buttonShadowHeight = 5;
 - (FUIButton *)emergencyButton {
     if (!_emergencyButton) {
         _emergencyButton = [[FUIButton alloc] initForAutoLayout];
-        [_emergencyButton setTitle:@"CALL 911" forState:UIControlStateNormal];
+        [_emergencyButton setTitle:@"CALL 911 (EMERGENCY)" forState:UIControlStateNormal];
         [_emergencyButton addTarget:self action:@selector(emergencyCall) forControlEvents:UIControlEventTouchUpInside];
         _emergencyButton.cornerRadius = 5;
         _emergencyButton.shadowHeight = buttonShadowHeight;
@@ -130,7 +130,7 @@ static CGFloat buttonShadowHeight = 5;
 - (FUIButton *)NUPDButton {
     if (!_NUPDButton) {
         _NUPDButton = [[FUIButton alloc] initForAutoLayout];
-        [_NUPDButton setTitle:@"REPORT AN INCIDENT TO NUPD" forState:UIControlStateNormal];
+        [_NUPDButton setTitle:@"CALL NUPD (NON-EMERGENCY)" forState:UIControlStateNormal];
         [_NUPDButton addTarget:self action:@selector(nupdCall) forControlEvents:UIControlEventTouchUpInside];
         _NUPDButton.cornerRadius = 5;
         _NUPDButton.shadowHeight = buttonShadowHeight;
