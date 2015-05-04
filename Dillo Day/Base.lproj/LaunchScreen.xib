@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,71 +10,23 @@
             <rect key="frame" x="0.0" y="0.0" width="589" height="701"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dillologo_1024" translatesAutoresizingMaskIntoConstraints="NO" id="hea-ri-w6f">
-                    <rect key="frame" x="124" y="197" width="341" height="306"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="iUt-lx-q1R">
+                    <rect key="frame" x="50" y="50" width="489" height="601"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjX-3d-wuV">
-                    <rect key="frame" x="194.5" y="570" width="200" height="97.5"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dillo_day" translatesAutoresizingMaskIntoConstraints="NO" id="yMU-ur-KAC">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="FsK-sM-f5I"/>
-                                <constraint firstAttribute="width" constant="200" id="dXp-fX-3Du"/>
-                            </constraints>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="-_2015_-" translatesAutoresizingMaskIntoConstraints="NO" id="Cky-Zk-vjB">
-                            <rect key="frame" x="50" y="48" width="100" height="49.5"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="Cky-Zk-vjB" secondAttribute="height" multiplier="147:73" id="zUh-8B-b6p"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="yMU-ur-KAC" firstAttribute="top" secondItem="EjX-3d-wuV" secondAttribute="top" id="2Vk-8Y-5z6"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="yMU-ur-KAC" secondAttribute="bottom" id="4dI-2H-qSK"/>
-                        <constraint firstAttribute="trailing" secondItem="yMU-ur-KAC" secondAttribute="trailing" id="QH2-cX-49t"/>
-                        <constraint firstItem="yMU-ur-KAC" firstAttribute="leading" secondItem="EjX-3d-wuV" secondAttribute="leading" id="dgE-80-xeF"/>
-                        <constraint firstItem="Cky-Zk-vjB" firstAttribute="top" secondItem="yMU-ur-KAC" secondAttribute="bottom" constant="-2" id="eLQ-yg-a6a"/>
-                        <constraint firstItem="Cky-Zk-vjB" firstAttribute="leading" secondItem="EjX-3d-wuV" secondAttribute="leading" constant="50" id="jei-LR-p0S"/>
-                        <constraint firstItem="Cky-Zk-vjB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EjX-3d-wuV" secondAttribute="top" id="kQR-na-UvX"/>
-                        <constraint firstAttribute="trailing" secondItem="Cky-Zk-vjB" secondAttribute="trailing" constant="50" id="oSr-AD-28w"/>
-                        <constraint firstAttribute="bottom" secondItem="Cky-Zk-vjB" secondAttribute="bottom" id="wLj-5U-Gdb"/>
-                    </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="kQR-na-UvX"/>
-                        </mask>
-                    </variation>
-                </view>
             </subviews>
-            <color key="backgroundColor" red="0.62745098039215685" green="0.85098039215686272" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="hea-ri-w6f" secondAttribute="centerY" id="0pi-AK-wRA"/>
-                <constraint firstAttribute="centerX" secondItem="EjX-3d-wuV" secondAttribute="centerX" id="9P9-c6-9ni"/>
-                <constraint firstAttribute="centerX" secondItem="hea-ri-w6f" secondAttribute="centerX" id="P2g-Cp-wry"/>
-                <constraint firstItem="hea-ri-w6f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="XBu-6d-yhr"/>
-                <constraint firstItem="hea-ri-w6f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="auT-Ov-vVQ"/>
-                <constraint firstAttribute="bottom" secondItem="hea-ri-w6f" secondAttribute="bottom" constant="100" id="ehS-zP-T7q"/>
-                <constraint firstAttribute="trailing" secondItem="hea-ri-w6f" secondAttribute="trailing" constant="100" id="nwq-fd-NRM"/>
-                <constraint firstItem="EjX-3d-wuV" firstAttribute="top" secondItem="hea-ri-w6f" secondAttribute="bottom" constant="67" id="sH7-uo-bzY"/>
+                <constraint firstAttribute="trailing" secondItem="iUt-lx-q1R" secondAttribute="trailing" constant="50" id="JVY-GI-z7R"/>
+                <constraint firstAttribute="bottom" secondItem="iUt-lx-q1R" secondAttribute="bottom" constant="50" id="aRr-Ej-kDO"/>
+                <constraint firstItem="iUt-lx-q1R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="cbX-SN-ZlD"/>
+                <constraint firstItem="iUt-lx-q1R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="yd7-tI-4wL"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="XBu-6d-yhr"/>
-                    <exclude reference="auT-Ov-vVQ"/>
-                    <exclude reference="ehS-zP-T7q"/>
-                    <exclude reference="nwq-fd-NRM"/>
-                </mask>
-            </variation>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="602.5" y="565.5"/>
         </view>
     </objects>
     <resources>
-        <image name="-_2015_-" width="177" height="41"/>
-        <image name="dillo_day" width="151" height="23"/>
-        <image name="dillologo_1024" width="341" height="306"/>
+        <image name="LaunchScreenGraphic" width="187" height="301"/>
     </resources>
 </document>

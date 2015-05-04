@@ -125,7 +125,4 @@
     return self.mapImageView;
 }
 
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-    NSLog(@"%@", NSStringFromCGRect(self.mapImageView.frame));
-}
 @end

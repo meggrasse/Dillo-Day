@@ -71,7 +71,7 @@
 
 
     DILNotificationsViewController *notificationVC = [[DILNotificationsViewController alloc] init];
-    notificationVC.title = @"NOTIFICATIONS";
+    notificationVC.title = @"ALERTS";
     UINavigationController *notificationsNavController = [[UINavigationController alloc] initWithRootViewController:notificationVC];
 
 

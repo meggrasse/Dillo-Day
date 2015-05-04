@@ -82,7 +82,6 @@
 		215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */; };
 		217946B21A87C96100224737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B11A87C96100224737 /* main.m */; };
 		217946B51A87C96100224737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B41A87C96100224737 /* AppDelegate.m */; };
-		217946BB1A87C96100224737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 217946B91A87C96100224737 /* Main.storyboard */; };
 		217946BD1A87C96100224737 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217946BC1A87C96100224737 /* Images.xcassets */; };
 		217946C01A87C96100224737 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217946BE1A87C96100224737 /* LaunchScreen.xib */; };
 		217946CC1A87C96100224737 /* Dillo_DayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946CB1A87C96100224737 /* Dillo_DayTests.m */; };
@@ -253,7 +252,6 @@
 		217946B11A87C96100224737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		217946B31A87C96100224737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		217946B41A87C96100224737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		217946BA1A87C96100224737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		217946BC1A87C96100224737 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		217946BF1A87C96100224737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		217946C51A87C96100224737 /* Dillo DayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dillo DayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -624,7 +622,6 @@
 				217D91D31A9E65F0006F3ABB /* DDConstants.m */,
 				217946B31A87C96100224737 /* AppDelegate.h */,
 				217946B41A87C96100224737 /* AppDelegate.m */,
-				217946B91A87C96100224737 /* Main.storyboard */,
 				217946BC1A87C96100224737 /* Images.xcassets */,
 				217946BE1A87C96100224737 /* LaunchScreen.xib */,
 				217946AF1A87C96100224737 /* Supporting Files */,
@@ -934,7 +931,6 @@
 				21171D031ADDF57800CDDFBD /* SourceSansPro-Regular.otf in Resources */,
 				21171D001ADDF57800CDDFBD /* SourceSansPro-It.otf in Resources */,
 				21171D111ADE002E00CDDFBD /* PTC55F.ttf in Resources */,
-				217946BB1A87C96100224737 /* Main.storyboard in Resources */,
 				21171D041ADDF57800CDDFBD /* SourceSansPro-Semibold.otf in Resources */,
 				211A11D31AF03913008EB8C1 /* storehouse.plist in Resources */,
 				210FE3351AD795D2009BC3DE /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
@@ -1119,14 +1115,6 @@
 				210FE32C1AD795D2009BC3DE /* zh-Hant */,
 			);
 			name = SVWebViewController.strings;
-			sourceTree = "<group>";
-		};
-		217946B91A87C96100224737 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				217946BA1A87C96100224737 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		217946BE1A87C96100224737 /* LaunchScreen.xib */ = {
