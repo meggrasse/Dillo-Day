@@ -7,11 +7,12 @@
 //
 
 #import "DILHelpViewController.h"
+@import MessageUI;
 #import <FlatUIKit/FlatUIKit.h>
 #import "SVModalWebViewController.h"
 #import "DILShuttleScheduleViewController.h"
 
-@interface DILHelpViewController ()
+@interface DILHelpViewController ()<MFMailComposeViewControllerDelegate>
 @property (strong, nonatomic) FUIButton *emergencyButton;
 @property (strong, nonatomic) FUIButton *NUPDButton;
 @property (strong, nonatomic) FUIButton *feedbackButton;
@@ -144,6 +145,7 @@ static CGFloat buttonShadowHeight = 5;
         _feedbackButton = [[FUIButton alloc] initForAutoLayout];
         [_feedbackButton setTitle:@"CONTACT MAYFEST" forState:UIControlStateNormal];
         _feedbackButton.cornerRadius = 5;
+        [_feedbackButton addTarget:self action:@selector(contactMayfest) forControlEvents:UIControlEventTouchUpInside];
         _feedbackButton.shadowHeight = buttonShadowHeight;
         _feedbackButton.buttonColor = [UIColor wetAsphaltColor];
         _feedbackButton.shadowColor = [UIColor midnightBlueColor];
@@ -234,5 +236,16 @@ static CGFloat buttonShadowHeight = 5;
         UIAlertView *calert = [[UIAlertView alloc]initWithTitle:@"Call Failed" message:@"This device cannot make a call at this time." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [calert show];
     }
+}
+
+- (void)contactMayfest {
+    MFMailComposeViewController *composeVC = [[MFMailComposeViewController alloc] init];
+    [composeVC setToRecipients:@[@"dilloday@gmail.com"]];
+    composeVC.mailComposeDelegate = self;
+    [self presentViewController:composeVC animated:YES completion:NULL];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [controller dismissViewControllerAnimated:YES completion:NULL];
 }
 @end
