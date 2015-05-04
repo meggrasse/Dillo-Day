@@ -80,9 +80,9 @@
 		215BB6711AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6701AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m */; };
 		215BB6741AEC38270062BA50 /* FMEParallaxPFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */; };
 		215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */; };
+		216D64E21AF8100D00C91D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216D64E11AF8100D00C91D5F /* Images.xcassets */; };
 		217946B21A87C96100224737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B11A87C96100224737 /* main.m */; };
 		217946B51A87C96100224737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946B41A87C96100224737 /* AppDelegate.m */; };
-		217946BD1A87C96100224737 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 217946BC1A87C96100224737 /* Images.xcassets */; };
 		217946C01A87C96100224737 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217946BE1A87C96100224737 /* LaunchScreen.xib */; };
 		217946CC1A87C96100224737 /* Dillo_DayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946CB1A87C96100224737 /* Dillo_DayTests.m */; };
 		217946DB1A87FCAD00224737 /* FMColorTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 217946DA1A87FCAD00224737 /* FMColorTransition.m */; };
@@ -247,12 +247,12 @@
 		215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEParallaxPFImageView.m; sourceTree = "<group>"; };
 		215BFB731ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILYoutubeVideoFetcher.h; sourceTree = "<group>"; };
 		215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILYoutubeVideoFetcher.m; sourceTree = "<group>"; };
+		216D64E11AF8100D00C91D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		217946AC1A87C96100224737 /* Dillo Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dillo Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		217946B01A87C96100224737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		217946B11A87C96100224737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		217946B31A87C96100224737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		217946B41A87C96100224737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		217946BC1A87C96100224737 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		217946BF1A87C96100224737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		217946C51A87C96100224737 /* Dillo DayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dillo DayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		217946CA1A87C96100224737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -612,6 +612,7 @@
 		217946AE1A87C96100224737 /* Dillo Day */ = {
 			isa = PBXGroup;
 			children = (
+				216D64E11AF8100D00C91D5F /* Images.xcassets */,
 				21171D061ADE002E00CDDFBD /* PT-Sans */,
 				21171CEB1ADDF57800CDDFBD /* source-sans-pro */,
 				21171CE91ADDF4CB00CDDFBD /* DilloDayStyleKit.h */,
@@ -622,7 +623,6 @@
 				217D91D31A9E65F0006F3ABB /* DDConstants.m */,
 				217946B31A87C96100224737 /* AppDelegate.h */,
 				217946B41A87C96100224737 /* AppDelegate.m */,
-				217946BC1A87C96100224737 /* Images.xcassets */,
 				217946BE1A87C96100224737 /* LaunchScreen.xib */,
 				217946AF1A87C96100224737 /* Supporting Files */,
 			);
@@ -938,6 +938,7 @@
 				21171CFC1ADDF57800CDDFBD /* SourceSansPro-Bold.otf in Resources */,
 				210FE3381AD795D2009BC3DE /* SVWebViewControllerActivitySafari@2x.png in Resources */,
 				210FE3341AD795D2009BC3DE /* SVWebViewControllerActivityChrome@2x.png in Resources */,
+				216D64E21AF8100D00C91D5F /* Images.xcassets in Resources */,
 				217946C01A87C96100224737 /* LaunchScreen.xib in Resources */,
 				210FE32F1AD795D2009BC3DE /* SVWebViewController.bundle in Resources */,
 				21171CF91ADDF57800CDDFBD /* SIL Open Font License.txt in Resources */,
@@ -953,7 +954,6 @@
 				21171CFB1ADDF57800CDDFBD /* SourceSansPro-BlackIt.otf in Resources */,
 				21171D181ADE002E00CDDFBD /* PTS76F.ttf in Resources */,
 				21171D051ADDF57800CDDFBD /* SourceSansPro-SemiboldIt.otf in Resources */,
-				217946BD1A87C96100224737 /* Images.xcassets in Resources */,
 				21171D171ADE002E00CDDFBD /* PTS75F.ttf in Resources */,
 				210FE3311AD795D2009BC3DE /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
 				21171D151ADE002E00CDDFBD /* PTS55F.ttf in Resources */,

@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="589" height="701"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenGraphic" translatesAutoresizingMaskIntoConstraints="NO" id="iUt-lx-q1R">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenImage" translatesAutoresizingMaskIntoConstraints="NO" id="iUt-lx-q1R">
                     <rect key="frame" x="50" y="50" width="489" height="601"/>
                 </imageView>
             </subviews>
@@ -27,6 +27,6 @@
         </view>
     </objects>
     <resources>
-        <image name="LaunchScreenGraphic" width="187" height="301"/>
+        <image name="LaunchScreenImage" width="561" height="864"/>
     </resources>
 </document>
