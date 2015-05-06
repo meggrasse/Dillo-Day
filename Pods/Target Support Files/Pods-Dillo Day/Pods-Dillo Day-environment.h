@@ -12,54 +12,6 @@
 #define COCOAPODS_VERSION_MINOR_BFPaperButton 0
 #define COCOAPODS_VERSION_PATCH_BFPaperButton 17
 
-// BFPaperCheckbox
-#define COCOAPODS_POD_AVAILABLE_BFPaperCheckbox
-#define COCOAPODS_VERSION_MAJOR_BFPaperCheckbox 1
-#define COCOAPODS_VERSION_MINOR_BFPaperCheckbox 2
-#define COCOAPODS_VERSION_PATCH_BFPaperCheckbox 7
-
-// BOString
-#define COCOAPODS_POD_AVAILABLE_BOString
-#define COCOAPODS_VERSION_MAJOR_BOString 0
-#define COCOAPODS_VERSION_MINOR_BOString 0
-#define COCOAPODS_VERSION_PATCH_BOString 9
-
-// BlocksKit
-#define COCOAPODS_POD_AVAILABLE_BlocksKit
-#define COCOAPODS_VERSION_MAJOR_BlocksKit 2
-#define COCOAPODS_VERSION_MINOR_BlocksKit 2
-#define COCOAPODS_VERSION_PATCH_BlocksKit 5
-
-// BlocksKit/All
-#define COCOAPODS_POD_AVAILABLE_BlocksKit_All
-#define COCOAPODS_VERSION_MAJOR_BlocksKit_All 2
-#define COCOAPODS_VERSION_MINOR_BlocksKit_All 2
-#define COCOAPODS_VERSION_PATCH_BlocksKit_All 5
-
-// BlocksKit/Core
-#define COCOAPODS_POD_AVAILABLE_BlocksKit_Core
-#define COCOAPODS_VERSION_MAJOR_BlocksKit_Core 2
-#define COCOAPODS_VERSION_MINOR_BlocksKit_Core 2
-#define COCOAPODS_VERSION_PATCH_BlocksKit_Core 5
-
-// BlocksKit/DynamicDelegate
-#define COCOAPODS_POD_AVAILABLE_BlocksKit_DynamicDelegate
-#define COCOAPODS_VERSION_MAJOR_BlocksKit_DynamicDelegate 2
-#define COCOAPODS_VERSION_MINOR_BlocksKit_DynamicDelegate 2
-#define COCOAPODS_VERSION_PATCH_BlocksKit_DynamicDelegate 5
-
-// BlocksKit/MessageUI
-#define COCOAPODS_POD_AVAILABLE_BlocksKit_MessageUI
-#define COCOAPODS_VERSION_MAJOR_BlocksKit_MessageUI 2
-#define COCOAPODS_VERSION_MINOR_BlocksKit_MessageUI 2
-#define COCOAPODS_VERSION_PATCH_BlocksKit_MessageUI 5
-
-// BlocksKit/UIKit
-#define COCOAPODS_POD_AVAILABLE_BlocksKit_UIKit
-#define COCOAPODS_VERSION_MAJOR_BlocksKit_UIKit 2
-#define COCOAPODS_VERSION_MINOR_BlocksKit_UIKit 2
-#define COCOAPODS_VERSION_PATCH_BlocksKit_UIKit 5
-
 // Bolts/Tasks
 #define COCOAPODS_POD_AVAILABLE_Bolts_Tasks
 #define COCOAPODS_VERSION_MAJOR_Bolts_Tasks 1
@@ -90,24 +42,6 @@
 #define COCOAPODS_VERSION_MINOR_DPMeterView 0
 #define COCOAPODS_VERSION_PATCH_DPMeterView 1
 
-// FMDB
-#define COCOAPODS_POD_AVAILABLE_FMDB
-#define COCOAPODS_VERSION_MAJOR_FMDB 2
-#define COCOAPODS_VERSION_MINOR_FMDB 3
-#define COCOAPODS_VERSION_PATCH_FMDB 0
-
-// FMDB/common
-#define COCOAPODS_POD_AVAILABLE_FMDB_common
-#define COCOAPODS_VERSION_MAJOR_FMDB_common 2
-#define COCOAPODS_VERSION_MINOR_FMDB_common 3
-#define COCOAPODS_VERSION_PATCH_FMDB_common 0
-
-// FMDB/standard
-#define COCOAPODS_POD_AVAILABLE_FMDB_standard
-#define COCOAPODS_VERSION_MAJOR_FMDB_standard 2
-#define COCOAPODS_VERSION_MINOR_FMDB_standard 3
-#define COCOAPODS_VERSION_PATCH_FMDB_standard 0
-
 // FXBlurView
 #define COCOAPODS_POD_AVAILABLE_FXBlurView
 #define COCOAPODS_VERSION_MAJOR_FXBlurView 1
@@ -120,35 +54,11 @@
 #define COCOAPODS_VERSION_MINOR_FlatUIKit 6
 #define COCOAPODS_VERSION_PATCH_FlatUIKit 1
 
-// FontasticIcons
-#define COCOAPODS_POD_AVAILABLE_FontasticIcons
-#define COCOAPODS_VERSION_MAJOR_FontasticIcons 0
-#define COCOAPODS_VERSION_MINOR_FontasticIcons 5
-#define COCOAPODS_VERSION_PATCH_FontasticIcons 0
-
-// GRMustache
-#define COCOAPODS_POD_AVAILABLE_GRMustache
-#define COCOAPODS_VERSION_MAJOR_GRMustache 7
-#define COCOAPODS_VERSION_MINOR_GRMustache 3
-#define COCOAPODS_VERSION_PATCH_GRMustache 0
-
-// GUITabPagerViewController
-#define COCOAPODS_POD_AVAILABLE_GUITabPagerViewController
-#define COCOAPODS_VERSION_MAJOR_GUITabPagerViewController 0
-#define COCOAPODS_VERSION_MINOR_GUITabPagerViewController 0
-#define COCOAPODS_VERSION_PATCH_GUITabPagerViewController 6
-
 // HMSegmentedControl
 #define COCOAPODS_POD_AVAILABLE_HMSegmentedControl
 #define COCOAPODS_VERSION_MAJOR_HMSegmentedControl 1
 #define COCOAPODS_VERSION_MINOR_HMSegmentedControl 5
 #define COCOAPODS_VERSION_PATCH_HMSegmentedControl 1
-
-// HTHorizontalSelectionList
-#define COCOAPODS_POD_AVAILABLE_HTHorizontalSelectionList
-#define COCOAPODS_VERSION_MAJOR_HTHorizontalSelectionList 0
-#define COCOAPODS_VERSION_MINOR_HTHorizontalSelectionList 3
-#define COCOAPODS_VERSION_PATCH_HTHorizontalSelectionList 2
 
 // HTKDynamicResizingCell
 #define COCOAPODS_POD_AVAILABLE_HTKDynamicResizingCell
@@ -156,59 +66,11 @@
 #define COCOAPODS_VERSION_MINOR_HTKDynamicResizingCell 0
 #define COCOAPODS_VERSION_PATCH_HTKDynamicResizingCell 2
 
-// JRSwizzle
-#define COCOAPODS_POD_AVAILABLE_JRSwizzle
-#define COCOAPODS_VERSION_MAJOR_JRSwizzle 1
-#define COCOAPODS_VERSION_MINOR_JRSwizzle 0
-#define COCOAPODS_VERSION_PATCH_JRSwizzle 0
-
-// L360Confetti
-#define COCOAPODS_POD_AVAILABLE_L360Confetti
-#define COCOAPODS_VERSION_MAJOR_L360Confetti 1
-#define COCOAPODS_VERSION_MINOR_L360Confetti 1
-#define COCOAPODS_VERSION_PATCH_L360Confetti 1
-
-// M13PDFKit
-#define COCOAPODS_POD_AVAILABLE_M13PDFKit
-#define COCOAPODS_VERSION_MAJOR_M13PDFKit 1
-#define COCOAPODS_VERSION_MINOR_M13PDFKit 0
-#define COCOAPODS_VERSION_PATCH_M13PDFKit 2
-
-// Mapbox-iOS-SDK
-#define COCOAPODS_POD_AVAILABLE_Mapbox_iOS_SDK
-#define COCOAPODS_VERSION_MAJOR_Mapbox_iOS_SDK 1
-#define COCOAPODS_VERSION_MINOR_Mapbox_iOS_SDK 6
-#define COCOAPODS_VERSION_PATCH_Mapbox_iOS_SDK 0
-
-// Masonry
-#define COCOAPODS_POD_AVAILABLE_Masonry
-#define COCOAPODS_VERSION_MAJOR_Masonry 0
-#define COCOAPODS_VERSION_MINOR_Masonry 6
-#define COCOAPODS_VERSION_PATCH_Masonry 1
-
-// Modality
-#define COCOAPODS_POD_AVAILABLE_Modality
-#define COCOAPODS_VERSION_MAJOR_Modality 0
-#define COCOAPODS_VERSION_MINOR_Modality 0
-#define COCOAPODS_VERSION_PATCH_Modality 1
-
-// NSAttributedString+CCLFormat
-#define COCOAPODS_POD_AVAILABLE_NSAttributedString_CCLFormat
-#define COCOAPODS_VERSION_MAJOR_NSAttributedString_CCLFormat 1
-#define COCOAPODS_VERSION_MINOR_NSAttributedString_CCLFormat 0
-#define COCOAPODS_VERSION_PATCH_NSAttributedString_CCLFormat 1
-
 // NSDate+TimeAgo
 #define COCOAPODS_POD_AVAILABLE_NSDate_TimeAgo
 #define COCOAPODS_VERSION_MAJOR_NSDate_TimeAgo 1
 #define COCOAPODS_VERSION_MINOR_NSDate_TimeAgo 0
 #define COCOAPODS_VERSION_PATCH_NSDate_TimeAgo 3
-
-// NYSegmentedControl
-#define COCOAPODS_POD_AVAILABLE_NYSegmentedControl
-#define COCOAPODS_VERSION_MAJOR_NYSegmentedControl 1
-#define COCOAPODS_VERSION_MINOR_NYSegmentedControl 0
-#define COCOAPODS_VERSION_PATCH_NYSegmentedControl 4
 
 // OMGHTTPURLRQ
 #define COCOAPODS_POD_AVAILABLE_OMGHTTPURLRQ
@@ -379,12 +241,6 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 2
 
-// SMCalloutView
-#define COCOAPODS_POD_AVAILABLE_SMCalloutView
-#define COCOAPODS_VERSION_MAJOR_SMCalloutView 2
-#define COCOAPODS_VERSION_MINOR_SMCalloutView 0
-#define COCOAPODS_VERSION_PATCH_SMCalloutView 0
-
 // SMScrollView
 #define COCOAPODS_POD_AVAILABLE_SMScrollView
 #define COCOAPODS_VERSION_MAJOR_SMScrollView 0
@@ -396,12 +252,6 @@
 #define COCOAPODS_VERSION_MAJOR_SVProgressHUD 1
 #define COCOAPODS_VERSION_MINOR_SVProgressHUD 1
 #define COCOAPODS_VERSION_PATCH_SVProgressHUD 3
-
-// Shimmer
-#define COCOAPODS_POD_AVAILABLE_Shimmer
-#define COCOAPODS_VERSION_MAJOR_Shimmer 1
-#define COCOAPODS_VERSION_MINOR_Shimmer 0
-#define COCOAPODS_VERSION_PATCH_Shimmer 2
 
 // TMCache
 #define COCOAPODS_POD_AVAILABLE_TMCache
@@ -415,23 +265,11 @@
 #define COCOAPODS_VERSION_MINOR_TOMSMorphingLabel 5
 #define COCOAPODS_VERSION_PATCH_TOMSMorphingLabel 1
 
-// TTOpenInAppActivity
-#define COCOAPODS_POD_AVAILABLE_TTOpenInAppActivity
-#define COCOAPODS_VERSION_MAJOR_TTOpenInAppActivity 1
-#define COCOAPODS_VERSION_MINOR_TTOpenInAppActivity 0
-#define COCOAPODS_VERSION_PATCH_TTOpenInAppActivity 0
-
 // UAProgressView
 #define COCOAPODS_POD_AVAILABLE_UAProgressView
 #define COCOAPODS_VERSION_MAJOR_UAProgressView 0
 #define COCOAPODS_VERSION_MINOR_UAProgressView 1
 #define COCOAPODS_VERSION_PATCH_UAProgressView 1
-
-// UIAlertView+Blocks
-#define COCOAPODS_POD_AVAILABLE_UIAlertView_Blocks
-#define COCOAPODS_VERSION_MAJOR_UIAlertView_Blocks 0
-#define COCOAPODS_VERSION_MINOR_UIAlertView_Blocks 9
-#define COCOAPODS_VERSION_PATCH_UIAlertView_Blocks 0
 
 // UIColor+BFPaperColors
 #define COCOAPODS_POD_AVAILABLE_UIColor_BFPaperColors

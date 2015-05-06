@@ -1,1 +1,0 @@
-../../../Modality/Modality/Helpers/MODPropertiesHelper.h

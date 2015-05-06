@@ -9,8 +9,6 @@
 #import "DILLineupViewController.h"
 
 #import "DILLineupCollectionViewModel.h"
-#import <Modality/UIViewController+Modality.h>
-#import <Modality/MODTransitionAnimatorSlideModal.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <PromiseKit/PromiseKit.h>
 
@@ -93,6 +91,7 @@
     DILArtistViewController *artistVC = [DILArtistViewController new];
     artistVC.artist = artist;
     [self showViewController:artistVC sender:self];
+//    [self.navigationController pushViewController:artistVC animated:YES];
 }
 
 #pragma mark - DILStageSelectionDelegate

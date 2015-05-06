@@ -8,501 +8,337 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-BFPaperCheckbox.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-BOString.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-BlocksKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-Dillo Day-Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-Dillo Day-CBStoreHouseRefreshControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Pods-Dillo Day-CSStickyHeaderFlowLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>Pods-Dillo Day-Colours.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>Pods-Dillo Day-DPMeterView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-FMDB.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>Pods-Dillo Day-FXBlurView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>Pods-Dillo Day-FlatUIKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-FontasticIcons.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-GRMustache.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-GUITabPagerViewController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 		<key>Pods-Dillo Day-HMSegmentedControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-HTHorizontalSelectionList.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>Pods-Dillo Day-HTKDynamicResizingCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-JRSwizzle.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-L360Confetti.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-M13PDFKit-M13PDFKitResources.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-M13PDFKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-Mapbox-iOS-SDK-Mapbox.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-Mapbox-iOS-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-Masonry.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-Modality.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Dillo Day-NSAttributedString+CCLFormat.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>12</integer>
 		</dict>
 		<key>Pods-Dillo Day-NSDate+TimeAgo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-NYSegmentedControl.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>13</integer>
 		</dict>
 		<key>Pods-Dillo Day-OMGHTTPURLRQ.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 		<key>Pods-Dillo Day-Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>15</integer>
 		</dict>
 		<key>Pods-Dillo Day-ParseUI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>16</integer>
 		</dict>
 		<key>Pods-Dillo Day-PromiseKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>17</integer>
 		</dict>
 		<key>Pods-Dillo Day-PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>18</integer>
 		</dict>
 		<key>Pods-Dillo Day-RDVTabBarController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>19</integer>
 		</dict>
 		<key>Pods-Dillo Day-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>20</integer>
 		</dict>
 		<key>Pods-Dillo Day-Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>21</integer>
 		</dict>
 		<key>Pods-Dillo Day-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-SMCalloutView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>22</integer>
 		</dict>
 		<key>Pods-Dillo Day-SMScrollView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>23</integer>
 		</dict>
 		<key>Pods-Dillo Day-SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-Shimmer.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>24</integer>
 		</dict>
 		<key>Pods-Dillo Day-TMCache.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>25</integer>
 		</dict>
 		<key>Pods-Dillo Day-TOMSMorphingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-TTOpenInAppActivity.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>26</integer>
 		</dict>
 		<key>Pods-Dillo Day-UAProgressView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>Pods-Dillo Day-UIAlertView+Blocks.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>27</integer>
 		</dict>
 		<key>Pods-Dillo Day-UIColor+BFPaperColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>28</integer>
 		</dict>
 		<key>Pods-Dillo Day-XCDYouTubeKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>29</integer>
 		</dict>
 		<key>Pods-Dillo Day.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04DB17AB03BAC1754694F59E</key>
+		<key>12DC8B730E69305B2978E353</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>106DFC11D86833246C11E53C</key>
+		<key>17A883296B04E2B7B192E895</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>10977F31E0F4874C410E95FA</key>
+		<key>1D50CB7CA71677FC5A710B10</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17ECFF33C3C7572666E91F32</key>
+		<key>234C5BB62CD8BA2C511FB2A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>181F15B89708782D04A5FE8E</key>
+		<key>24415E20776A6067CB2B78BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2410F19B22A7362E4B61BA00</key>
+		<key>25A79DDCA1C0C4ED1980C0A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>25ECA317A2EAD22FCB1D8071</key>
+		<key>26419A3DC3CBC0DF87D0D6AB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E01C634F793A22CDB90FD9E</key>
+		<key>3FEA299492B4964E70FA017C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>337B32E6B558F5D75E319545</key>
+		<key>41D8BBAA22B1932925B329F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35DB1DE6DF35A4682DED24A0</key>
+		<key>715932207C04C38D25E097D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>386578A72DDB9E7E2DBF4279</key>
+		<key>7397CFE58E625BE89829E101</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3AECA80401232E23F48102A4</key>
+		<key>75728E804FA181450B1B5E19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3E207A1C0BBDB66C81CE4547</key>
+		<key>83121F6547BE6F73112B9320</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3FB839A7C1E70D6064F13FA1</key>
+		<key>86046DEF7BB516283A198772</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4336DB4DEB1AB892B8C7878D</key>
+		<key>86D5E53A0AD92DA919E64068</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>452D2D7F141CE251C949FD7B</key>
+		<key>89466E916964954AB5E0A815</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4842357B55A46C9A33AF2E1E</key>
+		<key>A07D2DDD980AAB7F0FFD817C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C383D99A043DBBB3858F468</key>
+		<key>AAEBE4327A672715963E931C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>606340FCC9FD1DF41561151B</key>
+		<key>AD757A386AD5E1431082E0BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F749881A18FBBE75BAE1E06</key>
+		<key>B4D68F0C94A7ED1DC26E0036</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FE413B4752234E675C9D7CC</key>
+		<key>B7B76DF3226059DC35005927</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72189DF65E5D02F3FF4A776B</key>
+		<key>C64D512C711C9BE3F5D06CDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7486A42EF7B5231A54D60E14</key>
+		<key>CC043C41E65C7ED39089990A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7569D05B4F819758E9AB9CD9</key>
+		<key>D3F3EBDF6687F79263E723CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75BCB68DC7E21962A660C3D9</key>
+		<key>D505E70F06F3E1807C8C5E99</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>777179C23CDC6A9515C3140C</key>
+		<key>E050406E7FE23EEDC3ED2499</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7CA67FE6567A4C1872388CBC</key>
+		<key>E48DD32EB03CA7CBF3F01549</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8150A7AE6CF30CB9A523176B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>869DFD63493C638D5F29C9EB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8856757140BF401BB843B139</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9471C9604BCE9AB58A98D096</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>94B90C33FC3D0AF92951817E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>960F23DAECCCE2F62509EF6B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A1A1BDA74A37F675F566FB90</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B2EF7C2B9BAFA222597BDE77</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BA01624F2C75AC898D439580</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BA3A68BE1A84BCA17FC4D41A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BC1B299906B33C5D38CEAAA9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CAB89EC22D426E2DF1048824</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CD9CE6AECD366F54803E0075</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CE11D557DDFC17CC79004884</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DEA1AE88BDBFD4E37F8D6B24</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E4FD9E91FA0A979F708AADFD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E6DD2EC82BF38DC5F128D4C0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E9575F313A398E92C576C599</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EBDE6161DAC19A70F957DACC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F14F9C75594A2C6D6C260877</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F1A71274A5E5222965A83B84</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F94C401262CE7BF24D68D667</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FFBB780C4F67BC63FE3EFF7F</key>
+		<key>E56027657C407D018A5E9FE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6DD2EC82BF38DC5F128D4C0"
+               BlueprintIdentifier = "86046DEF7BB516283A198772"
                BuildableName = "libPods-Dillo Day-ParseUI.a"
                BlueprintName = "Pods-Dillo Day-ParseUI"
                ReferencedContainer = "container:Pods.xcodeproj">

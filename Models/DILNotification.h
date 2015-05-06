@@ -8,9 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <Realm/Realm.h>
+#import "PFNotification.h"
 
 @interface DILNotification : RLMObject
 @property NSString *alert;
 @property NSDate *dateRecieved;
+@property NSString *objectId;
+@property NSDate *createdAt;
 @property BOOL unread;
+
++ (NSString *)primaryKey;
+- (void)markRead;
++ (DILNotification *)notificationFromPFNotification:(PFNotification *)notification;
+- (BOOL)addToDatabase;
 @end

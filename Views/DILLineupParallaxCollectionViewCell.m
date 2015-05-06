@@ -160,6 +160,11 @@
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView {
     self.nameLabel.text = [artist.name uppercaseString];
 
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateFormat:@"hh:mm"];
+//    formatter.timeZone = [NSTimeZone time]
+//    NSString *timeString = [formatter stringFromDate:artist.performanceTime];
+
     self.performanceTimeLabel.text = [artist.performanceTime shortTimeString];
 //    self.performanceTimeLabel.text = artist.objectId;
     self.parallaxImageView.scrollView = scrollView;
@@ -179,6 +184,7 @@
 
 - (void)prepareForReuse {
     self.parallaxImageView.imageFile = nil;
+    self.nameLabel.text = self.performanceTimeLabel.text = @"";
 }
 
 + (NSString *)identifier {

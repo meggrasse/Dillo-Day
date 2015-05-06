@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE11D557DDFC17CC79004884"
+               BlueprintIdentifier = "AAEBE4327A672715963E931C"
                BuildableName = "libPods-Dillo Day-SMScrollView.a"
                BlueprintName = "Pods-Dillo Day-SMScrollView"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -7,8 +7,8 @@
 //
 
 #import "DILNotificationHTKTableViewCell.h"
-#import <FontasticIcons/FontasticIcons.h>
 #import <NSDate+TimeAgo/NSDate+TimeAgo.h>
+#import "NSDate+Utilities.h"
 
 @interface DILNotificationHTKTableViewCell()
 @property (strong, nonatomic) UILabel *notificationMessageLabel;
@@ -115,6 +115,7 @@
 
 
 - (void)configureCellWithNotification:(DILNotification *)notification {
+//    self.notificationMessageLabel.text = [NSString stringWithFormat:@"%@ %@", notification.alert, notification.dateRecieved.longTimeString];
     self.notificationMessageLabel.text = notification.alert;
     self.notificationTimeLabel.text = [notification.dateRecieved dateTimeAgo];
     self.unreadImageView.image = [self imageForUnreadImageView:notification.unread];

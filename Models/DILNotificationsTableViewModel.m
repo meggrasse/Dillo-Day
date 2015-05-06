@@ -7,14 +7,9 @@
 //
 
 #import "DILNotificationsTableViewModel.h"
-#import "Notification.h"
 #import "DILNotification.h"
 #import "DILPushNotificationHandler.h"
 #import "DILNotificationHTKTableViewCell.h"
-
-#define WEATHER_IMAGE [UIImage imageNamed:@"cloud394"]
-#define WARNING_IMAGE [UIImage imageNamed:@"warning45"]
-#define TIME_IMAGE [UIImage imageNamed:@"clock97"]
 
 @interface DILNotificationsTableViewModel()
 @property (strong, nonatomic) RLMResults *notificationArray;
@@ -25,11 +20,15 @@
 @implementation DILNotificationsTableViewModel
 - (id)init {
     if (self = [super init]) {
-        [self updateNotificationArray];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNotificationArray) name:kDILPushNotificationHandlerRecievedNewNotificationKey object:nil];
+        [self updateNotificationArray];
+        [self fetchNotifications];
     }
 
     return self;
+}
+- (void)fetchNotifications {
+     [[DILPushNotificationHandler sharedPushNotificationHandler] fetchNewNotificationsWithFetchCompletionHandler:NULL];
 }
 
 - (void)updateNotificationArray {
@@ -43,11 +42,9 @@
 }
 
 - (void)markDisplayedNotificationsRead {
-    [[[DILPushNotificationHandler sharedPushNotificationHandler] notificationRealm] beginWriteTransaction];
-    for (DILNotification *notification in self.displayedNotifications) {
-        notification.unread = NO;
-    }
-    [[[DILPushNotificationHandler sharedPushNotificationHandler] notificationRealm] commitWriteTransaction];
+        for (DILNotification *notification in self.displayedNotifications) {
+            [notification markRead];
+        }
 }
 
 #pragma mark - UITableViewDelegate and DataSource

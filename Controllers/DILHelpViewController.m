@@ -20,6 +20,7 @@
 @property (strong, nonatomic) UILabel *feedbackLabel;
 @property (strong, nonatomic) UILabel *shuttlesLabel;
 @property (strong, nonatomic) UILabel *smartDilloLabel;
+@property (strong, nonatomic) UIImageView *sponsorImageView;
 @end
 
 static CGFloat buttonShadowHeight = 5;
@@ -28,25 +29,89 @@ static CGFloat buttonShadowHeight = 5;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configureView];
+    [self configureEqualSizedView];
+//    [self configureView];
     // Do any additional setup after loading the view.
+}
+
+- (void)configureEqualSizedView {
+    CGFloat sideInset = 10;
+//    CGFloat buttonHeight = 50;
+
+    [self.view addSubview:self.sponsorImageView];
+    [self.sponsorImageView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.sponsorImageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:2*sideInset];
+
+//    [self.sponsorImageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:sideInset relation:NSLayoutRelationEqual];
+//    [self.sponsorImageView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:sideInset relation:NSLayoutRelationEqual];
+
+    [self.sponsorImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-4*sideInset];
+    [self.sponsorImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:self.sponsorImageView withMultiplier:self.sponsorImageView.image.size.height/self.sponsorImageView.image.size.width];
+
+    UIView *buttonSubview = [[UIView alloc] initForAutoLayout];
+    [self.view addSubview:buttonSubview];
+    [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+    [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeRight];
+    [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+    [buttonSubview autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.sponsorImageView withOffset:1*sideInset];
+
+    NSArray *buttonArray = @[self.emergencyButton, self.NUPDButton, self.shuttlesButton, self.feedbackButton];
+    for (UIView *view in buttonArray) {
+        [buttonSubview addSubview:view];
+        [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    }
+
+    [buttonArray autoDistributeViewsAlongAxis:ALAxisVertical alignedTo:ALAttributeVertical withFixedSpacing:sideInset insetSpacing:YES matchedSizes:YES];
+
+//    [self.emergencyButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.sponsorImageView withOffset:sideInset];
+    [self.emergencyButton autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:sideInset];
+    [self.emergencyButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+
+    [self.NUPDButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.emergencyButton withOffset:sideInset];
+    [self.NUPDButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+
+    [self.shuttlesButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.NUPDButton withOffset:sideInset];
+    [self.shuttlesButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+
+    [self.feedbackButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.shuttlesButton withOffset:sideInset];
+    [self.feedbackButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+    [self.feedbackButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset];
+
+
+
 }
 
 - (void)configureView {
     CGFloat sideInset = 10;
     CGFloat buttonHeight = 50;
 
+    [self.view addSubview:self.sponsorImageView];
+    [self.sponsorImageView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:3];
+
+    [self.sponsorImageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:sideInset relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.sponsorImageView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:sideInset relation:NSLayoutRelationGreaterThanOrEqual];
+
+    [UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
+        [self.sponsorImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+        [self.sponsorImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:self.sponsorImageView withMultiplier:self.sponsorImageView.image.size.height/self.sponsorImageView.image.size.width];
+    }];
+
+
     UIView *emergencyView = [[UIView alloc] initForAutoLayout];
     [self.view addSubview:emergencyView];
-    [emergencyView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
+//    [emergencyView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
+    [emergencyView autoPinEdgeToSuperviewEdge:ALEdgeLeading];
+    [emergencyView autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
+    [emergencyView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.sponsorImageView withOffset:sideInset];
 
-    [emergencyView addSubview:self.smartDilloLabel];
-    [self.smartDilloLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:sideInset];
-    [self.smartDilloLabel autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+//    [emergencyView addSubview:self.smartDilloLabel];
+//    [self.smartDilloLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:sideInset];
+//    [self.smartDilloLabel autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
 
     [emergencyView addSubview:self.emergencyButton];
     [self.emergencyButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
-    [self.emergencyButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.smartDilloLabel withOffset:sideInset];
+//    [self.emergencyButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.smartDilloLabel withOffset:sideInset];
+    [self.emergencyButton autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [self.emergencyButton autoSetDimension:ALDimensionHeight toSize:buttonHeight];
 
     [emergencyView addSubview:self.NUPDButton];
@@ -106,7 +171,7 @@ static CGFloat buttonShadowHeight = 5;
     [self.shuttlesButton autoPinEdgeToSuperviewEdge:ALEdgeTop];
 
 
-    for (UIView *view in @[self.smartDilloLabel, self.emergencyButton, self.NUPDButton, self.feedbackButton, self.shuttlesButton]) {
+    for (UIView *view in @[self.sponsorImageView, self.emergencyButton, self.NUPDButton, self.feedbackButton, self.shuttlesButton]) {
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
     }
 
@@ -203,6 +268,14 @@ static CGFloat buttonShadowHeight = 5;
     return _shuttlesLabel;
 }
 
+- (UIImageView *)sponsorImageView {
+    if (!_sponsorImageView) {
+        _sponsorImageView = [[UIImageView alloc] initForAutoLayout];
+        _sponsorImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _sponsorImageView.image = [UIImage imageNamed:@"RHASponsorLogo"];
+    }
+    return _sponsorImageView;
+}
 
 - (void)displayShuttleSchedule {
     DILShuttleScheduleViewController *scheduleViewController = [[DILShuttleScheduleViewController alloc] init];

@@ -151,11 +151,16 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 #pragma mark - Public Methods
 - (void)configureCellWithArtist:(DILPFArtist *)artist {
     [artist imageDownloadPromise].then(^(UIImage *image){
-        self.circularImageView.image = image;
         self.backgroundImageView.image = image;
     });
 
-    self.timeLabel.text = [artist.performanceTime mediumTimeString];
+    self.circularImageView.alpha = 0;
+    [artist iconImageDownloadPromise].then(^(UIImage *image){
+         self.circularImageView.image = image;
+        self.circularImageView.alpha = 1;
+    });
+
+//    self.timeLabel.text = [artist.performanceTime mediumTimeString];
 }
 
 + (NSString *)identifier {

@@ -12,9 +12,6 @@
 
 
 #import "NSDate+Utilities.h"
-#import "Artist.h"
-#import <FontasticIcons/FontasticIcons.h>
-#import "DILFollowArtist.h"
 #import <ParseUI/ParseUI.h>
 #import <UAProgressView/UAProgressView.h>
 

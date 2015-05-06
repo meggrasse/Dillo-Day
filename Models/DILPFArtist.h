@@ -38,5 +38,7 @@ extern NSString *const kDILPFArtistSponsorKey;
  *  @return A promise that returns a UIImage of the DILPFArtist object's lineupImage.
  */
 - (PMKPromise *)imageDownloadPromise;
+
+- (PMKPromise *)iconImageDownloadPromise;
 @end
 

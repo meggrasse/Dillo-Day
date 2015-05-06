@@ -22,16 +22,20 @@
 @implementation DILShuttleScheduleViewController
 
 - (void)viewDidLoad {
-    self.title = @"SHUTTLE SCHEDULE";
     //    self.edgesForExtendedLayout = UIRectEdgeNone;
     [super viewDidLoad];
+        self.title = @"SHUTTLE SCHEDULE";
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.backgroundColor = [DilloDayStyleKit navigationBarColor];
+    [self.navigationController.navigationBar setTintColor:[DilloDayStyleKit tabBarSelectedColor]];
+    self.view.backgroundColor = [DilloDayStyleKit notificationCellBackgroundColor];
     [self configureBarButtonItems];
     [self configureView];
     [self downloadSchedule];
 }
 
 - (void)configureBarButtonItems {
-    UIBarButtonItem *returnButton = [[UIBarButtonItem alloc]  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(returnButtonTapped)];
+    UIBarButtonItem *returnButton = [[UIBarButtonItem alloc]  initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(returnButtonTapped)];
     self.navigationItem.rightBarButtonItem = returnButton;
 }
 

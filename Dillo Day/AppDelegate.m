@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <RDVTabBarController/RDVTabBarController.h>
 #import <RDVTabBarController/RDVTabBarItem.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #import "DILLineupViewController.h"
 #import "DILMapViewController.h"
@@ -31,38 +32,26 @@
     [Parse setApplicationId:@"S9JO4idIXxAkVtwsj6xXNAkCwPulJ3cSOhKNuYzc"
                   clientKey:@"yUpokPMYESRM0jFDuP9jQOK2EHxewppqygEgS3uX"];
 
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
+
+
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD setFont:[UIFont systemFontOfSize:18]];
+//    [SVProgressHUD setInfoImage:[UIImage imageNamed:@"DillogoSharpLarge"]];
+    [SVProgressHUD setBackgroundColor:[DilloDayStyleKit notificationIconColor]];
 
 
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
                                                     UIUserNotificationTypeSound);
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
-
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
 
 
-//    DILVenueUser *venue = [DILVenueUser object];
-//    venue.name = @"Bar 63";
-//    venue.phoneNumber = @"123-456-7890";
-//    venue.venueLocation = @"Downtown Chicago";
-//    [venue saveInBackground];
-//
-//    DILSpotterUser *spotter = [DILSpotterUser object];
-//    spotter.firstName = @"Roshun";
-//    spotter.lastName = @"Patel";
-//    spotter.location = @"Bobb 220";
-//    [spotter saveInBackground];
-//     [[[DILFakeDataGenerator alloc] init] generateData];
-
-//    UIImage *backButtonImage  = [UIImage imageNamed:@"ArtistBackArrow"];
-//    backButtonImage = [backButtonImage stretchableImageWithLeftCapWidth: 15.0 topCapHeight: 30.0];
-//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage: backButtonImage forState: UIControlStateNormal barMetrics: UIBarMetricsDefault];
-
     DILLineupViewController *lineupVC = [DILLineupViewController new];
-//    lineupVC.title = @"Lineup";
     UINavigationController *lineupNavController = [[UINavigationController alloc] initWithRootViewController:lineupVC];
 
     DILMapViewController *mapVC = [[DILMapViewController alloc] init];
@@ -86,7 +75,6 @@
         [self configureFlatNavigationController:controller];
     }
 
-//    [UIBarButtonItem configureFlatButtonsWithColor:[DilloDayStyleKit barButtonItemColor] highlightedColor:[DilloDayStyleKit barButtonItemHighlightedColor] cornerRadius:3];
 
     self.tabBarController = [[RDVTabBarController alloc] initWithNibName:nil bundle:nil];
     RDVTabBar *tabBar = self.tabBarController.tabBar;
@@ -115,7 +103,9 @@
     self.window.rootViewController = self.tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+
+//    [[DILPushNotificationHandler sharedPushNotificationHandler] updateNotificationBadgeNumber];
+
     return YES;
 }
 
@@ -151,6 +141,34 @@
 
         [self.tabBarController setSelectedIndex:indexOfNotificationsVC];
     }
-    [[DILPushNotificationHandler sharedPushNotificationHandler] handlePushNotification:userInfo[@"aps"]];
 }
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    [[DILPushNotificationHandler sharedPushNotificationHandler] fetchNewNotificationsWithFetchCompletionHandler:completionHandler];
+    if (![UIApplication sharedApplication].applicationState == UIApplicationStateActive) {
+        NSUInteger indexOfNotificationsVC = [self.tabBarController.viewControllers indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj isMemberOfClass:[UINavigationController class]]) {
+                UIViewController *viewController = [((UINavigationController *)obj).viewControllers firstObject];
+                if ([viewController isMemberOfClass:[DILNotificationsViewController class]]) {
+                    return YES;
+                } else {
+                    return NO;
+                }
+            } else {
+                return NO;
+            }
+        }];
+
+        [self.tabBarController setSelectedIndex:indexOfNotificationsVC];
+    } else {
+        NSDictionary *apsDictionary = userInfo[@"aps"];
+        NSString *apsAlertText = apsDictionary[@"alert"];
+        [SVProgressHUD showInfoWithStatus:apsAlertText];
+    }
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+//    [[DILPushNotificationHandler sharedPushNotificationHandler] updateNotificationBadgeNumber];
+}
+
 @end

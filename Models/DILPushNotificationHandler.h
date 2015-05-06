@@ -15,4 +15,6 @@ extern NSString *kDILPushNotificationHandlerRecievedNewNotificationKey;
 + (id)sharedPushNotificationHandler;
 - (void)handlePushNotification:(NSDictionary *)userInfo;
 - (RLMRealm *)notificationRealm;
+- (void)fetchNewNotificationsWithFetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
+- (void)updateNotificationBadgeNumber;
 @end

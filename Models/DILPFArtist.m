@@ -45,6 +45,19 @@ NSString *const kDILPFArtistSponsorKey = @"sponsor";
     }];
 }
 
+- (PMKPromise *)iconImageDownloadPromise {
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        [self.iconImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            if (error) {
+                reject(error);
+            } else {
+                UIImage *image = [UIImage imageWithData:data];
+                fulfill(image);
+            }
+        }];
+    }];
+}
+
 - (BOOL)artistAlerts {
     DILFollowArtist *followArtistResult = [DILFollowArtist objectForPrimaryKey:self.objectId];
     return followArtistResult && followArtistResult.follow;

@@ -8,6 +8,7 @@
 
 #import "DILNotificationsViewController.h"
 #import "DILNotificationsTableViewModel.h"
+#import "DILPushNotificationHandler.h"
 
 @interface DILNotificationsViewController ()<DILNotificationsTableViewProtocol>
 @property (strong, nonatomic) UITableView *notificationsTableView;
