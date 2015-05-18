@@ -8,11 +8,14 @@
 
 #import "DILArtistYoutubeVideoCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ParseUI.h"
+#import "DPMeterView.h"
 
 @interface DILArtistYoutubeVideoCollectionViewCell()
-@property (strong, nonatomic) UIImageView *thumbnailImageView;
+@property (strong, nonatomic) PFImageView *thumbnailImageView;
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UIView *titleBackgroundView;
+@property (strong, nonatomic) DPMeterView *meterView;
 @end
 
 @implementation DILArtistYoutubeVideoCollectionViewCell
@@ -38,7 +41,7 @@
 
 - (UIImageView *)thumbnailImageView {
     if (!_thumbnailImageView) {
-        _thumbnailImageView = [[UIImageView alloc] initForAutoLayout];
+        _thumbnailImageView = [[PFImageView alloc] initForAutoLayout];
         _thumbnailImageView.clipsToBounds = YES;
         _thumbnailImageView.contentMode = UIViewContentModeScaleAspectFill;
     }
@@ -63,9 +66,41 @@
     return _titleBackgroundView;
 }
 
+
 - (void)configureCellWithVideo:(XCDYouTubeVideo *)video {
     [self.thumbnailImageView sd_setImageWithURL:video.mediumThumbnailURL];
     self.titleLabel.text = [video.title uppercaseString];
+}
+
+- (void)configureCellWithDILPFYoutubeVideo:(DILPFYoutubeVideo *)video {
+	self.titleLabel.text = [video.title uppercaseString];
+	self.thumbnailImageView.file = video.thumbnail;
+	[self setupMeterView];
+	[self.thumbnailImageView loadInBackground:^(UIImage *image, NSError *error) {
+		[self terminateMeterView];
+	} progressBlock:^(int percentDone) {
+		[self.meterView setProgress:((float)percentDone)/100.0 animated:YES];
+	}];
+}
+
+- (DPMeterView *)meterView {
+	if (!_meterView) {
+		_meterView = [[DPMeterView alloc] initForAutoLayout];
+		_meterView.meterType = DPMeterTypeLinearHorizontal;
+		_meterView.trackTintColor = [UIColor whiteColor];
+		_meterView.progressTintColor = [DilloDayStyleKit lineupCellProgressColor];
+	}
+	return _meterView;
+}
+
+- (void)setupMeterView {
+	[self.thumbnailImageView addSubview:self.meterView];
+	[self.meterView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+	[self.meterView setProgress:0 animated:NO];
+}
+
+- (void)terminateMeterView {
+	[self.meterView removeFromSuperview];
 }
 
 + (NSString *)identifier {

@@ -40,5 +40,7 @@ extern NSString *const kDILPFArtistSponsorKey;
 - (PMKPromise *)imageDownloadPromise;
 
 - (PMKPromise *)iconImageDownloadPromise;
+
+- (PMKPromise *)youtubeVideosQueryPromise;
 @end
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A07D2DDD980AAB7F0FFD817C"
+               BlueprintIdentifier = "E3F583099A527E2AC2523732"
                BuildableName = "libPods-Dillo Day-DPMeterView.a"
                BlueprintName = "Pods-Dillo Day-DPMeterView"
                ReferencedContainer = "container:Pods.xcodeproj">

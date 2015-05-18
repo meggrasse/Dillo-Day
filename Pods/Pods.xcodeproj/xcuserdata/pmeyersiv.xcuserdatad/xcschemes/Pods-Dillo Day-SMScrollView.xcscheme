@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AAEBE4327A672715963E931C"
+               BlueprintIdentifier = "086EDFCFBACEEFC045AF59F0"
                BuildableName = "libPods-Dillo Day-SMScrollView.a"
                BlueprintName = "Pods-Dillo Day-SMScrollView"
                ReferencedContainer = "container:Pods.xcodeproj">

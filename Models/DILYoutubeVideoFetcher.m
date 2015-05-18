@@ -33,6 +33,17 @@ static NSString *const kDownloadVideoImagePromiseFulfillImageKey = @"kDownloadVi
     return _sharedVideoFetcher;
 }
 
+- (void)fetchVideosForArtist:(DILPFArtist *)artist forSender:(id<DILYoutubeVideoFetcherDelegate>)sender {
+	[[UIApplication sharedApplication] beganNetworkActivity];
+	[artist youtubeVideosQueryPromise].then(^(NSArray *results){
+		for (DILPFYoutubeVideo *video in results) {
+			[sender fetchedDILPFYoutubeVideo:video];
+		}
+	}).finally(^(){
+		[[UIApplication sharedApplication] endedNetworkActivity];
+	});
+}
+
 - (void)fetchVideosForIds:(NSArray *)youtubeVideoIds forSender:(id<DILYoutubeVideoFetcherDelegate>)sender {
     for (NSString *youtubeVideoId in youtubeVideoIds) {
         [[UIApplication sharedApplication] beganNetworkActivity];
@@ -42,6 +53,8 @@ static NSString *const kDownloadVideoImagePromiseFulfillImageKey = @"kDownloadVi
             XCDYouTubeVideo *video = downloadVideoImagePromiseDictionary[kDownloadVideoImagePromiseFulfillVideoKey];
             UIImage *image = downloadVideoImagePromiseDictionary[kDownloadVideoImagePromiseFulfillImageKey];
             [sender fetchedVideo:video image:image];
+        }).catch(^(NSError *error){
+            NSLog(@"Error fetching: %@", error);
         }).finally(^(){
             [[UIApplication sharedApplication] endedNetworkActivity];
         });

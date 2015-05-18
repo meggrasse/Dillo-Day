@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <XCDYouTubeKit/XCDYouTubeKit.h>
+#import "DILPFYoutubeVideo.h"
 
 @interface DILArtistYoutubeVideoCollectionViewCell : UICollectionViewCell
-- (void)configureCellWithVideo:(XCDYouTubeVideo *)video;
+- (void)configureCellWithVideo:(XCDYouTubeVideo *)video __attribute__ ((deprecated));
+- (void)configureCellWithDILPFYoutubeVideo:(DILPFYoutubeVideo *)video;
 + (NSString *)identifier;
 @end

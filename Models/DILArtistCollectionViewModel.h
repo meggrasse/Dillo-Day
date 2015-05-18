@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "DILPFArtist.h"
 #import <XCDYouTubeKit/XCDYouTubeKit.h>
+#import "PBYouTubeVideoViewController.h"
+#import "DILPFYoutubeVideo.h"
 
 typedef enum NSUInteger {
     DILArtistInfoTypeBio = 0,
@@ -20,8 +22,9 @@ typedef enum NSUInteger {
 @required
 - (void)reloadSection:(NSUInteger)section;
 - (void)insertItemAtIndex:(NSIndexPath *)indexPath;
-- (void)presentVideoPlayerViewController:(XCDYouTubeVideoPlayerViewController *)player;
-
+- (void)presentYoutubeViewWebView:(DILPFYoutubeVideo *)video;
+@optional
+- (void)presentVideoPlayerViewController:(XCDYouTubeVideoPlayerViewController *)player DEPRECATED_ATTRIBUTE;
 @end
 
 @interface DILArtistCollectionViewModel : NSObject<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>

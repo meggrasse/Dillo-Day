@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D50CB7CA71677FC5A710B10"
+               BlueprintIdentifier = "AAE7F8C70423955E6DA01D28"
                BuildableName = "libPods-Dillo Day-UAProgressView.a"
                BlueprintName = "Pods-Dillo Day-UAProgressView"
                ReferencedContainer = "container:Pods.xcodeproj">

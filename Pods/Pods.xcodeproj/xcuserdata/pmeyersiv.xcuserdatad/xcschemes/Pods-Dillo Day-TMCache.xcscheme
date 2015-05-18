@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D505E70F06F3E1807C8C5E99"
+               BlueprintIdentifier = "1FD05ECA83B9A47373AE6E17"
                BuildableName = "libPods-Dillo Day-TMCache.a"
                BlueprintName = "Pods-Dillo Day-TMCache"
                ReferencedContainer = "container:Pods.xcodeproj">

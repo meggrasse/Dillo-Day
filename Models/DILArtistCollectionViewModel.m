@@ -15,6 +15,7 @@
 
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 #import "DILYoutubeVideoFetcher.h"
+#import "PBYouTubeVideoViewController.h"
 
 @interface DILArtistCollectionViewModel()<DILArtistStickyHeaderCollectionViewCellDelegate, DILYoutubeVideoFetcherDelegate>
 @property (nonatomic) BOOL hasRegisteredSupplementaryClasses;
@@ -42,7 +43,11 @@
 }
 
 - (void)fetchYoutubeVideos {
-    [[DILYoutubeVideoFetcher sharedVideoFetcher] fetchVideosForIds:self.artist.youtubeVideoIds forSender:self];
+//    [[DILYoutubeVideoFetcher sharedVideoFetcher] fetchVideosForIds:self.artist.youtubeVideoIds forSender:self];
+//	[self.artist youtubeVideosQueryPromise].then(^(NSArray *results){
+//		self.videos = [results mutableCopy];
+//	});
+	[[DILYoutubeVideoFetcher sharedVideoFetcher] fetchVideosForArtist:self.artist forSender:self];
 }
 
 - (void)fetchedVideo:(XCDYouTubeVideo *)video image:(UIImage *)image {
@@ -51,6 +56,14 @@
         NSUInteger indexOfVideo = [self.videos indexOfObject:video];
         [self.delegate insertItemAtIndex:[NSIndexPath indexPathForRow:indexOfVideo inSection:0]];
     }
+}
+
+- (void)fetchedDILPFYoutubeVideo:(DILPFYoutubeVideo *)video {
+	[self.videos addObject:video];
+	if (self.artistInfoTypeForDisplay == DILArtistInfoTypeMusic) {
+		NSUInteger indexOfVideo = [self.videos indexOfObject:video];
+		[self.delegate insertItemAtIndex:[NSIndexPath indexPathForRow:indexOfVideo inSection:0]];
+	}
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -114,7 +127,7 @@
         }
         case DILArtistInfoTypeMusic: {
             DILArtistYoutubeVideoCollectionViewCell *youtubeVideoCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistYoutubeVideoCollectionViewCell identifier] forIndexPath:indexPath];
-            [youtubeVideoCell configureCellWithVideo:[self youtubeVideoForIndexPath:indexPath]];
+			[youtubeVideoCell configureCellWithDILPFYoutubeVideo:[self youtubeVideoForIndexPath:indexPath]];
             return youtubeVideoCell;
         }
         default:
@@ -123,7 +136,7 @@
 
 }
 
-- (XCDYouTubeVideo *)youtubeVideoForIndexPath:(NSIndexPath *)indexPath {
+- (DILPFYoutubeVideo *)youtubeVideoForIndexPath:(NSIndexPath *)indexPath {
     return self.videos[indexPath.row];
 }
 
@@ -201,9 +214,11 @@
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if ([[collectionView cellForItemAtIndexPath:indexPath] isMemberOfClass:[DILArtistYoutubeVideoCollectionViewCell class]]) {
-        XCDYouTubeVideo *video = [self youtubeVideoForIndexPath:indexPath];
-        XCDYouTubeVideoPlayerViewController *youtubeVideoVC = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:video.identifier];
-        [self.delegate presentVideoPlayerViewController:youtubeVideoVC];
+		DILPFYoutubeVideo *video = [self youtubeVideoForIndexPath:indexPath];
+		[self.delegate presentYoutubeViewWebView:video];
+//        XCDYouTubeVideo *video = [self youtubeVideoForIndexPath:indexPath];
+//        XCDYouTubeVideoPlayerViewController *youtubeVideoVC = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:video.identifier];
+//        [self.delegate presentVideoPlayerViewController:youtubeVideoVC];
     }
 }
 

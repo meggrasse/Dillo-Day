@@ -73,6 +73,9 @@
 		215BB6711AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6701AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m */; };
 		215BB6741AEC38270062BA50 /* FMEParallaxPFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */; };
 		215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */; };
+		21636D091B0A4A81000B0F7F /* DILPFYoutubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 21636D081B0A4A81000B0F7F /* DILPFYoutubeVideo.m */; };
+		21636D1D1B0A5787000B0F7F /* PBYouTubeVideoView.html in Resources */ = {isa = PBXBuildFile; fileRef = 21636D111B0A5787000B0F7F /* PBYouTubeVideoView.html */; };
+		21636D1E1B0A5787000B0F7F /* PBYouTubeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21636D131B0A5787000B0F7F /* PBYouTubeVideoViewController.m */; };
 		216487521AF82DA3002D785C /* DILShuttleScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216487511AF82DA3002D785C /* DILShuttleScheduleViewController.m */; };
 		216D64E21AF8100D00C91D5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 216D64E11AF8100D00C91D5F /* Images.xcassets */; };
 		216D64E51AF8121600C91D5F /* DILPFShuttleSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 216D64E41AF8121600C91D5F /* DILPFShuttleSchedule.m */; };
@@ -214,6 +217,11 @@
 		215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEParallaxPFImageView.m; sourceTree = "<group>"; };
 		215BFB731ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILYoutubeVideoFetcher.h; sourceTree = "<group>"; };
 		215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILYoutubeVideoFetcher.m; sourceTree = "<group>"; };
+		21636D071B0A4A81000B0F7F /* DILPFYoutubeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFYoutubeVideo.h; sourceTree = "<group>"; };
+		21636D081B0A4A81000B0F7F /* DILPFYoutubeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFYoutubeVideo.m; sourceTree = "<group>"; };
+		21636D111B0A5787000B0F7F /* PBYouTubeVideoView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PBYouTubeVideoView.html; sourceTree = "<group>"; };
+		21636D121B0A5787000B0F7F /* PBYouTubeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBYouTubeVideoViewController.h; sourceTree = "<group>"; };
+		21636D131B0A5787000B0F7F /* PBYouTubeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBYouTubeVideoViewController.m; sourceTree = "<group>"; };
 		216487501AF82DA3002D785C /* DILShuttleScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILShuttleScheduleViewController.h; sourceTree = "<group>"; };
 		216487511AF82DA3002D785C /* DILShuttleScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILShuttleScheduleViewController.m; sourceTree = "<group>"; };
 		216D64E11AF8100D00C91D5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -430,6 +438,8 @@
 				217A8EE71AD89B5C0046F45F /* DILNotification.m */,
 				21E7B1DA1AF9954900FAD992 /* PFNotification.h */,
 				21E7B1DB1AF9954900FAD992 /* PFNotification.m */,
+				21636D071B0A4A81000B0F7F /* DILPFYoutubeVideo.h */,
+				21636D081B0A4A81000B0F7F /* DILPFYoutubeVideo.m */,
 				21C4C10C1AC74C9900AE4561 /* DILPFArtist.h */,
 				21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */,
 				21E6976A1AF4359A00494FA9 /* DILPFMap.h */,
@@ -455,6 +465,17 @@
 				2159BC311ACB8C3E00D48F5F /* NSDate+Utilities.m */,
 			);
 			path = "NSDate+Utilities";
+			sourceTree = "<group>";
+		};
+		21636D101B0A5787000B0F7F /* PBYoutubeVideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				21636D111B0A5787000B0F7F /* PBYouTubeVideoView.html */,
+				21636D121B0A5787000B0F7F /* PBYouTubeVideoViewController.h */,
+				21636D131B0A5787000B0F7F /* PBYouTubeVideoViewController.m */,
+			);
+			name = PBYoutubeVideoViewController;
+			path = PBYouTubeVideoViewController/Library;
 			sourceTree = "<group>";
 		};
 		217946A31A87C96100224737 = {
@@ -568,6 +589,7 @@
 		217946E71A88005200224737 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				21636D101B0A5787000B0F7F /* PBYoutubeVideoViewController */,
 				210FE30D1AD795D2009BC3DE /* SVWebViewController */,
 				219155511AD4BCA800FC61E8 /* CarbonTabSwipeNavigation */,
 				21DEA9741AD436DF00987379 /* UIApplication + NetworkActivityIndicator */,
@@ -788,6 +810,7 @@
 				210FE3311AD795D2009BC3DE /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
 				21171D151ADE002E00CDDFBD /* PTS55F.ttf in Resources */,
 				21171CFA1ADDF57800CDDFBD /* SourceSansPro-Black.otf in Resources */,
+				21636D1D1B0A5787000B0F7F /* PBYouTubeVideoView.html in Resources */,
 				210FE3321AD795D2009BC3DE /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
 				21171D141ADE002E00CDDFBD /* PTN77F.ttf in Resources */,
 			);
@@ -855,6 +878,7 @@
 				215BB6741AEC38270062BA50 /* FMEParallaxPFImageView.m in Sources */,
 				214FD6CA1AA5542D001D6619 /* UIFont+SytemFontOverride.m in Sources */,
 				215BB6711AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m in Sources */,
+				21636D1E1B0A5787000B0F7F /* PBYouTubeVideoViewController.m in Sources */,
 				210FE3331AD795D2009BC3DE /* SVWebViewControllerActivityChrome.m in Sources */,
 				217A8EE81AD89B5C0046F45F /* DILNotification.m in Sources */,
 				21EEC92B1AD61A1B00C968E9 /* DILParseClassGeneration.m in Sources */,
@@ -871,6 +895,7 @@
 				216487521AF82DA3002D785C /* DILShuttleScheduleViewController.m in Sources */,
 				21C4AE431AE9C86D005A911E /* DILStageSelectTableViewCell.m in Sources */,
 				21A175811AE98F770094E5C2 /* DILStageSelectTitleView.m in Sources */,
+				21636D091B0A4A81000B0F7F /* DILPFYoutubeVideo.m in Sources */,
 				21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */,
 				21C4AE461AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m in Sources */,
 				21E6976C1AF4359A00494FA9 /* DILPFMap.m in Sources */,
@@ -956,7 +981,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -997,7 +1021,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1023,7 +1046,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mayfest Productions (RL46734JR9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mayfest Productions (RL46734JR9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1047,7 +1070,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Mayfest Productions (RL46734JR9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mayfest Productions (RL46734JR9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE__IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

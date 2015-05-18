@@ -11,6 +11,7 @@
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 #import <FlatUIKit/FlatUIKit.h>
 #import "DILArtistStickyHeaderCollectionViewCell.h"
+#import "SVModalWebViewController.h"
 
 @interface DILArtistViewController ()<DILArtistCollectionViewModelDelegate>
 @property (strong, nonatomic) UICollectionView *artistCollectionView;
@@ -71,5 +72,14 @@
 
 - (void)presentVideoPlayerViewController:(XCDYouTubeVideoPlayerViewController *)player {
     [self presentViewController:player animated:YES completion:NULL];
+}
+
+- (void)presentYoutubeViewWebView:(DILPFYoutubeVideo *)video {
+	NSURL *youtubeURL = [video youtubeVideoURL];
+	SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithURL:youtubeURL];
+	[self presentViewController:webViewController animated:YES completion:^{
+		webViewController.navigationBar.tintColor = [DilloDayStyleKit navigationBarTextColor];
+	}];
+	
 }
 @end
