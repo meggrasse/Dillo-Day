@@ -44,6 +44,7 @@
         _thumbnailImageView = [[PFImageView alloc] initForAutoLayout];
         _thumbnailImageView.clipsToBounds = YES;
         _thumbnailImageView.contentMode = UIViewContentModeScaleAspectFill;
+		_thumbnailImageView.backgroundColor = [DilloDayStyleKit notificationCellBackgroundColor];
     }
     return _thumbnailImageView;
 }
@@ -74,6 +75,7 @@
 
 - (void)configureCellWithDILPFYoutubeVideo:(DILPFYoutubeVideo *)video {
 	self.titleLabel.text = [video.title uppercaseString];
+	self.thumbnailImageView.image = nil;
 	self.thumbnailImageView.file = video.thumbnail;
 	[self setupMeterView];
 	[self.thumbnailImageView loadInBackground:^(UIImage *image, NSError *error) {
