@@ -113,7 +113,8 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         PFQuery *scheduleQuery = [DILPFShuttleSchedule query];
         [scheduleQuery whereKey:@"currentSchedule" equalTo:[NSNumber numberWithBool:YES]];
-        [scheduleQuery findObjectsInBackgroundWithBlock:^(NSArray *PF_NULLABLE_S objects, NSError *PF_NULLABLE_S error) {
+//        [scheduleQuery findObjectsInBackgroundWithBlock:^(NSArray *PF_NULLABLE_S objects, NSError *PF_NULLABLE_S error) {
+        [scheduleQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (objects) {
                 fulfill([objects firstObject]);
             } else {
@@ -125,7 +126,8 @@
 
 - (PMKPromise *)scheduleFileDownloadPromise:(DILPFShuttleSchedule *)schedule {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
-        [schedule.shuttleScheduelImage getDataInBackgroundWithBlock:^(NSData *PF_NULLABLE_S data, NSError *PF_NULLABLE_S error){
+//        [schedule.shuttleScheduelImage getDataInBackgroundWithBlock:^(NSData *PF_NULLABLE_S data, NSError *PF_NULLABLE_S error){
+        [schedule.shuttleScheduelImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
             if (data) {
                 fulfill(data);
             } else {

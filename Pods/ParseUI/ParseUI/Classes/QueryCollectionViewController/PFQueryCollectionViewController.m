@@ -21,6 +21,9 @@
 
 #import "PFQueryCollectionViewController.h"
 
+#import <Bolts/BFTask.h>
+#import <Bolts/BFTaskCompletionSource.h>
+
 #import <Parse/Parse.h>
 
 #import "PFActivityIndicatorCollectionReusableView.h"
@@ -28,12 +31,13 @@
 #import "PFImageView.h"
 #import "PFLoadingView.h"
 #import "PFLocalization.h"
+#import "PFUIAlertView.h"
 
 static NSString *const PFQueryCollectionViewCellIdentifier = @"cell";
 static NSString *const PFQueryCollectionViewNextPageReusableViewIdentifier = @"nextPageView";
 
 @interface PFQueryCollectionViewController () {
-    NSMutableArray *_mutableObjects;
+    NSMutableArray<PFObject *> *_mutableObjects;
 
     BOOL _firstLoad;           // Whether we have loaded the first set of objects
     NSInteger _currentPage;    // The last page that was loaded
@@ -75,6 +79,10 @@ static NSString *const PFQueryCollectionViewNextPageReusableViewIdentifier = @"n
     [self _setupWithClassName:nil];
 
     return self;
+}
+
+- (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout {
+    return[self initWithCollectionViewLayout:layout className:nil];
 }
 
 - (instancetype)initWithCollectionViewLayout:(UICollectionViewLayout *)layout className:(NSString *)className {
@@ -165,18 +173,72 @@ static NSString *const PFQueryCollectionViewNextPageReusableViewIdentifier = @"n
 }
 
 #pragma mark -
-#pragma mark Loading Data
+#pragma mark Removing Objects
 
-- (void)loadObjects {
-    [self loadObjects:0 clear:YES];
+- (void)removeObjectAtIndexPath:(NSIndexPath *)indexPath {
+    [self removeObjectsAtIndexPaths:@[ indexPath ]];
 }
 
-- (void)loadObjects:(NSInteger)page clear:(BOOL)clear {
+- (void)removeObjectsAtIndexPaths:(NSArray *)indexPaths {
+    if (indexPaths.count == 0) {
+        return;
+    }
+
+    // We need the contents as both an index set and a list of index paths.
+    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet];
+
+    for (NSIndexPath *indexPath in indexPaths) {
+        if (indexPath.section != 0) {
+            [NSException raise:NSRangeException format:@"Index Path section %lu out of range!", (long)indexPath.section];
+        }
+
+        if (indexPath.row >= self.objects.count) {
+            [NSException raise:NSRangeException format:@"Index Path row %lu out of range!", (long)indexPath.row];
+        }
+
+        [indexes addIndex:indexPath.row];
+    }
+
+    BFContinuationBlock deletionHandlerBlock = ^id (BFTask *task) {
+        self.refreshControl.enabled = YES;
+
+        if (task.error) {
+            [self _handleDeletionError:task.error];
+        }
+
+        return nil;
+    };
+
+    NSMutableArray *allDeletionTasks = [NSMutableArray arrayWithCapacity:indexes.count];
+    NSArray *objectsToRemove = [self.objects objectsAtIndexes:indexes];
+
+    // Remove the contents from our local cache so we can give the user immediate feedback.
+    [_mutableObjects removeObjectsInArray:objectsToRemove];
+    [self.collectionView deleteItemsAtIndexPaths:indexPaths];
+
+    for (id obj in objectsToRemove) {
+        [allDeletionTasks addObject:[obj deleteInBackground]];
+    }
+
+    [[BFTask taskForCompletionOfAllTasks:allDeletionTasks]
+                       continueWithBlock:deletionHandlerBlock];
+}
+
+#pragma mark -
+#pragma mark Loading Data
+
+- (BFTask<NSArray<__kindof PFObject *> *> *)loadObjects {
+    return [self loadObjects:0 clear:YES];
+}
+
+- (BFTask<NSArray<__kindof PFObject *> *> *)loadObjects:(NSInteger)page clear:(BOOL)clear {
     self.loading = YES;
     [self objectsWillLoad];
 
     PFQuery *query = [self queryForCollection];
     [self _alterQuery:query forLoadingPage:page];
+
+    BFTaskCompletionSource<NSArray<__kindof PFObject *> *> *source = [BFTaskCompletionSource taskCompletionSource];
     [query findObjectsInBackgroundWithBlock:^(NSArray *foundObjects, NSError *error) {
         if (![Parse isLocalDatastoreEnabled] &&
             query.cachePolicy != kPFCachePolicyCacheOnly &&
@@ -197,15 +259,21 @@ static NSString *const PFQueryCollectionViewNextPageReusableViewIdentifier = @"n
             if (clear) {
                 [_mutableObjects removeAllObjects];
             }
-            [_mutableObjects addObjectsFromArray:foundObjects];
 
-            // Reload the table data
+            [_mutableObjects addObjectsFromArray:foundObjects];
             [self.collectionView reloadData];
         }
 
         [self objectsDidLoad:error];
         [self.refreshControl endRefreshing];
+
+        if (error) {
+            [source trySetError:error];
+        } else {
+            [source trySetResult:foundObjects];
+        }
     }];
+    return source.task;
 }
 
 - (void)loadNextPage {
@@ -266,7 +334,7 @@ static NSString *const PFQueryCollectionViewNextPageReusableViewIdentifier = @"n
     _currentNextPageView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
                                                               withReuseIdentifier:PFQueryCollectionViewNextPageReusableViewIdentifier
                                                                      forIndexPath:[self _indexPathForPaginationReusableView]];
-    _currentNextPageView.textLabel.text = NSLocalizedString(@"Load more...", @"Load more...");
+    _currentNextPageView.textLabel.text = PFLocalizedString(@"Load more...", @"Load more...");
     [_currentNextPageView addTarget:self action:@selector(loadNextPage) forControlEvents:UIControlEventTouchUpInside];
     _currentNextPageView.animating = self.loading;
     return _currentNextPageView;
@@ -291,12 +359,7 @@ static NSString *const PFQueryCollectionViewNextPageReusableViewIdentifier = @"n
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
            viewForSupplementaryElementOfKind:(NSString *)kind
                                  atIndexPath:(NSIndexPath *)indexPath {
-    if ([self _shouldShowPaginationView] &&
-        [kind isEqualToString:UICollectionElementKindSectionFooter] &&
-        [indexPath isEqual:[self _indexPathForPaginationReusableView]]) {
-        return [self collectionViewReusableViewForNextPageAction:collectionView];
-    }
-    return nil;
+    return [self collectionViewReusableViewForNextPageAction:collectionView];
 }
 
 #pragma mark -
@@ -320,6 +383,19 @@ static NSString *const PFQueryCollectionViewNextPageReusableViewIdentifier = @"n
 
 - (NSIndexPath *)_indexPathForPaginationReusableView {
     return [NSIndexPath indexPathForItem:0 inSection:[self numberOfSectionsInCollectionView:self.collectionView] - 1];
+}
+
+#pragma mark -
+#pragma mark Error handling
+
+- (void)_handleDeletionError:(NSError *)error {
+    // Fully reload on error.
+    [self loadObjects];
+
+    NSString *message = [NSString stringWithFormat:@"%@: \"%@\"",
+                              PFLocalizedString(@"Error occurred during deletion", @"Error occurred during deletion"),
+                              error.localizedDescription];
+    [PFUIAlertView presentAlertInViewController:self withTitle:PFLocalizedString(@"Delete Error", @"Delete Error") message:message];
 }
 
 #pragma mark -

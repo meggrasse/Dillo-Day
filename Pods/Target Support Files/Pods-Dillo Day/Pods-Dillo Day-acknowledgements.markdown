@@ -154,7 +154,7 @@ THE SOFTWARE.
 
 FXBlurView
 
-Version 1.6.3, November 1st, 2014
+Version 1.6.4, September 2nd, 2015
 
 Copyright (C) 2013 Charcoal Design
 
@@ -452,7 +452,37 @@ See README.markdown for full license text.
 
 ## Parse
 
-See https://www.parse.com/about/terms
+BSD License
+
+For Parse iOS/OSX SDK software
+
+Copyright (c) 2015-present, Parse, LLC. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+ * Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+ * Neither the name Parse nor the names of its contributors may be used to
+   endorse or promote products derived from this software without specific
+   prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
 
 ## ParseUI
 
@@ -813,18 +843,18 @@ EXPORT COMPLIANCE
 You understand that the Software may contain cryptographic functions that may be
 subject to export restrictions, and you represent and warrant that you are not
 located in a country that is subject to United States export restriction or embargo,
-including Cuba, Iran, North Korea, Sudan, or Syria, and that you are not on the
-Department of Commerce list of Denied Persons, Unverified Parties, or affiliated
-with a Restricted Entity.
+including Cuba, Iran, North Korea, Sudan, Syria or the Crimea region, and that you
+are not on the Department of Commerce list of Denied Persons, Unverified Parties,
+or affiliated with a Restricted Entity.
 
 You agree to comply with all export, re-export and import restrictions and
 regulations of the Department of Commerce or other agency or authority of the
 United States or other applicable countries. You also agree not to transfer, or
 authorize the transfer of, directly or indirectly, the Software to any prohibited
-country, including Cuba, Iran, North Korea, Sudan, or Syria, or to any person or
-organization on or affiliated with the Department of Commerce lists of Denied
-Persons, Unverified Parties or Restricted Entities, or otherwise in violation of any
-such restrictions or regulations.
+country, including Cuba, Iran, North Korea, Sudan, Syria or the Crimea region,
+or to any person or organization on or affiliated with the Department of
+Commerce lists of Denied Persons, Unverified Parties or Restricted Entities, or
+otherwise in violation of any such restrictions or regulations.
 
 
 ## Reveal-iOS-SDK
@@ -1311,7 +1341,7 @@ SOFTWARE.
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Bence Feher
+Copyright © (c) 2015 Bence Feher
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

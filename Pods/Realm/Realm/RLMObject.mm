@@ -16,6 +16,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
+#import "RLMAccessor.h"
 #import "RLMObject_Private.h"
 #import "RLMObjectSchema_Private.hpp"
 #import "RLMObjectStore.h"
@@ -32,36 +33,58 @@
 @implementation RLMObject
 
 // synthesized in RLMObjectBase
-@dynamic invalidated;
+@dynamic invalidated, realm, objectSchema;
 
 - (instancetype)init {
     return [super init];
 }
 
+- (instancetype)initWithValue:(id)value {
+    [self.class sharedSchema]; // ensure this class' objectSchema is loaded in the partialSharedSchema
+    RLMSchema *schema = RLMSchema.partialSharedSchema;
+    return [super initWithValue:value schema:schema];
+}
+
 - (instancetype)initWithObject:(id)object {
-    return [super initWithObject:object schema:RLMSchema.sharedSchema];
+    return [self initWithValue:object];
+}
+
++ (instancetype)createInDefaultRealmWithValue:(id)value {
+    return (RLMObject *)RLMCreateObjectInRealmWithValue([RLMRealm defaultRealm], [self className], value, false);
 }
 
 + (instancetype)createInDefaultRealmWithObject:(id)object {
-    return (RLMObject *)RLMCreateObjectInRealmWithValue([RLMRealm defaultRealm], [self className], object, RLMCreationOptionsAllowCopy);
+    return [self createInDefaultRealmWithValue:object];
 }
 
-+ (instancetype)createInRealm:(RLMRealm *)realm withObject:(id)value {
-    return (RLMObject *)RLMCreateObjectInRealmWithValue(realm, [self className], value, RLMCreationOptionsAllowCopy);
++ (instancetype)createInRealm:(RLMRealm *)realm withValue:(id)value {
+    return (RLMObject *)RLMCreateObjectInRealmWithValue(realm, [self className], value, false);
+}
+
++ (instancetype)createInRealm:(RLMRealm *)realm withObject:(id)object {
+    return [self createInRealm:realm withValue:object];
+}
+
++ (instancetype)createOrUpdateInDefaultRealmWithValue:(id)value {
+    return [self createOrUpdateInRealm:[RLMRealm defaultRealm] withValue:value];
 }
 
 + (instancetype)createOrUpdateInDefaultRealmWithObject:(id)object {
-    return [self createOrUpdateInRealm:[RLMRealm defaultRealm] withObject:object];
+    return [self createOrUpdateInDefaultRealmWithValue:object];
 }
 
-+ (instancetype)createOrUpdateInRealm:(RLMRealm *)realm withObject:(id)value {
++ (instancetype)createOrUpdateInRealm:(RLMRealm *)realm withValue:(id)value {
     // verify primary key
     RLMObjectSchema *schema = [self sharedSchema];
     if (!schema.primaryKeyProperty) {
         NSString *reason = [NSString stringWithFormat:@"'%@' does not have a primary key and can not be updated", schema.className];
         @throw [NSException exceptionWithName:@"RLMExecption" reason:reason userInfo:nil];
     }
-    return (RLMObject *)RLMCreateObjectInRealmWithValue(realm, [self className], value, RLMCreationOptionsUpdateOrCreate | RLMCreationOptionsAllowCopy);
+    return (RLMObject *)RLMCreateObjectInRealmWithValue(realm, [self className], value, true);
+}
+
++ (instancetype)createOrUpdateInRealm:(RLMRealm *)realm withObject:(id)object {
+    return [self createOrUpdateInRealm:realm withValue:object];
 }
 
 - (id)objectForKeyedSubscript:(NSString *)key {
@@ -70,14 +93,6 @@
 
 - (void)setObject:(id)obj forKeyedSubscript:(NSString *)key {
     RLMObjectBaseSetObjectForKeyedSubscript(self, key, obj);
-}
-
-- (RLMRealm *)realm {
-    return _realm;
-}
-
-- (RLMObjectSchema *)objectSchema {
-    return _objectSchema;
 }
 
 + (RLMResults *)allObjects {
@@ -150,6 +165,26 @@
 
 + (NSArray *)ignoredProperties {
     return nil;
+}
+
++ (NSArray *)requiredProperties {
+    return nil;
+}
+
+@end
+
+@implementation RLMDynamicObject
+
++ (BOOL)shouldIncludeInDefaultSchema {
+    return NO;
+}
+
+- (id)valueForUndefinedKey:(NSString *)key {
+    return RLMDynamicGet(self, RLMValidatedGetProperty(self, key));
+}
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    RLMDynamicValidatedSet(self, key, value);
 }
 
 @end

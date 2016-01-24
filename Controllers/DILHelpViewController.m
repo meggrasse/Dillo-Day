@@ -91,10 +91,10 @@ static CGFloat buttonShadowHeight = 5;
     [self.sponsorImageView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:sideInset relation:NSLayoutRelationGreaterThanOrEqual];
     [self.sponsorImageView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:sideInset relation:NSLayoutRelationGreaterThanOrEqual];
 
-    [UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
-        [self.sponsorImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
-        [self.sponsorImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:self.sponsorImageView withMultiplier:self.sponsorImageView.image.size.height/self.sponsorImageView.image.size.width];
-    }];
+//    [UIView autoSetPriority:UILayoutPriorityDefaultHigh forConstraints:^{
+//        [self.sponsorImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+//        [self.sponsorImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionWidth ofView:self.sponsorImageView withMultiplier:self.sponsorImageView.image.size.height/self.sponsorImageView.image.size.width];
+//    }];
 
 
     UIView *emergencyView = [[UIView alloc] initForAutoLayout];

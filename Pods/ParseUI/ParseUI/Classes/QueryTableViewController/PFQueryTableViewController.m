@@ -21,6 +21,10 @@
 
 #import "PFQueryTableViewController.h"
 
+#import <Bolts/BFExecutor.h>
+#import <Bolts/BFTask.h>
+#import <Bolts/BFTaskCompletionSource.h>
+
 #import <Parse/Parse.h>
 
 #import "PFActivityIndicatorTableViewCell.h"
@@ -28,6 +32,7 @@
 #import "PFLoadingView.h"
 #import "PFLocalization.h"
 #import "PFTableViewCell.h"
+#import "PFUIAlertView.h"
 
 // Add headers to kill any warnings.
 // `initWithStyle:` is a UITableViewController method.
@@ -41,7 +46,7 @@
 @end
 
 @interface PFQueryTableViewController () {
-    NSMutableArray *_mutableObjects;
+    NSMutableArray<PFObject *> *_mutableObjects;
 
     BOOL _firstLoad;           // Whether we have loaded the first set of objects
     NSInteger _currentPage;    // The last page that was loaded
@@ -136,6 +141,26 @@
     self.loadingView.frame = self.tableView.bounds;
 }
 
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [self.tableView beginUpdates];
+
+    // If we're currently showing the pagination cell, we need to hide it during editing.
+    if ([self paginationEnabled] && [self _shouldShowPaginationCell]) {
+        [self.tableView deleteRowsAtIndexPaths:@[ [self _indexPathForPaginationCell] ]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+
+    [super setEditing:editing animated:animated];
+
+    // Ensure proper re-insertion of the pagination cell.
+    if ([self paginationEnabled] && [self _shouldShowPaginationCell]) {
+        [self.tableView insertRowsAtIndexPaths:@[ [self _indexPathForPaginationCell] ]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+
+    [self.tableView endUpdates];
+}
+
 #pragma mark -
 #pragma mark Data
 
@@ -188,16 +213,18 @@
     _currentPage = 0;
 }
 
-- (void)loadObjects {
-    [self loadObjects:0 clear:YES];
+- (BFTask<NSArray<__kindof PFObject *> *> *)loadObjects {
+    return [self loadObjects:0 clear:YES];
 }
 
-- (void)loadObjects:(NSInteger)page clear:(BOOL)clear {
+- (BFTask<NSArray<__kindof PFObject *> *> *)loadObjects:(NSInteger)page clear:(BOOL)clear {
     self.loading = YES;
     [self objectsWillLoad];
 
     PFQuery *query = [self queryForTable];
     [self _alterQuery:query forLoadingPage:page];
+
+    BFTaskCompletionSource<NSArray<__kindof PFObject *> *> *source = [BFTaskCompletionSource taskCompletionSource];
     [query findObjectsInBackgroundWithBlock:^(NSArray *foundObjects, NSError *error) {
         if (![Parse isLocalDatastoreEnabled] &&
             query.cachePolicy != kPFCachePolicyCacheOnly &&
@@ -218,15 +245,22 @@
             if (clear) {
                 [_mutableObjects removeAllObjects];
             }
-            [_mutableObjects addObjectsFromArray:foundObjects];
 
-            // Reload the table data
+            [_mutableObjects addObjectsFromArray:foundObjects];
             [self.tableView reloadData];
         }
 
         [self objectsDidLoad:error];
         [self.refreshControl endRefreshing];
+
+        if (error) {
+            [source trySetError:error];
+        } else {
+            [source trySetResult:foundObjects];
+        }
     }];
+
+    return source.task;
 }
 
 - (void)loadNextPage {
@@ -316,6 +350,63 @@
     return self.objects[indexPath.row];
 }
 
+- (void)removeObjectAtIndexPath:(NSIndexPath *)indexPath {
+    [self removeObjectAtIndexPath:indexPath animated:YES];
+}
+
+- (void)removeObjectAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
+    [self removeObjectsAtIndexPaths:@[ indexPath ] animated:animated];
+}
+
+- (void)removeObjectsAtIndexPaths:(NSArray *)indexPaths {
+    [self removeObjectsAtIndexPaths:indexPaths animated:YES];
+}
+
+- (void)removeObjectsAtIndexPaths:(NSArray *)indexPaths animated:(BOOL)animated {
+    if (indexPaths.count == 0) {
+        return;
+    }
+
+    // We need the contents as both an index set and a list of index paths.
+    NSMutableIndexSet *indexes = [NSMutableIndexSet indexSet];
+
+    for (NSIndexPath *indexPath in indexPaths) {
+        if (indexPath.section != 0) {
+            [NSException raise:NSRangeException format:@"Index Path section %lu out of range!", (long)indexPath.section];
+        }
+
+        if (indexPath.row >= self.objects.count) {
+            [NSException raise:NSRangeException format:@"Index Path row %lu out of range!", (long)indexPath.row];
+        }
+
+        [indexes addIndex:indexPath.row];
+    }
+
+    BFContinuationBlock deletionHandlerBlock = ^id (BFTask *task) {
+        self.refreshControl.enabled = YES;
+        if (task.error) {
+            [self _handleDeletionError:task.error];
+        }
+
+        return nil;
+    };
+
+    NSMutableArray *allDeletionTasks = [NSMutableArray arrayWithCapacity:indexes.count];
+    NSArray *objectsToRemove = [self.objects objectsAtIndexes:indexes];
+
+    // Remove the contents from our local cache so we can give the user immediate feedback.
+    [_mutableObjects removeObjectsInArray:objectsToRemove];
+    [self.tableView deleteRowsAtIndexPaths:indexPaths
+                          withRowAnimation:animated ? UITableViewRowAnimationAutomatic : UITableViewRowAnimationNone];
+
+    for (id obj in objectsToRemove) {
+        [allDeletionTasks addObject:[obj deleteInBackground]];
+    }
+
+    [[BFTask taskForCompletionOfAllTasks:allDeletionTasks] continueWithExecutor:[BFExecutor mainThreadExecutor]
+                                                                      withBlock:deletionHandlerBlock];
+}
+
 - (PFTableViewCell *)tableView:(UITableView *)otherTableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"PFTableViewCellNextPage";
 
@@ -323,7 +414,7 @@
     if (cell == nil) {
         cell = [[PFActivityIndicatorTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                                        reuseIdentifier:cellIdentifier];
-        cell.textLabel.text = NSLocalizedString(@"Load more...", @"Load more...");
+        cell.textLabel.text = PFLocalizedString(@"Load more...", @"Load more...");
     }
 
     cell.animating = self.loading;
@@ -367,12 +458,30 @@
     }
 }
 
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
+           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath isEqual:[self _indexPathForPaginationCell]]) {
+        return UITableViewCellEditingStyleNone;
+    }
+
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([indexPath isEqual:[self _indexPathForPaginationCell]]) {
+        return NO;
+    }
+
+    return YES;
+}
+
 #pragma mark -
 #pragma mark Private
 
 // Whether we need to show the pagination cell
 - (BOOL)_shouldShowPaginationCell {
     return (self.paginationEnabled &&
+            !self.editing &&
             [self.objects count] != 0 &&
             (_lastLoadCount == -1 || _lastLoadCount >= (NSInteger)self.objectsPerPage));
 }
@@ -407,6 +516,19 @@
 }
 
 #pragma mark -
+#pragma mark Error handling
+
+- (void)_handleDeletionError:(NSError *)error {
+    // Fully reload on error.
+    [self loadObjects];
+
+    NSString *message = [NSString stringWithFormat:@"%@: \"%@\"",
+                         PFLocalizedString(@"Error occurred during deletion", @"Error occurred during deletion"),
+                         error.localizedDescription];
+    [PFUIAlertView presentAlertInViewController:self withTitle:PFLocalizedString(@"Delete Error", @"Delete Error") message:message];
+}
+
+#pragma mark -
 #pragma mark Actions
 
 - (void)_refreshControlValueChanged:(UIRefreshControl *)refreshControl {
@@ -416,7 +538,7 @@
 #pragma mark -
 #pragma mark Accessors
 
-- (NSArray *)objects {
+- (NSArray<__kindof PFObject *> *)objects {
     return _mutableObjects;
 }
 

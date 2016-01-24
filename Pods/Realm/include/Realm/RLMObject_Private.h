@@ -29,7 +29,7 @@
 }
 
 // standalone initializer
-- (instancetype)initWithObject:(id)value schema:(RLMSchema *)schema;
+- (instancetype)initWithValue:(id)value schema:(RLMSchema *)schema;
 
 // live accessor initializer
 - (instancetype)initWithRealm:(__unsafe_unretained RLMRealm *const)realm
@@ -37,6 +37,10 @@
 
 // shared schema for this class
 + (RLMObjectSchema *)sharedSchema;
+
+@end
+
+@interface RLMDynamicObject : RLMObject
 
 @end
 
@@ -55,6 +59,9 @@ FOUNDATION_EXTERN NSArray *RLMObjectBaseLinkingObjectsOfClass(RLMObjectBase *obj
 FOUNDATION_EXTERN id RLMObjectBaseObjectForKeyedSubscript(RLMObjectBase *object, NSString *key);
 FOUNDATION_EXTERN void RLMObjectBaseSetObjectForKeyedSubscript(RLMObjectBase *object, NSString *key, id obj);
 
+// Calls valueForKey: and re-raises NSUndefinedKeyExceptions
+FOUNDATION_EXTERN id RLMValidatedValueForProperty(id object, NSString *key, NSString *className);
+
 // Compare two RLObjectBases
 FOUNDATION_EXTERN BOOL RLMObjectBaseAreEqual(RLMObjectBase *o1, RLMObjectBase *o2);
 
@@ -66,12 +73,14 @@ FOUNDATION_EXTERN const NSUInteger RLMDescriptionMaxDepth;
 @class RLMProperty, RLMArray;
 @interface RLMObjectUtil : NSObject
 
-+ (NSString *)primaryKeyForClass:(Class)cls;
-+ (NSArray *)ignoredPropertiesForClass:(Class)cls;
-+ (NSArray *)indexedPropertiesForClass:(Class)cls;
++ (NSArray RLM_GENERIC(NSString *) *)ignoredPropertiesForClass:(Class)cls;
++ (NSArray RLM_GENERIC(NSString *) *)indexedPropertiesForClass:(Class)cls;
 
-+ (NSArray *)getGenericListPropertyNames:(id)obj;
++ (NSArray RLM_GENERIC(NSString *) *)getGenericListPropertyNames:(id)obj;
 + (void)initializeListProperty:(RLMObjectBase *)object property:(RLMProperty *)property array:(RLMArray *)array;
++ (void)initializeOptionalProperty:(RLMObjectBase *)object property:(RLMProperty *)property;
+
++ (NSDictionary RLM_GENERIC(NSString *, NSNumber *) *)getOptionalProperties:(id)obj;
++ (NSArray RLM_GENERIC(NSString *) *)requiredPropertiesForClass:(Class)cls;
 
 @end
-

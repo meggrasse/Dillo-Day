@@ -1,1 +1,0 @@
-PODS_DILLO_DAY_FXBLURVIEW_OTHER_LDFLAGS = -framework "Accelerate" -framework "QuartzCore"

@@ -52,14 +52,14 @@
     [self.notificationTimeLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.notificationMessageLabel];
     [self.notificationTimeLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.notificationMessageLabel withOffset:verticalTextOffset];
     [self.notificationTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:unreadInset relation:NSLayoutRelationGreaterThanOrEqual];
-
-    [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
-        [self.notificationMessageLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisVertical];
-    }];
-
-    [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
-        [self.notificationMessageLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
-    }];
+//
+//    [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
+//        [self.notificationMessageLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisVertical];
+//    }];
+//
+//    [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
+//        [self.notificationMessageLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
+//    }];
 }
 
 - (UILabel *)notificationMessageLabel {

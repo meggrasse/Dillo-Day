@@ -1,1 +1,0 @@
-PODS_DILLO_DAY_DPMETERVIEW_OTHER_LDFLAGS = -framework "CoreMotion" -framework "QuartzCore"

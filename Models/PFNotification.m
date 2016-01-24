@@ -27,7 +27,8 @@
             PFQuery *recentNotificationsQuery = [PFNotification query];
             [recentNotificationsQuery whereKey:@"createdAt" greaterThan:[PFInstallation currentInstallation].createdAt];
             [recentNotificationsQuery orderByDescending:@"createdAt"];
-            [recentNotificationsQuery findObjectsInBackgroundWithBlock:^(NSArray *PF_NULLABLE_S objects,  NSError *PF_NULLABLE_S error){
+//            [recentNotificationsQuery findObjectsInBackgroundWithBlock:^(NSArray *PF_NULLABLE_S objects,  NSError *PF_NULLABLE_S error){
+            [recentNotificationsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects,  NSError *error){
                 if (objects) {
                     fulfill(objects);
                 } else {

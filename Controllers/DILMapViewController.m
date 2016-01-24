@@ -98,7 +98,8 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         PFQuery *mapQuery = [DILPFMap query];
         [mapQuery whereKey:@"currentMap" equalTo:@(YES)];
-        [mapQuery findObjectsInBackgroundWithBlock:^(NSArray *PF_NULLABLE_S objects, NSError *PF_NULLABLE_S error){
+        //[mapQuery findObjectsInBackgroundWithBlock:^(NSArray *PF_NULLABLE_S objects, NSError *PF_NULLABLE_S error){
+        [mapQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
             if (objects) {
                 fulfill([objects firstObject]);
             } else {
@@ -110,7 +111,8 @@
 
 - (PMKPromise *)mapFileDownloadPromise:(DILPFMap *)map {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
-        [map.mapFile getDataInBackgroundWithBlock:^(NSData *PF_NULLABLE_S data, NSError *PF_NULLABLE_S error){
+        //[map.mapFile getDataInBackgroundWithBlock:^(NSData *PF_NULLABLE_S data, NSError *PF_NULLABLE_S error){
+        [map.mapFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
             if (data) {
                 fulfill(data);
             } else {
