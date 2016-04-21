@@ -50,6 +50,8 @@ BOOL musicPlaying = NO;
     [self addSubview:self.segmentedControl];
     [self.backgroundImageView addSubview:self.circularImageView];
     
+    self.previewUrl = @"";
+    
     [self.backgroundImageViewTintView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 
     [self.segmentedControl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
@@ -65,7 +67,6 @@ BOOL musicPlaying = NO;
     CGFloat timeLabelInset = 10;
     [self.timeLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.backgroundImageView withOffset:-timeLabelInset];
     [self.timeLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.backgroundImageView withOffset:-timeLabelInset];
-    [_circularImageView addTarget:self action:@selector(controlTrack1:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -181,16 +182,15 @@ BOOL musicPlaying = NO;
 }
 
 - (void)controlTrack1:(id)sender {
-    NSLog(@"works");
     if (musicPlaying == NO) {
         musicPlaying = YES;
-        //[_audioPlayer play];
+        [_audioPlayer play];
         _circleLabel.text = @"   \u258D\u258D";
         _circleLabel.font = [UIFont systemFontOfSize:35];
         _circleLabel.textAlignment = NSTextAlignmentRight;
     } else {
         musicPlaying = NO;
-        //[_audioPlayer pause];
+        [_audioPlayer pause];
         _circleLabel.text = @"\u25B6";
         _circleLabel.textAlignment = NSTextAlignmentRight;
         _circleLabel.font = [UIFont systemFontOfSize:80];
@@ -215,6 +215,8 @@ BOOL musicPlaying = NO;
     [artist imageDownloadPromise].then(^(UIImage *image){
         self.backgroundImageView.image = image;
         self.previewUrl = [@"https://p.scdn.co/mp3-preview/" stringByAppendingString:artist.previewUrl];
+        [self initTrack];
+        [_circularImageView addTarget:self action:@selector(controlTrack1:) forControlEvents:UIControlEventTouchUpInside];
     });
     
    // [self addCircularImageView];
