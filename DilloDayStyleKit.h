@@ -34,8 +34,6 @@
 + (UIColor*)artistInfoSponsoredByTextColor;
 + (UIColor*)artistInfoBioTextColor;
 + (UIColor*)artistInfoSegmentedControlTextColor;
-+ (UIColor*)artistInfoMusicVideoTitleTextColor;
-+ (UIColor*)artistInfoMusicVideoTitleBackgroundColor;
 + (UIColor*)notificationCellTimeAgoTextColor;
 + (UIColor*)notificationCellMessageTextColor;
 + (UIColor*)lineupCellProgressColor;

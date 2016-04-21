@@ -9,7 +9,6 @@
 #import "DILPFArtist.h"
 #import <Realm/Realm.h>
 #import "DILFollowArtist.h"
-#import "DILPFYoutubeVideo.h"
 
 NSString *const kDILPFArtistClassKey = @"DILPFArtist";
 NSString *const kDILPFArtistSponsorKey = @"sponsor";
@@ -21,9 +20,14 @@ NSString *const kDILPFArtistSponsorKey = @"sponsor";
 @dynamic about;
 @dynamic sponsor;
 @dynamic stage;
-@dynamic youtubeVideoIds;
 @dynamic announced;
 @dynamic iconImage;
+@dynamic previewUrl;
+@dynamic spotifyUrl;
+@dynamic tidalUrl;
+@dynamic aplUrl;
+@dynamic soundcloudUrl;
+@dynamic youtubeUrl;
 
 + (NSString *)parseClassName {
     return kDILPFArtistClassKey;
@@ -78,19 +82,5 @@ NSString *const kDILPFArtistSponsorKey = @"sponsor";
 
     followArtistResult.follow = artistAlerts;
     [defaultRealm commitWriteTransaction];
-}
-
-- (PMKPromise *)youtubeVideosQueryPromise {
-	return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
-		PFQuery *youtubeVideosForArtist = [DILPFYoutubeVideo query];
-		[youtubeVideosForArtist whereKey:@"artistId" equalTo:self.objectId];
-		[youtubeVideosForArtist findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-			if (error) {
-				reject(error);
-			} else {
-				fulfill(objects);
-			}
-		}];
-	}];
 }
 @end

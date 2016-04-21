@@ -10,17 +10,14 @@
 
 #import "DILArtistStickyHeaderCollectionViewCell.h"
 #import "DILArtistBioHTKCollectionViewCell.h"
-#import "DILArtistYoutubeVideoCollectionViewCell.h"
 #import "DILArtistSponsorCollectionViewCell.h"
+#import "DILArtistMusicViewCell.h"
 
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
-#import "DILYoutubeVideoFetcher.h"
-#import "PBYouTubeVideoViewController.h"
 
-@interface DILArtistCollectionViewModel()<DILArtistStickyHeaderCollectionViewCellDelegate, DILYoutubeVideoFetcherDelegate>
+@interface DILArtistCollectionViewModel()<DILArtistStickyHeaderCollectionViewCellDelegate>
 @property (nonatomic) BOOL hasRegisteredSupplementaryClasses;
 @property (nonatomic) BOOL hasRegisteredCellClasses;
-@property (strong, nonatomic) NSMutableArray *videos;
 @property (nonatomic) DILArtistInfoType artistInfoTypeForDisplay;
 @end
 
@@ -28,7 +25,7 @@
 - (id)initWithArtist:(DILPFArtist *)artist {
     if (self = [self init]) {
         self.artist = artist;
-        [self fetchYoutubeVideos];
+        //Switch to get platform links
     }
     return self;
 }
@@ -36,34 +33,9 @@
 - (id)init {
     if (self = [super init]) {
         self.hasRegisteredCellClasses = self.hasRegisteredSupplementaryClasses = NO;
-        self.videos = [NSMutableArray new];
         self.artistInfoTypeForDisplay = DILArtistInfoTypeBio;
     }
     return self;
-}
-
-- (void)fetchYoutubeVideos {
-//    [[DILYoutubeVideoFetcher sharedVideoFetcher] fetchVideosForIds:self.artist.youtubeVideoIds forSender:self];
-//	[self.artist youtubeVideosQueryPromise].then(^(NSArray *results){
-//		self.videos = [results mutableCopy];
-//	});
-	[[DILYoutubeVideoFetcher sharedVideoFetcher] fetchVideosForArtist:self.artist forSender:self];
-}
-
-- (void)fetchedVideo:(XCDYouTubeVideo *)video image:(UIImage *)image {
-    [self.videos addObject:video];
-    if (self.artistInfoTypeForDisplay == DILArtistInfoTypeMusic) {
-        NSUInteger indexOfVideo = [self.videos indexOfObject:video];
-        [self.delegate insertItemAtIndex:[NSIndexPath indexPathForRow:indexOfVideo inSection:0]];
-    }
-}
-
-- (void)fetchedDILPFYoutubeVideo:(DILPFYoutubeVideo *)video {
-	[self.videos addObject:video];
-	if (self.artistInfoTypeForDisplay == DILArtistInfoTypeMusic) {
-		NSUInteger indexOfVideo = [self.videos indexOfObject:video];
-		[self.delegate insertItemAtIndex:[NSIndexPath indexPathForRow:indexOfVideo inSection:0]];
-	}
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -90,7 +62,7 @@
             }
         }
         case DILArtistInfoTypeMusic: {
-            return self.videos.count;
+            return 1; //change to number of platforms avaiable
         }
         default:
             return 0;
@@ -100,8 +72,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.hasRegisteredCellClasses) {
         [collectionView registerClass:[DILArtistBioHTKCollectionViewCell class] forCellWithReuseIdentifier:[DILArtistBioHTKCollectionViewCell identifier]];
-        [collectionView registerClass:[DILArtistYoutubeVideoCollectionViewCell class] forCellWithReuseIdentifier:[DILArtistYoutubeVideoCollectionViewCell identifier]];
         [collectionView registerClass:[DILArtistSponsorCollectionViewCell class] forCellWithReuseIdentifier:[DILArtistSponsorCollectionViewCell identifier]];
+        [collectionView registerClass:[DILArtistMusicViewCell class] forCellWithReuseIdentifier: [DILArtistMusicViewCell identifier]];
         self.hasRegisteredCellClasses = YES;
     }
 
@@ -125,19 +97,13 @@
                     return nil;
             }
         }
-        case DILArtistInfoTypeMusic: {
-            DILArtistYoutubeVideoCollectionViewCell *youtubeVideoCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistYoutubeVideoCollectionViewCell identifier] forIndexPath:indexPath];
-			[youtubeVideoCell configureCellWithDILPFYoutubeVideo:[self youtubeVideoForIndexPath:indexPath]];
-            return youtubeVideoCell;
+        case DILArtistInfoTypeMusic: { //double check this case name
+            DILArtistMusicViewCell *musicCell = [collectionView dequeueReusableCellWithReuseIdentifier:[DILArtistMusicViewCell identifier] forIndexPath:indexPath]; //doublecheck
+            [musicCell configureCellWithArtist:self.artist];
+            return musicCell;
         }
-        default:
-            return nil;
+
     }
-
-}
-
-- (DILPFYoutubeVideo *)youtubeVideoForIndexPath:(NSIndexPath *)indexPath {
-    return self.videos[indexPath.row];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -187,16 +153,14 @@
             }
         }
         case DILArtistInfoTypeMusic: {
-            CGFloat videoCellWidth = CGRectGetWidth(collectionView.bounds) - 15*2;
-            CGFloat videoCellHeight = videoCellWidth * (9.0/16.0);
-            return CGSizeMake(videoCellWidth, videoCellHeight);
+            CGFloat viewWidth = CGRectGetWidth(collectionView.bounds);
+            CGFloat viewHeight = viewWidth/2 + 40.0;
+            return CGSizeMake(viewWidth, viewHeight);
         }
         default:
             return CGSizeZero;
     }
-
 }
-
 
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
@@ -209,17 +173,6 @@
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(15, 0, 15, 0);
-}
-
-#pragma mark - UICollectionViewDelegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if ([[collectionView cellForItemAtIndexPath:indexPath] isMemberOfClass:[DILArtistYoutubeVideoCollectionViewCell class]]) {
-		DILPFYoutubeVideo *video = [self youtubeVideoForIndexPath:indexPath];
-		[self.delegate presentYoutubeViewWebView:video];
-//        XCDYouTubeVideo *video = [self youtubeVideoForIndexPath:indexPath];
-//        XCDYouTubeVideoPlayerViewController *youtubeVideoVC = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:video.identifier];
-//        [self.delegate presentVideoPlayerViewController:youtubeVideoVC];
-    }
 }
 
 #pragma mark - DILArtistStickyHeaderCollectionViewCellDelegate

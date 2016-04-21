@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface DILMapViewController : UIViewController
+@interface DILMapViewController : UIViewController <MKMapViewDelegate>
 
 @end

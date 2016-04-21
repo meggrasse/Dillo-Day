@@ -23,12 +23,8 @@
         stage.name = stageName;
         stage.artists = [NSMutableArray new];
         [stage save];
-
-        NSArray *youtubeVideoIds = @[@"debIyWS6Byc",
-                                     @"WMq6MLo_eSM",
-                                     @"CdLhdrNgGu4",
-                                     @"HkMNOlYcpHg",
-                                     @"AOPMlIIg_38"];
+        
+        //Add fake links
 
         NSArray *artistNames = @[@"pizza!",
                                  @"radio frenzy",
@@ -56,7 +52,7 @@
             newArtist.performanceTime = [NSDate date];
             newArtist.lineupImage = newArtist.iconImage = [PFFile fileWithData:UIImagePNGRepresentation((UIImage *)bigPics[i])];
             newArtist.about = artistText;
-            newArtist.youtubeVideoIds = [youtubeVideoIds mutableCopy];
+// Add links
             newArtist.announced = [NSNumber numberWithBool:NO];
             [newArtist save];
 

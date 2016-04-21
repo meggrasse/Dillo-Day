@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DA3BE5FA2B16F047CF06A4ED'
+               BlueprintIdentifier = '1499220C3CA95C061EC99885'
                BlueprintName = 'DPMeterView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libDPMeterView.a'>

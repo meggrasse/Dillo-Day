@@ -28,9 +28,15 @@ extern NSString *const kDILPFArtistSponsorKey;
 @property (retain) NSString *about;
 @property (retain) DILPFSponsor *sponsor;
 @property (retain) DILPFStage *stage;
-@property (retain) NSMutableArray *youtubeVideoIds;
 @property (nonatomic) BOOL artistAlerts;
 @property (retain) NSNumber *announced;
+@property (retain) NSString *previewUrl;
+@property (retain) NSString *spotifyUrl;
+@property (retain) NSString *tidalUrl;
+@property (retain) NSString *aplUrl;
+@property (retain) NSString *soundcloudUrl;
+@property (retain) NSString *youtubeUrl;
+
 
 /**
  *  Returns a promise that returns a UIImage of the DILPFArtist object's lineupImage.
@@ -41,6 +47,5 @@ extern NSString *const kDILPFArtistSponsorKey;
 
 - (PMKPromise *)iconImageDownloadPromise;
 
-- (PMKPromise *)youtubeVideosQueryPromise;
 @end
 

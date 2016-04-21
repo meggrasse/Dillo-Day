@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "DILPFArtist.h"
+#import "DILArtistStickyHeaderCollectionViewCell.h"
 
+@class DILArtistStickyHeaderCollectionViewCell;
 @interface DILArtistViewController : UIViewController
 @property (strong, nonatomic) DILPFArtist *artist;
+@property (strong, nonatomic) DILArtistStickyHeaderCollectionViewCell *headerView;
+//@property (weak, nonatomic) DILArtistStickyHeaderCollectionViewCell *ref;
+- (void)controlTrack:(id)sender;
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 @end

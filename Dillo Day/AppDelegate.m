@@ -11,6 +11,8 @@
 #import <RDVTabBarController/RDVTabBarController.h>
 #import <RDVTabBarController/RDVTabBarItem.h>
 #import <SVProgressHUD/SVProgressHUD.h>
+#import <Spotify/Spotify.h>
+#import <AVFoundation/AVFoundation.h>
 
 #import "DILLineupViewController.h"
 #import "DILMapViewController.h"
@@ -23,14 +25,16 @@
 
 @interface AppDelegate ()
 @property (strong, nonatomic) RDVTabBarController *tabBarController;
+@property (nonatomic, strong) SPTSession *session;
+@property (nonatomic, strong) SPTAudioStreamingController *player;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Parse setApplicationId:@"S9JO4idIXxAkVtwsj6xXNAkCwPulJ3cSOhKNuYzc"
-                  clientKey:@"yUpokPMYESRM0jFDuP9jQOK2EHxewppqygEgS3uX"];
+    [Parse setApplicationId:@"27yFuFV8nW6mRudOABtjzkOSdoYY9krMdmhoJcgc"
+                  clientKey:@"orufTxovCEWvJhqkY9w4baUvqSFf13VcTtfY79gE"];
 
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
@@ -104,6 +108,18 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
+    [[SPTAuth defaultInstance] setClientID:@"607cdff95f51464bad31c3e314af0832"];
+    [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:@"23f7504f730848dbbe71c252ad36c3d6"]];
+    [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope]];
+    
+    // Construct a login URL and open it
+    //NSURL *loginURL = [[SPTAuth defaultInstance] loginURL];
+    
+    // Opening a URL in Safari close to application launch may trigger
+    // an iOS bug, so we wait a bit before doing so.
+    //[application performSelector:@selector(openURL:)
+                      //withObject:loginURL afterDelay:0.1];
+    
 //    [[DILPushNotificationHandler sharedPushNotificationHandler] updateNotificationBadgeNumber];
 
     return YES;
@@ -169,6 +185,53 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 //    [[DILPushNotificationHandler sharedPushNotificationHandler] updateNotificationBadgeNumber];
+}
+
+// Handle auth callback
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation {
+    
+    // Ask SPTAuth if the URL given is a Spotify authentication callback
+    if ([[SPTAuth defaultInstance] canHandleURL:url]) {
+        [[SPTAuth defaultInstance] handleAuthCallbackWithTriggeredAuthURL:url callback:^(NSError *error, SPTSession *session) {
+            
+            if (error != nil) {
+                NSLog(@"*** Auth error: %@", error);
+                return;
+            }
+            
+            // Call the -playUsingSession: method to play a track
+            [self playUsingSession:session];
+        }];
+        return YES;
+    }
+    
+    return NO;
+}
+
+-(void)playUsingSession:(SPTSession *)session {
+    
+    // Create a new player if needed
+    if (self.player == nil) {
+        self.player = [[SPTAudioStreamingController alloc] initWithClientId:[SPTAuth defaultInstance].clientID];
+    }
+    
+    [self.player loginWithSession:session callback:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"*** Logging in got error: %@", error);
+            return;
+        }
+        
+        NSURL *trackURI = [NSURL URLWithString:@"spotify:track:3trS6e40JCVUOpPVt5OdHj"];
+        [self.player playURIs:@[ trackURI ] fromIndex:0 callback:^(NSError *error) {
+            if (error != nil) {
+                NSLog(@"*** Starting playback got error: %@", error);
+                return;
+            }
+        }];
+    }];
 }
 
 @end

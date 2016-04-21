@@ -66,14 +66,12 @@
 		214C5DA61A8D6133009BC7F0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214C5DA51A8D6133009BC7F0 /* Social.framework */; };
 		214FD6CA1AA5542D001D6619 /* UIFont+SytemFontOverride.m in Sources */ = {isa = PBXBuildFile; fileRef = 214FD6C91AA5542D001D6619 /* UIFont+SytemFontOverride.m */; };
 		214FD6D21AA55D9E001D6619 /* FMParallaxImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 214FD6D11AA55D9E001D6619 /* FMParallaxImageView.m */; };
-		215675931AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215675921AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.m */; };
+		215675931AD05A2B006CA2F2 /* DILArtistMusicViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215675921AD05A2B006CA2F2 /* DILArtistMusicViewCell.m */; };
 		2159BC301ACB7CB000D48F5F /* DILFakeDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC2F1ACB7CB000D48F5F /* DILFakeDataGenerator.m */; };
 		2159BC331ACB8C3E00D48F5F /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC311ACB8C3E00D48F5F /* NSDate+Utilities.m */; };
 		2159BC371ACC422000D48F5F /* DILFollowArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159BC361ACC422000D48F5F /* DILFollowArtist.m */; };
 		215BB6711AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6701AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m */; };
 		215BB6741AEC38270062BA50 /* FMEParallaxPFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */; };
-		215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */; };
-		21636D091B0A4A81000B0F7F /* DILPFYoutubeVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 21636D081B0A4A81000B0F7F /* DILPFYoutubeVideo.m */; };
 		21636D1D1B0A5787000B0F7F /* PBYouTubeVideoView.html in Resources */ = {isa = PBXBuildFile; fileRef = 21636D111B0A5787000B0F7F /* PBYouTubeVideoView.html */; };
 		21636D1E1B0A5787000B0F7F /* PBYouTubeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21636D131B0A5787000B0F7F /* PBYouTubeVideoViewController.m */; };
 		216487521AF82DA3002D785C /* DILShuttleScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216487511AF82DA3002D785C /* DILShuttleScheduleViewController.m */; };
@@ -104,6 +102,9 @@
 		21E6976C1AF4359A00494FA9 /* DILPFMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E6976B1AF4359A00494FA9 /* DILPFMap.m */; };
 		21E7B1DC1AF9954900FAD992 /* PFNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E7B1DB1AF9954900FAD992 /* PFNotification.m */; };
 		21EEC92B1AD61A1B00C968E9 /* DILParseClassGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */; };
+		9455FD341C5571EC00E83AC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9455FD331C5571EC00E83AC2 /* MapKit.framework */; };
+		94C31FF91C70E0AC007C6560 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C31FF81C70E0AC007C6560 /* Spotify.framework */; };
+		94C31FFB1C70E283007C6560 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C31FFA1C70E283007C6560 /* AVFoundation.framework */; };
 		9E0BDF8DD8C012C4C3F4ED85 /* libPods-Dillo Day.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */; };
 /* End PBXBuildFile section */
 
@@ -203,8 +204,8 @@
 		214FD6C91AA5542D001D6619 /* UIFont+SytemFontOverride.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+SytemFontOverride.m"; sourceTree = "<group>"; };
 		214FD6D01AA55D9E001D6619 /* FMParallaxImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMParallaxImageView.h; sourceTree = "<group>"; };
 		214FD6D11AA55D9E001D6619 /* FMParallaxImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMParallaxImageView.m; sourceTree = "<group>"; };
-		215675911AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILArtistYoutubeVideoCollectionViewCell.h; sourceTree = "<group>"; };
-		215675921AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILArtistYoutubeVideoCollectionViewCell.m; sourceTree = "<group>"; };
+		215675911AD05A2B006CA2F2 /* DILArtistMusicViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILArtistMusicViewCell.h; sourceTree = "<group>"; };
+		215675921AD05A2B006CA2F2 /* DILArtistMusicViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILArtistMusicViewCell.m; sourceTree = "<group>"; };
 		2159BC2E1ACB7CB000D48F5F /* DILFakeDataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILFakeDataGenerator.h; sourceTree = "<group>"; };
 		2159BC2F1ACB7CB000D48F5F /* DILFakeDataGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILFakeDataGenerator.m; sourceTree = "<group>"; };
 		2159BC311ACB8C3E00D48F5F /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
@@ -215,10 +216,6 @@
 		215BB6701AEC31170062BA50 /* DILLineupParallaxCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupParallaxCollectionViewCell.m; sourceTree = "<group>"; };
 		215BB6721AEC38270062BA50 /* FMEParallaxPFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMEParallaxPFImageView.h; sourceTree = "<group>"; };
 		215BB6731AEC38270062BA50 /* FMEParallaxPFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEParallaxPFImageView.m; sourceTree = "<group>"; };
-		215BFB731ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILYoutubeVideoFetcher.h; sourceTree = "<group>"; };
-		215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILYoutubeVideoFetcher.m; sourceTree = "<group>"; };
-		21636D071B0A4A81000B0F7F /* DILPFYoutubeVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFYoutubeVideo.h; sourceTree = "<group>"; };
-		21636D081B0A4A81000B0F7F /* DILPFYoutubeVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFYoutubeVideo.m; sourceTree = "<group>"; };
 		21636D111B0A5787000B0F7F /* PBYouTubeVideoView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PBYouTubeVideoView.html; sourceTree = "<group>"; };
 		21636D121B0A5787000B0F7F /* PBYouTubeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBYouTubeVideoViewController.h; sourceTree = "<group>"; };
 		21636D131B0A5787000B0F7F /* PBYouTubeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBYouTubeVideoViewController.m; sourceTree = "<group>"; };
@@ -282,6 +279,10 @@
 		21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILParseClassGeneration.m; sourceTree = "<group>"; };
 		6D331DFBD86CF821E61B852F /* Pods-Dillo Day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dillo Day.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.debug.xcconfig"; sourceTree = "<group>"; };
 		6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dillo Day.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9455FD331C5571EC00E83AC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		94C31FF81C70E0AC007C6560 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
+		94C31FFA1C70E283007C6560 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		94FB6D271C9F4124009BF085 /* drum01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = drum01.mp3; path = "../../../Downloads/Sound Demo/Sound Demo/drum01.mp3"; sourceTree = SOURCE_ROOT; };
 		BB9D6A9B72E6CB8B1378584F /* Pods-Dillo Day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dillo Day.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,14 +291,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214C5D9E1A8D6104009BC7F0 /* SystemConfiguration.framework in Frameworks */,
+				94C31FFB1C70E283007C6560 /* AVFoundation.framework in Frameworks */,
+				9455FD341C5571EC00E83AC2 /* MapKit.framework in Frameworks */,
 				214C5DA61A8D6133009BC7F0 /* Social.framework in Frameworks */,
 				214C5DA41A8D611A009BC7F0 /* Accounts.framework in Frameworks */,
 				214C5DA21A8D6114009BC7F0 /* libsqlite3.dylib in Frameworks */,
 				214C5DA01A8D610B009BC7F0 /* libz.1.1.3.dylib in Frameworks */,
-				214C5D9E1A8D6104009BC7F0 /* SystemConfiguration.framework in Frameworks */,
 				214C5D9A1A8D60F8009BC7F0 /* Security.framework in Frameworks */,
 				214C5D981A8D60F1009BC7F0 /* MobileCoreServices.framework in Frameworks */,
 				214C5D961A8D60E9009BC7F0 /* CoreLocation.framework in Frameworks */,
+				94C31FF91C70E0AC007C6560 /* Spotify.framework in Frameworks */,
 				214C5D941A8D60E3009BC7F0 /* CoreGraphics.framework in Frameworks */,
 				214C5D921A8D60DD009BC7F0 /* CFNetwork.framework in Frameworks */,
 				214C5D901A8D60D7009BC7F0 /* AudioToolbox.framework in Frameworks */,
@@ -318,10 +322,13 @@
 		129CA9EBF89302FBF1C892F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94C31FFA1C70E283007C6560 /* AVFoundation.framework */,
+				9455FD331C5571EC00E83AC2 /* MapKit.framework */,
 				214C5DA51A8D6133009BC7F0 /* Social.framework */,
 				214C5DA31A8D611A009BC7F0 /* Accounts.framework */,
 				214C5DA11A8D6114009BC7F0 /* libsqlite3.dylib */,
 				214C5D9F1A8D610B009BC7F0 /* libz.1.1.3.dylib */,
+				94C31FF81C70E0AC007C6560 /* Spotify.framework */,
 				214C5D9D1A8D6104009BC7F0 /* SystemConfiguration.framework */,
 				214C5D991A8D60F8009BC7F0 /* Security.framework */,
 				214C5D971A8D60F1009BC7F0 /* MobileCoreServices.framework */,
@@ -424,8 +431,6 @@
 			children = (
 				21BAFE3C1ACE1D11003F5ADD /* DILArtistCollectionViewModel.h */,
 				21BAFE3D1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m */,
-				215BFB731ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.h */,
-				215BFB741ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m */,
 				2159BC2E1ACB7CB000D48F5F /* DILFakeDataGenerator.h */,
 				2159BC2F1ACB7CB000D48F5F /* DILFakeDataGenerator.m */,
 				210A81691AC626DD0091C134 /* DILLineupCollectionViewModel.h */,
@@ -438,8 +443,6 @@
 				217A8EE71AD89B5C0046F45F /* DILNotification.m */,
 				21E7B1DA1AF9954900FAD992 /* PFNotification.h */,
 				21E7B1DB1AF9954900FAD992 /* PFNotification.m */,
-				21636D071B0A4A81000B0F7F /* DILPFYoutubeVideo.h */,
-				21636D081B0A4A81000B0F7F /* DILPFYoutubeVideo.m */,
 				21C4C10C1AC74C9900AE4561 /* DILPFArtist.h */,
 				21C4C10D1AC74C9900AE4561 /* DILPFArtist.m */,
 				21E6976A1AF4359A00494FA9 /* DILPFMap.h */,
@@ -555,9 +558,9 @@
 				216487501AF82DA3002D785C /* DILShuttleScheduleViewController.h */,
 				216487511AF82DA3002D785C /* DILShuttleScheduleViewController.m */,
 				210A815C1AC5FFE80091C134 /* DILNotificationsViewController.h */,
+				210A81671AC625A80091C134 /* DILLineupViewController.m */,
 				210A815D1AC5FFE80091C134 /* DILNotificationsViewController.m */,
 				210A81661AC625A80091C134 /* DILLineupViewController.h */,
-				210A81671AC625A80091C134 /* DILLineupViewController.m */,
 				21BAFE391ACE1C49003F5ADD /* DILArtistViewController.h */,
 				21BAFE3A1ACE1C49003F5ADD /* DILArtistViewController.m */,
 				210FBBDF1AF73951009896D2 /* DILMapViewController.h */,
@@ -589,6 +592,7 @@
 		217946E71A88005200224737 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				94FB6D271C9F4124009BF085 /* drum01.mp3 */,
 				21636D101B0A5787000B0F7F /* PBYoutubeVideoViewController */,
 				210FE30D1AD795D2009BC3DE /* SVWebViewController */,
 				219155511AD4BCA800FC61E8 /* CarbonTabSwipeNavigation */,
@@ -638,8 +642,8 @@
 		21D593901AEB30EA00339787 /* DILArtistInfo Cells */ = {
 			isa = PBXGroup;
 			children = (
-				215675911AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.h */,
-				215675921AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.m */,
+				215675911AD05A2B006CA2F2 /* DILArtistMusicViewCell.h */,
+				215675921AD05A2B006CA2F2 /* DILArtistMusicViewCell.m */,
 				21BAFE361ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.h */,
 				21BAFE371ACE15B1003F5ADD /* DILArtistStickyHeaderCollectionViewCell.m */,
 				21D593911AEB388A00339787 /* DILArtistSponsorCollectionViewCell.h */,
@@ -731,7 +735,7 @@
 				TargetAttributes = {
 					217946AB1A87C96100224737 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = JXY4XE6W27;
+						DevelopmentTeam = QR3YW3B828;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -905,13 +909,11 @@
 				217946B21A87C96100224737 /* main.m in Sources */,
 				210A816B1AC626DD0091C134 /* DILLineupCollectionViewModel.m in Sources */,
 				21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */,
-				215BFB751ACF4FCF0021C2C6 /* DILYoutubeVideoFetcher.m in Sources */,
 				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
 				21E7B1DC1AF9954900FAD992 /* PFNotification.m in Sources */,
 				216487521AF82DA3002D785C /* DILShuttleScheduleViewController.m in Sources */,
 				21C4AE431AE9C86D005A911E /* DILStageSelectTableViewCell.m in Sources */,
 				21A175811AE98F770094E5C2 /* DILStageSelectTitleView.m in Sources */,
-				21636D091B0A4A81000B0F7F /* DILPFYoutubeVideo.m in Sources */,
 				21C4C1111AC74F8C00AE4561 /* DILPFSponsor.m in Sources */,
 				21C4AE461AE9D4C1005A911E /* DILLineupCenterTextCollectionViewCellRadialShadowView.m in Sources */,
 				21E6976C1AF4359A00494FA9 /* DILPFMap.m in Sources */,
@@ -927,7 +929,7 @@
 				21C4C10E1AC74C9900AE4561 /* DILPFArtist.m in Sources */,
 				210A81611AC6009B0091C134 /* DILNotificationsTableViewModel.m in Sources */,
 				210A81641AC609DA0091C134 /* DILNotificationHTKTableViewCell.m in Sources */,
-				215675931AD05A2B006CA2F2 /* DILArtistYoutubeVideoCollectionViewCell.m in Sources */,
+				215675931AD05A2B006CA2F2 /* DILArtistMusicViewCell.m in Sources */,
 				210A815E1AC5FFE80091C134 /* DILNotificationsViewController.m in Sources */,
 				2159BC371ACC422000D48F5F /* DILFollowArtist.m in Sources */,
 			);
@@ -1061,8 +1063,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mayfest Productions (RL46734JR9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1071,6 +1074,11 @@
 				INFOPLIST_FILE = "Dillo Day/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					$inherited,
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Controls/Dillo Day-Bridging-Header.h";
@@ -1085,9 +1093,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mayfest Productions (RL46734JR9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE__IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1096,6 +1105,11 @@
 				INFOPLIST_FILE = "Dillo Day/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					$inherited,
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Controls/Dillo Day-Bridging-Header.h";

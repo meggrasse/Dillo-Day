@@ -30,8 +30,6 @@ static UIColor* _artistInfoSegmentedControlBackgroundColor = nil;
 static UIColor* _artistInfoSponsoredByTextColor = nil;
 static UIColor* _artistInfoBioTextColor = nil;
 static UIColor* _artistInfoSegmentedControlTextColor = nil;
-static UIColor* _artistInfoMusicVideoTitleTextColor = nil;
-static UIColor* _artistInfoMusicVideoTitleBackgroundColor = nil;
 static UIColor* _notificationCellTimeAgoTextColor = nil;
 static UIColor* _notificationCellMessageTextColor = nil;
 static UIColor* _lineupCellProgressColor = nil;
@@ -49,7 +47,6 @@ static UIImage* _imageOfNotificationIndicatorUnread = nil;
     _tabBarSelectedColor = [UIColor colorWithRed: 0.443 green: 0.851 blue: 0.808 alpha: 1];
     _notificationIconColor = DilloDayStyleKit.tabBarSelectedColor;
     _artistInfoSegmentedControlSelectedSegmentIndicatorColor = DilloDayStyleKit.tabBarSelectedColor;
-    _artistInfoMusicVideoTitleTextColor = DilloDayStyleKit.artistInfoSegmentedControlSelectedSegmentIndicatorColor;
     _lineupCellProgressColor = DilloDayStyleKit.tabBarSelectedColor;
     _navigationBarColor = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
     _barButtonItemColor = [UIColor colorWithRed: 0.204 green: 0.596 blue: 0.859 alpha: 1];
@@ -60,7 +57,6 @@ static UIImage* _imageOfNotificationIndicatorUnread = nil;
     _notificationCellBackgroundColor = [UIColor colorWithRed: 0.973 green: 1 blue: 0.996 alpha: 1];
     _fontColor = [UIColor colorWithRed: 0.165 green: 0.165 blue: 0.165 alpha: 1];
     _navigationBarTextColor = DilloDayStyleKit.fontColor;
-    _artistInfoMusicVideoTitleBackgroundColor = DilloDayStyleKit.fontColor;
     _artistInfoSegmentedControlBackgroundColor = [UIColor colorWithRed: 0.427 green: 0.467 blue: 0.471 alpha: 1];
     _artistInfoSponsoredByTextColor = [UIColor colorWithRed: 0.384 green: 0.741 blue: 0.706 alpha: 1];
     _artistInfoBioTextColor = [UIColor colorWithRed: 0.29 green: 0.29 blue: 0.29 alpha: 1];
@@ -87,8 +83,6 @@ static UIImage* _imageOfNotificationIndicatorUnread = nil;
 + (UIColor*)artistInfoSponsoredByTextColor { return _artistInfoSponsoredByTextColor; }
 + (UIColor*)artistInfoBioTextColor { return _artistInfoBioTextColor; }
 + (UIColor*)artistInfoSegmentedControlTextColor { return _artistInfoSegmentedControlTextColor; }
-+ (UIColor*)artistInfoMusicVideoTitleTextColor { return _artistInfoMusicVideoTitleTextColor; }
-+ (UIColor*)artistInfoMusicVideoTitleBackgroundColor { return _artistInfoMusicVideoTitleBackgroundColor; }
 + (UIColor*)notificationCellTimeAgoTextColor { return _notificationCellTimeAgoTextColor; }
 + (UIColor*)notificationCellMessageTextColor { return _notificationCellMessageTextColor; }
 + (UIColor*)lineupCellProgressColor { return _lineupCellProgressColor; }
