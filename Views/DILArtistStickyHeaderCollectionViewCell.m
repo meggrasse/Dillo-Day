@@ -51,7 +51,7 @@ BOOL musicPlaying = NO;
     [self.backgroundImageView addSubview:self.circularImageView];
     
     self.previewUrl = @"";
-    
+
     [self.backgroundImageViewTintView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 
     [self.segmentedControl autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeTop];
@@ -63,6 +63,7 @@ BOOL musicPlaying = NO;
     
     [self addCircularImageView];
     
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
     
     CGFloat timeLabelInset = 10;
     [self.timeLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.backgroundImageView withOffset:-timeLabelInset];
