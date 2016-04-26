@@ -8,10 +8,10 @@
 
 #import "DILArtistCollectionViewModel.h"
 
-#import "DILArtistStickyHeaderCollectionViewCell.h"
 #import "DILArtistBioHTKCollectionViewCell.h"
 #import "DILArtistSponsorCollectionViewCell.h"
 #import "DILArtistMusicViewCell.h"
+#import "DILArtistStickyHeaderCollectionViewCell.h"
 
 #import <CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout.h>
 
@@ -62,7 +62,7 @@
             }
         }
         case DILArtistInfoTypeMusic: {
-            return 1; //change to number of platforms avaiable
+            return 1;
         }
         default:
             return 0;
@@ -117,9 +117,9 @@
                                                                             withReuseIdentifier:[DILArtistStickyHeaderCollectionViewCell identifier]
                                                                                    forIndexPath:indexPath];
         if ([cell isMemberOfClass:[DILArtistStickyHeaderCollectionViewCell class]]) {
-            DILArtistStickyHeaderCollectionViewCell *stickyHeaderCell = (DILArtistStickyHeaderCollectionViewCell *)cell;
-            [stickyHeaderCell configureCellWithArtist:self.artist];
-            stickyHeaderCell.delegate = self;
+            self.stickyHeaderCell = (DILArtistStickyHeaderCollectionViewCell *)cell;
+            [self.stickyHeaderCell configureCellWithArtist:self.artist];
+            self.stickyHeaderCell.delegate = self;
 
         }
 

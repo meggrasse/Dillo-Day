@@ -19,41 +19,26 @@
 @interface DILArtistViewController ()<DILArtistCollectionViewModelDelegate>
 @property (strong, nonatomic) UICollectionView *artistCollectionView;
 @property (strong, nonatomic) DILArtistCollectionViewModel *artistCollectionViewModel;
-//@property (strong, nonatomic) NSString *previewUrl;
-//@property (strong, nonatomic) AVPlayer *audioPlayer;
+@property (strong, nonatomic) NSString *previewUrl;
+@property (strong, nonatomic) AVPlayer *audioPlayer;
 @end
 
-//BOOL musicPlaying = NO;
+BOOL musicPlaying = NO;
 
 @implementation DILArtistViewController
 
-//@synthesize ref= _ref;
-//@synthesize headerView;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
- //   self.previewUrl = @"";
+    self.previewUrl = @"";
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    _headerView = [DILArtistStickyHeaderCollectionViewCell alloc];
+//    _headerView = [DILArtistStickyHeaderCollectionViewCell alloc];
 //    [headerView.circularImageView addTarget:self action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
 //    [headerView.circularImageView addTarget:headerView action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
-//    [self initTrack];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    NSLog(@"bye");
-    // [super viewWillDisappear:animated];
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    UITouch *touch = [touches anyObject];
-//    if ([touch view] == _headerView.circularImageView) {
-//        NSLog(@"touch");
-//    }
-//    else if ([touch view] == _headerView.backgroundImageView) {
-//        NSLog(@"other touch");
-//    }
+    musicPlaying = NO;
 }
 
 - (void)configureArtistCollectionView {
@@ -77,6 +62,7 @@
     
     self.artistCollectionViewModel = [[DILArtistCollectionViewModel alloc] initWithArtist:self.artist];
     self.artistCollectionViewModel.delegate = self;
+    self.artistCollectionViewModel.stickyHeaderCell.controller = self;
 
     self.artistCollectionView.dataSource = self.artistCollectionViewModel;
     self.artistCollectionView.delegate = self.artistCollectionViewModel;
@@ -89,40 +75,33 @@
     _artist = artist;
     self.title = [artist.name uppercaseString];
     [self configureArtistCollectionView];
-//    self.previewUrl = [@"https://p.scdn.co/mp3-preview/" stringByAppendingString:artist.previewUrl];
+    self.previewUrl = [@"https://p.scdn.co/mp3-preview/" stringByAppendingString:artist.previewUrl];
+    [self initTrack];
 }
 
 - (void)controlTrack:(id)sender {
-    NSLog(@"check");
-//    if (musicPlaying == NO) {
-//        musicPlaying = YES;
-//        [_audioPlayer play];
-//        self.ref.circleLabel.text = @"   \u258D\u258D";
-//        self.ref.circleLabel.font = [UIFont systemFontOfSize:35];
-//        self.ref.circleLabel.textAlignment = NSTextAlignmentRight;
-//    } else {
-//        musicPlaying = NO;
-//        [_audioPlayer pause];
-//        self.ref.circleLabel.text = @"\u25B6";
-//        self.ref.circleLabel.textAlignment = NSTextAlignmentRight;
-//        self.ref.circleLabel.font = [UIFont systemFontOfSize:80];
-//    }
+    if (musicPlaying == NO) {
+        musicPlaying = YES;
+        [_audioPlayer play];
+        [self.artistCollectionViewModel.stickyHeaderCell playMusicLabel];
+    } else {
+        musicPlaying = NO;
+        [_audioPlayer pause];
+        [self.artistCollectionViewModel.stickyHeaderCell pauseMusicLabel];
+    }
 }
 
-//- (void)initTrack {
-//    NSURL *urlStream = [[NSURL alloc] initWithString:self.previewUrl];
-//    AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:urlStream options:nil];
-//    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:avAsset];
-//    _audioPlayer = [AVPlayer playerWithPlayerItem:playerItem];
-//    _audioPlayer = [AVPlayer playerWithURL:urlStream];
-//    [_headerView.circularImageView addTarget:_headerView.circularImageView action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
-   // [self.ref.circularImageView addTarget:_ref action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
-   // [self.ref.circularImageView addTarget:self.ref.circularImageView action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
-//}
+- (void)initTrack {
+    NSURL *urlStream = [[NSURL alloc] initWithString:self.previewUrl];
+    AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:urlStream options:nil];
+    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:avAsset];
+    _audioPlayer = [AVPlayer playerWithPlayerItem:playerItem];
+    _audioPlayer = [AVPlayer playerWithURL:urlStream];
+}
 
 - (void)reloadSection:(NSUInteger)section {
     [self.artistCollectionView reloadSections:[NSIndexSet indexSetWithIndex:section]];
-//    [self.artistCollectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+    [self.artistCollectionViewModel.stickyHeaderCell testMethod];
 }
 
 - (void)insertItemAtIndex:(NSIndexPath *)indexPath {

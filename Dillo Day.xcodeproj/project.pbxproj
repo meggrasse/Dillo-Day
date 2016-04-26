@@ -883,6 +883,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */,
 				21D593961AEC21B000339787 /* FMEParallaxImageView.m in Sources */,
 				219155541AD4BCA800FC61E8 /* CarbonTabSwipeNavigation.m in Sources */,
 				210FE3371AD795D2009BC3DE /* SVWebViewControllerActivitySafari.m in Sources */,
@@ -908,7 +909,6 @@
 				21171CEA1ADDF4CB00CDDFBD /* DilloDayStyleKit.m in Sources */,
 				217946B21A87C96100224737 /* main.m in Sources */,
 				210A816B1AC626DD0091C134 /* DILLineupCollectionViewModel.m in Sources */,
-				21BAFE3E1ACE1D11003F5ADD /* DILArtistCollectionViewModel.m in Sources */,
 				217D91D41A9E65F0006F3ABB /* DDConstants.m in Sources */,
 				21E7B1DC1AF9954900FAD992 /* PFNotification.m in Sources */,
 				216487521AF82DA3002D785C /* DILShuttleScheduleViewController.m in Sources */,

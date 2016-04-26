@@ -11,6 +11,7 @@
 #import "DILArtistCollectionViewModel.h"
 
 @class DILArtistViewController;
+
 static CGFloat const kDILArtistStickyHeaderCollectionViewSegmentedControlHeight = 50.0;
 
 @protocol DILArtistStickyHeaderCollectionViewCellDelegate <NSObject>
@@ -25,6 +26,10 @@ static CGFloat const kDILArtistStickyHeaderCollectionViewSegmentedControlHeight 
 //@property (weak, nonatomic) DILArtistViewController *ref;
 
 @property (weak, nonatomic) id<DILArtistStickyHeaderCollectionViewCellDelegate> delegate;
+@property (assign) UIViewController* controller;
 - (void)configureCellWithArtist:(DILPFArtist *)artist;
+- (void)testMethod;
+- (void)playMusicLabel;
+- (void)pauseMusicLabel;
 + (NSString *)identifier;
 @end

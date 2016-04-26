@@ -15,6 +15,8 @@ typedef enum NSUInteger {
     DILArtistInfoTypeMusic,
 } DILArtistInfoType;
 
+@class DILArtistStickyHeaderCollectionViewCell;
+
 @protocol DILArtistCollectionViewModelDelegate <NSObject>
 @required
 - (void)reloadSection:(NSUInteger)section;
@@ -24,5 +26,6 @@ typedef enum NSUInteger {
 @interface DILArtistCollectionViewModel : NSObject<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) id<DILArtistCollectionViewModelDelegate> delegate;
 @property (strong, nonatomic) DILPFArtist *artist;
+@property (strong, nonatomic) DILArtistStickyHeaderCollectionViewCell *stickyHeaderCell;
 - (id)initWithArtist:(DILPFArtist *)artist;
 @end

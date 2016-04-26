@@ -30,9 +30,11 @@
 
 static NSString *const kSegmentedControlBio     = @"BIO";
 static NSString *const kSegmentedControlMusic   = @"MUSIC";
-BOOL musicPlaying = NO;
+//BOOL musicPlaying = NO;
 
 @implementation DILArtistStickyHeaderCollectionViewCell
+
+@synthesize controller;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -134,6 +136,7 @@ BOOL musicPlaying = NO;
     [self.circularImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.backgroundImageView withOffset:-inset];
     [self.circularImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.circularImageView];
 //    [self.circularImageView addTarget:self action:@selector(controlTrack1:) forControlEvents:UIControlEventTouchUpInside];
+    [self.circularImageView addTarget:controller action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (UILabel *)timeLabel {
@@ -182,21 +185,21 @@ BOOL musicPlaying = NO;
     return _backgroundImageViewTintView;
 }
 
-- (void)controlTrack1:(id)sender {
-    if (musicPlaying == NO) {
-        musicPlaying = YES;
-        [_audioPlayer play];
-        _circleLabel.text = @"   \u258D\u258D";
-        _circleLabel.font = [UIFont systemFontOfSize:35];
-        _circleLabel.textAlignment = NSTextAlignmentRight;
-    } else {
-        musicPlaying = NO;
-        [_audioPlayer pause];
-        _circleLabel.text = @"\u25B6";
-        _circleLabel.textAlignment = NSTextAlignmentRight;
-        _circleLabel.font = [UIFont systemFontOfSize:80];
-    }
-}
+//- (void)controlTrack1:(id)sender {
+//    if (musicPlaying == NO) {
+//        musicPlaying = YES;
+//        [_audioPlayer play];
+//        _circleLabel.text = @"   \u258D\u258D";
+//        _circleLabel.font = [UIFont systemFontOfSize:35];
+//        _circleLabel.textAlignment = NSTextAlignmentRight;
+//    } else {
+//        musicPlaying = NO;
+//        [_audioPlayer pause];
+//        _circleLabel.text = @"\u25B6";
+//        _circleLabel.textAlignment = NSTextAlignmentRight;
+//        _circleLabel.font = [UIFont systemFontOfSize:80];
+//    }
+//}
 
 - (void)initTrack {
     NSURL *urlStream = [[NSURL alloc] initWithString:self.previewUrl];
@@ -211,13 +214,30 @@ BOOL musicPlaying = NO;
 
 }
 
+- (void)testMethod {
+    NSLog(@"foudn");
+}
+
+- (void)playMusicLabel {
+    _circleLabel.text = @"   \u258D\u258D";
+    _circleLabel.font = [UIFont systemFontOfSize:35];
+    _circleLabel.textAlignment = NSTextAlignmentRight;
+}
+
+- (void)pauseMusicLabel {
+    _circleLabel.text = @"\u25B6";
+    _circleLabel.textAlignment = NSTextAlignmentRight;
+    _circleLabel.font = [UIFont systemFontOfSize:80];
+    
+}
+
 #pragma mark - Public Methods
 - (void)configureCellWithArtist:(DILPFArtist *)artist {
     [artist imageDownloadPromise].then(^(UIImage *image){
         self.backgroundImageView.image = image;
         self.previewUrl = [@"https://p.scdn.co/mp3-preview/" stringByAppendingString:artist.previewUrl];
         [self initTrack];
-        [_circularImageView addTarget:self action:@selector(controlTrack1:) forControlEvents:UIControlEventTouchUpInside];
+        //[_circularImageView addTarget:self action:@selector(controlTrack1:) forControlEvents:UIControlEventTouchUpInside];
     });
     
    // [self addCircularImageView];
