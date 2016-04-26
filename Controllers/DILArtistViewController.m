@@ -101,7 +101,6 @@ BOOL musicPlaying = NO;
 
 - (void)reloadSection:(NSUInteger)section {
     [self.artistCollectionView reloadSections:[NSIndexSet indexSetWithIndex:section]];
-    [self.artistCollectionViewModel.stickyHeaderCell testMethod];
 }
 
 - (void)insertItemAtIndex:(NSIndexPath *)indexPath {

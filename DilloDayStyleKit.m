@@ -44,12 +44,12 @@ static UIImage* _imageOfNotificationIndicatorUnread = nil;
     // Colors Initialization
     _tabBarColor = [UIColor colorWithRed: 0.173 green: 0.173 blue: 0.173 alpha: 1];
     _tabBarUnselectedColor = [UIColor colorWithRed: 0.933 green: 0.961 blue: 0.957 alpha: 1];
-    _tabBarSelectedColor = [UIColor colorWithRed: 0.443 green: 0.851 blue: 0.808 alpha: 1];
+    _tabBarSelectedColor = [UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1];
     _notificationIconColor = DilloDayStyleKit.tabBarSelectedColor;
     _artistInfoSegmentedControlSelectedSegmentIndicatorColor = DilloDayStyleKit.tabBarSelectedColor;
     _lineupCellProgressColor = DilloDayStyleKit.tabBarSelectedColor;
     _navigationBarColor = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
-    _barButtonItemColor = [UIColor colorWithRed: 0.204 green: 0.596 blue: 0.859 alpha: 1];
+    _barButtonItemColor = [UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1];
     CGFloat barButtonItemColorHSBA[4];
     [_barButtonItemColor getHue: &barButtonItemColorHSBA[0] saturation: &barButtonItemColorHSBA[1] brightness: &barButtonItemColorHSBA[2] alpha: &barButtonItemColorHSBA[3]];
 
@@ -58,7 +58,7 @@ static UIImage* _imageOfNotificationIndicatorUnread = nil;
     _fontColor = [UIColor colorWithRed: 0.165 green: 0.165 blue: 0.165 alpha: 1];
     _navigationBarTextColor = DilloDayStyleKit.fontColor;
     _artistInfoSegmentedControlBackgroundColor = [UIColor colorWithRed: 0.427 green: 0.467 blue: 0.471 alpha: 1];
-    _artistInfoSponsoredByTextColor = [UIColor colorWithRed: 0.384 green: 0.741 blue: 0.706 alpha: 1];
+    _artistInfoSponsoredByTextColor = [UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1];
     _artistInfoBioTextColor = [UIColor colorWithRed: 0.29 green: 0.29 blue: 0.29 alpha: 1];
     _artistInfoSegmentedControlTextColor = [UIColor colorWithRed: 1 green: 1 blue: 1 alpha: 1];
     _notificationCellTimeAgoTextColor = [UIColor colorWithRed: 0.463 green: 0.463 blue: 0.463 alpha: 1];
@@ -229,6 +229,7 @@ static UIImage* _imageOfNotificationIndicatorUnread = nil;
             oval1Path.usesEvenOddFillRule = YES;
 
             [DilloDayStyleKit.tabBarSelectedColor setFill];
+            NSLog(@"%@", DilloDayStyleKit.tabBarSelectedColor);
             [oval1Path fill];
         }
     }
@@ -364,7 +365,7 @@ static UIImage* _imageOfNotificationIndicatorUnread = nil;
 + (void)drawNotificationIndicatorRead
 {
     //// Color Declarations
-    UIColor* notificationIndicatorColor = [UIColor colorWithRed: 0.443 green: 0.851 blue: 0.808 alpha: 1];
+    UIColor* notificationIndicatorColor = [UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1];
 
     //// Group 3
     {
@@ -379,7 +380,7 @@ static UIImage* _imageOfNotificationIndicatorUnread = nil;
 + (void)drawNotificationIndicatorUnread
 {
     //// Color Declarations
-    UIColor* notificationIndicatorColor = [UIColor colorWithRed: 0.443 green: 0.851 blue: 0.808 alpha: 1];
+    UIColor* notificationIndicatorColor = [UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1];
 
     //// Oval 2 Drawing
     UIBezierPath* oval2Path = [UIBezierPath bezierPathWithOvalInRect: CGRectMake(1.5, 1.5, 38, 38)];

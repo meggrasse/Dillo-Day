@@ -101,7 +101,7 @@
         [tabBarItem setFinishedSelectedImage:selectedIconArray[i] withFinishedUnselectedImage:unselectedIconArray[i]];
     }
 
-    [self.tabBarController.tabBar setBackgroundColor:[UIColor turquoiseColor]];
+    [self.tabBarController.tabBar setBackgroundColor:[UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1]];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.tabBarController;

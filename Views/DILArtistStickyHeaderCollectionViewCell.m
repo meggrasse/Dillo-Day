@@ -214,10 +214,6 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 
 }
 
-- (void)testMethod {
-    NSLog(@"foudn");
-}
-
 - (void)playMusicLabel {
     _circleLabel.text = @"   \u258D\u258D";
     _circleLabel.font = [UIFont systemFontOfSize:35];
