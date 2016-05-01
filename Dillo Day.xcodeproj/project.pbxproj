@@ -103,6 +103,7 @@
 		21E7B1DC1AF9954900FAD992 /* PFNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E7B1DB1AF9954900FAD992 /* PFNotification.m */; };
 		21EEC92B1AD61A1B00C968E9 /* DILParseClassGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EEC92A1AD61A1B00C968E9 /* DILParseClassGeneration.m */; };
 		9455FD341C5571EC00E83AC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9455FD331C5571EC00E83AC2 /* MapKit.framework */; };
+		945761841CD3E31300174E18 /* DILPFMapFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = 945761831CD3E31300174E18 /* DILPFMapFeatures.m */; };
 		94C31FF91C70E0AC007C6560 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C31FF81C70E0AC007C6560 /* Spotify.framework */; };
 		94C31FFB1C70E283007C6560 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C31FFA1C70E283007C6560 /* AVFoundation.framework */; };
 		9E0BDF8DD8C012C4C3F4ED85 /* libPods-Dillo Day.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */; };
@@ -280,6 +281,8 @@
 		6D331DFBD86CF821E61B852F /* Pods-Dillo Day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dillo Day.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.debug.xcconfig"; sourceTree = "<group>"; };
 		6E1D0C7A0E46C4CED9365181 /* libPods-Dillo Day.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dillo Day.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9455FD331C5571EC00E83AC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		945761821CD3E31300174E18 /* DILPFMapFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILPFMapFeatures.h; sourceTree = "<group>"; };
+		945761831CD3E31300174E18 /* DILPFMapFeatures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILPFMapFeatures.m; sourceTree = "<group>"; };
 		94C31FF81C70E0AC007C6560 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
 		94C31FFA1C70E283007C6560 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		94FB6D271C9F4124009BF085 /* drum01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = drum01.mp3; path = "../../../Downloads/Sound Demo/Sound Demo/drum01.mp3"; sourceTree = SOURCE_ROOT; };
@@ -451,6 +454,8 @@
 				216D64E41AF8121600C91D5F /* DILPFShuttleSchedule.m */,
 				21C4C10F1AC74F8C00AE4561 /* DILPFSponsor.h */,
 				21C4C1101AC74F8C00AE4561 /* DILPFSponsor.m */,
+				945761821CD3E31300174E18 /* DILPFMapFeatures.h */,
+				945761831CD3E31300174E18 /* DILPFMapFeatures.m */,
 				21C4C1121AC750EE00AE4561 /* DILPFStage.h */,
 				21C4C1131AC750EE00AE4561 /* DILPFStage.m */,
 				2159BC351ACC422000D48F5F /* DILFollowArtist.h */,
@@ -890,6 +895,7 @@
 				217A8EE51AD89B2C0046F45F /* DILPushNotificationHandler.m in Sources */,
 				210A81681AC625A80091C134 /* DILLineupViewController.m in Sources */,
 				210FE3391AD795D2009BC3DE /* SVWebViewControllerActivity.m in Sources */,
+				945761841CD3E31300174E18 /* DILPFMapFeatures.m in Sources */,
 				210FE3301AD795D2009BC3DE /* SVWebViewController.m in Sources */,
 				210FBBE11AF73951009896D2 /* DILMapViewController.m in Sources */,
 				212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */,
