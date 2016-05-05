@@ -17,9 +17,11 @@
 @property (strong, nonatomic) FUIButton *NUPDButton;
 @property (strong, nonatomic) FUIButton *feedbackButton;
 @property (strong, nonatomic) FUIButton *shuttlesButton;
+@property (strong, nonatomic) FUIButton *lyftButton;
 @property (strong, nonatomic) UILabel *feedbackLabel;
 @property (strong, nonatomic) UILabel *shuttlesLabel;
 @property (strong, nonatomic) UILabel *smartDilloLabel;
+@property (strong, nonatomic) UILabel *lyftLabel;
 @property (strong, nonatomic) UIImageView *sponsorImageView;
 @end
 
@@ -76,7 +78,7 @@ static CGFloat buttonShadowHeight = 5;
     [sponsorSubview autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     [sponsorSubview autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:buttonSubview];
 
-    NSArray *buttonArray = @[self.emergencyButton, self.NUPDButton, self.shuttlesButton, self.feedbackButton];
+    NSArray *buttonArray = @[self.emergencyButton, self.NUPDButton, self.shuttlesButton, self.feedbackButton, self.lyftButton];
     for (UIView *view in buttonArray) {
         [buttonSubview addSubview:view];
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
@@ -96,9 +98,10 @@ static CGFloat buttonShadowHeight = 5;
 
     [self.feedbackButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.shuttlesButton withOffset:sideInset];
     [self.feedbackButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
-    [self.feedbackButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset];
-
-
+    
+    [self.lyftButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.feedbackButton withOffset:sideInset];
+    [self.lyftButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+    [self.lyftButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset];
 
 }
 
@@ -192,7 +195,7 @@ static CGFloat buttonShadowHeight = 5;
     [self.shuttlesButton autoPinEdgeToSuperviewEdge:ALEdgeTop];
 
 
-    for (UIView *view in @[self.emergencyButton, self.NUPDButton, self.feedbackButton, self.shuttlesButton]) {
+    for (UIView *view in @[self.emergencyButton, self.NUPDButton, self.feedbackButton, self.shuttlesButton, self.lyftButton]) {
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
     }
 
@@ -206,9 +209,9 @@ static CGFloat buttonShadowHeight = 5;
         [_emergencyButton setTitle:@"CALL 911 (EMERGENCY)" forState:UIControlStateNormal];
         [_emergencyButton addTarget:self action:@selector(emergencyCall) forControlEvents:UIControlEventTouchUpInside];
         _emergencyButton.cornerRadius = 5;
-        _emergencyButton.shadowHeight = buttonShadowHeight;
+        //_emergencyButton.shadowHeight = buttonShadowHeight;
         _emergencyButton.buttonColor = [UIColor alizarinColor];
-        _emergencyButton.shadowColor = [UIColor pomegranateColor];
+       // _emergencyButton.shadowColor = [UIColor pomegranateColor];
     }
     return _emergencyButton;
 }
@@ -219,9 +222,9 @@ static CGFloat buttonShadowHeight = 5;
         [_NUPDButton setTitle:@"CALL NUPD (NON-EMERGENCY)" forState:UIControlStateNormal];
         [_NUPDButton addTarget:self action:@selector(nupdCall) forControlEvents:UIControlEventTouchUpInside];
         _NUPDButton.cornerRadius = 5;
-        _NUPDButton.shadowHeight = buttonShadowHeight;
+        //_NUPDButton.shadowHeight = buttonShadowHeight;
         _NUPDButton.buttonColor = [UIColor amethystColor];
-        _NUPDButton.shadowColor = [UIColor wisteriaColor];
+       // _NUPDButton.shadowColor = [UIColor wisteriaColor];
     }
     return _NUPDButton;
 }
@@ -232,12 +235,13 @@ static CGFloat buttonShadowHeight = 5;
         [_feedbackButton setTitle:@"CONTACT MAYFEST" forState:UIControlStateNormal];
         _feedbackButton.cornerRadius = 5;
         [_feedbackButton addTarget:self action:@selector(contactMayfest) forControlEvents:UIControlEventTouchUpInside];
-        _feedbackButton.shadowHeight = buttonShadowHeight;
+       // _feedbackButton.shadowHeight = buttonShadowHeight;
         _feedbackButton.buttonColor = [UIColor wetAsphaltColor];
-        _feedbackButton.shadowColor = [UIColor midnightBlueColor];
+       // _feedbackButton.shadowColor = [UIColor midnightBlueColor];
     }
     return _feedbackButton;
 }
+
 
 - (FUIButton *)shuttlesButton {
     if (!_shuttlesButton) {
@@ -245,11 +249,25 @@ static CGFloat buttonShadowHeight = 5;
         [_shuttlesButton addTarget:self action:@selector(displayShuttleSchedule) forControlEvents:UIControlEventTouchUpInside];
         [_shuttlesButton setTitle:@"SHUTTLE SCHEDULE" forState:UIControlStateNormal];
         _shuttlesButton.cornerRadius = 5;
-        _shuttlesButton.shadowHeight = buttonShadowHeight;
+       // _shuttlesButton.shadowHeight = buttonShadowHeight;
         _shuttlesButton.buttonColor = [UIColor peterRiverColor];
-        _shuttlesButton.shadowColor = [UIColor belizeHoleColor];
+      //  _shuttlesButton.shadowColor = [UIColor belizeHoleColor];
     }
     return _shuttlesButton;
+}
+
+
+- (FUIButton *)lyftButton {
+    if (!_lyftButton) {
+        _lyftButton = [[FUIButton alloc] initForAutoLayout];
+        [_lyftButton setTitle:@"RIDE WITH LYFT" forState:UIControlStateNormal];
+        _lyftButton.cornerRadius = 5;
+        [_lyftButton addTarget:self action:@selector(openLyft) forControlEvents:UIControlEventTouchUpInside];
+      //`  _lyftButton.shadowHeight = buttonShadowHeight;
+        _lyftButton.buttonColor = [UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1];;
+       // _lyftButton.shadowColor = [UIColor pomegranateColor];
+    }
+    return _lyftButton;
 }
 
 - (UILabel *)feedbackLabel {
@@ -287,6 +305,19 @@ static CGFloat buttonShadowHeight = 5;
         _shuttlesLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _shuttlesLabel;
+}
+
+- (UILabel *)lyftLabel {
+    if (!_lyftLabel) {
+        _lyftLabel = [[UILabel alloc] initForAutoLayout];
+        //        _shuttlesLabel.text = @"Going somewhere? Why not check if a shuttle can take you there!";
+        _lyftLabel.text = nil;
+        _lyftLabel.numberOfLines = 0;
+        _lyftLabel.adjustsFontSizeToFitWidth = YES;
+        _lyftLabel.minimumScaleFactor = 0.01;
+        _lyftLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _lyftLabel;
 }
 
 //- (UIImageView *)sponsorImageView {
@@ -337,6 +368,19 @@ static CGFloat buttonShadowHeight = 5;
     [composeVC setToRecipients:@[@"dilloday@gmail.com"]];
     composeVC.mailComposeDelegate = self;
     [self presentViewController:composeVC animated:YES completion:NULL];
+}
+
+- (void)openLyft {
+    UIApplication *myApp = UIApplication.sharedApplication;
+    NSURL *lyftAppURL = [NSURL URLWithString:@"lyft://"];
+    if ([myApp canOpenURL:lyftAppURL]) {
+        // Lyft is installed; launch it
+        [myApp openURL:lyftAppURL];
+    } else {
+        // Lyft not installed; open App Store
+        NSURL *lyftAppStoreURL = [NSURL URLWithString:@"https://itunes.apple.com/us/app/lyft-taxi-bus-app-alternative/id529379082"];
+        [myApp openURL:lyftAppStoreURL];
+    }
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {

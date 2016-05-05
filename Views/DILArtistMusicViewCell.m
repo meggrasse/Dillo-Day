@@ -69,7 +69,7 @@
 - (UIButton *)spotifyBtn {
     if (!_spotifyBtn) {
         _spotifyBtn = [[UIButton alloc] initForAutoLayout];
-        UIImage *btnImage = [UIImage imageNamed:@"spotify"];;
+        UIImage *btnImage = [UIImage imageNamed:@"spotify"];
         [_spotifyBtn setBackgroundImage:btnImage forState:UIControlStateNormal];
         [self.spotifyBtn addTarget:self action:@selector(openSpotify:) forControlEvents:UIControlEventTouchUpInside];
     }
