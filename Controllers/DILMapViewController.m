@@ -22,7 +22,6 @@
 @property (strong, nonatomic) NSMutableArray *imageArray;
 @property (strong, nonnull) NSArray *annoArray;
 @property (strong, nonnull) PFFile *currFile;
-@property (strong, nonnull) UIImage *currImage;
 @property (strong, nonnull) NSMutableArray *imageFileArray;
 @property (strong, nonnull) MKAnnotationView *annoView;
 @property (strong, nonnull) NSMutableArray *realAnnoArray;
@@ -51,59 +50,20 @@ int currIndex = 0;
     self.locationManager.distanceFilter = kCLDistanceFilterNone;
     [self.locationManager startUpdatingLocation];
     [self.view addSubview:self.mapView];
-//    CLLocationCoordinate2D midCoordinate = CLLocationCoordinate2DMake(42.055409, -87.671126);
-//    CLLocationCoordinate2D diffCoordinate = CLLocationCoordinate2DMake(42.055409, -88.671126);
-//    MKPointAnnotation *anno = [[MKPointAnnotation alloc] init];
-//    anno.coordinate = midCoordinate;
-//    anno.title = @"test";
-//    anno.subtitle = @"secondtest";
-//    MKCircle *circle;
-//    circle = [MKCircle circleWithCenterCoordinate:midCoordinate radius:100];
-//    circle.title = @"here";
-//    circle.subtitle = @"here";
-   // [self.mapView addOverlay:circle];
-//    [self.mapView addAnnotation:circle];
-//    MKAnnotation ano = [[MKAnnotation alloc] init];
-//    ano.coordinate = midCoordinate;
-//    [self queryForAnnotations];
-//    [self getImages];
-//    [self fillAnnotations];
-   // NSLog(@"this one %@", anno);
-   // [self.mapView addAnnotation:anno];
     [self fetchAnnotations];
     [self configureView];
 }
-
-// Delegate method from the MKMapViewDelegate protocol.
-//-(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
-//    MKCircleRenderer *circleRenderer = [[MKCircleRenderer alloc] initWithCircle:(MKCircle *)overlay];
-//    circleRenderer.fillColor =  [UIColor colorWithRed:0 green:0.647 blue:0.961 alpha:1.0];
-//    return circleRenderer;
-//}
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     
-    NSLog(@"here1.5");
-    
-    //self.annoView = [[MKAnnotationView alloc] initWithAnnotation: (id<MKAnnotation>)annotation reuseIdentifier:nil];
     MKAnnotationView *annoView = [[MKAnnotationView alloc] initWithAnnotation: (id<MKAnnotation>)annotation reuseIdentifier:nil];
-//    for (PFFile *file in self.imageFileArray) {
-//        [self imageQueryPromise:file].then(^{
-            annoView.canShowCallout = YES;
-    NSLog(@"%@", self.imageArray[currIndex]);
-            annoView.image = self.imageArray[currIndex];
-            currIndex++;
-            //NSLog(@"%@", annoView);
-            //NSLog(@"fjdksla");
-            return annoView;
-       // }).catch(^{
-//            return self.annoView;
-//        });
-//    }
-//    return self.annoView;
+    annoView.canShowCallout = YES;
+    annoView.image = self.imageArray[currIndex];
+    currIndex++;
+    return annoView;
 }
 
 - (void)locationManager:(CLLocationManager *)locationManager didUpdateLocations:(NSArray *)locations
@@ -114,11 +74,9 @@ int currIndex = 0;
 
 - (void)configureView {
     [self.view addSubview:self.scrollView];
-//    [self.scrollView addSubview:self.imageView];
     [self.scrollView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     self.scrollView.backgroundColor = [UIColor clearColor];
 }
-
 
 - (PMKPromise *)annotationQueryPromise {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
@@ -140,10 +98,7 @@ int currIndex = 0;
                 reject(error);
             } else {
                 UIImage *image = [UIImage imageWithData:data];
-                self.currImage = image;
                 [self.imageArray addObject:image];
-                //self.annoView.image = image;
-                NSLog(@"%@", self.imageArray);
                 fulfill(image);
             }
         }];
@@ -159,83 +114,6 @@ int currIndex = 0;
     });
 }
 
-//-(void)fillImageArray {
-//    for (DILPFMapFeatures *anno in self.annoArray) {
-//        PFFile *imageFile = [anno objectForKey:@"image"];
-//        [self imageQueryPromise:imageFile];
-//        [self imageQueryPromise:imageFile complete:^{
-//            NSLog(@"here");
-//        }];
-//    }
-//
-//}
-//
-//- (PMKPromise *)getImages {
-//    return [PMKPromise promiseWithResolverBlock:^(PMKResolver *resolve) {
-//        PFQuery *query = [PFUser query];
-//        [query whereKey:@"name" equals:@"mxcl"];
-//        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//            resolve(error ?: objects);
-//        }];
-//    }];
-//}
-//
-//- (PMKPromise *)users {
-//    return [PMKPromise promiseWithResolverBlock:^(PMKResolver *resolve) {
-//        PFQuery *query = [PFUser query];
-//        [query whereKey:@"name" equals:@"mxcl"];
-//        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//            resolve(error ?: objects);
-//        }];
-//    }];
-//}
-//
-//[self users].then(^(NSArray *users){
-//    //…
-//});
-
-//-(void)fillImageArray {
-//    for (DILPFMapFeatures *anno in self.annoArray) {
-//        PFFile *imageFile = [anno objectForKey:@"image"];
-//        [self sendFiletoPromise:imageFile];
-//    }
-//    
-//}
-//
-//-(void)sendFiletoPromise:(PFFile *) imageFile {
-//    [self imageQueryPromise:imageFile].then(^(UIImage *image) {
-//        [self.imageArray addObject:image];
-//    });
-//    NSLog(@"%@", self.imageArray);
-//}
-
-//-(void) fillAnnotations {
-//    if (currIndex >= [_annoArray count]) {
-//        return;
-//    }
-//    //for (DILPFMapFeatures *anno in _annoArray) {
-//    DILPFMapFeatures *anno = _annoArray[1];
-//        NSLog(@"here");
-//        PFFile *imageFile = [anno objectForKey:@"image"];
-//        PMKWhen([self imageQueryPromise:imageFile]).then(^(NSArray *results) {
-//            [self.imageArray addObject:image];
-//            NSLog(@"%lu", (unsigned long)[self.imageArray count]);
-//            NSLog(@"%@", self.imageArray);
-//            MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-//            annotation.title = [anno objectForKey:@"title"];
-//            annotation.subtitle = [anno objectForKey:@"subtitle"];
-//            PFGeoPoint *gp = [anno objectForKey:@"location"];
-//            CLLocationCoordinate2D *temp;
-//            temp->latitude = gp.latitude;
-//            temp->longitude = gp.longitude;
-//            annotation.coordinate = *(temp);
-//            [self.mapView addAnnotation:annotation];
-//            currIndex++;
-//        });
-//    //}
-//}
-
-
 -(void) fillAnnotations {
     for (DILPFMapFeatures *anno in self.annoArray) {
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -245,29 +123,21 @@ int currIndex = 0;
         [self.imageFileArray addObject:tempFile];
         PFGeoPoint *gp = [anno objectForKey:@"coordinate"];
         CLLocationCoordinate2D temp = CLLocationCoordinate2DMake(gp.latitude, gp.longitude);
-        //CLLocationCoordinate2D temp = CLLocationCoordinate2DMake(42.055409, -87.671126);
         annotation.coordinate = temp;
-        NSLog(@"2nd one %@", annotation);
         [self.realAnnoArray addObject:annotation];
-        NSLog(@"3nd one %@", self.realAnnoArray);
-        //[self.mapView addAnnotation:annotation];
     }
     [self setImagetoAnno];
 }
+
 -(void) setImagetoAnno {
     for (PFFile *file in self.imageFileArray) {
         [self imageQueryPromise:file].then(^{
-            [self sendDatatoAnno];
+            for (MKPointAnnotation *anno in self.realAnnoArray) {
+                [self.mapView addAnnotation:anno];
+            }
         });
     }
 }
-
--(void) sendDatatoAnno {
-    for (MKPointAnnotation *anno in self.realAnnoArray) {
-        [self.mapView addAnnotation:anno];
-    }
-}
-
 
 
 
