@@ -68,9 +68,9 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - Realm (0.98.3):
-    - Realm/Headers (= 0.98.3)
-  - Realm/Headers (0.98.3)
+  - Realm (0.101.0):
+    - Realm/Headers (= 0.101.0)
+  - Realm/Headers (0.101.0)
   - Reveal-iOS-SDK (1.6.2)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -100,7 +100,7 @@ DEPENDENCIES:
   - PureLayout
   - RDVTabBarController
   - ReactiveCocoa
-  - Realm (~> 0.91)
+  - Realm (~> 0.101.0)
   - Reveal-iOS-SDK
   - SDWebImage (~> 3.6)
   - SMScrollView
@@ -129,7 +129,7 @@ SPEC CHECKSUMS:
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  Realm: c6a7d00221a2d5177810a674aebd40c5e0b70b0f
+  Realm: b21596d6d7e1c054f6fae967d27263d2593ca309
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SMScrollView: 5eb8928f90f5296cf65e0c8d23a7968e043bbf30

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '589B20CF5F73232A62CC1658'
+               BlueprintIdentifier = '491E8CCDE77C88E73639AB41'
                BlueprintName = 'BFPaperButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libBFPaperButton.a'>
