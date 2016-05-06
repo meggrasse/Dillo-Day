@@ -431,7 +431,7 @@
 
 - (void)openLyft {
     UIApplication *myApp = UIApplication.sharedApplication;
-    NSURL *lyftAppURL = [NSURL URLWithString:@"lyft://payment?credits=<my_custom_promo_code>"];
+    NSURL *lyftAppURL = [NSURL URLWithString:@"lyft://payment?credits=DILLODAY2016"];
     if ([myApp canOpenURL:lyftAppURL]) {
         // Lyft is installed; launch it
         [myApp openURL:lyftAppURL];

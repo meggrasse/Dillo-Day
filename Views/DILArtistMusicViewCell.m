@@ -10,6 +10,7 @@
 #import "DILArtistMusicViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <PureLayout/PureLayout.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 #import "ParseUI.h"
 
 @interface DILArtistMusicViewCell()
@@ -227,6 +228,10 @@
 }
 
 - (void)openSpotify:(id)sender {
+    if ([self.mainSpotifyUrl isEqualToString:@"spotify://artist/"]) {
+        [SVProgressHUD showInfoWithStatus:@"Artist not available on Spotify"];
+        return;
+    }
     UIApplication *myApp = UIApplication.sharedApplication;
     NSURL *realSpotifyUrl = [NSURL URLWithString: self.mainSpotifyUrl];
     NSURL *fakeSpotifyUrl = [NSURL URLWithString: self.safeSpotifyUrl];
@@ -238,6 +243,10 @@
 }
 
 - (void)openTidal:(id)sender {
+    if ([self.mainTidalUrl isEqualToString:@"tidal://artist/"]) {
+        [SVProgressHUD showInfoWithStatus:@"Artist not available on Tidal"];
+        return;
+    }
     UIApplication *myApp = UIApplication.sharedApplication;
     NSURL *realTidalUrl = [NSURL URLWithString: self.mainTidalUrl];
     NSURL *fakeTidalUrl = [NSURL URLWithString: self.safeTidalUrl];
@@ -249,11 +258,19 @@
 }
 
 - (void)openApl:(id)sender {
+    if ([self.aplUrl isEqualToString:@"https://itun.es/us/"]) {
+        [SVProgressHUD showInfoWithStatus:@"Artist not available on iTunes"];
+        return;
+    }
     [[UIApplication sharedApplication] openURL:
      [NSURL URLWithString: self.aplUrl]];
 }
 
 - (void)openSoundcloud:(id)sender {
+    if ([self.mainSoundcloudUrl isEqualToString:@"soundcloud:users:"]) {
+        [SVProgressHUD showInfoWithStatus:@"Artist not available on Soundcloud"];
+        return;
+    }
     UIApplication *myApp = UIApplication.sharedApplication;
     NSURL *realSoundcloudUrl = [NSURL URLWithString: self.mainSoundcloudUrl];
     NSURL *fakeSoundcloudUrl = [NSURL URLWithString: self.safeSoundcloudUrl];
@@ -265,6 +282,10 @@
 }
 
 - (void)openYoutube:(id)sender {
+    if ([self.youtubeUrl isEqualToString:@"https://www.youtube.com/user/"]) {
+        [SVProgressHUD showInfoWithStatus:@"Artist not available on Youtube"];
+        return;
+    }
     [[UIApplication sharedApplication] openURL:
      [NSURL URLWithString: self.youtubeUrl]];
 }
