@@ -38,11 +38,9 @@
 }
 
 - (void)configureEqualSizedView {
-    CGFloat sideInset = 10;
-    CGFloat width = self.view.frame.size.width;
     CGFloat height = self.view.frame.size.height;
-    NSLog(@"%f", width);
-    NSLog(@"%f", height);
+    CGFloat width = self.view.frame.size.width;
+    CGFloat sideInset = 10;
     
     //CGFloat width = CGRectGetWidth(window);
     //Bonus height.
@@ -312,9 +310,11 @@
 
 - (FUIButton *)lyftButton {
     if (!_lyftButton) {
+        CGFloat height = self.view.frame.size.height;
         _lyftButton = [[FUIButton alloc] initForAutoLayout];
         UIImageView *lyftImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lyft"]];
         [_lyftButton addSubview:lyftImage];
+        [lyftImage autoSetDimensionsToSize:CGSizeMake(3.22*(height/14), height/14)];
         [lyftImage autoAlignAxis:ALAxisVertical toSameAxisOfView:self.lyftButton];
         [lyftImage autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.lyftButton];
         _lyftButton.layer.cornerRadius = 5;

@@ -51,7 +51,7 @@
 }
 
 + (CGSize)defaultSize {
-    return CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]), 50);
+    return CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - 20, 50);
 }
 
 + (NSString *)identifier {
