@@ -18,6 +18,7 @@
 @property (strong, nonatomic) FUIButton *feedbackButton;
 @property (strong, nonatomic) FUIButton *shuttlesButton;
 @property (strong, nonatomic) FUIButton *lyftButton;
+@property (strong, nonatomic) FUIButton *sponsorsButton;
 @property (strong, nonatomic) UILabel *feedbackLabel;
 @property (strong, nonatomic) UILabel *shuttlesLabel;
 @property (strong, nonatomic) UILabel *smartDilloLabel;
@@ -40,7 +41,8 @@
     CGFloat sideInset = 10;
     CGFloat width = self.view.frame.size.width;
     CGFloat height = self.view.frame.size.height;
-    
+    NSLog(@"%f", width);
+    NSLog(@"%f", height);
     
     //CGFloat width = CGRectGetWidth(window);
     //Bonus height.
@@ -68,6 +70,7 @@
     [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeLeft];
     [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeRight];
     [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeTop];
+    [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     
     UIView *sponsorSubview = [[UIView alloc] initForAutoLayout];
     [self.view addSubview:sponsorSubview];
@@ -78,7 +81,7 @@
     [sponsorSubview autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     [sponsorSubview autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:buttonSubview];
     
-    NSArray *buttonArray = @[self.emergencyButton, self.NUPDButton, self.shuttlesButton, self.feedbackButton, self.lyftButton];
+    NSArray *buttonArray = @[self.emergencyButton, self.NUPDButton, self.shuttlesButton, self.feedbackButton, self.sponsorsButton, self.lyftButton];
     for (UIView *view in buttonArray) {
         [buttonSubview addSubview:view];
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
@@ -99,7 +102,10 @@
     [self.feedbackButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.shuttlesButton withOffset:sideInset];
     [self.feedbackButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
-    [self.lyftButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.feedbackButton withOffset:sideInset];
+    [self.sponsorsButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.feedbackButton withOffset:sideInset];
+    [self.sponsorsButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+    
+    [self.lyftButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.sponsorsButton withOffset:sideInset];
     [self.lyftButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     [self.lyftButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset];
     
@@ -196,6 +202,38 @@
     [self.shuttlesButton autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [self.shuttlesButton autoPinEdgeToSuperviewEdge:ALEdgeTop];
     
+//    UIView *webViewContainer = [[UIView alloc] initForAutoLayout];
+//    webViewContainer.clipsToBounds = YES;
+//    [self.view addSubview:webViewContainer];
+//    [shuttleViewContainer autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view];
+//    [shuttleViewContainer autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:emergencyView withOffset:0];
+//    [shuttleViewContainer autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:feedbackView withOffset:0];
+//    
+//    
+//    UIView *shuttlesView = [[UIView alloc] initForAutoLayout];
+//    [shuttleViewContainer addSubview:shuttlesView];
+//    [shuttlesView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+//    [shuttlesView autoPinEdgeToSuperviewEdge:ALEdgeLeading];
+//    [shuttlesView autoPinEdgeToSuperviewEdge:ALEdgeTrailing];
+//    //    [shuttlesView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset relation:NSLayoutRelationGreaterThanOrEqual];
+//    //    [shuttlesView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:sideInset relation:NSLayoutRelationGreaterThanOrEqual];
+//    //    [shuttlesView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:emergencyView];
+//    //    [shuttlesView autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:feedbackView];
+//    
+//    /*
+//     [shuttlesView addSubview:self.shuttlesLabel];
+//     [self.shuttlesLabel autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+//     [self.shuttlesLabel autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//     [self.shuttlesLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+//     */
+//    
+//    [shuttlesView addSubview:self.shuttlesButton];
+//    [self.shuttlesButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+//    [self.shuttlesButton autoSetDimension:ALDimensionHeight toSize:buttonHeight];
+//    //    [self.shuttlesButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.shuttlesLabel withOffset:sideInset];
+//    [self.shuttlesButton autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+//    [self.shuttlesButton autoPinEdgeToSuperviewEdge:ALEdgeTop];
+//    
     
     for (UIView *view in @[self.emergencyButton, self.NUPDButton, self.feedbackButton, self.shuttlesButton, self.lyftButton]) {
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
@@ -258,20 +296,36 @@
     return _shuttlesButton;
 }
 
+- (FUIButton *)sponsorsButton {
+    if (!_sponsorsButton) {
+        _sponsorsButton = [[FUIButton alloc] initForAutoLayout];
+        [_sponsorsButton addTarget:self action:@selector(openSponsorPage) forControlEvents:UIControlEventTouchUpInside];
+        [_sponsorsButton setTitle:@"SPONSORS" forState:UIControlStateNormal];
+        _sponsorsButton.cornerRadius = 5;
+        // _shuttlesButton.shadowHeight = buttonShadowHeight;
+        _sponsorsButton.buttonColor = [UIColor peterRiverColor];
+        //  _shuttlesButton.shadowColor = [UIColor belizeHoleColor];
+    }
+    return _sponsorsButton;
+}
+
 
 - (FUIButton *)lyftButton {
     if (!_lyftButton) {
         _lyftButton = [[FUIButton alloc] initForAutoLayout];
-        [_lyftButton setTitle:@"RIDE WITH LYFT" forState:UIControlStateNormal];
-        //[_lyftButton addSubview:_lyftLabel];
-        _lyftButton.cornerRadius = 5;
+        UIImageView *lyftImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lyft"]];
+        [_lyftButton addSubview:lyftImage];
+        [lyftImage autoAlignAxis:ALAxisVertical toSameAxisOfView:self.lyftButton];
+        [lyftImage autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.lyftButton];
+        _lyftButton.layer.cornerRadius = 5;
         [_lyftButton addTarget:self action:@selector(openLyft) forControlEvents:UIControlEventTouchUpInside];
-        //`  _lyftButton.shadowHeight = buttonShadowHeight;
-        _lyftButton.buttonColor = [UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1];;
-        // _lyftButton.shadowColor = [UIColor pomegranateColor];
+        [[_lyftButton layer] setBorderWidth:2.0f];
+        [[_lyftButton layer] setBorderColor:[UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1].CGColor];
+        _lyftButton.buttonColor = [UIColor whiteColor];
     }
     return _lyftButton;
 }
+
 
 - (UILabel *)feedbackLabel {
     if (!_feedbackLabel) {
@@ -377,7 +431,7 @@
 
 - (void)openLyft {
     UIApplication *myApp = UIApplication.sharedApplication;
-    NSURL *lyftAppURL = [NSURL URLWithString:@"lyft://"];
+    NSURL *lyftAppURL = [NSURL URLWithString:@"lyft://payment?credits=<my_custom_promo_code>"];
     if ([myApp canOpenURL:lyftAppURL]) {
         // Lyft is installed; launch it
         [myApp openURL:lyftAppURL];
@@ -387,6 +441,12 @@
         [myApp openURL:lyftAppStoreURL];
     }
 }
+
+- (void)openSponsorPage {
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:@"http://www.dilloday.com/sponsors"];
+    [self presentViewController:webViewController animated:YES completion:NULL];
+}
+
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
     [controller dismissViewControllerAnimated:YES completion:NULL];

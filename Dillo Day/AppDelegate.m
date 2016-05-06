@@ -69,7 +69,7 @@
 
 
     DILHelpViewController *helpVC = [DILHelpViewController new];
-    helpVC.title = @"HELP";
+    helpVC.title = @"INFO";
     UINavigationController *helpNavController = [[UINavigationController alloc] initWithRootViewController:helpVC];
     
     NSArray *navigationControllerArray = @[lineupNavController, mapNavController, notificationsNavController, helpNavController];
