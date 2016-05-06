@@ -25,7 +25,7 @@
 @property (strong, nonatomic) UIImageView *sponsorImageView;
 @end
 
-static CGFloat buttonShadowHeight = 5;
+//static CGFloat buttonShadowHeight = 5;
 
 @implementation DILHelpViewController
 
@@ -103,6 +103,8 @@ static CGFloat buttonShadowHeight = 5;
     [self.lyftButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     [self.lyftButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset];
     
+//    [self.lyftLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.lyftButton];
+//    [self.lyftLabel autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.lyftButton];
 }
 
 - (void)configureView {
@@ -261,6 +263,7 @@ static CGFloat buttonShadowHeight = 5;
     if (!_lyftButton) {
         _lyftButton = [[FUIButton alloc] initForAutoLayout];
         [_lyftButton setTitle:@"RIDE WITH LYFT" forState:UIControlStateNormal];
+        //[_lyftButton addSubview:_lyftLabel];
         _lyftButton.cornerRadius = 5;
         [_lyftButton addTarget:self action:@selector(openLyft) forControlEvents:UIControlEventTouchUpInside];
         //`  _lyftButton.shadowHeight = buttonShadowHeight;
@@ -309,13 +312,15 @@ static CGFloat buttonShadowHeight = 5;
 
 - (UILabel *)lyftLabel {
     if (!_lyftLabel) {
+        //_lyftLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, _lyftButton.frame.size.height, _lyftButton.frame.size.width)];
         _lyftLabel = [[UILabel alloc] initForAutoLayout];
-        //        _shuttlesLabel.text = @"Going somewhere? Why not check if a shuttle can take you there!";
+        NSLog(@"%@", _lyftLabel);
         _lyftLabel.text = nil;
         _lyftLabel.numberOfLines = 0;
         _lyftLabel.adjustsFontSizeToFitWidth = YES;
         _lyftLabel.minimumScaleFactor = 0.01;
         _lyftLabel.textAlignment = NSTextAlignmentCenter;
+        //_lyftLabel.text = @"test";
     }
     return _lyftLabel;
 }

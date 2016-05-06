@@ -4,6 +4,11 @@
 <dict>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>music</string>
+		<string>tidal</string>
+		<string>soundcloud</string>
+		<string>youtube</string>
+		<string>spotify</string>
 		<string>lyft</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

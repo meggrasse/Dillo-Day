@@ -36,6 +36,7 @@ extern NSString *const kDILPFArtistSponsorKey;
 @property (retain) NSString *aplUrl;
 @property (retain) NSString *soundcloudUrl;
 @property (retain) NSString *youtubeUrl;
+@property (retain) NSString *soundcloudUsername;
 
 
 /**
