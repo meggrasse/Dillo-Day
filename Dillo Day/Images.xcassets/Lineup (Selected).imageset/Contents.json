@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Lineup (Selected).png",
+      "filename" : "dock1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Lineup (Selected)@2x.png",
+      "filename" : "dock1-3.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Lineup (Selected)@3x.png",
+      "filename" : "dock1-4.png",
       "scale" : "3x"
     }
   ],

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6753F487A9E580CC9CCE0E73'
+               BlueprintIdentifier = '5C5D2387CD54D95F47FEF31C'
                BlueprintName = 'SMScrollView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libSMScrollView.a'>

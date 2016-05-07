@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Map (Selected).png",
+      "filename" : "dock2-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Map (Selected)@2x.png",
+      "filename" : "dock2-2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Map (Selected)@3x.png",
+      "filename" : "dock2.png",
       "scale" : "3x"
     }
   ],
