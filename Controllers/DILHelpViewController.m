@@ -79,7 +79,7 @@
     [sponsorSubview autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     [sponsorSubview autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:buttonSubview];
     
-    NSArray *buttonArray = @[self.emergencyButton, self.NUPDButton, self.shuttlesButton, self.feedbackButton, self.sponsorsButton, self.lyftButton];
+    NSArray *buttonArray = @[self.lyftButton, self.NUPDButton, self.emergencyButton, self.feedbackButton, self.shuttlesButton, self.sponsorsButton];
     for (UIView *view in buttonArray) {
         [buttonSubview addSubview:view];
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
@@ -88,24 +88,24 @@
     [buttonArray autoDistributeViewsAlongAxis:ALAxisVertical alignedTo:ALAttributeVertical withFixedSpacing:sideInset insetSpacing:YES matchedSizes:YES];
     
     //    [self.emergencyButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.sponsorImageView withOffset:sideInset];
-    [self.emergencyButton autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:sideInset];
-    [self.emergencyButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+    [self.lyftButton autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:sideInset];
+    [self.lyftButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
-    [self.NUPDButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.emergencyButton withOffset:sideInset];
+    [self.NUPDButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.lyftButton withOffset:sideInset];
     [self.NUPDButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
-    [self.shuttlesButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.NUPDButton withOffset:sideInset];
-    [self.shuttlesButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+    [self.emergencyButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.NUPDButton withOffset:sideInset];
+    [self.emergencyButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
-    [self.feedbackButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.shuttlesButton withOffset:sideInset];
+    [self.feedbackButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.emergencyButton withOffset:sideInset];
     [self.feedbackButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
-    [self.sponsorsButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.feedbackButton withOffset:sideInset];
-    [self.sponsorsButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+    [self.shuttlesButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.feedbackButton withOffset:sideInset];
+    [self.shuttlesButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
-    [self.lyftButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.sponsorsButton withOffset:sideInset];
-    [self.lyftButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
-    [self.lyftButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset];
+    [self.sponsorsButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.shuttlesButton withOffset:sideInset];
+    [self.sponsorsButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+    [self.sponsorsButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset];
     
 //    [self.lyftLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.lyftButton];
 //    [self.lyftLabel autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.lyftButton];
@@ -301,7 +301,7 @@
         [_sponsorsButton setTitle:@"SPONSORS" forState:UIControlStateNormal];
         _sponsorsButton.cornerRadius = 5;
         // _shuttlesButton.shadowHeight = buttonShadowHeight;
-        _sponsorsButton.buttonColor = [UIColor peterRiverColor];
+        _sponsorsButton.buttonColor = [UIColor colorWithRed: 0.204 green: 0.859 blue: 0.549 alpha: 1];
         //  _shuttlesButton.shadowColor = [UIColor belizeHoleColor];
     }
     return _sponsorsButton;
