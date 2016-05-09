@@ -13,6 +13,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Spotify/Spotify.h>
 #import <AVFoundation/AVFoundation.h>
+#import <Realm/Realm.h>
 
 #import "DILLineupViewController.h"
 #import "DILMapViewController.h"
@@ -21,7 +22,6 @@
 #import "DILFakeDataGenerator.h"
 #import "DILParseClassGeneration.h"
 #import "DILPushNotificationHandler.h"
-
 
 @interface AppDelegate ()
 @property (strong, nonatomic) RDVTabBarController *tabBarController;
@@ -33,6 +33,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [[NSFileManager defaultManager] removeItemAtURL:[RLMRealmConfiguration defaultConfiguration].fileURL error:nil];
+    
+ //   [RLMRealm defaultRealm];
+    
+//    RLMMigrationBlock migrationBlock = ^(RLMMigration *migration, uint64_t oldSchemaVersion) {
+//        // We haven’t migrated anything yet, so oldSchemaVersion == 0
+//        if (oldSchemaVersion < 1) {
+//            // Nothing to do!
+//            // Realm will automatically detect new properties and removed properties
+//            // And will update the schema on disk automatically
+//        }
+//        // Return the latest version number (always set manually)
+//        // Must be a higher than the previous version or an RLMException is thrown
+//        return 1;
+//    };
+//    
+//    // Apply the migration block above to the default Realm
+//    [RLMRealm migrateDefaultRealmWithBlock:migrationBlock];
+//    
     [Parse setApplicationId:@"27yFuFV8nW6mRudOABtjzkOSdoYY9krMdmhoJcgc"
                   clientKey:@"orufTxovCEWvJhqkY9w4baUvqSFf13VcTtfY79gE"];
 
@@ -111,6 +131,7 @@
     [[SPTAuth defaultInstance] setClientID:@"607cdff95f51464bad31c3e314af0832"];
     [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:@"23f7504f730848dbbe71c252ad36c3d6"]];
     [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope]];
+    
     
     // Construct a login URL and open it
     //NSURL *loginURL = [[SPTAuth defaultInstance] loginURL];
