@@ -72,9 +72,9 @@ PODS:
     - Realm/Headers (= 0.101.0)
   - Realm/Headers (0.101.0)
   - Reveal-iOS-SDK (1.6.2)
-  - SDWebImage (3.7.5):
-    - SDWebImage/Core (= 3.7.5)
-  - SDWebImage/Core (3.7.5)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
   - SMScrollView (0.1.0)
   - SVProgressHUD (2.0.3)
   - TMCache (1.2.4)
@@ -131,7 +131,7 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   Realm: b21596d6d7e1c054f6fae967d27263d2593ca309
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
-  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SMScrollView: 5eb8928f90f5296cf65e0c8d23a7968e043bbf30
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   TMCache: a93984b045a5ee84bd8941bd5e0b54296059cc52
