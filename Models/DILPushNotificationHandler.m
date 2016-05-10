@@ -74,7 +74,7 @@ static NSString *const kDILPushNotificationHandlerUserInfoTimeKey = @"time";
 
 - (void)removeFileProtectionKeys {
     RLMRealm *notificationRealm = [self notificationRealm];
-    NSString *pathToRealmFile = [notificationRealm path];
+    NSString *pathToRealmFile = notificationRealm.configuration.fileURL.path;
     NSLog(@"%@", pathToRealmFile);
     NSArray *allNotificationRealmRelatedFiles = @[
                                                   pathToRealmFile,
