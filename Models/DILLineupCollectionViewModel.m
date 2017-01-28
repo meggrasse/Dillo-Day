@@ -39,7 +39,7 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
     [unsortedArray sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         DILPFArtist *LHS = (DILPFArtist *)obj1;
         DILPFArtist *RHS = (DILPFArtist *)obj2;
-        return [RHS.unannouncedOrder compare:LHS.unannouncedOrder];
+        return [RHS.lineupCollectionViewOrder compare:LHS.lineupCollectionViewOrder];
     }];
     return unsortedArray;
 }
