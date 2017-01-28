@@ -285,7 +285,6 @@
 		9455FD331C5571EC00E83AC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		94C31FF81C70E0AC007C6560 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
 		94C31FFA1C70E283007C6560 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		94FB6D271C9F4124009BF085 /* drum01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = drum01.mp3; path = "../../../Downloads/Sound Demo/Sound Demo/drum01.mp3"; sourceTree = SOURCE_ROOT; };
 		B628256970EB885798A2F3A3 /* libPods-Dillo Day.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dillo Day.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7F54AF6C3852EF381C7620 /* Pods-Dillo Day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dillo Day.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dillo Day/Pods-Dillo Day.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -598,7 +597,6 @@
 		217946E71A88005200224737 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				94FB6D271C9F4124009BF085 /* drum01.mp3 */,
 				21636D101B0A5787000B0F7F /* PBYoutubeVideoViewController */,
 				210FE30D1AD795D2009BC3DE /* SVWebViewController */,
 				219155511AD4BCA800FC61E8 /* CarbonTabSwipeNavigation */,
@@ -1131,7 +1129,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"$inherited",
+					$inherited,
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production1;
@@ -1162,7 +1160,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
-					"$inherited",
+					$inherited,
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production1;

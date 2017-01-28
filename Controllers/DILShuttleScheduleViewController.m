@@ -22,9 +22,8 @@
 @implementation DILShuttleScheduleViewController
 
 - (void)viewDidLoad {
-    //    self.edgesForExtendedLayout = UIRectEdgeNone;
     [super viewDidLoad];
-        self.title = @"SHUTTLE SCHEDULE";
+    self.title = @"SHUTTLE SCHEDULE";
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.backgroundColor = [DilloDayStyleKit navigationBarColor];
     [self.navigationController.navigationBar setTintColor:[DilloDayStyleKit tabBarSelectedColor]];
@@ -45,7 +44,6 @@
 
 - (void)configureView {
     [self.view addSubview:self.scrollView];
-    //    [self.scrollView addSubview:self.imageView];
     [self.scrollView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     self.scrollView.backgroundColor = [UIColor clearColor];
 }
@@ -58,13 +56,9 @@
 
     self.scrollView.alpha = 0;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.000001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //        [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
         self.scrollView.zoomScale += 0.001;
         self.scrollView.alpha = 1;
     });
-    //    [self.scrollView scaleToFit];
-    //    CGPoint centerOffset = CGPointMake(0, 0);
-    //    [self.scrollView setContentOffset: centerOffset animated: NO];
 }
 
 - (UIImageView *)imageView {
@@ -113,7 +107,6 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         PFQuery *scheduleQuery = [DILPFShuttleSchedule query];
         [scheduleQuery whereKey:@"currentSchedule" equalTo:[NSNumber numberWithBool:YES]];
-//        [scheduleQuery findObjectsInBackgroundWithBlock:^(NSArray *PF_NULLABLE_S objects, NSError *PF_NULLABLE_S error) {
         [scheduleQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (objects) {
                 fulfill([objects firstObject]);
@@ -126,8 +119,7 @@
 
 - (PMKPromise *)scheduleFileDownloadPromise:(DILPFShuttleSchedule *)schedule {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
-//        [schedule.shuttleScheduelImage getDataInBackgroundWithBlock:^(NSData *PF_NULLABLE_S data, NSError *PF_NULLABLE_S error){
-        [schedule.shuttleScheduelImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+        [schedule.shuttleScheduelImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (data) {
                 fulfill(data);
             } else {

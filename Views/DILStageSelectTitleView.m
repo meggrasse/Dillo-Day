@@ -12,7 +12,7 @@
 
 #import <PureLayout/PureLayout.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
-//#import <Parse/Parse.h>
+#import <Parse/Parse.h>
 #import <PromiseKit/PromiseKit.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <FXBlurView/FXBlurView.h>

@@ -21,10 +21,6 @@ static CGFloat const kDILArtistStickyHeaderCollectionViewSegmentedControlHeight 
 
 @interface DILArtistStickyHeaderCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic) UIButton *circularImageView;
-//@property (strong, nonatomic) UIImageView *backgroundImageView;
-//@property (strong, nonatomic) UILabel *circleLabel;
-//@property (weak, nonatomic) DILArtistViewController *ref;
-
 @property (weak, nonatomic) id<DILArtistStickyHeaderCollectionViewCellDelegate> delegate;
 @property (assign) UIViewController* controller;
 - (void)configureCellWithArtist:(DILPFArtist *)artist;

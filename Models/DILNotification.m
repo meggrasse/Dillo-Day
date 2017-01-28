@@ -44,7 +44,7 @@
 + (DILNotification *)notificationFromPFNotification:(PFNotification *)notification {
     DILNotification *newAPN = [DILNotification new];
     newAPN.alert = notification.alert;
-//    newAPN.dateRecieved = [NSDate dateWithTimeIntervalSince1970:[notification.time floatValue]];
+    newAPN.dateRecieved = [NSDate dateWithTimeIntervalSince1970:[notification.time floatValue]];
     newAPN.dateRecieved = notification.createdAt;
     newAPN.unread = YES;
     newAPN.objectId = notification.objectId;

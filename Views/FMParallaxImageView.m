@@ -101,42 +101,4 @@
     }
 }
 
-
-/*
-- (void)setImageOffsetFactor:(CGFloat)imageOffsetFactor {
-    _imageOffsetFactor = imageOffsetFactor;
-    
-    if (imageOffsetFactor < -1) {
-        imageOffsetFactor = -1;
-    } else if (imageOffsetFactor > 1) {
-        imageOffsetFactor = 1;
-    }
-    
-    CGFloat yOffsetBaseline = (CGRectGetHeight(self.bounds) - CGRectGetHeight(self.imageView.bounds))/2.0;
-    CGFloat yWiggleRoom = (CGRectGetHeight(self.bounds) * _percentage)/2.0;
-
-    CGFloat yOffset = yOffsetBaseline + (yWiggleRoom * -imageOffsetFactor);
-    if (isnan(yOffset)) {
-        yOffset = 0;
-    }
-    CGRect frame = self.imageView.frame;
-    frame.origin.y = yOffset;
-    self.imageView.frame = frame;
-}
-*/
-/*
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    [self setImageOffsetFactor:_imageOffsetFactor];
-    
-    for (NSLayoutConstraint *constraint in self.imageViewConstraints) {
-        if (constraint.firstAttribute == NSLayoutAttributeTop || constraint.firstAttribute == NSLayoutAttributeBottom) {
-            CGSize imageViewSize = self.frame.size;
-            imageViewSize.height *= (1 + _percentage);
-            
-            constraint.constant = imageViewSize.height/2.0;
-        }
-    }
-}
- */
 @end

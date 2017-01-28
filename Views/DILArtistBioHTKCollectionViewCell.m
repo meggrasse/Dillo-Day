@@ -26,14 +26,6 @@
     CGFloat bioLabelInset = 5;
     [self.bioLabel autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(bioLabelInset, bioLabelInset, bioLabelInset, bioLabelInset)];
 
-//    [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
-//        [self.bioLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisVertical];
-//    }];
-//
-//    [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
-//        [self.bioLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
-//    }];
-
     self.bioLabel.preferredMaxLayoutWidth = [[self class] defaultSize].width - 2*bioLabelInset;
 }
 

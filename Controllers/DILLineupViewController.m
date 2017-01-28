@@ -15,8 +15,6 @@
 #import "DILArtistViewController.h"
 #import "DILStageSelectTitleView.h"
 
-//#import <CBStoreHouseRefreshControl/CBStoreHouseRefreshControl.h>
-
 @interface DILLineupViewController ()<DILLineupCollectionViewDelegate, DILStageSelectTitleViewDelegate>
 @property (strong, nonatomic) UICollectionView *lineupCollectionView;
 @property (strong, nonatomic) DILLineupCollectionViewModel *lineupCollectionViewModel;
@@ -91,14 +89,12 @@
     DILArtistViewController *artistVC = [DILArtistViewController new];
     artistVC.artist = artist;
     [self showViewController:artistVC sender:self];
-//    [self.navigationController pushViewController:artistVC animated:YES];
 }
 
 #pragma mark - DILStageSelectionDelegate
 - (void)didSelectStage:(DILPFStage *)stage {
     self.stageSelectTitleView.selectedStage = stage;
     self.lineupCollectionViewModel.stage = stage;
-//    self.title = [stage.name uppercaseString];
     [self.lineupCollectionView reloadData];
     [self.lineupCollectionView setContentOffset:CGPointZero animated:NO];
 }

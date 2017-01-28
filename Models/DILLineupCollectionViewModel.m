@@ -63,18 +63,6 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
     DILPFArtist *artistForCell = [self artistForIndexPath:indexPath];
     [parallaxLineupCell configureCellWithArtist:artistForCell scrollView:collectionView];
     return parallaxLineupCell;
-
-
-    /*
-    DILLineupCenterTextCollectionViewCell *lineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:DILLineupCenterTextCollectionViewCellIdentifier forIndexPath:indexPath];
-    DILPFArtist *artistForCell = [self artistForIndexPath:indexPath];
-    [lineupCell configureCellWithArtist:artistForCell];
-
-    lineupCell.layer.shouldRasterize = YES;
-    lineupCell.layer.rasterizationScale = [UIScreen mainScreen].scale;
-    
-    return lineupCell;
-     */
 }
 
 - (DILPFArtist *)artistForIndexPath:(NSIndexPath *)indexPath {
@@ -118,19 +106,6 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 
 #pragma mark - Pull to Refresh
 - (void)configurePullToRefresh {
-    /*
-    self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.collectionView
-                                                                  target:self
-                                                           refreshAction:@selector(refreshTriggered:)
-                                                                   plist:@"storehouse"
-                                                                   color:[UIColor redColor]
-                                                               lineWidth:2
-                                                              dropHeight:80
-                                                                   scale:1
-                                                    horizontalRandomness:150
-                                                 reverseLoadingAnimation:YES
-                                                 internalAnimationFactor:0.5];
-     */
     self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.collectionView
                                                                       target:self
                                                                refreshAction:@selector(refreshTriggered:)

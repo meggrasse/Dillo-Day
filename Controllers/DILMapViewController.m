@@ -22,7 +22,6 @@
 @implementation DILMapViewController
 
 - (void)viewDidLoad {
-    //    self.edgesForExtendedLayout = UIRectEdgeNone;
     [super viewDidLoad];
     [self configureView];
     [self downloadMap];
@@ -30,7 +29,6 @@
 
 - (void)configureView {
     [self.view addSubview:self.scrollView];
-    //    [self.scrollView addSubview:self.imageView];
     [self.scrollView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     self.scrollView.backgroundColor = [UIColor clearColor];
 }
@@ -43,13 +41,9 @@
     
     self.scrollView.alpha = 0;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.000001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        //        [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
         self.scrollView.zoomScale += 0.001;
         self.scrollView.alpha = 1;
     });
-    //    [self.scrollView scaleToFit];
-    //    CGPoint centerOffset = CGPointMake(0, 0);
-    //    [self.scrollView setContentOffset: centerOffset animated: NO];
 }
 
 - (UIImageView *)mapImageView {
@@ -98,8 +92,7 @@
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         PFQuery *mapQuery = [DILPFMap query];
         [mapQuery whereKey:@"currentMap" equalTo:@(YES)];
-        //[mapQuery findObjectsInBackgroundWithBlock:^(NSArray *PF_NULLABLE_S objects, NSError *PF_NULLABLE_S error){
-        [mapQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        [mapQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (objects) {
                 fulfill([objects firstObject]);
             } else {
@@ -111,8 +104,7 @@
 
 - (PMKPromise *)mapFileDownloadPromise:(DILPFMap *)map {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
-        //[map.mapFile getDataInBackgroundWithBlock:^(NSData *PF_NULLABLE_S data, NSError *PF_NULLABLE_S error){
-        [map.mapFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error){
+        [map.mapFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             if (data) {
                 fulfill(data);
             } else {

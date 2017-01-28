@@ -31,9 +31,6 @@ BOOL musicPlaying = NO;
     [super viewDidLoad];
     self.previewUrl = @"";
     self.edgesForExtendedLayout = UIRectEdgeNone;
-//    _headerView = [DILArtistStickyHeaderCollectionViewCell alloc];
-//    [headerView.circularImageView addTarget:self action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
-//    [headerView.circularImageView addTarget:headerView action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

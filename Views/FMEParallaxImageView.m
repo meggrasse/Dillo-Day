@@ -104,9 +104,6 @@
 - (void)setScrollView:(UIScrollView *)scrollView {
     _scrollView = scrollView;
 
-    //    [RACObserve(scrollView, bounds) subscribeNext:^(NSNumber *next) {
-    //        [self updateParallaxOffset];
-    //    }];
     [RACObserve(scrollView, contentOffset) subscribeNext:^(id x) {
         [self updateParallaxOffset];
     }];

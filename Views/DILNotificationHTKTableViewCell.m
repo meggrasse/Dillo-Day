@@ -52,14 +52,6 @@
     [self.notificationTimeLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.notificationMessageLabel];
     [self.notificationTimeLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.notificationMessageLabel withOffset:verticalTextOffset];
     [self.notificationTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:unreadInset relation:NSLayoutRelationGreaterThanOrEqual];
-//
-//    [UIView autoSetPriority:UILayoutPriorityRequired forConstraints:^{
-//        [self.notificationMessageLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisVertical];
-//    }];
-//
-//    [UIView autoSetPriority:UILayoutPriorityDefaultLow forConstraints:^{
-//        [self.notificationMessageLabel autoSetContentCompressionResistancePriorityForAxis:ALAxisHorizontal];
-//    }];
 }
 
 - (UILabel *)notificationMessageLabel {
@@ -90,16 +82,12 @@
         _unreadImageView = [[UIImageView alloc] initForAutoLayout];
         _unreadImageView.contentMode = UIViewContentModeScaleAspectFit;
         _unreadImageView.clipsToBounds = YES;
-//        _unreadImageView.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:.3];
     }
     return _unreadImageView;
 }
 
 - (UIImage *)imageForUnreadImageView:(BOOL)unread {
     UIImage *image;
-//    CGFloat imageDimension = 20;
-//    CGRect imageBounds = CGRectMake(0, 0, imageDimension, imageDimension);
-//    UIColor *imageColor = [UIColor blackColor];
     if (unread) {
         image = [DilloDayStyleKit imageOfNotificationIndicatorUnread];
     } else {
@@ -115,7 +103,6 @@
 
 
 - (void)configureCellWithNotification:(DILNotification *)notification {
-//    self.notificationMessageLabel.text = [NSString stringWithFormat:@"%@ %@", notification.alert, notification.dateRecieved.longTimeString];
     self.notificationMessageLabel.text = notification.alert;
     self.notificationTimeLabel.text = [notification.dateRecieved dateTimeAgo];
     self.unreadImageView.image = [self imageForUnreadImageView:notification.unread];

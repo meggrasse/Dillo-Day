@@ -19,7 +19,6 @@
 @interface DILArtistStickyHeaderCollectionViewCell()
 @property (strong, nonatomic) UIImageView *backgroundImageView;
 @property (strong, nonatomic) UILabel *timeLabel;
-//@property (strong, nonatomic) UIButton *circularImageView;
 @property (strong, nonatomic) UILabel *circleLabel;
 @property (strong, nonatomic) HMSegmentedControl *segmentedControl;
 @property (strong, nonatomic) NSMutableArray *circularImageViewLayoutConstraints;
@@ -30,7 +29,6 @@
 
 static NSString *const kSegmentedControlBio     = @"BIO";
 static NSString *const kSegmentedControlMusic   = @"MUSIC";
-//BOOL musicPlaying = NO;
 
 @implementation DILArtistStickyHeaderCollectionViewCell
 
@@ -72,20 +70,6 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     [self.timeLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.backgroundImageView withOffset:-timeLabelInset];
 }
 
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    UITouch *touch = [touches anyObject];
-//    if ([touch view] == _circularImageView) {
-//        NSLog(@"touch");
-//    }
-//    else if ([touch view] == nil) {
-//        NSLog(@"check");
-//    }
-//    else {
-//        UIView *tview = [touch view];
-//        NSLog(@"%@", tview.description);
-//    }
-//}
-
 - (UIImageView *)backgroundImageView {
     if (!_backgroundImageView) {
         _backgroundImageView = [[UIImageView alloc] initForAutoLayout];
@@ -99,7 +83,6 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 - (UIButton *)circularImageView {
     if (!_circularImageView) {
         _circularImageView = [[UIButton alloc] initForAutoLayout];
-        //_circularImageView.contentMode = UIViewContentModeScaleAspectFill;
         _circularImageView.clipsToBounds = YES;
         _circularImageView.layer.shadowOpacity = 1;
         _circularImageView.layer.shadowOffset = CGSizeZero;
@@ -135,7 +118,6 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     CGFloat inset = 60;
     [self.circularImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.backgroundImageView withOffset:-inset];
     [self.circularImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.circularImageView];
-//    [self.circularImageView addTarget:self action:@selector(controlTrack1:) forControlEvents:UIControlEventTouchUpInside];
     [self.circularImageView addTarget:controller action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -185,22 +167,6 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     return _backgroundImageViewTintView;
 }
 
-//- (void)controlTrack1:(id)sender {
-//    if (musicPlaying == NO) {
-//        musicPlaying = YES;
-//        [_audioPlayer play];
-//        _circleLabel.text = @"   \u258D\u258D";
-//        _circleLabel.font = [UIFont systemFontOfSize:35];
-//        _circleLabel.textAlignment = NSTextAlignmentRight;
-//    } else {
-//        musicPlaying = NO;
-//        [_audioPlayer pause];
-//        _circleLabel.text = @"\u25B6";
-//        _circleLabel.textAlignment = NSTextAlignmentRight;
-//        _circleLabel.font = [UIFont systemFontOfSize:80];
-//    }
-//}
-
 - (void)initTrack {
     NSURL *urlStream = [[NSURL alloc] initWithString:self.previewUrl];
     AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:urlStream options:nil];
@@ -233,22 +199,14 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
         self.backgroundImageView.image = image;
         self.previewUrl = [@"https://p.scdn.co/mp3-preview/" stringByAppendingString:artist.previewUrl];
         [self initTrack];
-        //[_circularImageView addTarget:self action:@selector(controlTrack1:) forControlEvents:UIControlEventTouchUpInside];
     });
     
-   // [self addCircularImageView];
-
-
     self.circularImageView.alpha = 0;
     [artist iconImageDownloadPromise].then(^(UIImage *image){
         [_circularImageView setBackgroundImage:image forState:UIControlStateNormal];
-        //_circularImageView.image = image;
-        //UIImage *btnImage = image;
-        //[_circularImageView setImage:btnImage forState:UIControlStateNormal];
         self.circularImageView.alpha = 1;
     });
 
-//    self.timeLabel.text = [artist.performanceTime mediumTimeString];
 }
 
 + (NSString *)identifier {
