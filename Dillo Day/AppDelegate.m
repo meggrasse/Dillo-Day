@@ -47,7 +47,7 @@
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [SVProgressHUD setFont:[UIFont systemFontOfSize:18]];
 //    [SVProgressHUD setInfoImage:[UIImage imageNamed:@"DillogoSharpLarge"]];
-    [SVProgressHUD setBackgroundColor:[DilloDayStyleKit notificationIconColor]];
+    [SVProgressHUD setBackgroundColor:[DilloDayStyleKit notificationCellBackgroundColor]];
 
 
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
