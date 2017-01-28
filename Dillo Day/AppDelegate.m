@@ -33,8 +33,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Parse setApplicationId:@"27yFuFV8nW6mRudOABtjzkOSdoYY9krMdmhoJcgc"
-                  clientKey:@"orufTxovCEWvJhqkY9w4baUvqSFf13VcTtfY79gE"];
+    
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"27yFuFV8nW6mRudOABtjzkOSdoYY9krMdmhoJcgc";
+        configuration.clientKey = @"orufTxovCEWvJhqkY9w4baUvqSFf13VcTtfY79gE";
+        configuration.server = @"http://mayfest-db.herokuapp.com/parse";
+    }]];
 
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];

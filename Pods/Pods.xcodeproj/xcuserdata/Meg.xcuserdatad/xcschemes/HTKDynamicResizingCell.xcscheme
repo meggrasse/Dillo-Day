@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '662E8489B29DE88F425837F6'
+               BlueprintIdentifier = '43977C47C23C84B2070A22800871DA80'
                BlueprintName = 'HTKDynamicResizingCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libHTKDynamicResizingCell.a'>
