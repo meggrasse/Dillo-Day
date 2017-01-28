@@ -91,7 +91,7 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 0.1;
+    return 0.5;
 }
 
 
