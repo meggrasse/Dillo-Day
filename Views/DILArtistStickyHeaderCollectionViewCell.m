@@ -195,7 +195,7 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 
 #pragma mark - Public Methods
 - (void)configureCellWithArtist:(DILPFArtist *)artist {
-    [artist imageDownloadPromise].then(^(UIImage *image){
+    [artist imageDownloadPromise].then(^(UIImage *image) {
         self.backgroundImageView.image = image;
         self.previewUrl = [@"https://p.scdn.co/mp3-preview/" stringByAppendingString:artist.previewUrl];
         [self initTrack];

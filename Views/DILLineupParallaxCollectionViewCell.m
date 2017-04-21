@@ -20,7 +20,6 @@
 @property (strong, nonatomic) UAProgressView *progressView;
 @property (strong, nonatomic) DPMeterView *meterView;
 @property (strong, nonatomic) UILabel *announcementLabel;
-@property (strong, nonatomic) DILPFArtist *artist;
 @end
 
 @implementation DILLineupParallaxCollectionViewCell
@@ -64,13 +63,13 @@
     [self.performanceTimeLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
-//    [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [self.performanceTimeLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.nameLabel withOffset:verticalTextOffset];
     
     [self.announcementLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [self.announcementLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [self.announcementLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [self.announcementLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.nameLabel withOffset:verticalTextOffset];
+    
 }
 
 
@@ -85,6 +84,7 @@
         _nameLabel.minimumScaleFactor = 0.1;
         _nameLabel.layer.shadowOpacity = .70;
         _nameLabel.layer.shadowOffset = CGSizeZero;
+        _nameLabel.alpha = 0;
     }
     return _nameLabel;
 }
@@ -115,6 +115,7 @@
         _announcementLabel.minimumScaleFactor = 0.1;
         _announcementLabel.layer.shadowOpacity = .70;
         _announcementLabel.layer.shadowOffset = CGSizeZero;
+        _announcementLabel.alpha = 0;
     }
     return _announcementLabel;
 }
@@ -169,18 +170,18 @@
 
 
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView {
-    self.artist = artist;
-    if (artist.isBeingAnnounced) {
-        self.announcementLabel.text = @"announcing:".uppercaseString;
-        self.announcementLabel.alpha = 0;
-        self.nameLabel.alpha = 0;
-    }
-    self.nameLabel.text = [artist.name uppercaseString];
+    if (!artist.isBeingAnnounced)
+        self.nameLabel.alpha = 1;
+
+    self.announcementLabel.text = @"announcing:".uppercaseString;
+    self.nameLabel.text = artist.name.uppercaseString;
 
     if (artist.performanceTime)
         self.performanceTimeLabel.text = [artist.performanceTime shortTimeString];
     self.parallaxImageView.scrollView = scrollView;
-    self.parallaxImageView.imageFile = artist.lineupImage;
+    
+    if (!artist.isBeingAnnounced)
+        self.parallaxImageView.imageFile = artist.lineupImage;
 
     [self setupMeterView];
     [self.parallaxImageView loadInBackground:^(UIImage *image, NSError *error) {
@@ -191,14 +192,14 @@
 }
 
 - (void)announcementLabelAnimation {
-    [UIView animateWithDuration:3 delay:8 options: UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:3 delay:15 options: UIViewAnimationOptionCurveEaseIn animations:^{
         self.announcementLabel.alpha = 1;
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:3 delay:5 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            self.announcementLabel.alpha = 0;
+        [UIView animateWithDuration:3 delay:3 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            self.nameLabel.alpha = 1;
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:5 delay:5 options:UIViewAnimationOptionCurveEaseIn animations:^{
-                self.nameLabel.alpha = 1;
+            [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                self.announcementLabel.alpha = 0;
             } completion: nil];
         }];
     }];

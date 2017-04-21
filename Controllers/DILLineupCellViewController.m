@@ -8,6 +8,8 @@
 
 #import "DILLineupCellViewController.h"
 
+#import <AVFoundation/AVFoundation.h>
+
 @interface DILLineupCellViewController ()
 
 @property (strong, nonatomic) YTPlayerView *playerView;
@@ -19,6 +21,7 @@
 
 - (void)viewDidLoad {
     self.playerView.delegate = self;
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
 
     [super viewDidLoad];
 }
