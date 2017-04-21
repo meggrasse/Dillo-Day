@@ -7,15 +7,12 @@
 //
 
 #import "DILLineupParallaxCollectionViewCell.h"
-#import "FMEParallaxPFImageView.h"
 
 #import "NSDate+Utilities.h"
 #import <UAProgressView/UAProgressView.h>
 #import <DPMeterView/DPMeterView.h>
 
 @interface DILLineupParallaxCollectionViewCell()
-@property (strong, nonatomic) FMEParallaxPFImageView *parallaxImageView;
-@property (strong, nonatomic) UILabel *nameLabel;
 @property (strong, nonatomic) UILabel *performanceTimeLabel;
 @property (strong, nonatomic) UAProgressView *progressView;
 @property (strong, nonatomic) DPMeterView *meterView;
@@ -35,23 +32,23 @@
 
     [self.contentView addSubview:self.parallaxImageView];
 
-    UIView *centeredTextView = [[UIView alloc] initForAutoLayout];
-    [self.contentView addSubview:centeredTextView];
+    self.centeredTextView = [[UIView alloc] initForAutoLayout];
+    [self.contentView addSubview:self.centeredTextView];
 
-    [centeredTextView addSubview:self.nameLabel];
-    [centeredTextView addSubview:self.performanceTimeLabel];
+    [self.centeredTextView addSubview:self.nameLabel];
+    [self.centeredTextView addSubview:self.performanceTimeLabel];
 
 
     [self.parallaxImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
-    [centeredTextView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-    [centeredTextView autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.centeredTextView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    [self.centeredTextView autoAlignAxisToSuperviewAxis:ALAxisVertical];
 
     CGFloat centeredTextViewInset = 20.f;
-//    [centeredTextView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(centeredTextViewInset, centeredTextViewInset, centeredTextViewInset, centeredTextViewInset)];
-    [centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
-    [centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
-    [centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
-    [centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
+//    [self.centeredTextView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(self.centeredTextViewInset, self.centeredTextViewInset, self.centeredTextViewInset, self.centeredTextViewInset)];
+    [self.centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
 
 
 //    [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
@@ -165,7 +162,8 @@
 //    formatter.timeZone = [NSTimeZone time]
 //    NSString *timeString = [formatter stringFromDate:artist.performanceTime];
 
-    self.performanceTimeLabel.text = [artist.performanceTime shortTimeString];
+    if (artist.performanceTime)
+        self.performanceTimeLabel.text = [artist.performanceTime shortTimeString];
 //    self.performanceTimeLabel.text = artist.objectId;
     self.parallaxImageView.scrollView = scrollView;
     self.parallaxImageView.imageFile = artist.lineupImage;

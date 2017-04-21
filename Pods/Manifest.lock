@@ -80,6 +80,7 @@ PODS:
   - TOMSMorphingLabel (0.5.1)
   - UAProgressView (0.1.3)
   - XCDYouTubeKit (2.1.3)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - BFPaperButton (~> 2.0)
@@ -107,6 +108,7 @@ DEPENDENCIES:
   - TOMSMorphingLabel (~> 0.5)
   - UAProgressView
   - XCDYouTubeKit (~> 2.1.1)
+  - youtube-ios-player-helper (~> 0.1.6)
 
 SPEC CHECKSUMS:
   BFPaperButton: c76835e789669f64d600dc68934cc60fbb550bb9
@@ -136,7 +138,8 @@ SPEC CHECKSUMS:
   TOMSMorphingLabel: 3e88a2bf5257f8993ebc51fb3109187a0bfb2c4d
   UAProgressView: ce49aee47c14df6dc372f6fd57852f570ca97e6b
   XCDYouTubeKit: ca3120218413fdd141567ca98b5418df309b1ced
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 26440769bc866ed9e793cd11282fe50525d75736
+PODFILE CHECKSUM: 1eb29b933c12803cc87001b25067df28aa88bec6
 
 COCOAPODS: 1.2.0.rc.1

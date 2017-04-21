@@ -10,6 +10,8 @@
 
 #import "DILLineupCenterTextCollectionViewCell.h"
 #import "DILLineupParallaxCollectionViewCell.h"
+#import "DILLineupCellViewController.h"
+
 #import "DILPFArtist.h"
 
 #import <PromiseKit/PromiseKit.h>
@@ -20,6 +22,7 @@
 @property (nonatomic) BOOL hasRegisteredClass;
 @property (strong, nonatomic) CBStoreHouseRefreshControl *refreshControl;
 @property (readonly, nonatomic) NSArray *sortedArtistArray;
+@property (nonatomic, strong) DILLineupCellViewController *announcementCellViewController;
 @end
 
 static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLineupCenterTextCollectionViewCellIdentifier";
@@ -59,10 +62,19 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
         self.hasRegisteredClass = YES;
     }
 
-    DILLineupParallaxCollectionViewCell *parallaxLineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:DILLineupParallaxCollectionViewCellIdentifier forIndexPath:indexPath];
+    DILLineupParallaxCollectionViewCell *lineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:DILLineupParallaxCollectionViewCellIdentifier forIndexPath:indexPath];
+
     DILPFArtist *artistForCell = [self artistForIndexPath:indexPath];
-    [parallaxLineupCell configureCellWithArtist:artistForCell scrollView:collectionView];
-    return parallaxLineupCell;
+    [lineupCell configureCellWithArtist:artistForCell scrollView:collectionView];
+
+    if (artistForCell.isBeingAnnounced && !self.announcementCellViewController) {
+        self.announcementCellViewController = [[DILLineupCellViewController alloc] init];
+        [self.announcementCellViewController setupYTPlayerView:lineupCell.bounds forArtist:artistForCell];
+        [lineupCell addSubview:self.announcementCellViewController.view];
+        [lineupCell sendSubviewToBack:self.announcementCellViewController.view];
+    }
+    
+    return lineupCell;
 }
 
 - (DILPFArtist *)artistForIndexPath:(NSIndexPath *)indexPath {

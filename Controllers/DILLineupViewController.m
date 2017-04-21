@@ -76,7 +76,6 @@
     }
 }
 
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.stageSelectTitleView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -84,6 +83,7 @@
         [constraint autoInstall];
     }
 }
+
 #pragma mark - DILLineupCollectionViewDelegate
 - (void)didSelectArtist:(DILPFArtist *)artist {
     DILArtistViewController *artistVC = [DILArtistViewController new];
@@ -125,4 +125,3 @@
     }];
 }
 @end
-//

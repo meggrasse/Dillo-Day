@@ -88,6 +88,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "ParseUI/ParseUI/Resources/Localization/fr.lproj"
   install_resource "ParseUI/ParseUI/Resources/Localization/pt-BR.lproj"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "FlatUIKit/Resources/flat-ui-icons-regular.ttf"
@@ -101,6 +102,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "ParseUI/ParseUI/Resources/Localization/fr.lproj"
   install_resource "ParseUI/ParseUI/Resources/Localization/pt-BR.lproj"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "youtube-ios-player-helper/youtube-ios-player-helper/Assets.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

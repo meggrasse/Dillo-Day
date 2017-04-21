@@ -105,6 +105,7 @@
 		41622D61DBCDC77216A73D20 /* libPods-Dillo Day.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B628256970EB885798A2F3A3 /* libPods-Dillo Day.a */; };
 		556ADC61DA57ADA2EAB7887C /* libPods-Dillo DayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8ECCFD0B2D85200EB4A438 /* libPods-Dillo DayTests.a */; };
 		9455FD341C5571EC00E83AC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9455FD331C5571EC00E83AC2 /* MapKit.framework */; };
+		94BE92601EA8641E009B7A72 /* DILLineupCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BE925F1EA8641E009B7A72 /* DILLineupCellViewController.m */; };
 		94C31FF91C70E0AC007C6560 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C31FF81C70E0AC007C6560 /* Spotify.framework */; };
 		94C31FFB1C70E283007C6560 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C31FFA1C70E283007C6560 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -283,6 +284,8 @@
 		4C8ECCFD0B2D85200EB4A438 /* libPods-Dillo DayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dillo DayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C95C15E111A6C0657187FC /* Pods-Dillo DayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dillo DayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dillo DayTests/Pods-Dillo DayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9455FD331C5571EC00E83AC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		94BE925E1EA8641E009B7A72 /* DILLineupCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DILLineupCellViewController.h; sourceTree = "<group>"; };
+		94BE925F1EA8641E009B7A72 /* DILLineupCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DILLineupCellViewController.m; sourceTree = "<group>"; };
 		94C31FF81C70E0AC007C6560 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
 		94C31FFA1C70E283007C6560 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B628256970EB885798A2F3A3 /* libPods-Dillo Day.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dillo Day.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -564,6 +567,8 @@
 				216487511AF82DA3002D785C /* DILShuttleScheduleViewController.m */,
 				210A815C1AC5FFE80091C134 /* DILNotificationsViewController.h */,
 				210A81671AC625A80091C134 /* DILLineupViewController.m */,
+				94BE925E1EA8641E009B7A72 /* DILLineupCellViewController.h */,
+				94BE925F1EA8641E009B7A72 /* DILLineupCellViewController.m */,
 				210A815D1AC5FFE80091C134 /* DILNotificationsViewController.m */,
 				210A81661AC625A80091C134 /* DILLineupViewController.h */,
 				21BAFE391ACE1C49003F5ADD /* DILArtistViewController.h */,
@@ -946,6 +951,7 @@
 				210FE3391AD795D2009BC3DE /* SVWebViewControllerActivity.m in Sources */,
 				210FE3301AD795D2009BC3DE /* SVWebViewController.m in Sources */,
 				210FBBE11AF73951009896D2 /* DILMapViewController.m in Sources */,
+				94BE92601EA8641E009B7A72 /* DILLineupCellViewController.m in Sources */,
 				212028661AA8362B00E9E028 /* UIView+FindUIViewController.m in Sources */,
 				217946B51A87C96100224737 /* AppDelegate.m in Sources */,
 				21C4C1141AC750EE00AE4561 /* DILPFStage.m in Sources */,

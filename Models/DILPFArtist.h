@@ -38,6 +38,8 @@ extern NSString *const kDILPFArtistSponsorKey;
 @property (retain) NSString *youtubeUrl;
 @property (retain) NSString *soundcloudUsername;
 @property (retain) NSNumber *lineupCollectionViewOrder;
+@property (nonatomic) BOOL isBeingAnnounced;
+@property (retain) NSString *announcementVideoId;
 
 /**
  *  Returns a promise that returns a UIImage of the DILPFArtist object's lineupImage.

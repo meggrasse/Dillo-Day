@@ -30,6 +30,8 @@ NSString *const kDILPFArtistSponsorKey = @"sponsor";
 @dynamic youtubeUrl;
 @dynamic soundcloudUsername;
 @dynamic lineupCollectionViewOrder;
+@dynamic isBeingAnnounced;
+@dynamic announcementVideoId;
 
 + (NSString *)parseClassName {
     return kDILPFArtistClassKey;
