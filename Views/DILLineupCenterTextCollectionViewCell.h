@@ -10,5 +10,5 @@
 #import "DILPFArtist.h"
 
 @interface DILLineupCenterTextCollectionViewCell : UICollectionViewCell
-- (void)configureCellWithArtist:(DILPFArtist *)artist;
+
 @end

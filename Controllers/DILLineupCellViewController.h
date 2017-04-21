@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "DILPFArtist.h"
+#import "DILLineupParallaxCollectionViewCell.h"
 #import "YTPlayerView.h"
 
 @interface DILLineupCellViewController : UIViewController<YTPlayerViewDelegate>
 
-- (void)setupYTPlayerView:(CGRect)frame forArtist:(DILPFArtist *)artist;
+- (void)setupYTPlayerViewForCell:(DILLineupParallaxCollectionViewCell *)cell forArtist:(DILPFArtist *)artist;
 
 @end

@@ -11,6 +11,7 @@
 @interface DILLineupCellViewController ()
 
 @property (strong, nonatomic) YTPlayerView *playerView;
+@property (strong, nonatomic) DILLineupParallaxCollectionViewCell *cell;
 
 @end
 
@@ -26,8 +27,11 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)setupYTPlayerView:(CGRect)frame forArtist:(DILPFArtist *)artist {
+- (void)setupYTPlayerViewForCell:(DILLineupParallaxCollectionViewCell *)cell forArtist:(DILPFArtist *)artist {
 
+    self.cell = cell;
+    CGRect frame = cell.bounds;
+    
     //math to get rid of Youtube black bars
     CGFloat newWidth = (1280.0/960.0*frame.size.width);
     CGFloat newHeight = (9.0/16.0)*newWidth;
@@ -52,7 +56,8 @@
 }
 
 - (void)playerViewDidBecomeReady:(YTPlayerView* )playerView {
-            [self.playerView playVideo];
+    [self.playerView playVideo];
+    [self.cell announcementLabelAnimation];
 }
 
 @end

@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Controllers/DILLineupCellViewController.m"
-            timestampString = "514478211.472111"
+            filePath = "Views/DILLineupParallaxCollectionViewCell.m"
+            timestampString = "514489226.660721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-setupYTPlayerView:forArtist:"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-configureCellWithArtist:scrollView:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

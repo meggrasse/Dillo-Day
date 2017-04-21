@@ -11,11 +11,9 @@
 #import "FMEParallaxPFImageView.h"
 
 @interface DILLineupParallaxCollectionViewCell : UICollectionViewCell
-- (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView;
-+ (NSString *)identifier;
 
-@property (strong, nonatomic) UILabel *nameLabel;
-@property (strong, nonatomic) FMEParallaxPFImageView *parallaxImageView;
-@property (strong, nonatomic) UIView *centeredTextView;
+- (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView;
+- (void)announcementLabelAnimation;
++ (NSString *)identifier;
 
 @end

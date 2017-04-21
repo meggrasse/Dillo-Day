@@ -13,9 +13,14 @@
 #import <DPMeterView/DPMeterView.h>
 
 @interface DILLineupParallaxCollectionViewCell()
+@property (strong, nonatomic) UILabel *nameLabel;
+@property (strong, nonatomic) FMEParallaxPFImageView *parallaxImageView;
+@property (strong, nonatomic) UIView *centeredTextView;
 @property (strong, nonatomic) UILabel *performanceTimeLabel;
 @property (strong, nonatomic) UAProgressView *progressView;
 @property (strong, nonatomic) DPMeterView *meterView;
+@property (strong, nonatomic) UILabel *announcementLabel;
+@property (strong, nonatomic) DILPFArtist *artist;
 @end
 
 @implementation DILLineupParallaxCollectionViewCell
@@ -37,39 +42,35 @@
 
     [self.centeredTextView addSubview:self.nameLabel];
     [self.centeredTextView addSubview:self.performanceTimeLabel];
-
+    [self.centeredTextView addSubview:self.announcementLabel];
 
     [self.parallaxImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
     [self.centeredTextView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [self.centeredTextView autoAlignAxisToSuperviewAxis:ALAxisVertical];
 
     CGFloat centeredTextViewInset = 20.f;
-//    [self.centeredTextView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(self.centeredTextViewInset, self.centeredTextViewInset, self.centeredTextViewInset, self.centeredTextViewInset)];
     [self.centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
     [self.centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
     [self.centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
     [self.centeredTextView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:centeredTextViewInset relation:NSLayoutRelationGreaterThanOrEqual];
 
-
-//    [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
-//    [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
-//    CGFloat nameLabelInset = 20;
-//    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:nameLabelInset relation:NSLayoutRelationGreaterThanOrEqual];
-//    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:nameLabelInset relation:NSLayoutRelationGreaterThanOrEqual];
-//    [self.nameLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
-
+    [self.nameLabel autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    
     CGFloat verticalTextOffset = 0;
     [self.performanceTimeLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
     [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
-    [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+//    [self.performanceTimeLabel autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [self.performanceTimeLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.nameLabel withOffset:verticalTextOffset];
-
-
+    
+    [self.announcementLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.announcementLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.announcementLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
+    [self.announcementLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.nameLabel withOffset:verticalTextOffset];
 }
 
 
@@ -84,7 +85,6 @@
         _nameLabel.minimumScaleFactor = 0.1;
         _nameLabel.layer.shadowOpacity = .70;
         _nameLabel.layer.shadowOffset = CGSizeZero;
-        //        _nameLabel.backgroundColor = [UIColor blackColor];
     }
     return _nameLabel;
 }
@@ -100,9 +100,23 @@
         _performanceTimeLabel.minimumScaleFactor = 0.1;
         _performanceTimeLabel.layer.shadowOpacity = .70;
         _performanceTimeLabel.layer.shadowOffset = CGSizeZero;
-        //        _performanceTimeLabel.backgroundColor = [UIColor blackColor];
     }
     return _performanceTimeLabel;
+}
+
+- (UILabel *)announcementLabel {
+    if (!_announcementLabel ) {
+        _announcementLabel = [[UILabel alloc] initForAutoLayout];
+        _announcementLabel.numberOfLines = 1;
+        _announcementLabel.font = [UIFont boldFlatFontOfSize:20];
+        _announcementLabel.textColor = [UIColor whiteColor];
+        _announcementLabel.textAlignment = NSTextAlignmentCenter;
+        _announcementLabel.adjustsFontSizeToFitWidth = YES;
+        _announcementLabel.minimumScaleFactor = 0.1;
+        _announcementLabel.layer.shadowOpacity = .70;
+        _announcementLabel.layer.shadowOffset = CGSizeZero;
+    }
+    return _announcementLabel;
 }
 
 - (FMEParallaxPFImageView *)parallaxImageView {
@@ -155,29 +169,39 @@
 
 
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView {
+    self.artist = artist;
+    if (artist.isBeingAnnounced) {
+        self.announcementLabel.text = @"announcing:".uppercaseString;
+        self.announcementLabel.alpha = 0;
+        self.nameLabel.alpha = 0;
+    }
     self.nameLabel.text = [artist.name uppercaseString];
-
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    [formatter setDateFormat:@"hh:mm"];
-//    formatter.timeZone = [NSTimeZone time]
-//    NSString *timeString = [formatter stringFromDate:artist.performanceTime];
 
     if (artist.performanceTime)
         self.performanceTimeLabel.text = [artist.performanceTime shortTimeString];
-//    self.performanceTimeLabel.text = artist.objectId;
     self.parallaxImageView.scrollView = scrollView;
     self.parallaxImageView.imageFile = artist.lineupImage;
 
-//    [self setupProgressView];
     [self setupMeterView];
     [self.parallaxImageView loadInBackground:^(UIImage *image, NSError *error) {
-//        [self terminateProgressView];
         [self terminateMeterView];
     } progressBlock:^(int percentDone) {
         [self.meterView setProgress:((float)percentDone)/100.0 animated:YES];
-//        [self.progressView setProgress:((float)percentDone)/100.0 animated:YES];
     }];
+}
 
+- (void)announcementLabelAnimation {
+    [UIView animateWithDuration:3 delay:8 options: UIViewAnimationOptionCurveEaseIn animations:^{
+        self.announcementLabel.alpha = 1;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:3 delay:5 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.announcementLabel.alpha = 0;
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:5 delay:5 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                self.nameLabel.alpha = 1;
+            } completion: nil];
+        }];
+    }];
 }
 
 - (void)prepareForReuse {

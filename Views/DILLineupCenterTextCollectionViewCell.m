@@ -174,31 +174,4 @@
     [self.progressView removeFromSuperview];
 }
 
-
-#pragma mark - Public Methods
-
-
-- (void)configureCellWithArtist:(DILPFArtist *)artist {
-    self.artist = artist;
-    
-//    [artist imageDownloadPromise].then(^(UIImage *image){
-//        self.artistImageView.image = image;
-//    });
-    self.artistImageView.file = artist.lineupImage;
-    [self setupProgressView];
-    [self.artistImageView loadInBackground:^(UIImage *image, NSError *error) {
-        [self terminateProgressView];
-    } progressBlock:^(int percentDone) {
-        [self.progressView setProgress:((float)percentDone)/100.0 animated:YES];
-    }];
-
-    self.nameLabel.text = artist.name;
-    self.performanceTimeLabel.text = [artist.performanceTime mediumTimeString];
-    if (artist.sponsor.name) {
-        self.sponsorLabel.text = [NSString stringWithFormat:@"Sponsored by %@", artist.sponsor.name];
-    }
-
-    [self.favoriteButton setImage:[self followImageForArtist:artist] forState:UIControlStateNormal];
-}
-
 @end

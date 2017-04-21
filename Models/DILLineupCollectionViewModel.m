@@ -69,7 +69,7 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 
     if (artistForCell.isBeingAnnounced && !self.announcementCellViewController) {
         self.announcementCellViewController = [[DILLineupCellViewController alloc] init];
-        [self.announcementCellViewController setupYTPlayerView:lineupCell.bounds forArtist:artistForCell];
+        [self.announcementCellViewController setupYTPlayerViewForCell:lineupCell forArtist:artistForCell];
         [lineupCell addSubview:self.announcementCellViewController.view];
         [lineupCell sendSubviewToBack:self.announcementCellViewController.view];
     }
