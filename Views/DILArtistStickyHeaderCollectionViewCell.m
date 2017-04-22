@@ -63,7 +63,7 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     
     [self addCircularImageView];
     
-    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
+//    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
     
     CGFloat timeLabelInset = 10;
     [self.timeLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.backgroundImageView withOffset:-timeLabelInset];

@@ -40,6 +40,8 @@
         configuration.server = @"http://mayfest-db.herokuapp.com/parse";
     }]];
 
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
+
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     [NSTimeZone setDefaultTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"CST"]];
 

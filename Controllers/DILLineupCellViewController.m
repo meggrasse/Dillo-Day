@@ -21,7 +21,6 @@
 
 - (void)viewDidLoad {
     self.playerView.delegate = self;
-    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
 
     [super viewDidLoad];
 }
@@ -61,6 +60,11 @@
 - (void)playerViewDidBecomeReady:(YTPlayerView* )playerView {
     [self.playerView playVideo];
     [self.cell announcementLabelAnimation];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.playerView stopVideo];
+    [self.playerView removeFromSuperview];
 }
 
 @end

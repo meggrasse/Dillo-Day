@@ -14,8 +14,6 @@
 
 @interface DILLineupParallaxCollectionViewCell()
 @property (strong, nonatomic) UILabel *nameLabel;
-@property (strong, nonatomic) FMEParallaxPFImageView *parallaxImageView;
-@property (strong, nonatomic) UIView *centeredTextView;
 @property (strong, nonatomic) UILabel *performanceTimeLabel;
 @property (strong, nonatomic) UAProgressView *progressView;
 @property (strong, nonatomic) DPMeterView *meterView;
@@ -180,8 +178,7 @@
         self.performanceTimeLabel.text = [artist.performanceTime shortTimeString];
     self.parallaxImageView.scrollView = scrollView;
     
-    if (!artist.isBeingAnnounced)
-        self.parallaxImageView.imageFile = artist.lineupImage;
+    self.parallaxImageView.imageFile = artist.lineupImage;
 
     [self setupMeterView];
     [self.parallaxImageView loadInBackground:^(UIImage *image, NSError *error) {

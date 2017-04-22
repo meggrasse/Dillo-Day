@@ -12,6 +12,9 @@
 
 @interface DILLineupParallaxCollectionViewCell : UICollectionViewCell
 
+@property (strong, nonatomic) FMEParallaxPFImageView *parallaxImageView;
+@property (strong, nonatomic) UIView *centeredTextView;
+
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView;
 - (void)announcementLabelAnimation;
 + (NSString *)identifier;
