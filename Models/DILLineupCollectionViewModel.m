@@ -21,7 +21,6 @@
 @interface DILLineupCollectionViewModel()
 @property (nonatomic) BOOL hasRegisteredClass;
 @property (strong, nonatomic) CBStoreHouseRefreshControl *refreshControl;
-@property (readonly, nonatomic) NSArray *sortedArtistArray;
 @property (nonatomic, strong) DILLineupCellViewController *announcementCellViewController;
 @end
 
@@ -37,22 +36,12 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 }
 
 #pragma mark - UICollectionViewDataSource
-- (NSArray *)sortedArtistArray {
-    NSMutableArray *unsortedArray = [self.stage.artists mutableCopy];
-    [unsortedArray sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        DILPFArtist *LHS = (DILPFArtist *)obj1;
-        DILPFArtist *RHS = (DILPFArtist *)obj2;
-        return [RHS.lineupCollectionViewOrder compare:LHS.lineupCollectionViewOrder];
-    }];
-    return unsortedArray;
-}
-
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.sortedArtistArray.count;
+    return self.self.stage.artists.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -79,7 +68,7 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 }
 
 - (DILPFArtist *)artistForIndexPath:(NSIndexPath *)indexPath {
-    return self.sortedArtistArray[indexPath.row];
+    return self.self.stage.artists[indexPath.row];
 }
 
 #pragma mark - UICollectionViewFlowLayout
