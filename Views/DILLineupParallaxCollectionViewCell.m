@@ -67,7 +67,6 @@
     [self.announcementLabel autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [self.announcementLabel autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:0 relation:NSLayoutRelationGreaterThanOrEqual];
     [self.announcementLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.nameLabel withOffset:verticalTextOffset];
-    
 }
 
 
