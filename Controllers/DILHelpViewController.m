@@ -17,12 +17,12 @@
 @property (strong, nonatomic) FUIButton *NUPDButton;
 @property (strong, nonatomic) FUIButton *feedbackButton;
 @property (strong, nonatomic) FUIButton *shuttlesButton;
-@property (strong, nonatomic) FUIButton *lyftButton;
+@property (strong, nonatomic) FUIButton *zipcarButton;
 @property (strong, nonatomic) FUIButton *sponsorsButton;
 @property (strong, nonatomic) UILabel *feedbackLabel;
 @property (strong, nonatomic) UILabel *shuttlesLabel;
 @property (strong, nonatomic) UILabel *smartDilloLabel;
-@property (strong, nonatomic) UILabel *lyftLabel;
+@property (strong, nonatomic) UILabel *zipcarLabel;
 @property (strong, nonatomic) UIImageView *sponsorImageView;
 @end
 
@@ -56,7 +56,7 @@
     [sponsorSubview autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     [sponsorSubview autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:buttonSubview];
     
-    NSArray *buttonArray = @[self.lyftButton, self.NUPDButton, self.emergencyButton, self.feedbackButton, self.shuttlesButton, self.sponsorsButton];
+    NSArray *buttonArray = @[self.zipcarButton, self.NUPDButton, self.emergencyButton, self.feedbackButton, self.shuttlesButton, self.sponsorsButton];
     for (UIView *view in buttonArray) {
         [buttonSubview addSubview:view];
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
@@ -64,10 +64,10 @@
     
     [buttonArray autoDistributeViewsAlongAxis:ALAxisVertical alignedTo:ALAttributeVertical withFixedSpacing:sideInset insetSpacing:YES matchedSizes:YES];
     
-    [self.lyftButton autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:sideInset];
-    [self.lyftButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+    [self.zipcarButton autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:sideInset];
+    [self.zipcarButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
-    [self.NUPDButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.lyftButton withOffset:sideInset];
+    [self.NUPDButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.zipcarButton withOffset:sideInset];
     [self.NUPDButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
     [self.emergencyButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.NUPDButton withOffset:sideInset];
@@ -123,7 +123,6 @@
     [shuttleViewContainer autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:emergencyView withOffset:0];
     [shuttleViewContainer autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:feedbackView withOffset:0];
     
-    
     UIView *shuttlesView = [[UIView alloc] initForAutoLayout];
     [shuttleViewContainer addSubview:shuttlesView];
     [shuttlesView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
@@ -136,7 +135,7 @@
     [self.shuttlesButton autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     [self.shuttlesButton autoPinEdgeToSuperviewEdge:ALEdgeTop];
     
-    for (UIView *view in @[self.emergencyButton, self.NUPDButton, self.feedbackButton, self.shuttlesButton, self.lyftButton]) {
+    for (UIView *view in @[self.emergencyButton, self.NUPDButton, self.feedbackButton, self.shuttlesButton, self.zipcarButton]) {
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
     }
     
@@ -198,22 +197,22 @@
     return _sponsorsButton;
 }
 
-- (FUIButton *)lyftButton {
-    if (!_lyftButton) {
+- (FUIButton *)zipcarButton {
+    if (!_zipcarButton) {
         CGFloat height = self.view.frame.size.height;
-        _lyftButton = [[FUIButton alloc] initForAutoLayout];
-        UIImageView *lyftImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"lyft"]];
-        [_lyftButton addSubview:lyftImage];
-        [lyftImage autoSetDimensionsToSize:CGSizeMake(3.22*(height/14), height/14)];
-        [lyftImage autoAlignAxis:ALAxisVertical toSameAxisOfView:self.lyftButton];
-        [lyftImage autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.lyftButton];
-        _lyftButton.layer.cornerRadius = 5;
-        [_lyftButton addTarget:self action:@selector(openLyft) forControlEvents:UIControlEventTouchUpInside];
-        [[_lyftButton layer] setBorderWidth:2.0f];
-        [[_lyftButton layer] setBorderColor:[UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1].CGColor];
-        _lyftButton.buttonColor = [UIColor whiteColor];
+        _zipcarButton = [[FUIButton alloc] initForAutoLayout];
+        UIImageView *zipcarImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"zipcar"]];
+        [_zipcarButton addSubview:zipcarImage];
+        [zipcarImage autoSetDimensionsToSize:CGSizeMake(3.22*(height/14), height/14)];
+        [zipcarImage autoAlignAxis:ALAxisVertical toSameAxisOfView:self.zipcarButton];
+        [zipcarImage autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.zipcarButton];
+        _zipcarButton.layer.cornerRadius = 5;
+        [_zipcarButton addTarget:self action:@selector(openAppStoreForZipcar) forControlEvents:UIControlEventTouchUpInside];
+        [[_zipcarButton layer] setBorderWidth:2.0f];
+        [[_zipcarButton layer] setBorderColor:[UIColor colorWithRed: 0.929 green: 0.224 blue: 0.588 alpha: 1].CGColor];
+        _zipcarButton.buttonColor = [UIColor whiteColor];
     }
-    return _lyftButton;
+    return _zipcarButton;
 }
 
 
@@ -253,17 +252,17 @@
     return _shuttlesLabel;
 }
 
-- (UILabel *)lyftLabel {
-    if (!_lyftLabel) {
-        _lyftLabel = [[UILabel alloc] initForAutoLayout];
-        NSLog(@"%@", _lyftLabel);
-        _lyftLabel.text = nil;
-        _lyftLabel.numberOfLines = 0;
-        _lyftLabel.adjustsFontSizeToFitWidth = YES;
-        _lyftLabel.minimumScaleFactor = 0.01;
-        _lyftLabel.textAlignment = NSTextAlignmentCenter;
+- (UILabel *)zipcarLabel {
+    if (!_zipcarLabel) {
+        _zipcarLabel = [[UILabel alloc] initForAutoLayout];
+        NSLog(@"%@", _zipcarLabel);
+        _zipcarLabel.text = nil;
+        _zipcarLabel.numberOfLines = 0;
+        _zipcarLabel.adjustsFontSizeToFitWidth = YES;
+        _zipcarLabel.minimumScaleFactor = 0.01;
+        _zipcarLabel.textAlignment = NSTextAlignmentCenter;
     }
-    return _lyftLabel;
+    return _zipcarLabel;
 }
 
 - (void)displayShuttleSchedule {
@@ -307,17 +306,8 @@
     [self presentViewController:composeVC animated:YES completion:NULL];
 }
 
-- (void)openLyft {
-    UIApplication *myApp = UIApplication.sharedApplication;
-    NSURL *lyftAppURL = [NSURL URLWithString:@"lyft://payment?credits=DILLODAY2016"];
-    if ([myApp canOpenURL:lyftAppURL]) {
-        // Lyft is installed; launch it
-        [myApp openURL:lyftAppURL];
-    } else {
-        // Lyft not installed; open App Store
-        NSURL *lyftAppStoreURL = [NSURL URLWithString:@"https://itunes.apple.com/us/app/lyft-taxi-bus-app-alternative/id529379082"];
-        [myApp openURL:lyftAppStoreURL];
-    }
+- (void)openAppStoreForZipcar {
+    [UIApplication.sharedApplication openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/zipcar/id329384702"]];
 }
 
 - (void)openSponsorPage {
