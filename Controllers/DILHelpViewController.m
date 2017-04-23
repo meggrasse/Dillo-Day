@@ -202,7 +202,7 @@
         _zipcarButton = [[FUIButton alloc] initForAutoLayout];
         UIImageView *zipcarImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"zipcar"]];
         [_zipcarButton addSubview:zipcarImage];
-        CGFloat targetWidth = (4.0/5.0)*self.view.frame.size.width;
+        CGFloat targetWidth = (3.0/5.0)*self.view.frame.size.width;
         CGFloat targetRatio = zipcarImage.frame.size.height/zipcarImage.frame.size.width;
         [zipcarImage autoSetDimensionsToSize:CGSizeMake(targetWidth, targetWidth*targetRatio)];
         [zipcarImage autoAlignAxis:ALAxisVertical toSameAxisOfView:self.zipcarButton];
@@ -210,7 +210,7 @@
         _zipcarButton.layer.cornerRadius = 5;
         [_zipcarButton addTarget:self action:@selector(openAppStoreForZipcar) forControlEvents:UIControlEventTouchUpInside];
         [[_zipcarButton layer] setBorderWidth:2.0f];
-        [[_zipcarButton layer] setBorderColor:[UIColor colorWithRed:0.35 green:0.68 blue:0.25 alpha:1.0].CGColor];
+        [[_zipcarButton layer] setBorderColor:[DilloDayStyleKit barButtonItemColor].CGColor];
         _zipcarButton.buttonColor = [UIColor whiteColor];
     }
     return _zipcarButton;
