@@ -80,12 +80,11 @@ BOOL musicPlaying = NO;
     if (musicPlaying == NO) {
         musicPlaying = YES;
         [_audioPlayer play];
-        [self.artistCollectionViewModel.stickyHeaderCell playMusicLabel];
     } else {
         musicPlaying = NO;
         [_audioPlayer pause];
-        [self.artistCollectionViewModel.stickyHeaderCell pauseMusicLabel];
     }
+    [self.artistCollectionViewModel.stickyHeaderCell togglePreviewPlayerLabel:musicPlaying];
 }
 
 - (void)initTrack {

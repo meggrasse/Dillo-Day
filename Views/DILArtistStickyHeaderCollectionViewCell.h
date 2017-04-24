@@ -24,7 +24,6 @@ static CGFloat const kDILArtistStickyHeaderCollectionViewSegmentedControlHeight 
 @property (weak, nonatomic) id<DILArtistStickyHeaderCollectionViewCellDelegate> delegate;
 @property (assign) UIViewController* controller;
 - (void)configureCellWithArtist:(DILPFArtist *)artist;
-- (void)playMusicLabel;
-- (void)pauseMusicLabel;
+- (void)togglePreviewPlayerLabel:(BOOL)showedPlayingSymbol;
 + (NSString *)identifier;
 @end

@@ -89,7 +89,7 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
         _circularImageView.layer.shadowRadius = 10;
         _circleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, _circularImageView.frame.size.height, _circularImageView.frame.size.width)];
         _circleLabel.text = @"\u25B6";
-        _circleLabel.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.8];
+        _circleLabel.textColor = [DilloDayStyleKit barButtonItemColor];
         _circleLabel.font = [UIFont systemFontOfSize:80];
         [_circularImageView addSubview:_circleLabel];
         [self.circleLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.circularImageView];
@@ -180,17 +180,14 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
 
 }
 
-- (void)playMusicLabel {
-    _circleLabel.text = @"   \u258D\u258D";
-    _circleLabel.font = [UIFont systemFontOfSize:35];
-    _circleLabel.textAlignment = NSTextAlignmentRight;
-}
-
-- (void)pauseMusicLabel {
-    _circleLabel.text = @"\u25B6";
-    _circleLabel.textAlignment = NSTextAlignmentRight;
-    _circleLabel.font = [UIFont systemFontOfSize:80];
-    
+- (void)togglePreviewPlayerLabel:(BOOL)showingPlayingSymbol {
+    if (showingPlayingSymbol) {
+        _circleLabel.text = @"   \u258D\u258D";
+        _circleLabel.font = [UIFont systemFontOfSize:35];
+    } else {
+        _circleLabel.text = @"\u25B6";
+        _circleLabel.font = [UIFont systemFontOfSize:80];
+    }
 }
 
 #pragma mark - Public Methods
