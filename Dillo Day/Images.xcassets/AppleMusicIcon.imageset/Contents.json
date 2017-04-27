@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "spotify.png",
+      "filename" : "applemusic-3.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "spotify-1.png",
+      "filename" : "applemusic-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "spotify-2.png",
+      "filename" : "applemusic-2.png",
       "scale" : "3x"
     }
   ],
