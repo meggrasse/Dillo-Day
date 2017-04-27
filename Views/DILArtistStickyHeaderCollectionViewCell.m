@@ -19,18 +19,23 @@
 @interface DILArtistStickyHeaderCollectionViewCell()
 @property (strong, nonatomic) UIImageView *backgroundImageView;
 @property (strong, nonatomic) UILabel *timeLabel;
-@property (strong, nonatomic) UILabel *circleLabel;
+@property (strong, nonatomic) UILabel *previewTrackControlLabel;
 @property (strong, nonatomic) HMSegmentedControl *segmentedControl;
 @property (strong, nonatomic) NSMutableArray *circularImageViewLayoutConstraints;
 @property (strong, nonatomic) UIView *backgroundImageViewTintView;
-@property (strong, nonatomic) NSString *previewUrl;
-@property (strong, nonatomic) AVPlayer *audioPlayer;
 @end
 
 static NSString *const kSegmentedControlBio     = @"BIO";
 static NSString *const kSegmentedControlMusic   = @"MUSIC";
 
+static NSString *const kPlayButtonASCIIValue    = @"\u25B6";
+//spaces is in string as a hacky way to preserve formatting
+static NSString *const kPauseButtonASCIIValue   = @"   \u258D\u258D";
+
 @implementation DILArtistStickyHeaderCollectionViewCell
+
+NSAttributedString *_playButtonAttributedString;
+NSAttributedString *_pauseButtonAttributedString;
 
 @synthesize controller;
 
@@ -48,9 +53,16 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     [self.backgroundImageView addSubview:self.backgroundImageViewTintView];
     [self addSubview:self.timeLabel];
     [self addSubview:self.segmentedControl];
-    [self.backgroundImageView addSubview:self.circularImageView];
     
-    self.previewUrl = @"";
+    NSDictionary *playStrokeFeatureDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             [DilloDayStyleKit barButtonItemColor], NSStrokeColorAttributeName, [UIColor clearColor], NSForegroundColorAttributeName, [NSNumber numberWithFloat:-2.0], NSStrokeWidthAttributeName, [UIFont systemFontOfSize:80], NSFontAttributeName, nil];
+    NSDictionary *pauseStrokeFeatureDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                                 [DilloDayStyleKit barButtonItemColor], NSStrokeColorAttributeName, [UIColor clearColor], NSForegroundColorAttributeName, [NSNumber numberWithFloat:-5.0], NSStrokeWidthAttributeName, [UIFont systemFontOfSize:35], NSFontAttributeName, nil];
+
+    _playButtonAttributedString = [[NSAttributedString alloc] initWithString:kPlayButtonASCIIValue attributes:playStrokeFeatureDictionary];
+    _pauseButtonAttributedString = [[NSAttributedString alloc] initWithString:kPauseButtonASCIIValue attributes:pauseStrokeFeatureDictionary];
+    
+    [self.backgroundImageView addSubview:self.circularImageViewButton];
 
     [self.backgroundImageViewTintView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 
@@ -61,9 +73,7 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     [self.backgroundImageView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeBottom];
     [self.backgroundImageView autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.segmentedControl];
     
-    [self addCircularImageView];
-    
-//    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error: nil];
+    [self addcircularImageViewButton];
     
     CGFloat timeLabelInset = 10;
     [self.timeLabel autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.backgroundImageView withOffset:-timeLabelInset];
@@ -80,45 +90,46 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     return _backgroundImageView;
 }
 
-- (UIButton *)circularImageView {
-    if (!_circularImageView) {
-        _circularImageView = [[UIButton alloc] initForAutoLayout];
-        _circularImageView.clipsToBounds = YES;
-        _circularImageView.layer.shadowOpacity = 1;
-        _circularImageView.layer.shadowOffset = CGSizeZero;
-        _circularImageView.layer.shadowRadius = 10;
-        _circleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, _circularImageView.frame.size.height, _circularImageView.frame.size.width)];
-        _circleLabel.text = @"\u25B6";
-        _circleLabel.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.8];
-        _circleLabel.font = [UIFont systemFontOfSize:80];
-        [_circularImageView addSubview:_circleLabel];
-        [self.circleLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.circularImageView];
-        [self.circleLabel autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.circularImageView];
+- (UIButton *)circularImageViewButton {
+    if (!_circularImageViewButton) {
+        _circularImageViewButton = [[UIButton alloc] initForAutoLayout];
+        _circularImageViewButton.clipsToBounds = YES;
+        _circularImageViewButton.layer.shadowOpacity = 1;
+        _circularImageViewButton.layer.shadowOffset = CGSizeZero;
+        _circularImageViewButton.layer.shadowRadius = 10;
         
-        [RACObserve(self, circularImageView.bounds) subscribeNext:^(NSNumber *bounds) {
+        [RACObserve(self, circularImageViewButton.bounds) subscribeNext:^(NSNumber *bounds) {
             CGRect imageViewBounds = bounds.CGRectValue;
-            _circularImageView.layer.cornerRadius = CGRectGetHeight(imageViewBounds)/2.0;
+            _circularImageViewButton.layer.cornerRadius = CGRectGetHeight(imageViewBounds)/2.0;
         }];
         
     }
-    return _circularImageView;
+    return _circularImageViewButton;
 }
 
-- (void)removeCircularImageView {
-    if (_circularImageView) {
-        [self.circularImageView removeFromSuperview];
-        _circularImageView = nil;
+- (UILabel *)previewTrackControlLabel {
+    if (!_previewTrackControlLabel) {
+        _previewTrackControlLabel = [[UILabel alloc] initWithFrame:_circularImageViewButton.frame];
+    }
+    return _previewTrackControlLabel;
+}
+
+
+- (void)removecircularImageViewButton {
+    if (_circularImageViewButton) {
+        [self.circularImageViewButton removeFromSuperview];
+        _circularImageViewButton = nil;
     }
 }
 
-- (void)addCircularImageView {
-    [self.circularImageView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.backgroundImageView];
-    [self.circularImageView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.backgroundImageView];
+- (void)addcircularImageViewButton {
+    [self.circularImageViewButton autoAlignAxis:ALAxisVertical toSameAxisOfView:self.backgroundImageView];
+    [self.circularImageViewButton autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.backgroundImageView];
 
     CGFloat inset = 60;
-    [self.circularImageView autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.backgroundImageView withOffset:-inset];
-    [self.circularImageView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.circularImageView];
-    [self.circularImageView addTarget:controller action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
+    [self.circularImageViewButton autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self.backgroundImageView withOffset:-inset];
+    [self.circularImageViewButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.circularImageViewButton];
+    [self.circularImageViewButton addTarget:controller action:@selector(controlTrack:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (UILabel *)timeLabel {
@@ -167,46 +178,29 @@ static NSString *const kSegmentedControlMusic   = @"MUSIC";
     return _backgroundImageViewTintView;
 }
 
-- (void)initTrack {
-    NSURL *urlStream = [[NSURL alloc] initWithString:self.previewUrl];
-    AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:urlStream options:nil];
-    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:avAsset];
-    _audioPlayer = [AVPlayer playerWithPlayerItem:playerItem];
-    _audioPlayer = [AVPlayer playerWithURL:urlStream];
-}
-
-- (void)applyLayoutAttributes:(CSStickyHeaderFlowLayoutAttributes *)layoutAttributes {
-
-
-}
-
-- (void)playMusicLabel {
-    _circleLabel.text = @"   \u258D\u258D";
-    _circleLabel.font = [UIFont systemFontOfSize:35];
-    _circleLabel.textAlignment = NSTextAlignmentRight;
-}
-
-- (void)pauseMusicLabel {
-    _circleLabel.text = @"\u25B6";
-    _circleLabel.textAlignment = NSTextAlignmentRight;
-    _circleLabel.font = [UIFont systemFontOfSize:80];
-    
+- (void)togglePreviewPlayerLabel:(BOOL)showingPlayingSymbol {
+    _previewTrackControlLabel.attributedText = showingPlayingSymbol ? _pauseButtonAttributedString : _playButtonAttributedString;
 }
 
 #pragma mark - Public Methods
 - (void)configureCellWithArtist:(DILPFArtist *)artist {
     [artist imageDownloadPromise].then(^(UIImage *image) {
         self.backgroundImageView.image = image;
-        self.previewUrl = [@"https://p.scdn.co/mp3-preview/" stringByAppendingString:artist.previewUrl];
-        [self initTrack];
     });
     
-    self.circularImageView.alpha = 0;
+    self.circularImageViewButton.alpha = 0;
     [artist iconImageDownloadPromise].then(^(UIImage *image){
-        [_circularImageView setBackgroundImage:image forState:UIControlStateNormal];
-        self.circularImageView.alpha = 1;
+        [_circularImageViewButton setBackgroundImage:image forState:UIControlStateNormal];
+        self.circularImageViewButton.alpha = 1;
     });
-
+    
+    if (artist.previewUrl) {
+        [self.circularImageViewButton addSubview:self.previewTrackControlLabel];
+        // not the best place to do this
+        [self.previewTrackControlLabel autoAlignAxis:ALAxisVertical toSameAxisOfView:self.circularImageViewButton];
+        [self.previewTrackControlLabel autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.circularImageViewButton];
+        [self togglePreviewPlayerLabel:NO];
+    }
 }
 
 + (NSString *)identifier {

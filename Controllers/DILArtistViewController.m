@@ -23,13 +23,14 @@
 @property (strong, nonatomic) AVPlayer *audioPlayer;
 @end
 
+static NSString *const kPreviewURLPrefix        = @"https://p.scdn.co/mp3-preview/";
+
 BOOL musicPlaying = NO;
 
 @implementation DILArtistViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.previewUrl = @"";
     self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
@@ -72,30 +73,28 @@ BOOL musicPlaying = NO;
     _artist = artist;
     self.title = [artist.name uppercaseString];
     [self configureArtistCollectionView];
-    self.previewUrl = [@"https://p.scdn.co/mp3-preview/" stringByAppendingString:artist.previewUrl];
-    [self initTrack];
+    if (artist.previewUrl) {
+        self.previewUrl = [kPreviewURLPrefix stringByAppendingString:artist.previewUrl];
+        [self initTrack];
+    }
 }
 
 - (void)controlTrack:(id)sender {
     if (musicPlaying == NO) {
         musicPlaying = YES;
         [_audioPlayer play];
-        [self.artistCollectionViewModel.stickyHeaderCell playMusicLabel];
     } else {
         musicPlaying = NO;
         [_audioPlayer pause];
-        [self.artistCollectionViewModel.stickyHeaderCell pauseMusicLabel];
     }
+
+    [self.artistCollectionViewModel.stickyHeaderCell togglePreviewPlayerLabel:musicPlaying];
 }
 
 - (void)initTrack {
-    NSURL *urlStream = [[NSURL alloc] initWithString:self.previewUrl];
-    AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:urlStream options:nil];
-    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:avAsset];
-    _audioPlayer = [AVPlayer playerWithPlayerItem:playerItem];
-    _audioPlayer = [AVPlayer playerWithURL:urlStream];
+    NSLog(@"%@", self.previewUrl);
+    _audioPlayer = [AVPlayer playerWithURL:[[NSURL alloc] initWithString:self.previewUrl]];
 }
-
 - (void)reloadSection:(NSUInteger)section {
     [self.artistCollectionView reloadSections:[NSIndexSet indexSetWithIndex:section]];
 }

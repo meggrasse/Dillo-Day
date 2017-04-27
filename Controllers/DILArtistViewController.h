@@ -15,5 +15,4 @@
 @property (strong, nonatomic) DILPFArtist *artist;
 @property (strong, nonatomic) DILArtistStickyHeaderCollectionViewCell *headerView;
 - (void)controlTrack:(id)sender;
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 @end
