@@ -26,6 +26,7 @@
 @property (strong, nonatomic) DILExternalStreamingServiceButton *appleMusicLinkButton;
 @property (strong, nonatomic) DILExternalStreamingServiceButton *soundCloudLinkButton;
 @property (strong, nonatomic) DILExternalStreamingServiceButton *youtubeLinkButton;
+@property (strong, nonatomic) DILExternalStreamingServiceButton *bandcampLinkButton;
 @end
 
 @implementation DILArtistMusicViewCell
@@ -65,11 +66,10 @@
     [_soundCloudLinkButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_spotifyLinkButton withOffset:verticalInset];
     [_soundCloudLinkButton autoSetDimensionsToSize:iconSize];
 
-
-//    [self.contentView addSubview:self.tidalBtn];
-//    [_tidalBtn autoSetDimensionsToSize:CGSizeMake(icon_dim, icon_dim)];
-//    [_tidalBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_youtubeLinkButton];
-//    [_tidalBtn autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:(icon_dim*.75)];
+    [self.contentView addSubview:self.bandcampLinkButton];
+    [_bandcampLinkButton autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:secondRowHorizontalInset];
+    [_bandcampLinkButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:_youtubeLinkButton withOffset:verticalInset];
+    [_bandcampLinkButton autoSetDimensionsToSize:iconSize];
 }
 
 - (DILExternalStreamingServiceButton *)spotifyLinkButton {
@@ -80,17 +80,6 @@
     _spotifyLinkButton.userInteractionEnabled = YES;
     return _spotifyLinkButton;
 }
-
-//- (DILExternalStreamingServiceButton *)tidalBtn {
-//    if (!_tidalBtn) {
-//        _tidalBtn = [[UIButton alloc] initForAutoLayout];
-//        UIImage *btnImage = [UIImage imageNamed:@"tidal"];
-//        [_tidalBtn setBackgroundImage:btnImage forState:UIControlStateNormal];
-//        [self.tidalBtn addTarget:self action:@selector(openTidal:) forControlEvents:UIControlEventTouchUpInside];
-//    }
-//    _tidalBtn.userInteractionEnabled = YES;
-//    return _tidalBtn;
-//}
 
 - (DILExternalStreamingServiceButton *)appleMusicLinkButton {
     if (!_appleMusicLinkButton) {
@@ -119,6 +108,15 @@
     return _youtubeLinkButton;
 }
 
+- (DILExternalStreamingServiceButton *)bandcampLinkButton {
+    if(!_bandcampLinkButton) {
+        _bandcampLinkButton = [[DILExternalStreamingServiceButton alloc] initForAutoLayout];
+        [self.bandcampLinkButton addTarget:self action:@selector(openExternalStreamingPlaybackService:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    _bandcampLinkButton.userInteractionEnabled = YES;
+    return _bandcampLinkButton;
+}
+
 - (void)configureCellWithArtist:(DILPFArtist *)artist{
     if (artist.spotifyUrl) {
         NSURL *spotifyAppURL = [NSURL URLWithString:[@"spotify://artist/" stringByAppendingString:artist.spotifyUrl]];
@@ -138,7 +136,7 @@
     
     if (artist.soundcloudUrl) {
         NSURL *soundCloudAppURL = [NSURL URLWithString:[@"soundcloud:users:" stringByAppendingString:artist.soundcloudUrl]];
-        NSURL *soundCloudBackupURL = [NSURL URLWithString:[@"https://soundcloud.com/" stringByAppendingString:artist.soundcloudUrl]];
+        NSURL *soundCloudBackupURL = [NSURL URLWithString:[@"https://soundcloud.com/" stringByAppendingString:artist.soundcloudUsername]];
         self.soundCloudLinkButton.externalURL = [UIApplication.sharedApplication canOpenURL:soundCloudAppURL] ? soundCloudAppURL : soundCloudBackupURL;
         [_soundCloudLinkButton setBackgroundImage:[UIImage imageNamed:@"SoundCloudIcon"] forState:UIControlStateNormal];
     } else {
@@ -150,6 +148,13 @@
         [_youtubeLinkButton setBackgroundImage:[UIImage imageNamed:@"YoutubeIcon"] forState:UIControlStateNormal];
     } else {
         [_youtubeLinkButton setBackgroundImage:[UIImage imageNamed:@"YoutubeIconBW"] forState:UIControlStateNormal];
+    }
+    
+    if (artist.bandcampURL) {
+        self.bandcampLinkButton.externalURL = [NSURL URLWithString:[[@"https://" stringByAppendingString:artist.bandcampURL] stringByAppendingString: @".bandcamp.com"]];
+        [_bandcampLinkButton setBackgroundImage:[UIImage imageNamed:@"BandcampIcon"] forState:UIControlStateNormal];
+    } else {
+        [_bandcampLinkButton setBackgroundImage:[UIImage imageNamed:@"BandcampIconBW"] forState:UIControlStateNormal];
     }
 }
                                                               
