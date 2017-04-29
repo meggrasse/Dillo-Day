@@ -33,6 +33,7 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
                                                  selector:@selector(recieveAnnouncementAnimationEndedNotification:)
                                                      name:@"announcementAnimationEndedNotification"
                                                    object:nil];
+        self.isAnnouncementFinished = YES;
     }
     return self;
 }
@@ -61,6 +62,7 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
     if (artistForCell.isBeingAnnounced && !self.announcementCellViewController) {
         self.announcementCellViewController = [[DILLineupCellViewController alloc] init];
         [self.announcementCellViewController setupYTPlayerViewForCell:lineupCell forArtist:artistForCell];
+        self.isAnnouncementFinished = NO;
         [lineupCell.contentView addSubview:self.announcementCellViewController.view];
         [lineupCell.contentView sendSubviewToBack:lineupCell.parallaxImageView];
         [lineupCell.contentView bringSubviewToFront:lineupCell.centeredTextView];
