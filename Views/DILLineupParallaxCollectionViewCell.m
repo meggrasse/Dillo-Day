@@ -180,6 +180,8 @@
     if (!artist.isBeingAnnounced) {
         self.nameLabel.alpha = 1;
         [self loadParallaxImage];
+    } else {
+        self.userInteractionEnabled = NO;
     }
 }
 
@@ -205,6 +207,7 @@
                  postNotificationName:@"announcementAnimationEndedNotification"
                  object:self];
                 [self loadParallaxImage];
+                self.userInteractionEnabled = YES;
             }];
         }];
     }];
