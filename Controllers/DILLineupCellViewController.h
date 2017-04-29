@@ -15,5 +15,6 @@
 @interface DILLineupCellViewController : UIViewController<YTPlayerViewDelegate>
 
 - (void)setupYTPlayerViewForCell:(DILLineupParallaxCollectionViewCell *)cell forArtist:(DILPFArtist *)artist;
+- (void)removeVideo;
 
 @end

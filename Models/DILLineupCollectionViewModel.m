@@ -10,7 +10,6 @@
 
 #import "DILLineupCenterTextCollectionViewCell.h"
 #import "DILLineupParallaxCollectionViewCell.h"
-#import "DILLineupCellViewController.h"
 
 #import "DILPFArtist.h"
 
@@ -21,7 +20,6 @@
 @interface DILLineupCollectionViewModel()
 @property (nonatomic) BOOL hasRegisteredClass;
 @property (strong, nonatomic) CBStoreHouseRefreshControl *refreshControl;
-@property (nonatomic, strong) DILLineupCellViewController *announcementCellViewController;
 @end
 
 static NSString *const DILLineupCenterTextCollectionViewCellIdentifier = @"DILLineupCenterTextCollectionViewCellIdentifier";
@@ -31,6 +29,10 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 - (id)init {
     if (self = [super init]) {
         self.hasRegisteredClass = NO;
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(recieveAnnouncementAnimationEndedNotification:)
+                                                     name:@"announcementAnimationEndedNotification"
+                                                   object:nil];
     }
     return self;
 }
@@ -85,14 +87,23 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 }
 
 
+- (void)recieveAnnouncementAnimationEndedNotification:(NSNotification *)notification
+{
+    if ([[notification name] isEqualToString:@"announcementAnimationEndedNotification"]) {
+        self.isAnnouncementFinished = YES;
+        [self.announcementCellViewController removeVideo];
+    }
+}
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    DILPFArtist *selectedArtist = [self artistForIndexPath:indexPath];
-    if ([selectedArtist.announced boolValue]) {
-        [self.delegate didSelectArtist:selectedArtist];
-    } else {
-        [SVProgressHUD showInfoWithStatus:@"Artist not yet announced!"];
+    if (self.isAnnouncementFinished) {
+        DILPFArtist *selectedArtist = [self artistForIndexPath:indexPath];
+        if ([selectedArtist.announced boolValue]) {
+            [self.delegate didSelectArtist:selectedArtist];
+        } else {
+            [SVProgressHUD showInfoWithStatus:@"Artist not yet announced!"];
+        }
     }
 }
 

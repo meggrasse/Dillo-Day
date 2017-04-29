@@ -167,9 +167,6 @@
 
 
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView {
-    if (!artist.isBeingAnnounced)
-        self.nameLabel.alpha = 1;
-
     self.announcementLabel.text = @"announcing:".uppercaseString;
     self.nameLabel.text = artist.name.uppercaseString;
 
@@ -180,6 +177,13 @@
     self.parallaxImageView.imageFile = artist.lineupImage;
 
     [self setupMeterView];
+    if (!artist.isBeingAnnounced) {
+        self.nameLabel.alpha = 1;
+        [self loadParallaxImage];
+    }
+}
+
+- (void)loadParallaxImage {
     [self.parallaxImageView loadInBackground:^(UIImage *image, NSError *error) {
         [self terminateMeterView];
     } progressBlock:^(int percentDone) {
@@ -194,9 +198,14 @@
         [UIView animateWithDuration:3 delay:3 options:UIViewAnimationOptionCurveEaseIn animations:^{
             self.nameLabel.alpha = 1;
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                 self.announcementLabel.alpha = 0;
-            } completion: nil];
+            } completion:^(BOOL finished) {
+                [[NSNotificationCenter defaultCenter]
+                 postNotificationName:@"announcementAnimationEndedNotification"
+                 object:self];
+                [self loadParallaxImage];
+            }];
         }];
     }];
 }

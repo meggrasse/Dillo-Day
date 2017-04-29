@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "DILLineupCellViewController.h"
 #import "DILPFStage.h"
 
 @class DILLineupCollectionViewModel;
@@ -20,5 +21,7 @@
 @property (strong, nonatomic) DILPFStage *stage;
 @property (weak, nonatomic) id<DILLineupCollectionViewDelegate> delegate;
 @property (weak, nonatomic) UICollectionView *collectionView;
+@property (nonatomic) BOOL isAnnouncementFinished;
+@property (nonatomic, strong) DILLineupCellViewController *announcementCellViewController;
 - (void)configurePullToRefresh;
 @end

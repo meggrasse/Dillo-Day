@@ -29,6 +29,10 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self removeVideo];
+}
+
 - (void)setupYTPlayerViewForCell:(DILLineupParallaxCollectionViewCell *)cell forArtist:(DILPFArtist *)artist {
 
     self.cell = cell;
@@ -62,7 +66,7 @@
     [self.cell announcementLabelAnimation];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
+- (void)removeVideo {
     [self.playerView stopVideo];
     [self.playerView removeFromSuperview];
 }
