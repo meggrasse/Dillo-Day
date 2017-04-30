@@ -163,7 +163,7 @@
     if (currentButton.externalURL) {
         [UIApplication.sharedApplication openURL:currentButton.externalURL];
     } else {
-        [SVProgressHUD showInfoWithStatus:@"Artist hasn't shared their music here yet"];
+        [SVProgressHUD showInfoWithStatus:@"Artist not available on this platform"];
     }
 }
 

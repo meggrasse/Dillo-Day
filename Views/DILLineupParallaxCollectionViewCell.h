@@ -16,7 +16,7 @@
 @property (strong, nonatomic) UIView *centeredTextView;
 
 - (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView;
-- (void)announcementLabelAnimation;
+- (void)announcementLabelAnimation:(DILPFArtist *)artist;
 + (NSString *)identifier;
 
 @end

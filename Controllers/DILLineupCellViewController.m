@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) YTPlayerView *playerView;
 @property (strong, nonatomic) DILLineupParallaxCollectionViewCell *cell;
+@property (strong, nonatomic) DILPFArtist *artist;
 
 @end
 
@@ -30,11 +31,12 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self removeVideo];
+    [self.playerView removeFromSuperview];
 }
 
 - (void)setupYTPlayerViewForCell:(DILLineupParallaxCollectionViewCell *)cell forArtist:(DILPFArtist *)artist {
 
+    self.artist = artist;
     self.cell = cell;
     CGRect frame = cell.bounds;
     
@@ -61,14 +63,15 @@
     [self.playerView loadWithVideoId:artist.announcementVideoId playerVars:playerVars];
 }
 
-- (void)playerViewDidBecomeReady:(YTPlayerView* )playerView {
-    [self.playerView playVideo];
-    [self.cell announcementLabelAnimation];
-}
-
 - (void)removeVideo {
     [self.playerView stopVideo];
     [self.playerView removeFromSuperview];
+}
+
+# pragma mark - YTPlayerViewDelegate methods
+- (void)playerViewDidBecomeReady:(YTPlayerView* )playerView {
+    [self.playerView playVideo];
+    [self.cell announcementLabelAnimation:self.artist];
 }
 
 @end

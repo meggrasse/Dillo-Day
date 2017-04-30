@@ -193,7 +193,7 @@
     }];
 }
 
-- (void)announcementLabelAnimation {
+- (void)announcementLabelAnimation:(DILPFArtist *)artist {
     [UIView animateWithDuration:3 delay:15 options: UIViewAnimationOptionCurveEaseIn animations:^{
         self.announcementLabel.alpha = 1;
     } completion:^(BOOL finished) {
@@ -207,6 +207,7 @@
                  postNotificationName:@"announcementAnimationEndedNotification"
                  object:self];
                 [self loadParallaxImage];
+                artist.isBeingAnnounced = NO;
                 self.userInteractionEnabled = YES;
             }];
         }];
