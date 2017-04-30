@@ -108,7 +108,7 @@
 #pragma mark - DILLineupCollectionViewDelegate
 - (void)didSelectArtist:(DILPFArtist *)artist {
     if (self.lineupCollectionViewModel.announcementHasEnded) {
-        if (artist.announced) {
+        if ([artist.announced boolValue]) {
             DILArtistViewController *artistVC = [DILArtistViewController new];
             artistVC.artist = artist;
             [self showViewController:artistVC sender:self];

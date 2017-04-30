@@ -197,10 +197,10 @@
     [UIView animateWithDuration:3 delay:15 options: UIViewAnimationOptionCurveEaseIn animations:^{
         self.announcementLabel.alpha = 1;
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:3 delay:3 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [UIView animateWithDuration:5 delay:5 options:UIViewAnimationOptionCurveEaseIn animations:^{
             self.nameLabel.alpha = 1;
         } completion:^(BOOL finished) {
-            [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            [UIView animateWithDuration:3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
                 self.announcementLabel.alpha = 0;
             } completion:^(BOOL finished) {
                 [[NSNotificationCenter defaultCenter]
