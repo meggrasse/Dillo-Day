@@ -21,7 +21,7 @@
 @property (strong, nonatomic) DILPFStage *stage;
 @property (weak, nonatomic) id<DILLineupCollectionViewDelegate> delegate;
 @property (weak, nonatomic) UICollectionView *collectionView;
-@property (nonatomic) BOOL isAnnouncementFinished;
+@property (nonatomic) BOOL announcementHasEnded;
 @property (nonatomic, strong) DILLineupCellViewController *announcementCellViewController;
 - (void)configurePullToRefresh;
 @end

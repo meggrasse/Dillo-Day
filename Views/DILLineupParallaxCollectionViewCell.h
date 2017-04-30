@@ -14,9 +14,11 @@
 
 @property (strong, nonatomic) FMEParallaxPFImageView *parallaxImageView;
 @property (strong, nonatomic) UIView *centeredTextView;
+//@property (nonatomic) BOOL isAnnoucementAnimationContinuing;
 
-- (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView;
+- (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView annoucementHasEnded:(BOOL)announcementHasEnded;
 - (void)announcementLabelAnimation:(DILPFArtist *)artist;
 + (NSString *)identifier;
+- (void)loadParallaxImage;
 
 @end

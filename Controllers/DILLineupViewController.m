@@ -37,6 +37,10 @@
 
     [self fetchStages];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(recieveAnnouncementAnimationEndedNotification:)
+                                                 name:@"announcementAnimationEndedNotification"
+                                               object:nil];
 }
 
 - (void)configureLineupCollectionView {
@@ -84,19 +88,44 @@
     }
 }
 
-#pragma mark - DILLineupCollectionViewDelegate
-- (void)didSelectArtist:(DILPFArtist *)artist {
-    DILArtistViewController *artistVC = [DILArtistViewController new];
-    artistVC.artist = artist;
-    [self showViewController:artistVC sender:self];
+- (void)recieveAnnouncementAnimationEndedNotification:(NSNotification *)notification
+{
+    if ([[notification name] isEqualToString:@"announcementAnimationEndedNotification"]) {
+        self.lineupCollectionViewModel.announcementHasEnded = YES;
+        [self.lineupCollectionViewModel.announcementCellViewController removeVideo];
+        [self.lineupCollectionViewModel.announcementCellViewController.cell loadParallaxImage];
+        self.lineupCollectionViewModel.announcementCellViewController.cell.userInteractionEnabled = YES;
+    }
 }
 
-#pragma mark - DILStageSelectionDelegate
-- (void)didSelectStage:(DILPFStage *)stage {
+- (void)initLineupForStage:(DILPFStage *)stage {
     self.stageSelectTitleView.selectedStage = stage;
     self.lineupCollectionViewModel.stage = stage;
     [self.lineupCollectionView reloadData];
     [self.lineupCollectionView setContentOffset:CGPointZero animated:NO];
+}
+
+#pragma mark - DILLineupCollectionViewDelegate
+- (void)didSelectArtist:(DILPFArtist *)artist {
+    if (self.lineupCollectionViewModel.announcementHasEnded) {
+        if (artist.announced) {
+            DILArtistViewController *artistVC = [DILArtistViewController new];
+            artistVC.artist = artist;
+            [self showViewController:artistVC sender:self];
+        } else {
+            [SVProgressHUD showInfoWithStatus:@"Artist not yet announced!"];
+        }
+    }
+}
+
+#pragma mark - DILStageSelectionDelegate
+- (void)didSelectStage:(DILPFStage *)stage {
+    if (self.lineupCollectionViewModel.announcementHasEnded) {
+        self.stageSelectTitleView.selectedStage = stage;
+        self.lineupCollectionViewModel.stage = stage;
+        [self.lineupCollectionView reloadData];
+        [self.lineupCollectionView setContentOffset:CGPointZero animated:NO];
+    }
 }
 
 #pragma mark - Promises
@@ -105,7 +134,13 @@
     [self stageQueryPromise].then(^(NSArray *stages) {
         [SVProgressHUD dismiss];
         self.stageArray = stages;
-        [self didSelectStage:[stages firstObject]];
+        
+        self.lineupCollectionViewModel.announcementHasEnded = YES;
+        for (DILPFStage *stage in stages)
+            for (DILPFArtist *artist in stage.artists)
+                if (artist.isBeingAnnounced)
+                    self.lineupCollectionViewModel.announcementHasEnded = NO;
+        [self initLineupForStage:[stages firstObject]];
     });
 }
 

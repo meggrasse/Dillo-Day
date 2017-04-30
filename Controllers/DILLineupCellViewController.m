@@ -13,7 +13,6 @@
 @interface DILLineupCellViewController ()
 
 @property (strong, nonatomic) YTPlayerView *playerView;
-@property (strong, nonatomic) DILLineupParallaxCollectionViewCell *cell;
 @property (strong, nonatomic) DILPFArtist *artist;
 
 @end
@@ -31,7 +30,9 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self.playerView removeFromSuperview];
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"announcementAnimationEndedNotification"
+     object:self];
 }
 
 - (void)setupYTPlayerViewForCell:(DILLineupParallaxCollectionViewCell *)cell forArtist:(DILPFArtist *)artist {
@@ -66,6 +67,7 @@
 - (void)removeVideo {
     [self.playerView stopVideo];
     [self.playerView removeFromSuperview];
+    self.playerView = nil;
 }
 
 # pragma mark - YTPlayerViewDelegate methods

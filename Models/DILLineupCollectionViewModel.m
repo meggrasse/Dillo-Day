@@ -29,11 +29,6 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 - (id)init {
     if (self = [super init]) {
         self.hasRegisteredClass = NO;
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(recieveAnnouncementAnimationEndedNotification:)
-                                                     name:@"announcementAnimationEndedNotification"
-                                                   object:nil];
-        self.isAnnouncementFinished = YES;
     }
     return self;
 }
@@ -57,12 +52,11 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
     DILLineupParallaxCollectionViewCell *lineupCell = [collectionView dequeueReusableCellWithReuseIdentifier:DILLineupParallaxCollectionViewCellIdentifier forIndexPath:indexPath];
 
     DILPFArtist *artistForCell = [self artistForIndexPath:indexPath];
-    [lineupCell configureCellWithArtist:artistForCell scrollView:collectionView];
+    [lineupCell configureCellWithArtist:artistForCell scrollView:collectionView annoucementHasEnded:self.announcementHasEnded];
 
     if (artistForCell.isBeingAnnounced && !self.announcementCellViewController) {
         self.announcementCellViewController = [[DILLineupCellViewController alloc] init];
         [self.announcementCellViewController setupYTPlayerViewForCell:lineupCell forArtist:artistForCell];
-        self.isAnnouncementFinished = NO;
         [lineupCell.contentView addSubview:self.announcementCellViewController.view];
         [lineupCell.contentView sendSubviewToBack:lineupCell.parallaxImageView];
         [lineupCell.contentView bringSubviewToFront:lineupCell.centeredTextView];
@@ -72,7 +66,7 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
 }
 
 - (DILPFArtist *)artistForIndexPath:(NSIndexPath *)indexPath {
-    return self.self.stage.artists[indexPath.row];
+    return self.stage.artists[indexPath.row];
 }
 
 #pragma mark - UICollectionViewFlowLayout
@@ -88,25 +82,9 @@ static NSString *const DILLineupParallaxCollectionViewCellIdentifier = @"DILLine
     return 0.5;
 }
 
-
-- (void)recieveAnnouncementAnimationEndedNotification:(NSNotification *)notification
-{
-    if ([[notification name] isEqualToString:@"announcementAnimationEndedNotification"]) {
-        self.isAnnouncementFinished = YES;
-        [self.announcementCellViewController removeVideo];
-    }
-}
-
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.isAnnouncementFinished) {
-        DILPFArtist *selectedArtist = [self artistForIndexPath:indexPath];
-        if ([selectedArtist.announced boolValue]) {
-            [self.delegate didSelectArtist:selectedArtist];
-        } else {
-            [SVProgressHUD showInfoWithStatus:@"Artist not yet announced!"];
-        }
-    }
+    [self.delegate didSelectArtist:[self artistForIndexPath:indexPath]];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

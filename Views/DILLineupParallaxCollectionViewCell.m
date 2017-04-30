@@ -166,7 +166,7 @@
 }
 
 
-- (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView {
+- (void)configureCellWithArtist:(DILPFArtist *)artist scrollView:(UIScrollView *)scrollView annoucementHasEnded:(BOOL)announcementHasEnded {
     self.announcementLabel.text = @"announcing:".uppercaseString;
     self.nameLabel.text = artist.name.uppercaseString;
 
@@ -177,7 +177,7 @@
     self.parallaxImageView.imageFile = artist.lineupImage;
 
     [self setupMeterView];
-    if (!artist.isBeingAnnounced) {
+    if (!artist.isBeingAnnounced || announcementHasEnded) {
         self.nameLabel.alpha = 1;
         [self loadParallaxImage];
     } else {
@@ -206,9 +206,6 @@
                 [[NSNotificationCenter defaultCenter]
                  postNotificationName:@"announcementAnimationEndedNotification"
                  object:self];
-                [self loadParallaxImage];
-                artist.isBeingAnnounced = NO;
-                self.userInteractionEnabled = YES;
             }];
         }];
     }];

@@ -235,7 +235,6 @@
 #pragma mark - DILStageSelectDelegate 
 - (void)didSelectStage:(DILPFStage *)stage {
     [self hideStageSelection];
-    self.selectedStage = stage;
     [self.delegate didSelectStage:stage];
 }
 

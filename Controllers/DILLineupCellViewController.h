@@ -14,6 +14,8 @@
 
 @interface DILLineupCellViewController : UIViewController<YTPlayerViewDelegate>
 
+@property (strong, nonatomic) DILLineupParallaxCollectionViewCell *cell;
+
 - (void)setupYTPlayerViewForCell:(DILLineupParallaxCollectionViewCell *)cell forArtist:(DILPFArtist *)artist;
 - (void)removeVideo;
 
