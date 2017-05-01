@@ -19,7 +19,7 @@ PODS:
     - OMGHTTPURLRQ/FormURLEncode
     - OMGHTTPURLRQ/UserAgent
   - OMGHTTPURLRQ/UserAgent (2.1.3)
-  - Parse (1.14.2):
+  - Parse (1.14.4):
     - Bolts/Tasks (~> 1.8)
   - ParseUI (1.2.0):
     - Bolts/Tasks (~> 1.3)
@@ -67,9 +67,9 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - Realm (0.101.0):
-    - Realm/Headers (= 0.101.0)
-  - Realm/Headers (0.101.0)
+  - Realm (2.6.2):
+    - Realm/Headers (= 2.6.2)
+  - Realm/Headers (2.6.2)
   - Reveal-iOS-SDK (1.6.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -99,7 +99,7 @@ DEPENDENCIES:
   - PureLayout
   - RDVTabBarController
   - ReactiveCocoa
-  - Realm (~> 0.101.0)
+  - Realm
   - Reveal-iOS-SDK
   - SDWebImage (~> 3.6)
   - SMScrollView
@@ -123,13 +123,13 @@ SPEC CHECKSUMS:
   HTKDynamicResizingCell: 9358514816f0737a8d20329617ee126a1498357c
   NSDate+TimeAgo: 35601c619b2d59290055e4fe76e61d97677a2360
   OMGHTTPURLRQ: c4268dea4295b585d711055dbcd87bfa82badd5f
-  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
+  Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
   PromiseKit: 102844c7b5ccff53f693e0710365c445d8df3871
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  Realm: b21596d6d7e1c054f6fae967d27263d2593ca309
+  Realm: 29222766425b9f831228f81b63f0e38a97a4d700
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SMScrollView: 5eb8928f90f5296cf65e0c8d23a7968e043bbf30
@@ -140,6 +140,6 @@ SPEC CHECKSUMS:
   XCDYouTubeKit: ca3120218413fdd141567ca98b5418df309b1ced
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 1eb29b933c12803cc87001b25067df28aa88bec6
+PODFILE CHECKSUM: d9ba31a50b2df32d649790a7661f29d131e90dcf
 
 COCOAPODS: 1.2.0.rc.1

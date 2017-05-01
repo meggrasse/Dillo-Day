@@ -749,7 +749,7 @@
 				TargetAttributes = {
 					217946AB1A87C96100224737 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = QR3YW3B828;
+						DevelopmentTeam = JXY4XE6W27;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1125,6 +1125,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JXY4XE6W27;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1138,7 +1139,7 @@
 					$inherited,
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Controls/Dillo Day-Bridging-Header.h";
@@ -1156,6 +1157,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE__IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = JXY4XE6W27;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1169,7 +1171,7 @@
 					$inherited,
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Controls/Dillo Day-Bridging-Header.h";

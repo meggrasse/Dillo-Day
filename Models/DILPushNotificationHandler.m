@@ -69,12 +69,15 @@ static NSString *const kDILPushNotificationHandlerUserInfoTimeKey = @"time";
 }
 
 - (RLMRealm *)notificationRealm {
+    RLMRealmConfiguration *notificationConfiguration = [RLMRealmConfiguration defaultConfiguration];
+    notificationConfiguration.deleteRealmIfMigrationNeeded = YES;
+    [RLMRealmConfiguration setDefaultConfiguration:notificationConfiguration];
     return [RLMRealm defaultRealm];
 }
 
 - (void)removeFileProtectionKeys {
     RLMRealm *notificationRealm = [self notificationRealm];
-    NSString *pathToRealmFile = [notificationRealm path];
+    NSString *pathToRealmFile = notificationRealm.configuration.fileURL.absoluteString;
     NSArray *allNotificationRealmRelatedFiles = @[
                                                   pathToRealmFile,
                                                   [pathToRealmFile stringByAppendingPathComponent:@".lock"],

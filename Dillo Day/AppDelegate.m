@@ -116,8 +116,8 @@
     [[SPTAuth defaultInstance] setClientID:@"607cdff95f51464bad31c3e314af0832"];
     [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:@"23f7504f730848dbbe71c252ad36c3d6"]];
     [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope]];
-    
-    [[DILPushNotificationHandler sharedPushNotificationHandler] updateNotificationBadgeNumber];
+
+//    [[DILPushNotificationHandler sharedPushNotificationHandler] updateNotificationBadgeNumber];
 
     return YES;
 }
@@ -180,7 +180,7 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    [[DILPushNotificationHandler sharedPushNotificationHandler] updateNotificationBadgeNumber];
+//    [[DILPushNotificationHandler sharedPushNotificationHandler] updateNotificationBadgeNumber];
 }
 
 @end
