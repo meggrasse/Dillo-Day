@@ -36,7 +36,6 @@
     
     [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = @"27yFuFV8nW6mRudOABtjzkOSdoYY9krMdmhoJcgc";
-        configuration.clientKey = @"orufTxovCEWvJhqkY9w4baUvqSFf13VcTtfY79gE";
         configuration.server = @"http://mayfest-db.herokuapp.com/parse";
     }]];
 
