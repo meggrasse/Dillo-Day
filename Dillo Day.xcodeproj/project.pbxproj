@@ -747,7 +747,7 @@
 				TargetAttributes = {
 					217946AB1A87C96100224737 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = JXY4XE6W27;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1138,7 +1138,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Dillo Day/Dillo Day.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = JXY4XE6W27;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1155,7 +1155,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "0bfd2b89-c08c-4dd0-9209-5a624262a617";
+				PROVISIONING_PROFILE_SPECIFIER = "Dillo Day App Store Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Controls/Dillo Day-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1169,10 +1170,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Dillo Day/Dillo Day.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mayfest Productions (JXY4XE6W27)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mayfest Productions (JXY4XE6W27)";
 				CODE__IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = JXY4XE6W27;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1188,7 +1189,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayfest.dilloday.production;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "0bfd2b89-c08c-4dd0-9209-5a624262a617";
+				PROVISIONING_PROFILE_SPECIFIER = "Dillo Day App Store Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Controls/Dillo Day-Bridging-Header.h";
 			};
 			name = Release;
