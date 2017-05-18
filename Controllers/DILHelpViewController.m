@@ -19,6 +19,7 @@
 @property (strong, nonatomic) FUIButton *shuttlesButton;
 @property (strong, nonatomic) FUIButton *zipcarButton;
 @property (strong, nonatomic) FUIButton *sponsorsButton;
+@property (strong, nonatomic) FUIButton *foodTruckMenusButton;
 @property (strong, nonatomic) UILabel *feedbackLabel;
 @property (strong, nonatomic) UILabel *shuttlesLabel;
 @property (strong, nonatomic) UILabel *smartDilloLabel;
@@ -47,16 +48,7 @@
     [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeTop];
     [buttonSubview autoPinEdgeToSuperviewEdge:ALEdgeBottom];
     
-    UIView *sponsorSubview = [[UIView alloc] initForAutoLayout];
-    [self.view addSubview:sponsorSubview];
-    [sponsorSubview autoSetDimension:ALDimensionWidth toSize:width];
-    [sponsorSubview autoSetDimension:ALDimensionHeight toSize:height/2];
-    [sponsorSubview autoPinEdgeToSuperviewEdge:ALEdgeLeft];
-    [sponsorSubview autoPinEdgeToSuperviewEdge:ALEdgeRight];
-    [sponsorSubview autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
-    [sponsorSubview autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:buttonSubview];
-    
-    NSArray *buttonArray = @[self.zipcarButton, self.NUPDButton, self.emergencyButton, self.feedbackButton, self.shuttlesButton, self.sponsorsButton];
+    NSArray *buttonArray = @[self.zipcarButton, self.NUPDButton, self.emergencyButton, self.feedbackButton, self.shuttlesButton, self.foodTruckMenusButton, self.sponsorsButton];
     for (UIView *view in buttonArray) {
         [buttonSubview addSubview:view];
         [view autoAlignAxisToSuperviewAxis:ALAxisVertical];
@@ -78,8 +70,11 @@
     
     [self.shuttlesButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.feedbackButton withOffset:sideInset];
     [self.shuttlesButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
+
+    [self.foodTruckMenusButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.shuttlesButton withOffset:sideInset];
+    [self.foodTruckMenusButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     
-    [self.sponsorsButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.shuttlesButton withOffset:sideInset];
+    [self.sponsorsButton autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.foodTruckMenusButton withOffset:sideInset];
     [self.sponsorsButton autoMatchDimension:ALDimensionWidth toDimension:ALDimensionWidth ofView:self.view withOffset:-2*sideInset];
     [self.sponsorsButton autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:sideInset];
 }
@@ -195,6 +190,17 @@
         _sponsorsButton.buttonColor = [UIColor colorWithRed: 0.204 green: 0.859 blue: 0.549 alpha: 1];
     }
     return _sponsorsButton;
+}
+
+- (FUIButton *)foodTruckMenusButton {
+    if (!_foodTruckMenusButton) {
+        _foodTruckMenusButton = [[FUIButton alloc] initForAutoLayout];
+        [_foodTruckMenusButton addTarget:self action:@selector(openFoodTruckMenusPage) forControlEvents:UIControlEventTouchUpInside];
+        [_foodTruckMenusButton setTitle:@"FOOD TRUCK MENUS" forState:UIControlStateNormal];
+        _foodTruckMenusButton.cornerRadius = 5;
+        _foodTruckMenusButton.buttonColor = [UIColor colorWithRed:0.89 green:0.72 blue:0.94 alpha:1.0];
+    }
+    return _foodTruckMenusButton;
 }
 
 - (FUIButton *)zipcarButton {
@@ -316,6 +322,10 @@
     [self presentViewController:webViewController animated:YES completion:NULL];
 }
 
+- (void)openFoodTruckMenusPage {
+    SVModalWebViewController *webViewController = [[SVModalWebViewController alloc] initWithAddress:@"http://www.dilloday.com/files/DilloFoodTruckMenus.pdf"];
+    [self presentViewController:webViewController animated:YES completion:NULL];
+}
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
     [controller dismissViewControllerAnimated:YES completion:NULL];
